@@ -130,7 +130,7 @@ dl.facts dd{margin:0}
 .prose h2{font-size:24px;line-height:32px;margin-top:36px}
 
 /* Footer */
-footer.site{background:var(--bg-4);color:var(--pearl);padding:48px 0 40px;font-size:15px;border-top:1px solid rgba(242,225,186,.35)}
+footer.site{background:var(--bg-5);color:var(--pearl);padding:48px 0 40px;font-size:15px;border-top:1px solid rgba(242,225,186,.35)}
 footer.site .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
 .wordmark{font-family:var(--font-display);font-weight:600;font-size:30px;line-height:1.1}
 .wordmark .loving{color:var(--gold-1)}.wordmark .grace{color:var(--pearl)}
