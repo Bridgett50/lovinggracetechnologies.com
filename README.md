@@ -1,7 +1,11 @@
 # Loving Grace Technologies website
 
-Static site for lovinggracetechnologies.com. Plain HTML + CSS, no build step.
+Static site for lovinggracetechnologies.com. Plain HTML + CSS, no build tooling beyond `python3 build.py` (regenerates the pages).
 
-- Restyle: edit the variables at the top of `assets/style.css` (colors, fonts).
-- Logo: replace `assets/logo.svg` (used in the header and as the favicon).
+- Brand tokens (colors, gradients, fonts) live at the top of `assets/style.css`, taken from the official kit
+  (color-palette, typography-system, brand-voice-messaging boards).
+- Logos: `assets/logo-horizontal.*` (header), `assets/logo-primary-stacked.*` (About), app icon favicons
+  (`favicon.ico`, `assets/favicon-*.png`, `assets/apple-touch-icon.png`), hero art `assets/hero-art.*`.
+  All are crops/resizes of Bridgett's official files; the art itself is unaltered.
+- Background texture: `assets/pattern-tile.jpg`, made from the kit pattern tile with lighting evened out and mirrored so it repeats without seams.
 - Hosting: GitHub Pages from `main`.
