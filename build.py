@@ -175,7 +175,7 @@ P["index.html"] = (
 <div class="card">{ic("web")}<h3>Websites and web applications</h3><p>Design and build of websites and web apps for businesses and public-facing work, including custom product software.</p></div>
 <div class="card">{ic("train")}<h3>AI implementation training</h3><p>We train teams to implement AI using systems we build, not off-the-shelf courses. Every engagement is custom-built for the work at hand.</p></div>
 <div class="card">{ic("docs")}<h3>Documentation, evidence, and research</h3><p>Technical documentation, evidence and governance support, and research strategy for government and commercial teams.</p></div>
-<div class="card">{ic("box")}<h3>Packout software</h3><p>Software for contents inventory, packout, storage, packback, condition documentation, and claims reporting. We build the system; we are not a field packout contractor.</p></div>
+<div class="card">{ic("box")}<h3>Packout software</h3><p>Software for contents inventory, packout, storage, packback, condition documentation, and claims reporting.</p></div>
 <div class="card">{ic("consult")}<h3>Small Business Consulting</h3><p>We help small businesses get ready for an AI-powered world. We look at how your business runs today, find where AI can save you time and money, and build a clear, practical plan to put it to work. We also help with the foundations around it: planning, registrations, and contracting readiness, so you&rsquo;re set up to grow.</p></div>
 </div>
 <p style="margin-top:28px"><a class="more" href="services.html">All services</a></p>
@@ -232,8 +232,8 @@ P["services.html"] = (
 <p>We train teams to implement AI using systems we build, not off-the-shelf courses. Curriculum and sessions are custom-built around the tools, workflows, and approvals that team will actually use.</p></article>
 <article class="card product">{ic("docs")}<span class="caption">Writing and research</span><h2>Documentation, evidence, and research strategy</h2>
 <p>Operating procedures, runbooks, evidence matrices, decision records, review checkpoints, and source-backed research for government and commercial teams, including concept papers and proposal support.</p></article>
-<article class="card product">{ic("box")}<span class="caption">Software, not field contracting</span><h2>Packout software</h2>
-<p>Software for contents inventory, packout, storage, packback, condition documentation, and claims reporting. Loving Grace Technologies builds and supports the software. We are not a field packout contractor.</p></article>
+<article class="card product">{ic("box")}<span class="caption">Software</span><h2>Packout software</h2>
+<p>Software for contents inventory, packout, storage, packback, condition documentation, and claims reporting. Loving Grace Technologies builds and supports the software.</p></article>
 <article class="card product">{ic("consult")}<span class="caption">Consulting</span><h2>Small Business Consulting</h2>
 <p>We help small businesses get ready for an AI-powered world. We look at how your business runs today, find where AI can save you time and money, and build a clear, practical plan to put it to work. We also help with the foundations around it: planning, registrations, and contracting readiness, so you&rsquo;re set up to grow.</p></article>
 </div></section>''',
