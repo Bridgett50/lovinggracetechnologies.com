@@ -2,7 +2,7 @@
 EMAIL="bridgettsanders50@lovinggracetechnologies.com"
 SITE="https://lovinggracetechnologies.com/"
 NAV=[("index.html","Home"),("products.html","Products"),("about.html","About"),("contact.html","Contact")]
-FONTS='<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600&family=Montserrat:wght@500&family=Sora:wght@500&display=swap" rel="stylesheet">'
+FONTS='<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600&family=Montserrat:wght@500&family=Quicksand:wght@600&display=swap" rel="stylesheet">'
 ICONS={
  "agent":'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><path d="M12 10.6v2.8M10.6 12h2.8"/></svg>',
  "seat":'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="11" rx="2"/><path d="M9 20h6M12 16v4"/><path d="M8.5 11.2l2.2 2 4.8-4.6"/></svg>',
@@ -32,7 +32,7 @@ def page(fn,title,desc,body):
 <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 {FONTS}
-<link rel="stylesheet" href="assets/style.css?v=20261110d">
+<link rel="stylesheet" href="assets/style.css?v=20261110e">
 </head>
 <body>
 <header class="site"><div class="wrap">

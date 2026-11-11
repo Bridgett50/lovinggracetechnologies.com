@@ -1,4 +1,5 @@
-/* Loving Grace Technologies — brand tokens from the official kit (palette board 1000016622, type board 1000016624).
+/* Loving Grace Technologies — brand tokens from the official kit (palette board 1000016622)
+   plus the blended typography Bridgett approved November 10, 2026.
    "Soft contrast, never neon, never black." Swap tokens here to restyle the whole site. */
 :root{
   /* Background gradient */
@@ -14,9 +15,15 @@
   --grad-bg:linear-gradient(180deg,var(--bg-1) 0%,var(--bg-2) 45%,var(--bg-3) 100%);
   --grad-gold:linear-gradient(135deg,var(--gold-1) 0%,var(--gold-2) 35%,var(--gold-3) 70%,var(--gold-4) 100%);
   --grad-gold-text:linear-gradient(180deg,var(--gold-1) 0%,var(--gold-2) 100%);
-  /* Fonts */
-  --font-h1:"Manrope",system-ui,sans-serif;--font-h2:"Montserrat",system-ui,sans-serif;
-  --font-accent:"Sora",system-ui,sans-serif;--font-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  /* Fonts — official blend:
+     Quicksand SemiBold: H1 / hero / text wordmark
+     Montserrat Medium, uppercase, light tracking: eyebrows, nav, buttons
+     Manrope SemiBold/Medium: H2 / H3 / card titles
+     Inter: body and captions */
+  --font-display:"Quicksand",system-ui,sans-serif;
+  --font-label:"Montserrat",system-ui,sans-serif;
+  --font-sub:"Manrope",system-ui,sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   --shadow:0 10px 30px rgba(47,55,70,.10);
 }
 *{box-sizing:border-box}
@@ -33,15 +40,15 @@ header.site{position:sticky;top:0;z-index:20;background:#CBCCD3;backdrop-filter:
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;min-height:72px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
 .brand img{height:78px;width:auto;-webkit-mask-image:radial-gradient(ellipse 58% 62% at 50% 50%,#000 80%,transparent 100%);mask-image:radial-gradient(ellipse 58% 62% at 50% 50%,#000 80%,transparent 100%)}
 nav ul{list-style:none;display:flex;gap:4px;margin:0;padding:0;flex-wrap:wrap}
-nav a{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;color:var(--text);font-family:var(--font-body);font-weight:500;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+nav a{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;color:var(--text);font-family:var(--font-label);font-weight:500;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
 nav a:hover{background:var(--card)}
 nav a[aria-current=page]{background:var(--grad-gold);color:var(--text)}
 
 /* Type */
-h1{font-family:var(--font-h1);font-weight:600;font-size:56px;line-height:64px;margin:0;letter-spacing:-.01em}
-h2{font-family:var(--font-h2);font-weight:500;font-size:32px;line-height:40px;margin:0 0 12px;text-transform:uppercase;letter-spacing:.08em;color:var(--text)}
-h3{font-family:var(--font-accent);font-weight:500;font-size:20px;line-height:28px;margin:0 0 8px;color:var(--text)}
-.caption{font-family:var(--font-body);font-weight:500;font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:.18em;color:var(--text)}
+h1{font-family:var(--font-display);font-weight:600;font-size:56px;line-height:64px;margin:0;letter-spacing:-.01em}
+h2{font-family:var(--font-sub);font-weight:600;font-size:32px;line-height:40px;margin:0 0 12px;letter-spacing:-.01em;color:var(--text)}
+h3{font-family:var(--font-sub);font-weight:500;font-size:20px;line-height:28px;margin:0 0 8px;color:var(--text)}
+.caption{font-family:var(--font-label);font-weight:500;font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:.18em;color:var(--text)}
 .lead{font-size:18px;line-height:28px;max-width:720px;margin:0 0 36px;color:var(--text)}
 .rule{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-3),transparent);position:relative;margin:14px 0 26px}
 .rule::after{content:"";position:absolute;left:50%;top:-2px;width:5px;height:5px;border-radius:50%;background:var(--gold-3);transform:translateX(-50%)}
@@ -58,16 +65,17 @@ h3{font-family:var(--font-accent);font-weight:500;font-size:20px;line-height:28p
 .hero .copy{padding:64px 0;position:relative;z-index:2}
 .hero-lead{font-size:17px;line-height:26px;margin:0 0 30px;max-width:520px;color:var(--pearl)}
 .hero h1 .l2{display:block;color:var(--pearl)}
-.hero .tagline{font-family:var(--font-accent);font-weight:500;font-size:24px;line-height:32px;margin:20px 0 18px;color:var(--pearl)}
+.hero .tagline{font-family:var(--font-sub);font-weight:500;font-size:24px;line-height:32px;margin:20px 0 18px;color:var(--pearl)}
 .hero .tagline em{font-style:normal;color:var(--gold-1)}
-.pillars{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:0 0 18px;padding:0;list-style:none;font-weight:500;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--pearl)}
+.pillars{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:0 0 18px;padding:0;list-style:none;font-family:var(--font-label);font-weight:500;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--pearl)}
 .pillars li+li::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--gold-2);margin-right:14px;vertical-align:middle}
 .hero .art{position:absolute;right:0;top:0;bottom:0;width:44%;z-index:1}
 .hero .art img{position:absolute;right:0;top:0;height:100%;width:auto;max-width:none;
   -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 22%);mask-image:linear-gradient(90deg,transparent 0%,#000 30%)}
 
 /* Buttons */
-.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-family:var(--font-body);font-weight:600;font-size:15px;letter-spacing:.04em;text-decoration:none;color:var(--text);transition:transform .15s ease,box-shadow .15s ease}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-family:var(--font-label);font-weight:500;font-size:15px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--text);transition:transform .15s ease,box-shadow .15s ease}
+a.btn[href^="mailto"]{text-transform:none;letter-spacing:.02em;font-family:var(--font-body);font-weight:500}
 .btn.primary{background:var(--grad-gold);box-shadow:0 6px 18px rgba(151,121,86,.25);border:1px solid rgba(255,255,255,.5)}
 .btn.primary:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(151,121,86,.3)}
 .btn.secondary{border:1px solid var(--silver-3);background:rgba(255,255,255,.18)}
@@ -85,7 +93,7 @@ section{padding:84px 0}
 .textured-tile{background:linear-gradient(180deg,rgba(226,225,228,.86),rgba(205,206,214,.82)),url(pattern-tile.jpg) center/700px repeat,var(--bg-2)}
 .principles{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
 .principles div{background:var(--card);border:1px solid var(--card-line);border-radius:16px;padding:22px 22px 22px 24px}
-.principles strong{display:block;font-family:var(--font-accent);font-weight:500;font-size:18px;margin-bottom:4px}
+.principles strong{display:block;font-family:var(--font-sub);font-weight:600;font-size:18px;margin-bottom:4px}
 .band{color:var(--pearl);background:linear-gradient(90deg,rgba(86,95,114,.95),rgba(104,112,130,.90) 50%,rgba(86,95,114,.95)),url(pattern-tile.jpg) center/700px repeat,var(--bg-4);text-align:center}
 .band h2{color:var(--pearl);font-size:28px;line-height:36px}
 .band p{font-size:18px;margin:0 auto 28px;max-width:640px}
@@ -93,11 +101,11 @@ section{padding:84px 0}
 /* Page heads */
 .page-head{color:var(--pearl);background:linear-gradient(90deg,rgba(86,95,114,.95),rgba(104,112,130,.90) 60%,rgba(146,152,167,.7)),url(pattern-tile.jpg) center/700px repeat,var(--bg-4);padding:72px 0 60px}
 .page-head h1{font-size:48px;line-height:56px}
-.page-head p{font-family:var(--font-accent);font-weight:500;font-size:20px;line-height:28px;margin:14px 0 0;max-width:720px}
+.page-head p{font-family:var(--font-sub);font-weight:500;font-size:20px;line-height:28px;margin:14px 0 0;max-width:720px}
 
 /* Products */
 .product{display:grid;grid-template-columns:1fr;gap:8px;padding:30px;margin-bottom:24px}
-.product .sub{font-family:var(--font-accent);font-weight:500;margin:0 0 6px;color:var(--text)}
+.product .sub{font-family:var(--font-sub);font-weight:500;margin:0 0 6px;color:var(--text)}
 .product ul{padding-left:20px;margin:8px 0 0}
 .product li::marker{color:var(--bronze)}
 .video{position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid var(--card-line);margin-top:16px;max-width:760px;box-shadow:var(--shadow)}
@@ -114,11 +122,11 @@ dl.facts dd{margin:0}
 /* Footer */
 footer.site{background:var(--bg-4);color:var(--pearl);padding:48px 0 40px;font-size:15px;border-top:1px solid rgba(242,225,186,.35)}
 footer.site .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
-.wordmark{font-family:var(--font-h1);font-weight:500;font-size:30px;line-height:1.1}
+.wordmark{font-family:var(--font-display);font-weight:600;font-size:30px;line-height:1.1}
 .wordmark .loving{color:var(--gold-1)}.wordmark .grace{color:var(--pearl)}
-.wordmark small{display:block;font-family:var(--font-body);font-size:12px;letter-spacing:.42em;color:var(--silver-1);margin-top:8px;font-weight:500}
+.wordmark small{display:block;font-family:var(--font-label);font-size:12px;letter-spacing:.42em;color:var(--silver-1);margin-top:8px;font-weight:500}
 footer.site a{color:var(--pearl)}
-footer.site nav a{display:inline;padding:0;margin-right:16px;text-transform:none;letter-spacing:0;font-size:15px;border-radius:0;text-decoration:underline;text-decoration-color:var(--gold-2)}
+footer.site nav a{display:inline;padding:0;margin-right:16px;text-transform:none;letter-spacing:0;font-size:15px;border-radius:0;font-family:var(--font-body);font-weight:500;text-decoration:underline;text-decoration-color:var(--gold-2)}
 footer.site nav a:hover{background:none}
 footer.site p{margin:10px 0 0}
 
@@ -150,9 +158,9 @@ footer.site p{margin:10px 0 0}
 .approach .card::before{display:none}
 .icon{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;margin-bottom:18px;background:radial-gradient(circle at 35% 30%,var(--pearl),var(--silver-1));border:1.5px solid var(--gold-3);box-shadow:0 4px 14px rgba(151,121,86,.18)}
 .icon svg{width:28px;height:28px;stroke:var(--bronze);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.card .more{display:inline-block;margin-top:16px;font-weight:600;font-size:14px;letter-spacing:.04em}
+.card .more{display:inline-block;margin-top:16px;font-family:var(--font-label);font-weight:500;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
 .card hr{border:0;height:1px;background:linear-gradient(90deg,var(--gold-3),transparent);margin:18px 0 0}
-.motto{font-family:var(--font-accent);font-weight:500;font-size:15px;letter-spacing:.04em;color:var(--pearl);margin:0}
+.motto{font-family:var(--font-sub);font-weight:500;font-size:15px;letter-spacing:.04em;color:var(--pearl);margin:0}
 .motto span{color:var(--gold-1);padding:0 8px}
-.sig{font-family:var(--font-accent);font-weight:500;color:var(--gold-1);margin-top:6px}
+.sig{font-family:var(--font-sub);font-weight:500;color:var(--gold-1);margin-top:6px}
 .foot-bottom{border-top:1px solid rgba(242,225,186,.3);margin-top:28px;padding-top:20px;width:100%;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}

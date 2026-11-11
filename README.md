@@ -3,7 +3,9 @@
 Static site for lovinggracetechnologies.com. Plain HTML + CSS, no build tooling beyond `python3 build.py` (regenerates the pages).
 
 - Brand tokens (colors, gradients, fonts) live at the top of `assets/style.css`, taken from the official kit
-  (color-palette, typography-system, brand-voice-messaging boards).
+  (color-palette, typography-system, brand-voice-messaging boards). Official type blend, approved November 10, 2026:
+  Quicksand SemiBold (H1 / wordmark), Montserrat Medium uppercase (eyebrows, nav, buttons),
+  Manrope SemiBold/Medium (H2 / H3 / card titles), Inter (body and captions).
 - Logos: `assets/logo-horizontal.*` (header), `assets/logo-primary-stacked.*` (About), app icon favicons
   (`favicon.ico`, `assets/favicon-*.png`, `assets/apple-touch-icon.png`), hero art `assets/hero-art.*`.
   All are crops/resizes of Bridgett's official files; the art itself is unaltered.
