@@ -187,7 +187,7 @@ P["index.html"] = (
 <p class="lead">Human-centered deep tech on one principle: our technology does real work, and people stay in charge of every decision that matters.</p>
 <div class="grid">
 <div class="card">{ic("agent")}<h3>Loving Grace Agent</h3><p>A self-hosted AI assistant with memory, skills, and computer use. It always asks before sending, paying, or deleting.</p><hr><a class="more" href="products.html#agent">Learn more</a></div>
-<div class="card">{ic("seat")}<h3>Second Seat</h3><p>An AI meeting twin that captures what was agreed, drafts the follow-up work, and waits for human approval.</p><hr><a class="more" href="products.html#second-seat">Watch the demo</a></div>
+<div class="card">{ic("seat")}<h3>Second Seat</h3><p>It turns what a small-business owner agrees to in a meeting into PayPal payments. AI drafts each payment, then a separate checker compares it against the owner&rsquo;s own words and blocks anything that doesn&rsquo;t match, like a changed bank account or an inflated amount. Nothing is paid until the owner approves it with one tap, and every payment keeps the quote it came from as its receipt.</p><hr><a class="more" href="https://youtu.be/1VJKjwJzRN0">Watch the demo</a></div>
 <div class="card">{ic("music")}<h3>AI Music &amp; Studio Tools</h3><p>AI music and studio tools for blues and soul recordings, made to support the artist&rsquo;s own voice.</p><hr><a class="more" href="products.html#music">Learn more</a></div>
 </div>
 </div></section>
@@ -252,12 +252,11 @@ P["products.html"] = (
 <ul><li>Memory that carries context across conversations</li><li>Skills it can add and reuse for repeat work</li><li>Computer use for browser and desktop tasks</li><li>Always asks before sending, paying, or deleting</li></ul>
 </article>
 <article class="card product" id="second-seat">{ic("seat")}
-<span class="caption">AI meeting twin</span>
+<span class="caption">PayPal payments</span>
 <h2>Second Seat</h2>
-<p>Second Seat sits in on meetings, captures what was agreed, and drafts the follow-up work. Nothing goes out until a person reviews and approves it.</p>
-<ul><li>Turns meeting decisions into draft tasks and messages</li><li>Human approval before any action is taken</li><li>Entered in the Meta Global AI Developer Hackathon, Startup track</li></ul>
+<p>It turns what a small-business owner agrees to in a meeting into PayPal payments. AI drafts each payment, then a separate checker compares it against the owner&rsquo;s own words and blocks anything that doesn&rsquo;t match, like a changed bank account or an inflated amount. Nothing is paid until the owner approves it with one tap, and every payment keeps the quote it came from as its receipt.</p>
 <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/1VJKjwJzRN0" title="Second Seat demo" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
-<p style="margin-top:12px"><a href="https://youtu.be/1VJKjwJzRN0">Watch the Second Seat demo on YouTube</a></p>
+<p style="margin-top:12px"><a href="https://youtu.be/1VJKjwJzRN0">Watch the demo</a></p>
 </article>
 <article class="card product" id="music">{ic("music")}
 <span class="caption">For blues and soul recordings</span>
