@@ -15,7 +15,7 @@ FONTS = (
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600&family=Montserrat:wght@500&family=Quicksand:wght@600&display=swap" rel="stylesheet">'
 )
-CSS_V = "20261110f"
+CSS_V = "20261110g"
 ICONS = {
     "agent": '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><path d="M12 10.6v2.8M10.6 12h2.8"/></svg>',
     "seat": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="11" rx="2"/><path d="M9 20h6M12 16v4"/><path d="M8.5 11.2l2.2 2 4.8-4.6"/></svg>',
@@ -136,6 +136,14 @@ GALLERY = (
            "An official artist site for vocalist Toni Green, built to present her music, merch, booking, and the release of God Knew Her Name.")
     + shot("portfolio-packout", "Loving Grace Packout software",
            "Contents inventory, packout, storage, packback, condition documentation, and claims-reporting software for insurance contents work.")
+    + shot("portfolio-keys", "The Keys Vault website",
+           "A resource site for courses, eBooks, and tools, with materials in English and Spanish.")
+    + shot("portfolio-sanctum", "The Sovereign Sanctum website",
+           "A public site for The Sovereign Sanctum, presenting its science, spirit, and robotics work.")
+    + shot("portfolio-flash", "Flash Match",
+           "A speed-dating web app for timed match rounds and event sign-up.")
+    + shot("portfolio-lhs", "LHS Creator Network",
+           "A creator-network roster and CRM, shown at its public sign-in page.")
     + "</div>"
 )
 

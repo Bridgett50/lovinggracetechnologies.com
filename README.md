@@ -13,6 +13,6 @@ Static site for lovinggracetechnologies.com. Plain HTML + CSS, no build tooling 
 - Hosting: GitHub Pages from `main`.
 
 - Content (November 10, 2026): services first, then products; Our Name origin story; packout as software only;
-  custom AI implementation training (not off-the-shelf courses); screenshot-only project gallery (Mo'ja Liquor shot is of mojaliquor.com, not an older preview URL; no live project links);
+  custom AI implementation training (not off-the-shelf courses); screenshot-only project gallery (Mo'ja Liquor, Toni Green, Packout, The Keys Vault, The Sovereign Sanctum, Flash Match, and LHS Creator Network; Mo'ja shot is of mojaliquor.com; no live project links);
   no personal name in visible copy or metadata. Canonical / Open Graph URLs use the GitHub Pages host
   until the custom domain DNS is changed. Contact is email only.
