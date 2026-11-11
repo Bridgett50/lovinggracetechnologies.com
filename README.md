@@ -11,3 +11,8 @@ Static site for lovinggracetechnologies.com. Plain HTML + CSS, no build tooling 
   All are crops/resizes of Bridgett's official files; the art itself is unaltered.
 - Background texture: `assets/pattern-tile.jpg`, made from the kit pattern tile with lighting evened out and mirrored so it repeats without seams.
 - Hosting: GitHub Pages from `main`.
+
+- Content (November 10, 2026): services first, then products; Our Name origin story; packout as software only;
+  custom AI implementation training (not off-the-shelf courses); screenshot-only project gallery;
+  no personal name in visible copy or metadata. Canonical / Open Graph URLs use the GitHub Pages host
+  until the custom domain DNS is changed. Contact is email only.
