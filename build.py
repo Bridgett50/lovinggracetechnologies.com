@@ -1,8 +1,8 @@
 # Generates the static pages. Run: python3 build.py
 EMAIL = "bridgettsanders50@lovinggracetechnologies.com"
-# Custom domain is not live yet (DNS still at the registrar placeholder).
-# Use the GitHub Pages URL for canonical / Open Graph links until DNS is changed.
-SITE = "https://bridgett50.github.io/lovinggracetechnologies.com/"
+# Canonical site is the custom domain. Apex A records point at GitHub Pages.
+# www is not in DNS yet (Squarespace could not save that CNAME).
+SITE = "https://lovinggracetechnologies.com/"
 NAV = [
     ("index.html", "Home"),
     ("services.html", "Services"),
@@ -350,4 +350,22 @@ P["404.html"] = (
 from pathlib import Path
 for fn, (t, d, b) in P.items():
     Path(fn).write_text(page(fn, t, d, b), encoding="utf-8")
-print("wrote", ", ".join(P))
+
+# Sitemap of public pages (not the 404 page)
+SITEMAP_PAGES = ["index.html", "services.html", "products.html", "about.html", "contact.html", "privacy.html"]
+urls = []
+for fn in SITEMAP_PAGES:
+    loc = SITE if fn == "index.html" else SITE + fn
+    urls.append(f"  <url><loc>{loc}</loc></url>")
+Path("sitemap.xml").write_text(
+    '<?xml version="1.0" encoding="UTF-8"?>\n'
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    + "\n".join(urls)
+    + "\n</urlset>\n",
+    encoding="utf-8",
+)
+Path("robots.txt").write_text(
+    "User-agent: *\nAllow: /\n\nSitemap: " + SITE + "sitemap.xml\n",
+    encoding="utf-8",
+)
+print("wrote", ", ".join(P), "sitemap.xml, robots.txt")
