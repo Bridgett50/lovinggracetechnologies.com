@@ -1,7 +1,7 @@
 # Generates the static pages. Run: python3 build.py
 EMAIL = "bridgettsanders50@lovinggracetechnologies.com"
 # Canonical site is the custom domain. Apex A records point at GitHub Pages.
-# www is not in DNS yet (Squarespace could not save that CNAME).
+# www is a CNAME to bridgett50.github.io; GitHub Pages redirects it to the apex.
 SITE = "https://lovinggracetechnologies.com/"
 NAV = [
     ("index.html", "Home"),
@@ -15,7 +15,7 @@ FONTS = (
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600&family=Montserrat:wght@500&family=Quicksand:wght@600&display=swap" rel="stylesheet">'
 )
-CSS_V = "20261110h"
+CSS_V = "20261111a"
 ICONS = {
     "agent": '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><path d="M12 10.6v2.8M10.6 12h2.8"/></svg>',
     "seat": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="11" rx="2"/><path d="M9 20h6M12 16v4"/><path d="M8.5 11.2l2.2 2 4.8-4.6"/></svg>',
@@ -38,12 +38,17 @@ def ic(k):
 
 def ldjson():
     import json
+    # ProfessionalService is a schema.org LocalBusiness type. Service-area
+    # business: city and state only. No street address is published.
     data = {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "ProfessionalService",
+        "@id": SITE + "#business",
         "name": "Loving Grace Technologies, LLC",
         "legalName": "Loving Grace Technologies, LLC",
         "url": SITE,
+        "logo": SITE + "assets/emblem-512.png",
+        "image": SITE + "assets/og-image.jpg",
         "email": EMAIL,
         "description": "Human-centered technology for government and commercial teams: workflow and AI automation, systems planning, websites, training, research, and small business consulting.",
         "address": {
@@ -52,7 +57,19 @@ def ldjson():
             "addressRegion": "MS",
             "addressCountry": "US",
         },
-        "areaServed": "US",
+        "areaServed": [
+            {"@type": "City", "name": "Grenada", "containedInPlace": {"@type": "State", "name": "Mississippi"}},
+            {"@type": "Country", "name": "United States"},
+        ],
+        "knowsAbout": [
+            "Workflow and AI automation",
+            "Systems planning",
+            "Website development",
+            "AI implementation training",
+            "Technical documentation",
+            "Packout and contents inventory software",
+            "Small business consulting",
+        ],
         "slogan": "Where Consciousness Meets Technology",
     }
     return '<script type="application/ld+json">' + json.dumps(data, separators=(",", ":")) + "</script>"
@@ -186,9 +203,9 @@ P["index.html"] = (
 <h2>What we are building</h2><div class="rule"></div>
 <p class="lead">Human-centered deep tech on one principle: our technology does real work, and people stay in charge of every decision that matters.</p>
 <div class="grid">
-<div class="card">{ic("agent")}<h3>Loving Grace Agent</h3><p>A self-hosted AI assistant with memory, skills, and computer use. It always asks before sending, paying, or deleting.</p><hr><a class="more" href="products.html#agent">Learn more</a></div>
+<div class="card">{ic("agent")}<h3>Loving Grace Agent</h3><p>A self-hosted AI assistant with memory, skills, and computer use. It always asks before sending, paying, or deleting.</p><hr><a class="more" href="products.html#agent">Learn more about Loving Grace Agent</a></div>
 <div class="card">{ic("seat")}<h3>Second Seat</h3><p>It turns what a small-business owner agrees to in a meeting into PayPal payments. AI drafts each payment, then a separate checker compares it against the owner&rsquo;s own words and blocks anything that doesn&rsquo;t match, like a changed bank account or an inflated amount. Nothing is paid until the owner approves it with one tap, and every payment keeps the quote it came from as its receipt.</p><hr><a class="more" href="https://youtu.be/1VJKjwJzRN0">Watch the demo</a></div>
-<div class="card">{ic("music")}<h3>AI Music &amp; Studio Tools</h3><p>AI music and studio tools for blues and soul recordings, made to support the artist&rsquo;s own voice.</p><hr><a class="more" href="products.html#music">Learn more</a></div>
+<div class="card">{ic("music")}<h3>AI Music &amp; Studio Tools</h3><p>AI music and studio tools for blues and soul recordings, made to support the artist&rsquo;s own voice.</p><hr><a class="more" href="products.html#music">Learn more about AI Music &amp; Studio Tools</a></div>
 </div>
 </div></section>
 

@@ -15,4 +15,4 @@ Static site for lovinggracetechnologies.com. Plain HTML + CSS, no build tooling 
 - Content (November 10, 2026): services first, then products; Our Name origin story;
   custom AI implementation training (not off-the-shelf courses); screenshot-only project gallery (Mo'ja Liquor, Toni Green, Packout, The Keys Vault, The Sovereign Sanctum, Flash Match, and LHS Creator Network; Mo'ja shot is of mojaliquor.com; no live project links);
   no personal name in visible copy or metadata. Canonical / Open Graph URLs use https://lovinggracetechnologies.com/.
-  Contact is email only. The www hostname is not in DNS yet.
+  Contact is email only. www is a CNAME to bridgett50.github.io and redirects to the apex; its HTTPS certificate must be reissued by GitHub Pages (see Settings > Pages).
