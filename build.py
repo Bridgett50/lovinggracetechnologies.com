@@ -15,7 +15,7 @@ FONTS = (
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600&family=Montserrat:wght@500&family=Quicksand:wght@600&display=swap" rel="stylesheet">'
 )
-CSS_V = "20261110g"
+CSS_V = "20261110h"
 ICONS = {
     "agent": '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><path d="M12 10.6v2.8M10.6 12h2.8"/></svg>',
     "seat": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="11" rx="2"/><path d="M9 20h6M12 16v4"/><path d="M8.5 11.2l2.2 2 4.8-4.6"/></svg>',
@@ -30,6 +30,7 @@ ICONS = {
     "train": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V7l8-3 8 3v12"/><path d="M4 7l8 3 8-3M12 10v9"/><path d="M8 19v-6.5M16 19v-6.5"/></svg>',
     "docs": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h7l5 5V20.5H7z"/><path d="M14 3.5V9h5M9.5 13h5M9.5 16.5h5"/></svg>',
     "box": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 8 12 4l8.5 4-8.5 4z"/><path d="M3.5 8v8L12 20l8.5-4V8M12 12v8"/></svg>',
+    "consult": '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8.5" cy="8" r="2.6"/><path d="M3.6 18.5v-1.2A4.4 4.4 0 0 1 8 13h1"/><circle cx="15.5" cy="8" r="2.6"/><path d="M20.4 18.5v-1.2A4.4 4.4 0 0 0 16 13h-1"/></svg>',
 }
 
 def ic(k):
@@ -44,7 +45,7 @@ def ldjson():
         "legalName": "Loving Grace Technologies, LLC",
         "url": SITE,
         "email": EMAIL,
-        "description": "Human-centered technology for government and commercial teams: workflow and AI automation, systems planning, websites, training, and research.",
+        "description": "Human-centered technology for government and commercial teams: workflow and AI automation, systems planning, websites, training, research, and small business consulting.",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Grenada",
@@ -151,14 +152,14 @@ P = {}
 
 P["index.html"] = (
     "Loving Grace Technologies | Where Consciousness Meets Technology",
-    "Human-centered technology for government and commercial teams: workflow and AI automation, systems planning, websites, training, and research. Grenada, Mississippi.",
+    "Human-centered technology for government and commercial teams: workflow and AI automation, systems planning, websites, training, research, and small business consulting. Grenada, Mississippi.",
     f'''
 <section class="hero" aria-labelledby="hero-title" style="padding:0"><div class="wrap">
 <div class="divider" aria-hidden="true"></div>
 <div class="copy">
 <p class="eyebrow">Where Consciousness Meets Technology</p>
 <h1 id="hero-title"><span class="gold">Technologies that protect consciousness</span><span class="l2">and expand human potential.</span></h1>
-<p class="hero-lead">We design human-centered tools &mdash; workflow and AI systems, websites, training, and research &mdash; so people stay in charge of the work that matters.</p>
+<p class="hero-lead">We design human-centered tools &mdash; workflow and AI systems, websites, training, research, and small business consulting &mdash; so people stay in charge of the work that matters.</p>
 <div class="btns"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a><a class="btn secondary" href="services.html">See our services</a></div>
 </div>
 <div class="art"><picture><source srcset="assets/hero-art.webp" type="image/webp"><img src="assets/hero-art.jpg" alt="" width="675" height="819"></picture></div>
@@ -168,13 +169,14 @@ P["index.html"] = (
 <p class="caption">Services</p>
 <h2>What we build and teach</h2><div class="rule"></div>
 <p class="lead">Loving Grace Technologies is an R&amp;D company that also takes on selected client work. We help teams plan, build, and document technology &mdash; and we train people to implement it well.</p>
-<div class="grid">
+<div class="grid services-grid">
 <div class="card">{ic("flow")}<h3>Workflow and AI automation</h3><p>AI-assisted workflow design so routine work is faster and easier to audit, with people still approving what matters.</p></div>
 <div class="card">{ic("sys")}<h3>Computer systems planning</h3><p>Practical planning for the systems a team already has and the ones it needs next, including requirements, tool selection, and implementation maps.</p></div>
 <div class="card">{ic("web")}<h3>Websites and web applications</h3><p>Design and build of websites and web apps for businesses and public-facing work, including custom product software.</p></div>
 <div class="card">{ic("train")}<h3>AI implementation training</h3><p>We train teams to implement AI using systems we build, not off-the-shelf courses. Every engagement is custom-built for the work at hand.</p></div>
 <div class="card">{ic("docs")}<h3>Documentation, evidence, and research</h3><p>Technical documentation, evidence and governance support, and research strategy for government and commercial teams.</p></div>
 <div class="card">{ic("box")}<h3>Packout software</h3><p>Software for contents inventory, packout, storage, packback, condition documentation, and claims reporting. We build the system; we are not a field packout contractor.</p></div>
+<div class="card">{ic("consult")}<h3>Small Business Consulting</h3><p>We help small businesses get ready for an AI-powered world. We look at how your business runs today, find where AI can save you time and money, and build a clear, practical plan to put it to work. We also help with the foundations around it: planning, registrations, and contracting readiness, so you&rsquo;re set up to grow.</p></div>
 </div>
 <p style="margin-top:28px"><a class="more" href="services.html">All services</a></p>
 </div></section>
@@ -216,7 +218,7 @@ P["index.html"] = (
 
 P["services.html"] = (
     "Services | Loving Grace Technologies",
-    "Workflow and AI automation, systems planning, websites, AI implementation training, documentation, research, and packout software from Loving Grace Technologies.",
+    "Workflow and AI automation, systems planning, websites, AI implementation training, documentation, research, packout software, and small business consulting from Loving Grace Technologies.",
     f'''
 <div class="page-head"><div class="wrap"><h1><span class="gold">Our</span> Services</h1><p>An R&amp;D company that helps teams plan, build, document, and implement technology &mdash; with people still in charge.</p></div></div>
 <section class="approach"><div class="wrap">
@@ -232,6 +234,8 @@ P["services.html"] = (
 <p>Operating procedures, runbooks, evidence matrices, decision records, review checkpoints, and source-backed research for government and commercial teams, including concept papers and proposal support.</p></article>
 <article class="card product">{ic("box")}<span class="caption">Software, not field contracting</span><h2>Packout software</h2>
 <p>Software for contents inventory, packout, storage, packback, condition documentation, and claims reporting. Loving Grace Technologies builds and supports the software. We are not a field packout contractor.</p></article>
+<article class="card product">{ic("consult")}<span class="caption">Consulting</span><h2>Small Business Consulting</h2>
+<p>We help small businesses get ready for an AI-powered world. We look at how your business runs today, find where AI can save you time and money, and build a clear, practical plan to put it to work. We also help with the foundations around it: planning, registrations, and contracting readiness, so you&rsquo;re set up to grow.</p></article>
 </div></section>''',
 )
 
@@ -282,7 +286,7 @@ P["about.html"] = (
 <section><div class="wrap prose">
 <div class="wordmark-banner"><picture><source srcset="assets/logo-primary-stacked.webp" type="image/webp"><img src="assets/logo-primary-stacked.jpg" alt="Loving Grace Technologies logo" width="900" height="788"></picture></div>
 <p>Loving Grace Technologies is a Mississippi company building human-centered deep tech. We combine scientific rigor with human wisdom: tools that help people work, document, and decide with more clarity, and with compassion in the design.</p>
-<p>We are an R&amp;D company. We also take on selected client work &mdash; systems planning, websites, custom software, and AI implementation training &mdash; always with people in charge of the decisions that matter.</p>
+<p>We are an R&amp;D company. We also take on selected client work &mdash; systems planning, websites, custom software, AI implementation training, and small business consulting &mdash; always with people in charge of the decisions that matter.</p>
 
 <div class="name-story">
 <p class="caption">Our Name</p>
@@ -308,10 +312,10 @@ P["contact.html"] = (
     "Contact | Loving Grace Technologies",
     "Contact Loving Grace Technologies by email.",
     f'''
-<div class="page-head"><div class="wrap"><h1><span class="gold">Start a</span> conversation</h1><p>Tell us about the system, site, or training you need.</p></div></div>
+<div class="page-head"><div class="wrap"><h1><span class="gold">Start a</span> conversation</h1><p>Tell us about the system, site, training, or consulting you need.</p></div></div>
 <section><div class="wrap prose">
 <div class="card">
-<p>For partnerships, pilots, website or software work, training, press, or government and research collaboration, email us and we&rsquo;ll get back to you.</p>
+<p>For partnerships, pilots, website or software work, training, small business consulting, press, or government and research collaboration, email us and we&rsquo;ll get back to you.</p>
 <p style="margin:22px 0"><a class="btn primary" href="mailto:{EMAIL}">{EMAIL}</a></p>
 <p>Loving Grace Technologies, LLC<br>Grenada, Mississippi, United States</p>
 </div>

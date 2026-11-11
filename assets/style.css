@@ -85,6 +85,16 @@ a.btn[href^="mailto"]{text-transform:none;letter-spacing:.02em;font-family:var(-
 /* Sections */
 section{padding:84px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px}
+/* Seven service cards: 1 col on phones, 2 cols on tablets (last centered), 3 cols on desktop (last centered). */
+.services-grid{grid-template-columns:1fr}
+@media (min-width:700px){
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid .card:last-child{grid-column:1/-1;width:100%;max-width:calc((100% - 24px)/2);justify-self:center}
+}
+@media (min-width:1000px){
+  .services-grid{grid-template-columns:repeat(3,1fr)}
+  .services-grid .card:last-child{grid-column:2;max-width:none;justify-self:stretch}
+}
 .card{background:var(--card);border:1px solid var(--card-line);border-radius:20px;padding:30px;box-shadow:var(--shadow);backdrop-filter:blur(6px);position:relative}
 .card::before{content:"";position:absolute;left:30px;right:30px;top:0;height:2px;border-radius:2px;background:var(--grad-gold)}
 .card .caption{display:block;margin-bottom:12px}
