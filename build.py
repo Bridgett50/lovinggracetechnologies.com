@@ -296,15 +296,15 @@ def scout_body():
 #   - every existing page is byte-for-byte the same as before this change.
 # Turning it on needs Bridgett's Go, the Square links below, and approved
 # terms (see TERMS_APPROVED).
-CHECKOUT_OPEN = False
-TERMS_APPROVED = False  # the terms and refund wording below is a draft until Bridgett approves it
+CHECKOUT_OPEN = True
+TERMS_APPROVED = True  # Bridgett approved the terms, refund policy, and opening checkout on Nov 12, 2026
 
 # Paste Square links here after they are created in the Loving Grace
 # Technologies, LLC Square Dashboard. Leave "" for anything not on sale yet;
 # an empty link shows "Not open yet" and no button.
 SQUARE_LINKS = {
-    "dfy": "",            # Done-for-you plan, $19 one-time payment link
-    "concierge": "",      # Concierge, $49 per trip, one-time payment link
+    "dfy": "https://square.link/u/H4hDZq49",            # Done-for-you plan, $19 one-time payment link
+    "concierge": "https://square.link/u/0awoNuDT",      # Concierge, $49 per trip, one-time payment link
     "scout_month": "",    # Scout, $9 monthly subscription checkout link
     "scout_year": "",     # Scout, $79 yearly subscription checkout link
     "pro_month": "",      # Pro, $19 monthly subscription checkout link
@@ -411,6 +411,7 @@ def plans_body():
 <h3>Good to know</h3>
 <ul>
 <li>Discovery Scout is a planning tool. Area scores describe geology and documented sites. They are not a chance of finding anything.</li>
+<li>We deliver Done-for-you and Concierge plans by email within 3 business days after we have your trip details.</li>
 <li>We do not sell tickets, tours, permits, lodging, or gear. Anything you pay a dig site, guide, or hotel, you pay them directly, under their own terms. Loving Grace Technologies charges nothing on their behalf.</li>
 <li>A plan does not give permission to enter land, dig, or collect. Check the site rules and collecting laws before you go.</li>
 <li>Not for archaeological or artifact hunting. Metal detecting is for modern items only.</li>
@@ -449,7 +450,7 @@ def thanks_body():
 <div class="page-head"><div class="wrap"><h1><span class="gold">Thank you</span></h1><p>Your Discovery Scout payment went through Square.</p></div></div>
 <section><div class="wrap prose">
 <div class="card">
-<p>Square emails your receipt. We will email you at the address you gave at checkout to collect your trip details, then deliver your plan by email.</p>
+<p>Square emails your receipt. We will email you at the address you gave at checkout to collect your trip details, then deliver your plan by email within 3 business days after we have those details.</p>
 <p style="margin-top:14px">Questions, changes, or a refund request: <a href="mailto:{EMAIL}?subject=Discovery%20Scout%20order">{EMAIL}</a>.</p>
 <p style="margin-top:14px">Remember: you book and pay any dig site, guide, or lodging directly. Check site rules and collecting laws before you go.</p>
 </div>
