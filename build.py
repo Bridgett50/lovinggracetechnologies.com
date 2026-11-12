@@ -15,7 +15,7 @@ FONTS = (
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600&family=Montserrat:wght@500&family=Quicksand:wght@600&display=swap" rel="stylesheet">'
 )
-CSS_V = "20261111a"
+CSS_V = "20261112a"
 ICONS = {
     "agent": '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><path d="M12 10.6v2.8M10.6 12h2.8"/></svg>',
     "seat": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="11" rx="2"/><path d="M9 20h6M12 16v4"/><path d="M8.5 11.2l2.2 2 4.8-4.6"/></svg>',
@@ -31,6 +31,7 @@ ICONS = {
     "docs": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h7l5 5V20.5H7z"/><path d="M14 3.5V9h5M9.5 13h5M9.5 16.5h5"/></svg>',
     "box": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 8 12 4l8.5 4-8.5 4z"/><path d="M3.5 8v8L12 20l8.5-4V8M12 12v8"/></svg>',
     "consult": '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8.5" cy="8" r="2.6"/><path d="M3.6 18.5v-1.2A4.4 4.4 0 0 1 8 13h1"/><circle cx="15.5" cy="8" r="2.6"/><path d="M20.4 18.5v-1.2A4.4 4.4 0 0 0 16 13h-1"/></svg>',
+    "scout": '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v1.8M12 18.7V20.5M3.5 12h1.8M18.7 12H20.5"/><path d="m14.7 9.3-1.6 3.8-3.8 1.6 1.6-3.8z"/></svg>',
 }
 
 def ic(k):
@@ -113,7 +114,7 @@ PAGE_TMPL = """<!doctype html>
 <p class="sig" style="font-size:14px;margin-top:10px;max-width:28rem">Named for a simple idea: machines should watch over people with grace, and people should remain in charge.</p>
 </div>
 <div>
-<nav aria-label="Footer"><a href="services.html">Services</a><a href="products.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav>
+<nav aria-label="Footer"><a href="services.html">Services</a><a href="products.html">Work</a><a href="discovery-scout.html">Discovery Scout</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav>
 <p><a href="mailto:{email}">{email}</a></p>
 <p>Grenada, Mississippi</p>
 </div>
@@ -126,7 +127,7 @@ PAGE_TMPL = """<!doctype html>
 </html>
 """
 
-def page(fn, title, desc, body):
+def page(fn, title, desc, body, extra_ld=""):
     nav = "".join(
         f'<li><a href="{h}"{" aria-current=page" if h == fn else ""}>{t}</a></li>'
         for h, t in NAV
@@ -134,7 +135,7 @@ def page(fn, title, desc, body):
     path = "" if fn == "index.html" else fn
     return PAGE_TMPL.format(
         title=title, desc=desc, url=SITE + path, site=SITE,
-        fonts=FONTS, css_v=CSS_V, ld=ldjson(), nav=nav, body=body, email=EMAIL,
+        fonts=FONTS, css_v=CSS_V, ld=ldjson() + extra_ld, nav=nav, body=body, email=EMAIL,
     )
 
 def shot(stem, title, cap):
@@ -164,6 +165,115 @@ GALLERY = (
            "A creator-network roster and CRM, shown at its public sign-in page.")
     + "</div>"
 )
+
+def discovery_ld():
+    import json
+    # Waitlist page only. No Offer, price, or download URL: nothing is for sale
+    # here, and the working product is not public.
+    data = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": SITE + "discovery-scout.html#webpage",
+        "url": SITE + "discovery-scout.html",
+        "name": "Discovery Scout waitlist",
+        "description": "Plan legal outdoor hunts with Discovery Scout. It scores areas from commercially allowed open data and explains why. Waitlist only. Nothing to buy here.",
+        "about": {
+            "@type": "SoftwareApplication",
+            "name": "Discovery Scout",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "Web",
+            "description": "A planning tool from Loving Grace Technologies for legal outdoor hunts. It uses commercially allowed open data, scores areas, and explains the reasons. It does not guarantee finds. This page is a waitlist. Planned plans are not for sale here.",
+            "featureList": [
+                "Area scores with reasons you can read",
+                "Planning from commercially allowed open data: geology, land status, and documented public sites",
+                "Topics: gems, gold, fossils, shark teeth, meteorites, metal detecting of modern items only, and storm and expedition planning",
+            ],
+            "provider": {"@id": SITE + "#business"},
+        },
+        "publisher": {"@id": SITE + "#business"},
+    }
+    return '<script type="application/ld+json">' + json.dumps(data, separators=(",", ":")) + "</script>"
+
+
+def scout_body():
+    # Delivery: static GitHub Pages cannot accept a form post. The form is a
+    # progressive enhancement over mailto. Submitting it opens the visitor's
+    # email app with the address filled in; they send the message to finish
+    # joining. A plain mailto link is on the page for when no app opens.
+    #
+    # Left to wire, if joins should be stored without the visitor's email app:
+    # a form endpoint that emails or saves the address only. FormSubmit
+    # (formsubmit.co) needs no account, but the first use must be confirmed
+    # from the company inbox, and a server-side activation attempt was blocked
+    # by Cloudflare. Do not add a checkout, prices, or extra fields.
+    script = (
+        "<script>\n"
+        "(function () {\n"
+        '  var form = document.getElementById("waitlist-form");\n'
+        "  if (!form) return;\n"
+        '  form.addEventListener("submit", function (event) {\n'
+        "    event.preventDefault();\n"
+        "    if (!form.reportValidity()) return;\n"
+        '    var input = document.getElementById("waitlist-email");\n'
+        '    var email = (input && input.value || "").trim();\n'
+        '    var body = "Please add this address to the Discovery Scout waitlist:\\n" + email + "\\n\\nJoining is free. This is not a purchase.";\n'
+        '    var note = document.getElementById("joined");\n'
+        "    if (note) {\n"
+        "      note.hidden = false;\n"
+        "      note.focus();\n"
+        "    }\n"
+        '    window.location.href = "mailto:' + EMAIL + '?subject=" + encodeURIComponent("Discovery Scout waitlist") + "&body=" + encodeURIComponent(body);\n'
+        "  });\n"
+        "})();\n"
+        "</script>"
+    )
+    return f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Discovery</span> Scout</h1><p>A planning tool for legal outdoor hunts. <a href="#waitlist">Join the waitlist</a>. Nothing on this page is for sale.</p></div></div>
+<section class="approach"><div class="wrap">
+<article class="card product">{ic("scout")}
+<span class="caption">Planning tool</span>
+<h2>Plan the hunt. Read the reasons.</h2>
+<p>Discovery Scout helps people plan legal outdoor hunts using commercially allowed open data: geology, land status, and documented public sites. It scores areas and explains the reasons for each score. It is a planning tool, not a guarantee of finds.</p>
+<p>Planning topics are gems, gold, fossils, shark teeth, meteorites, metal detecting of modern items only, and storm and expedition planning.</p>
+<ul>
+<li>Scores come with reasons you can read</li>
+<li>The data is commercially allowed open data</li>
+<li>Metal detecting is limited to modern items</li>
+<li>It is not for archaeological or artifact hunting, and it is not a way to take cultural artifacts</li>
+<li>It does not give permission to enter land, dig, or collect. Site rules and collecting laws are yours to check before you go</li>
+</ul>
+<p>Loving Grace Technologies is a technology company in Grenada, Mississippi. This page is the public waitlist. It is not a login, and it does not open the working product.</p>
+</article>
+</div></section>
+<section class="textured-tile approach" id="plans"><div class="wrap">
+<p class="caption">Not offered for purchase here</p>
+<h2>Planned plans</h2><div class="rule"></div>
+<p class="lead">These are names for plans we expect to offer later. They are not offered for purchase on this page. There is no checkout and no payment.</p>
+<div class="grid plans">
+<article class="card"><p class="caption">Coming soon</p><h3>Free</h3><p>A planned way to plan a legal hunt with open data and read the reasons behind each area score.</p></article>
+<article class="card"><p class="caption">Coming soon</p><h3>Done-for-you</h3><p>A planned option where a trip plan is prepared for you. You still decide whether to go, and you book any dig site or operator yourself.</p></article>
+<article class="card"><p class="caption">Coming soon</p><h3>Concierge planning</h3><p>Planning help for a trip you want to take. You book the dig site or operator directly. Loving Grace Technologies does not book the trip.</p></article>
+<article class="card"><p class="caption">Coming soon</p><h3>Scout and Pro</h3><p>Planned subscription tiers for ongoing planning access. They are not open for purchase on this page.</p></article>
+</div>
+</div></section>
+<section class="approach" id="waitlist" aria-labelledby="waitlist-title"><div class="wrap">
+<h2 id="waitlist-title">Join the waitlist</h2><div class="rule"></div>
+<div class="card waitlist">
+<p id="joined" class="joined" tabindex="-1" role="status" hidden>Your email app should open with the waitlist message filled in. Send that message to finish joining. We will use the address only to write when there is news. Joining is free, and it is not a purchase. If no email app opens, use the link under the form.</p>
+<p id="waitlist-help">Leave an email address and send it to us. We will write when there is news about Discovery Scout, and we use the address only for that. Joining the waitlist is free. This page does not take payment.</p>
+<form id="waitlist-form" action="mailto:{EMAIL}?subject=Discovery%20Scout%20waitlist" method="post" enctype="text/plain">
+<div class="field">
+<label for="waitlist-email">Email</label>
+<input id="waitlist-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="254" required aria-describedby="waitlist-help">
+</div>
+<button class="btn primary" type="submit">Join the waitlist</button>
+</form>
+<p class="hint">If the form does not open an email app, email <a href="mailto:{EMAIL}?subject=Discovery%20Scout%20waitlist">{EMAIL}</a> with the subject &ldquo;Discovery Scout waitlist&rdquo;.</p>
+<p class="hint">Loving Grace Technologies, LLC. Grenada, Mississippi, United States.</p>
+</div>
+{script}
+</div></section>'''
+
 
 P = {}
 
@@ -206,6 +316,7 @@ P["index.html"] = (
 <div class="card">{ic("agent")}<h3>Loving Grace Agent</h3><p>A self-hosted AI assistant with memory, skills, and computer use. It always asks before sending, paying, or deleting.</p><hr><a class="more" href="products.html#agent">Learn more about Loving Grace Agent</a></div>
 <div class="card">{ic("seat")}<h3>Second Seat</h3><p>It turns what a small-business owner agrees to in a meeting into PayPal payments. AI drafts each payment, then a separate checker compares it against the owner&rsquo;s own words and blocks anything that doesn&rsquo;t match, like a changed bank account or an inflated amount. Nothing is paid until the owner approves it with one tap, and every payment keeps the quote it came from as its receipt.</p><hr><a class="more" href="https://youtu.be/1VJKjwJzRN0">Watch the demo</a></div>
 <div class="card">{ic("music")}<h3>AI Music &amp; Studio Tools</h3><p>AI music and studio tools for blues and soul recordings, made to support the artist&rsquo;s own voice.</p><hr><a class="more" href="products.html#music">Learn more about AI Music &amp; Studio Tools</a></div>
+<div class="card">{ic("scout")}<h3>Discovery Scout</h3><p>A planning tool for legal outdoor hunts. It uses commercially allowed open data, scores areas, and explains why. It does not guarantee a find. The public page is a waitlist, with nothing to buy.</p><hr><a class="more" href="discovery-scout.html">Learn more about Discovery Scout</a></div>
 </div>
 </div></section>
 
@@ -258,7 +369,7 @@ P["services.html"] = (
 
 P["products.html"] = (
     "Work | Loving Grace Technologies",
-    "Products and selected projects from Loving Grace Technologies, including Second Seat, packout software, and website builds.",
+    "Products and selected projects from Loving Grace Technologies, including Discovery Scout, Second Seat, packout software, and website builds.",
     f'''
 <div class="page-head"><div class="wrap"><h1><span class="gold">Our</span> Work</h1><p>Products we are building, and selected websites and software already in the world.</p></div></div>
 <section class="approach"><div class="wrap">
@@ -279,6 +390,13 @@ P["products.html"] = (
 <span class="caption">For blues and soul recordings</span>
 <h2>AI Music &amp; Studio Tools</h2>
 <p>Tools that help artists and producers work with their recordings, including stem separation, editing, and AI-assisted music creation. Built to support the artist&rsquo;s voice, and used only with the artist&rsquo;s permission.</p>
+</article>
+<article class="card product" id="discovery-scout">{ic("scout")}
+<span class="caption">Waitlist</span>
+<h2>Discovery Scout</h2>
+<p>A planning tool for legal outdoor hunts. It uses commercially allowed open data (geology, land status, and documented public sites), scores areas, and explains the reasons. It covers gems, gold, fossils, shark teeth, meteorites, metal detecting of modern items only, and storm and expedition planning. It does not guarantee a find, and it is not for archaeological or artifact hunting.</p>
+<p>The public page is a waitlist. Planned plan names are described there as coming soon. Nothing is for sale on that page, and this site does not offer a trial login or a checkout.</p>
+<p><a class="more" href="discovery-scout.html">Learn more about Discovery Scout</a></p>
 </article>
 <article class="card product" id="presence">{ic("spark")}
 <span class="caption">Research and development</span>
@@ -342,12 +460,13 @@ P["privacy.html"] = (
     "Privacy | Loving Grace Technologies",
     "Privacy policy for the Loving Grace Technologies website.",
     f'''
-<div class="page-head"><div class="wrap"><h1><span class="gold">Privacy</span> Policy</h1><p>Last updated November 10, 2026</p></div></div>
+<div class="page-head"><div class="wrap"><h1><span class="gold">Privacy</span> Policy</h1><p>Last updated November 12, 2026</p></div></div>
 <section><div class="wrap prose">
 <p>This policy covers the public Loving Grace Technologies website, run by Loving Grace Technologies, LLC and hosted on GitHub Pages.</p>
 <h2>What We Collect</h2>
-<p>This website has no sign-up forms, no advertising, and no analytics or tracking cookies. We do not sell personal information.</p>
-<p>If you email us, we receive your email address and whatever you choose to include, and we use it only to reply to you.</p>
+<p>This website has no advertising and no analytics or tracking cookies. We do not sell personal information.</p>
+<p>The Discovery Scout page has an email-only waitlist. Joining opens an email to us, or you can email us directly. If you send that message, we receive the address you include and use it only to tell you about Discovery Scout. We do not ask for a password, payment card, government identification, or home address. This site does not run a separate signup database.</p>
+<p>If you email us, we receive your email address and whatever you choose to include, and we use it only to reply to you and, if you asked to join the waitlist, to keep that request.</p>
 <h2>Hosting and Embedded Content</h2>
 <p>Our hosting provider may keep standard server logs, such as IP address and browser type, to deliver and secure the site. Fonts are served by Google Fonts. The Work page embeds a YouTube video in privacy-enhanced mode; YouTube&rsquo;s own privacy policy applies when you play it.</p>
 <h2>Our Products</h2>
@@ -357,6 +476,12 @@ P["privacy.html"] = (
 </div></section>''',
 )
 
+P["discovery-scout.html"] = (
+    "Discovery Scout | Loving Grace Technologies",
+    "Plan legal outdoor hunts with Discovery Scout. It scores areas from commercially allowed open data and explains why. Waitlist only. Nothing to buy here.",
+    scout_body(),
+)
+
 P["404.html"] = (
     "Page not found | Loving Grace Technologies",
     "Page not found.",
@@ -364,11 +489,12 @@ P["404.html"] = (
 )
 
 from pathlib import Path
+EXTRA_LD = {"discovery-scout.html": discovery_ld()}
 for fn, (t, d, b) in P.items():
-    Path(fn).write_text(page(fn, t, d, b), encoding="utf-8")
+    Path(fn).write_text(page(fn, t, d, b, EXTRA_LD.get(fn, "")), encoding="utf-8")
 
 # Sitemap of public pages (not the 404 page)
-SITEMAP_PAGES = ["index.html", "services.html", "products.html", "about.html", "contact.html", "privacy.html"]
+SITEMAP_PAGES = ["index.html", "services.html", "products.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
 urls = []
 for fn in SITEMAP_PAGES:
     loc = SITE if fn == "index.html" else SITE + fn

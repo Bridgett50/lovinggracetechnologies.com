@@ -198,6 +198,28 @@ footer.site p{margin:10px 0 0}
   .gallery figure:last-child{grid-column:2;max-width:none;justify-self:stretch}
 }
 
+/* Page-head links sit on the dark band */
+.page-head a{color:var(--pearl)}
+
+/* Discovery Scout planned-plan grid and waitlist form */
+.plans{grid-template-columns:1fr}
+.waitlist{max-width:40rem}
+.waitlist form{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-top:18px}
+.waitlist .field{display:flex;flex-direction:column;gap:6px;width:100%;max-width:28rem}
+.waitlist label{font-family:var(--font-sub);font-weight:600;font-size:15px}
+.waitlist input[type=email]{font:inherit;color:var(--text);background:var(--pearl);border:1px solid var(--silver-4);border-radius:12px;padding:12px 14px;width:100%;min-height:44px}
+.waitlist input[type=email]:user-invalid{border-color:var(--bronze)}
+.waitlist .hint{margin:14px 0 0;font-size:15px;max-width:40rem;overflow-wrap:anywhere}
+.joined{margin:0 0 16px;padding:14px 16px;border-radius:12px;background:var(--gold-1);color:var(--text);border:1px solid var(--gold-4)}
+button.btn{cursor:pointer;appearance:none;-webkit-appearance:none}
+@media (min-width:700px){
+  .plans{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .waitlist .field,.waitlist input[type=email]{max-width:none}
+  .waitlist .btn{width:100%;text-align:center}
+}
+
 /* Our Name */
 .name-story{max-width:780px}
 .name-story .caption{display:block;margin-bottom:10px}
