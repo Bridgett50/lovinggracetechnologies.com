@@ -304,7 +304,7 @@ TERMS_APPROVED = False  # the terms and refund wording below is a draft until Br
 # an empty link shows "Not open yet" and no button.
 SQUARE_LINKS = {
     "dfy": "",            # Done-for-you plan, $19 one-time payment link
-    "concierge": "",      # Concierge planning, $49 one-time payment link
+    "concierge": "",      # Concierge, $49 per trip, one-time payment link
     "scout_month": "",    # Scout, $9 monthly subscription checkout link
     "scout_year": "",     # Scout, $79 yearly subscription checkout link
     "pro_month": "",      # Pro, $19 monthly subscription checkout link
@@ -330,14 +330,14 @@ DS_PLANS = [
                   "Weather forecast and links to lodging and the site's own booking page",
                   "A printable trip packet"],
      "links": [("dfy", "Buy a $19 plan")]},
-    {"id": "concierge", "name": "Concierge planning", "price": "$49", "per": "per trip", "kind": "one-time",
+    {"id": "concierge", "name": "Concierge", "price": "$49", "per": "per trip", "kind": "one-time",
      "blurb": "Planning help from a person for one trip.",
      "features": ["Everything in the Done-for-you plan",
                   "We check the site's posted hours, prices, and rules shortly before your trip",
                   "Help getting ready to book: what to book, where, and when",
                   "Follow-up help with a permission letter for private land",
                   "You book and pay the dig site, guide, or lodging yourself. We do not book trips or take payment for anyone else"],
-     "links": [("concierge", "Buy concierge planning, $49")]},
+     "links": [("concierge", "Buy Concierge, $49")]},
     {"id": "scout", "name": "Scout", "price": "$9", "per": "a month, or $79 a year", "kind": "subscription",
      "blurb": "For regular weekend hunters.",
      "features": ["Everything in Free", "3 done-for-you plans a month", "Saved spots and trip history"],
@@ -355,7 +355,7 @@ DS_PREVIEW_BANNER = (
     '</div></div>'
 )
 TERMS_DRAFT_NOTE = (
-    '<p class="ds-draft"><strong>Draft for approval.</strong> This wording has not been approved and is not in effect.</p>'
+    '<p class="ds-draft"><strong>Draft for approval.</strong> This wording has not been approved by Loving Grace Technologies and is not in effect. Refund time windows and several refund rules are still draft.</p>'
 )
 
 def _ds_buttons(plan):
@@ -403,7 +403,7 @@ def plans_body():
 <div class="page-head"><div class="wrap"><h1><span class="gold">Discovery Scout</span> plans</h1><p>Online planning software for legal outdoor hunts, with optional planning help from a person. It does not guarantee a find.</p></div></div>
 <section class="approach"><div class="wrap">
 <p class="lead">Pick the plan that fits your trip. Payments go through Square&rsquo;s secure checkout for Loving Grace Technologies, LLC. Our site never sees your card number. Prices are in U.S. dollars.</p>
-<div class="card ds-agree"><label><input type="checkbox" id="ds-agree"><span>I have read the <a href="discovery-scout-terms.html">Terms of Sale and Refund Policy</a>. I understand Discovery Scout is planning software and planning help, not a travel agency, and it does not guarantee any find.</span></label></div>
+<div class="card ds-agree"><label><input type="checkbox" id="ds-agree"><span>I have read the <a href="terms.html">Terms of Use</a> and <a href="refund-policy.html">Refund Policy</a>. I understand Discovery Scout is planning software and planning help, not a travel agency, and it does not guarantee any find.</span></label></div>
 <div class="grid ds-grid">
 {"".join(cards)}
 </div>
@@ -421,50 +421,27 @@ def plans_body():
 </div></section>
 {script}'''
 
-def terms_body():
+def _legal(body):
+    from ds_legal import TERMS_BODY, REFUND_BODY  # noqa: F401
     banner = "" if CHECKOUT_OPEN else DS_PREVIEW_BANNER
     draft = "" if TERMS_APPROVED else TERMS_DRAFT_NOTE
-    return f'''{banner}
-<div class="page-head"><div class="wrap"><h1><span class="gold">Terms of Sale</span> and Refund Policy</h1><p>Discovery Scout by Loving Grace Technologies, LLC</p></div></div>
-<section><div class="wrap prose">
-{draft}
-<h2>Who you are buying from</h2>
-<p>Discovery Scout is sold by Loving Grace Technologies, LLC, Grenada, Mississippi, United States. Payments are processed by Square for Loving Grace Technologies, LLC. Contact: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
-<h2>What Discovery Scout is</h2>
-<p>Discovery Scout is online planning software for legal outdoor hunts, such as gems, gold panning, fossils, shark teeth, meteorites, and metal detecting for modern items. Concierge planning is planning help from a person. Area scores describe geology and documented public sites. They are not a promise or a chance of finding anything.</p>
-<h2>What Discovery Scout is not</h2>
-<ul>
-<li>It is not a travel agency. We do not book, sell, or resell tickets, tours, permits, lodging, transportation, or gear.</li>
-<li>Dig sites, guides, parks, hotels, and stores are independent. You book and pay them directly, on their terms and refund rules. Loving Grace Technologies does not charge anything on their behalf and is not responsible for their prices, closures, or services.</li>
-<li>It does not give permission to enter land, dig, or collect. You are responsible for following site rules, landowner wishes, and collecting laws.</li>
-<li>It is not for archaeological or artifact hunting, or for taking cultural artifacts.</li>
-</ul>
-<h2>Plans and prices</h2>
-<ul>
-<li>Done-for-you plan: $19 per hunt plan, paid once.</li>
-<li>Concierge planning: $49 per trip, paid once.</li>
-<li>Scout: $9 a month or $79 a year, renews automatically until you cancel.</li>
-<li>Pro: $19 a month or $149 a year, renews automatically until you cancel.</li>
-</ul>
-<p>Prices are in U.S. dollars. Any tax shown at checkout is added by Square.</p>
-<h2>How a plan is delivered</h2>
-<p>After you pay, we email you at the address you gave at checkout to collect your trip details (what you want to look for, where you are starting, your dates, and your party size). We deliver your plan by email within 3 business days of receiving those details.</p>
-<h2>Subscriptions and cancelling</h2>
-<p>Scout and Pro renew at the end of each month or year at the price you signed up for. You can cancel at any time with the manage-subscription link in your Square receipt email, or by emailing us. Cancelling stops the next renewal. You keep access until the end of the period you already paid for.</p>
-<h2>Refund policy</h2>
-<ul>
-<li><strong>Before we start:</strong> if you ask before we begin your Done-for-you or Concierge plan, we refund the full amount.</li>
-<li><strong>After delivery:</strong> if your plan has a factual mistake we made (for example, a wrong site, a closed site we listed as open, or a missing legal checklist), tell us within 14 days of delivery. We will correct it, or refund you if we cannot.</li>
-<li><strong>Subscriptions:</strong> if you ask within 7 days of your first payment and have not received a done-for-you plan, we refund that first payment. Renewals are not refunded for partial periods, but cancelling stops the next charge.</li>
-<li><strong>Not refundable by us:</strong> weather, site closures, finding nothing, or anything you paid to a dig site, guide, hotel, or store. Ask that business about its own refund rules.</li>
-<li>Refunds go back to the card you paid with, through Square. Email <a href="mailto:{EMAIL}?subject=Discovery%20Scout%20refund">{EMAIL}</a> with your receipt.</li>
-</ul>
-<h2>Your safety</h2>
-<p>Outdoor hunts can involve heat, water, weather, and rough ground. Plans are a starting point. Use your own judgment, follow posted rules, and change or cancel your trip if conditions are unsafe.</p>
-<h2>Changes</h2>
-<p>If we change these terms, the new version applies to purchases made after we post it. The date at the top of this page shows the latest version.</p>
-<p><a class="more" href="discovery-scout-plans.html">Back to plans</a></p>
-</div></section>'''
+    # Processor is chosen: Square, through the Loving Grace Technologies, LLC account.
+    body = body.replace("Payments are handled by a third-party payment processor.",
+                        "Payments are handled by Square for Loving Grace Technologies, LLC.")
+    # Put the draft note just under the page heading.
+    head_end = body.find("</div></div>")
+    if draft and head_end != -1:
+        head_end += len("</div></div>")
+        body = body[:head_end] + '\n<section style="padding-bottom:0"><div class="wrap prose">' + draft + "</div></section>" + body[head_end:]
+    return banner + "\n" + body
+
+def terms_body():
+    from ds_legal import TERMS_BODY
+    return _legal(TERMS_BODY)
+
+def refund_body():
+    from ds_legal import REFUND_BODY
+    return _legal(REFUND_BODY)
 
 def thanks_body():
     banner = "" if CHECKOUT_OPEN else DS_PREVIEW_BANNER
@@ -697,20 +674,25 @@ P["404.html"] = (
 
 P["discovery-scout-plans.html"] = (
     "Discovery Scout plans | Loving Grace Technologies",
-    "Discovery Scout plans and prices: Free, Done-for-you $19, Concierge planning $49, Scout $9 a month or $79 a year, Pro $19 a month or $149 a year. Planning software, not a travel agency.",
+    "Discovery Scout plans and prices: Free, Done-for-you $19, Concierge $49 per trip, Scout $9 a month or $79 a year, Pro $19 a month or $149 a year. Planning software, not a travel agency.",
     plans_body(),
 )
-P["discovery-scout-terms.html"] = (
-    "Discovery Scout terms and refunds | Loving Grace Technologies",
-    "Terms of sale and refund policy for Discovery Scout by Loving Grace Technologies, LLC.",
+P["terms.html"] = (
+    "Discovery Scout Terms of Use | Loving Grace Technologies",
+    "Terms of Use for Discovery Scout by Loving Grace Technologies, LLC: plans, prices, payment, cancellation, and what Discovery Scout is and is not.",
     terms_body(),
+)
+P["refund-policy.html"] = (
+    "Discovery Scout Refund Policy | Loving Grace Technologies",
+    "Refund and cancellation policy for Discovery Scout by Loving Grace Technologies, LLC.",
+    refund_body(),
 )
 P["discovery-scout-thanks.html"] = (
     "Thank you | Discovery Scout",
     "Thank you for your Discovery Scout order.",
     thanks_body(),
 )
-CHECKOUT_PAGES = ["discovery-scout-plans.html", "discovery-scout-terms.html", "discovery-scout-thanks.html"]
+CHECKOUT_PAGES = ["discovery-scout-plans.html", "terms.html", "refund-policy.html", "discovery-scout-thanks.html"]
 
 if CHECKOUT_OPEN:
     if not TERMS_APPROVED:
@@ -742,6 +724,10 @@ if CHECKOUT_OPEN:
                       "<p>Plans and prices are on the <a href=\"discovery-scout-plans.html\">plans page</a>. Payments go through Square.</p>")
         P[fn] = (t, d, b)
 
+if CHECKOUT_OPEN:
+    PAGE_TMPL = PAGE_TMPL.replace('<a href="privacy.html">Privacy</a></nav>',
+                                  '<a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refund-policy.html">Refunds</a></nav>')
+
 from pathlib import Path
 _ds_ld = discovery_ld()
 if CHECKOUT_OPEN:
@@ -757,7 +743,7 @@ for fn, (t, d, b) in P.items():
 # Sitemap of public pages (not the 404 page)
 SITEMAP_PAGES = ["index.html", "services.html", "products.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
 if CHECKOUT_OPEN:
-    SITEMAP_PAGES += ["discovery-scout-plans.html", "discovery-scout-terms.html"]
+    SITEMAP_PAGES += ["discovery-scout-plans.html", "terms.html", "refund-policy.html"]
 urls = []
 for fn in SITEMAP_PAGES:
     loc = SITE if fn == "index.html" else SITE + fn
