@@ -51,7 +51,7 @@ def ldjson():
         "logo": SITE + "assets/emblem-512.png",
         "image": SITE + "assets/og-image.jpg",
         "email": EMAIL,
-        "description": "Human-centered technology for government and commercial teams: workflow and AI automation, systems planning, websites, training, research, and small business consulting.",
+        "description": "Human-centered technology for government and commercial teams: AI agents, AI assistant setup, workflow and AI automation, systems planning, websites, training, research, and small business consulting.",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Grenada",
@@ -63,9 +63,11 @@ def ldjson():
             {"@type": "Country", "name": "United States"},
         ],
         "knowsAbout": [
+            "AI agent development",
             "Workflow and AI automation",
             "Systems planning",
             "Website development",
+            "AI assistant setup and configuration",
             "AI implementation training",
             "Technical documentation",
             "Packout and contents inventory software",
@@ -464,14 +466,14 @@ P = {}
 
 P["index.html"] = (
     "Loving Grace Technologies | Where Consciousness Meets Technology",
-    "Human-centered technology for government and commercial teams: workflow and AI automation, systems planning, websites, training, research, and small business consulting. Grenada, Mississippi.",
+    "Human-centered technology for government and commercial teams: AI agents, AI assistant setup, workflow and AI automation, systems planning, websites, training, research, and small business consulting. Grenada, Mississippi.",
     f'''
 <section class="hero" aria-labelledby="hero-title" style="padding:0"><div class="wrap">
 <div class="divider" aria-hidden="true"></div>
 <div class="copy">
 <p class="eyebrow">Where Consciousness Meets Technology</p>
 <h1 id="hero-title"><span class="gold">Technologies that protect consciousness</span><span class="l2">and expand human potential.</span></h1>
-<p class="hero-lead">We design human-centered tools &mdash; workflow and AI systems, websites, training, research, and small business consulting &mdash; so people stay in charge of the work that matters.</p>
+<p class="hero-lead">We design human-centered tools &mdash; AI agents, AI assistant setup, workflow and AI systems, websites, training, research, and small business consulting &mdash; so people stay in charge of the work that matters.</p>
 <div class="btns"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a><a class="btn secondary" href="services.html">See our services</a></div>
 </div>
 <div class="art"><picture><source srcset="assets/hero-art.webp" type="image/webp"><img src="assets/hero-art.jpg" alt="" width="675" height="819"></picture></div>
@@ -482,9 +484,11 @@ P["index.html"] = (
 <h2>What we build and teach</h2><div class="rule"></div>
 <p class="lead">Loving Grace Technologies is an R&amp;D company that also takes on selected client work. We help teams plan, build, and document technology &mdash; and we train people to implement it well.</p>
 <div class="grid services-grid">
+<div class="card">{ic("agent")}<h3>AI agents</h3><p>We build AI agents that do defined work for your business: intake, drafting, research, follow-up, and checking, with a person approving anything that is sent, paid, or changed. Each agent is built around your workflow, your rules, and your records.</p></div>
 <div class="card">{ic("flow")}<h3>Workflow and AI automation</h3><p>AI-assisted workflow design so routine work is faster and easier to audit, with people still approving what matters.</p></div>
 <div class="card">{ic("sys")}<h3>Computer systems planning</h3><p>Practical planning for the systems a team already has and the ones it needs next, including requirements, tool selection, and implementation maps.</p></div>
 <div class="card">{ic("web")}<h3>Websites and web applications</h3><p>Design and build of websites and web apps for businesses and public-facing work, including custom product software.</p></div>
+<div class="card">{ic("spark")}<h3>AI assistant setup</h3><p>We set up and configure the AI assistant you already have, including Muse, Grok, ChatGPT, and Claude, so it knows your work, your files, and your preferences. You get a working assistant, tuned to you, without the hours of trial and error.</p></div>
 <div class="card">{ic("train")}<h3>AI implementation training</h3><p>We train teams to implement AI using systems we build, not off-the-shelf courses. Every engagement is custom-built for the work at hand.</p></div>
 <div class="card">{ic("docs")}<h3>Documentation, evidence, and research</h3><p>Technical documentation, evidence and governance support, and research strategy for government and commercial teams.</p></div>
 <div class="card">{ic("box")}<h3>Packout software</h3><p>Software for contents inventory, packout, storage, packback, condition documentation, and claims reporting.</p></div>
@@ -531,16 +535,20 @@ P["index.html"] = (
 
 P["services.html"] = (
     "Services | Loving Grace Technologies",
-    "Workflow and AI automation, systems planning, websites, AI implementation training, documentation, research, packout software, and small business consulting from Loving Grace Technologies.",
+    "AI agents, AI assistant setup, workflow and AI automation, systems planning, websites, AI implementation training, documentation, research, packout software, and small business consulting from Loving Grace Technologies.",
     f'''
 <div class="page-head"><div class="wrap"><h1><span class="gold">Our</span> Services</h1><p>An R&amp;D company that helps teams plan, build, document, and implement technology &mdash; with people still in charge.</p></div></div>
 <section class="approach"><div class="wrap">
+<article class="card product">{ic("agent")}<span class="caption">Custom builds</span><h2>AI agents</h2>
+<p>Custom AI agents that carry out defined work: intake, drafting, research, follow-up, and checking, with approval gates before anything is sent, paid, or changed. We design each agent around your workflow, your rules, and your records, with a control layer that keeps people in charge of the decisions that matter.</p></article>
 <article class="card product">{ic("flow")}<span class="caption">Automation</span><h2>Workflow and AI automation</h2>
 <p>AI-assisted workflow design, intake, prompt systems, and approval workflows for repetitive tasks. We help structure document-heavy operations into clear processes and practical automation plans, with human review built into decisions.</p></article>
 <article class="card product">{ic("sys")}<span class="caption">Planning</span><h2>Computer systems planning</h2>
 <p>Requirements, tool selection, integration maps, and implementation documentation. We plan for the systems a team already has and the ones it needs next.</p></article>
 <article class="card product">{ic("web")}<span class="caption">Web design and development</span><h2>Websites and web applications</h2>
 <p>Design and build of websites and web apps for businesses, artists, and public-facing work, as well as custom product software. Selected examples appear on our Work page as screenshots.</p></article>
+<article class="card product">{ic("spark")}<span class="caption">Done for you</span><h2>AI assistant setup</h2>
+<p>Setup and configuration of the AI assistant you already use, including Muse, Grok, ChatGPT, and Claude. We connect it to your work, your files, and your preferences, set its instructions and boundaries, and show you how to use it well, so it behaves the way you want from the first day.</p></article>
 <article class="card product">{ic("train")}<span class="caption">Custom training</span><h2>AI implementation training</h2>
 <p>We train teams to implement AI using systems we build, not off-the-shelf courses. Curriculum and sessions are custom-built around the tools, workflows, and approvals that team will actually use.</p></article>
 <article class="card product">{ic("docs")}<span class="caption">Writing and research</span><h2>Documentation, evidence, and research strategy</h2>
@@ -605,7 +613,7 @@ P["about.html"] = (
 <section><div class="wrap prose">
 <div class="wordmark-banner"><picture><source srcset="assets/logo-primary-stacked.webp" type="image/webp"><img src="assets/logo-primary-stacked.jpg" alt="Loving Grace Technologies logo" width="900" height="788"></picture></div>
 <p>Loving Grace Technologies is a Mississippi company building human-centered deep tech. We combine scientific rigor with human wisdom: tools that help people work, document, and decide with more clarity, and with compassion in the design.</p>
-<p>We are an R&amp;D company. We also take on selected client work &mdash; systems planning, websites, custom software, AI implementation training, and small business consulting &mdash; always with people in charge of the decisions that matter.</p>
+<p>We are an R&amp;D company. We also take on selected client work &mdash; AI agents, AI assistant setup, systems planning, websites, custom software, AI implementation training, and small business consulting &mdash; always with people in charge of the decisions that matter.</p>
 
 <div class="name-story">
 <p class="caption">Our Name</p>
@@ -631,10 +639,10 @@ P["contact.html"] = (
     "Contact | Loving Grace Technologies",
     "Contact Loving Grace Technologies by email.",
     f'''
-<div class="page-head"><div class="wrap"><h1><span class="gold">Start a</span> conversation</h1><p>Tell us about the system, site, training, or consulting you need.</p></div></div>
+<div class="page-head"><div class="wrap"><h1><span class="gold">Start a</span> conversation</h1><p>Tell us about the AI agent, AI assistant setup, system, site, training, or consulting you need.</p></div></div>
 <section><div class="wrap prose">
 <div class="card">
-<p>For partnerships, pilots, website or software work, training, small business consulting, press, or government and research collaboration, email us and we&rsquo;ll get back to you.</p>
+<p>For partnerships, pilots, AI agents, AI assistant setup, website or software work, training, small business consulting, press, or government and research collaboration, email us and we&rsquo;ll get back to you.</p>
 <p style="margin:22px 0"><a class="btn primary" href="mailto:{EMAIL}">{EMAIL}</a></p>
 <p>Loving Grace Technologies, LLC<br>Grenada, Mississippi, United States</p>
 </div>
