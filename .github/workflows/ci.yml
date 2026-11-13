@@ -1,0 +1,137 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  site:
+    name: Build and check
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.x"
+
+      - name: Set up Java
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Build site
+        shell: bash
+        run: |
+          if [[ ! -f build.py ]]; then
+            echo "build.py is not present; skipping the site build."
+            exit 0
+          fi
+          # build.py and README.md both document the command as: python3 build.py
+          python3 build.py
+
+      - name: Validate HTML
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL -o "$RUNNER_TEMP/vnu.jar" \
+            https://github.com/validator/validator/releases/download/latest/vnu.jar
+          java -jar "$RUNNER_TEMP/vnu.jar" --version
+          set +e
+          java -jar "$RUNNER_TEMP/vnu.jar" \
+            --errors-only \
+            --also-check-svg \
+            --asciiquotes \
+            --stdout \
+            ./*.html > "$RUNNER_TEMP/vnu.txt"
+          status=$?
+          set -e
+          if [[ "$status" -eq 0 ]]; then
+            echo "HTML validity check passed."
+            exit 0
+          fi
+          cat "$RUNNER_TEMP/vnu.txt"
+          # The footer wordmark is a div with aria-label and no non-generic role.
+          # The Nu Html Checker reports that on every page. It is existing markup,
+          # so this job warns on that message and still fails on every other error.
+          other=()
+          known=()
+          while IFS= read -r line; do
+            if [[ "$line" == *': error: '* ]]; then
+              if [[ "$line" == *'aria-label'* && "$line" == *'must not be specified on any "div" element'* ]]; then
+                known+=("$line")
+              else
+                other+=("$line")
+              fi
+            fi
+          done < "$RUNNER_TEMP/vnu.txt"
+          if ((${#other[@]} > 0)); then
+            echo "HTML validity check failed."
+            printf '%s\n' "${other[@]}"
+            exit 1
+          fi
+          if ((${#known[@]} == 0)); then
+            echo "Nu Html Checker exited ${status} without a parsed error."
+            exit "$status"
+          fi
+          for line in "${known[@]}"; do
+            echo "::warning title=Pre-existing HTML validity finding::${line}"
+          done
+          echo "Only the pre-existing footer wordmark aria-label finding was reported. Any other HTML error fails this job."
+
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@v2.9.0
+        with:
+          fail: true
+          output: lychee/internal.md
+          args: >-
+            --offline
+            --no-progress
+            --include-fragments
+            --verbose
+            '*.html'
+            assets/style.css
+
+      - name: Check external links
+        id: external
+        uses: lycheeverse/lychee-action@v2.9.0
+        with:
+          fail: false
+          jobSummary: false
+          output: lychee/external.md
+          args: >-
+            --no-progress
+            --verbose
+            --scheme https
+            '*.html'
+
+      - name: Report external link warnings
+        if: steps.external.outputs.exit_code != '0'
+        shell: bash
+        run: |
+          set -euo pipefail
+          code="${{ steps.external.outputs.exit_code }}"
+          echo "lychee exit code: ${code}"
+          if [[ -f lychee/external.md ]]; then
+            cat lychee/external.md
+          fi
+          # lychee exits 2 when links fail. Other codes mean the checker itself failed.
+          if [[ "$code" == "2" ]]; then
+            echo "::warning title=External links::External link check found broken links. Internal links are checked separately and must pass."
+            exit 0
+          fi
+          echo "External link checker failed to run (exit ${code})."
+          exit 1
