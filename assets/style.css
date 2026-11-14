@@ -235,3 +235,13 @@ button.btn{cursor:pointer;appearance:none;-webkit-appearance:none}
   header.site .wrap{justify-content:center}
   .brand img{height:64px}
 }
+
+/* Contact form */
+.contact-form{margin-top:20px}
+.contact-form .field{display:flex;flex-direction:column;gap:6px;width:100%;max-width:36rem;margin:0 0 16px}
+.contact-form label{font-family:var(--font-sub);font-weight:600;font-size:15px}
+.contact-form input[type=text],.contact-form input[type=email],.contact-form select,.contact-form textarea{font:inherit;color:var(--text);background:var(--pearl);border:1px solid var(--silver-4);border-radius:12px;padding:12px 14px;width:100%;min-height:44px}
+.contact-form textarea{min-height:140px;resize:vertical}
+.contact-form input:user-invalid,.contact-form select:user-invalid,.contact-form textarea:user-invalid{border-color:var(--bronze)}
+.contact-form .sent{margin:0 0 16px;padding:14px 16px;border-radius:12px;background:var(--gold-1);color:var(--text);border:1px solid var(--gold-4)}
+@media (max-width:640px){.contact-form .field{max-width:none}.contact-form .btn{width:100%;text-align:center}}

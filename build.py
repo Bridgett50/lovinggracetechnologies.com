@@ -1,5 +1,11 @@
 # Generates the static pages. Run: python3 build.py
 EMAIL = "bridgettsanders50@lovinggracetechnologies.com"
+# Contact form delivery: FormSubmit (formsubmit.co), free, no account. The
+# action URL carries the destination address until activation returns the
+# random-string alias, which replaces the address here. First submission
+# triggers a confirmation email to the company inbox; submissions are held
+# and delivered after that confirmation is clicked.
+FORMSUBMIT_ACTION = "https://formsubmit.co/" + EMAIL
 # Canonical site is the custom domain. Apex A records point at GitHub Pages.
 # www is a CNAME to bridgett50.github.io; GitHub Pages redirects it to the apex.
 SITE = "https://lovinggracetechnologies.com/"
@@ -17,7 +23,7 @@ FONTS = (
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600&family=Montserrat:wght@500&family=Quicksand:wght@600&display=swap" rel="stylesheet">'
 )
-CSS_V = "20261112a"
+CSS_V = "20261114a"
 ICONS = {
     "agent": '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><path d="M12 10.6v2.8M10.6 12h2.8"/></svg>',
     "seat": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="11" rx="2"/><path d="M9 20h6M12 16v4"/><path d="M8.5 11.2l2.2 2 4.8-4.6"/></svg>',
@@ -999,30 +1005,90 @@ P["about.html"] = (
 </div></section>''',
 )
 
-P["contact.html"] = (
-    "Contact | Loving Grace Technologies",
-    "Contact Loving Grace Technologies by email.",
-    f'''
-<div class="page-head"><div class="wrap"><h1><span class="gold">Start a</span> conversation</h1><p>Tell us about the AI agent, AI assistant setup, system, site, training, or consulting you need.</p></div></div>
+def contact_body():
+    # Static GitHub Pages cannot accept a form post. The form posts to
+    # FormSubmit, which delivers the message to the company inbox by email.
+    # No account, no dashboard; the inbox is the record. The visitor is
+    # returned here with ?sent=1 and sees the confirmation note.
+    script = (
+        "<script>\n"
+        "(function () {\n"
+        "  if (window.location.search.indexOf('sent=1') < 0) return;\n"
+        '  var note = document.getElementById("contact-sent");\n'
+        "  if (note) {\n"
+        "    note.hidden = false;\n"
+        "    note.focus();\n"
+        "  }\n"
+        "  if (window.history && window.history.replaceState) {\n"
+        "    window.history.replaceState(null, '', 'contact.html');\n"
+        "  }\n"
+        "})();\n"
+        "</script>"
+    )
+    return f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Start a</span> conversation</h1><p>Tell us about the work, the research, or the partnership you have in mind. We read every message and reply by email.</p></div></div>
 <section><div class="wrap prose">
 <div class="card">
-<p>For partnerships, pilots, AI agents, AI assistant setup, website or software work, training, small business consulting, press, or government and research collaboration, email us and we&rsquo;ll get back to you.</p>
-<p style="margin:22px 0"><a class="btn primary" href="mailto:{EMAIL}">{EMAIL}</a></p>
-<p>Loving Grace Technologies, LLC<br>Grenada, Mississippi, United States</p>
+<p>Loving Grace Technologies is an independent deep-technology research and development company. We run an R&amp;D program in verified handoffs and approval-gated AI systems, and we take on selected client work: AI agents, AI assistant setup, websites, custom software, training, and small business consulting. Read about the research on our <a href="research.html">Research</a> page.</p>
+<p>Use the form for client work, research and development collaboration, partnerships, pilots, press, or government inquiries. Tell us what you are building or deciding, and we will reply by email.</p>
+<p id="contact-sent" class="sent" tabindex="-1" role="status" hidden>Your message was sent. Thank you. We will reply by email.</p>
+<form class="contact-form" action="{FORMSUBMIT_ACTION}" method="post">
+<div class="field">
+<label for="contact-name">Name</label>
+<input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" required>
 </div>
-</div></section>''',
+<div class="field">
+<label for="contact-email">Email</label>
+<input id="contact-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="254" required>
+</div>
+<div class="field">
+<label for="contact-topic">Topic</label>
+<select id="contact-topic" name="topic" required>
+<option value="" selected>Choose a topic</option>
+<option>AI agents or AI assistant setup</option>
+<option>Research and development</option>
+<option>Partnerships or pilots</option>
+<option>Website or software work</option>
+<option>Training or consulting</option>
+<option>Press</option>
+<option>Government or research collaboration</option>
+<option>Something else</option>
+</select>
+</div>
+<div class="field">
+<label for="contact-message">Message</label>
+<textarea id="contact-message" name="message" rows="6" maxlength="2000" required></textarea>
+</div>
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input type="hidden" name="_subject" value="New message from the Loving Grace contact form">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://lovinggracetechnologies.com/contact.html?sent=1">
+<button class="btn primary" type="submit">Send message</button>
+</form>
+<p style="margin-top:22px">Loving Grace Technologies, LLC<br>Grenada, Mississippi, United States</p>
+</div>
+{script}
+</div></section>'''
+
+
+P["contact.html"] = (
+    "Contact | Loving Grace Technologies",
+    "Contact Loving Grace Technologies about client work or research and development. Send a message through the contact form.",
+    contact_body(),
 )
 
 P["privacy.html"] = (
     "Privacy | Loving Grace Technologies",
     "Privacy policy for the Loving Grace Technologies website.",
     f'''
-<div class="page-head"><div class="wrap"><h1><span class="gold">Privacy</span> Policy</h1><p>Last updated November 12, 2026</p></div></div>
+<div class="page-head"><div class="wrap"><h1><span class="gold">Privacy</span> Policy</h1><p>Last updated November 14, 2026</p></div></div>
 <section><div class="wrap prose">
 <p>This policy covers the public Loving Grace Technologies website, run by Loving Grace Technologies, LLC and hosted on GitHub Pages.</p>
 <h2>What We Collect</h2>
 <p>This website has no advertising and no analytics or tracking cookies. We do not sell personal information.</p>
 <p>The Discovery Scout page has an email-only waitlist. Joining opens an email to us, or you can email us directly. If you send that message, we receive the address you include and use it only to tell you about Discovery Scout. We do not ask for a password, payment card, government identification, or home address. This site does not run a separate signup database.</p>
+<p>The Contact page has a form. If you use it, the name, email address, topic, and message you enter are delivered to us by email through FormSubmit, the form service that carries the message. We use what you send only to reply to you. We do not ask for a password, payment card, government identification, or home address on the form.</p>
 <p>If you email us, we receive your email address and whatever you choose to include, and we use it only to reply to you and, if you asked to join the waitlist, to keep that request.</p>
 <h2>Hosting and Embedded Content</h2>
 <p>Our hosting provider may keep standard server logs, such as IP address and browser type, to deliver and secure the site. Fonts are served by Google Fonts. The Work page embeds a YouTube video in privacy-enhanced mode; YouTube&rsquo;s own privacy policy applies when you play it.</p>
