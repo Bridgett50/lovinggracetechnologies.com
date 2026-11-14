@@ -8,6 +8,7 @@ NAV = [
     ("services.html", "Services"),
     ("products.html", "Work"),
     ("articles.html", "Articles"),
+    ("research.html", "Research"),
     ("about.html", "About"),
     ("contact.html", "Contact"),
 ]
@@ -71,6 +72,8 @@ def ldjson():
             "AI assistant setup and configuration",
             "AI implementation training",
             "Technical documentation",
+            "Deep technology research and development",
+            "Verified authorization and custody systems",
             "Packout and contents inventory software",
             "Small business consulting",
         ],
@@ -132,7 +135,7 @@ PAGE_TMPL = """<!doctype html>
 <p class="sig" style="font-size:14px;margin-top:10px;max-width:28rem">Named for a simple idea: machines should watch over people with grace, and people should remain in charge.</p>
 </div>
 <div>
-<nav aria-label="Footer"><a href="services.html">Services</a><a href="products.html">Work</a><a href="articles.html">Articles</a><a href="discovery-scout.html">Discovery Scout</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav>
+<nav aria-label="Footer"><a href="services.html">Services</a><a href="products.html">Work</a><a href="articles.html">Articles</a><a href="research.html">Research</a><a href="discovery-scout.html">Discovery Scout</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav>
 <p><a href="mailto:{email}">{email}</a></p>
 <p>Grenada, Mississippi</p>
 </div>
@@ -208,6 +211,19 @@ def discovery_ld():
             ],
             "provider": {"@id": SITE + "#business"},
         },
+        "publisher": {"@id": SITE + "#business"},
+    }
+    return '<script type="application/ld+json">' + json.dumps(data, separators=(",", ":")) + "</script>"
+
+def research_ld():
+    import json
+    data = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": SITE + "research.html#webpage",
+        "url": SITE + "research.html",
+        "name": "Research and Development",
+        "description": "Loving Grace Technologies is an independent deep-technology research and development company. Lead program: Sovereign Mesh verified handoffs. Working systems: Second Seat approval research and self-hosted AI infrastructure.",
         "publisher": {"@id": SITE + "#business"},
     }
     return '<script type="application/ld+json">' + json.dumps(data, separators=(",", ":")) + "</script>"
@@ -335,7 +351,7 @@ for _k, _v in SQUARE_LINKS.items():
 
 DS_PLANS = [
     {"id": "free", "name": "Free", "price": "$0", "per": "", "kind": "free",
-     "blurb": "Spot reports and a basic hunt plan.",
+     "blurb": "Planned. Spot reports and a basic hunt plan.",
      "features": ["Spot reports: geology, area score with reasons, legal checklist, historic topo maps",
                   "Basic hunt plan: itinerary outline, gear list, nearest keep-what-you-find sites",
                   "A legal checklist for every hunt type"],
@@ -429,6 +445,7 @@ def plans_body():
 <h3>Good to know</h3>
 <ul>
 <li>Discovery Scout is a planning tool. Area scores describe geology and documented sites. They are not a chance of finding anything.</li>
+<li>The Free plan and the Scout and Pro subscriptions are planned and not open yet. The features listed for them are planned features.</li>
 <li>We deliver Done-for-you and Concierge plans by email within 3 business days after we have your trip details.</li>
 <li>We do not sell tickets, tours, permits, lodging, or gear. Anything you pay a dig site, guide, or hotel, you pay them directly, under their own terms. Loving Grace Technologies charges nothing on their behalf.</li>
 <li>A plan does not give permission to enter land, dig, or collect. Check the site rules and collecting laws before you go.</li>
@@ -465,7 +482,7 @@ def refund_body():
 def thanks_body():
     banner = "" if CHECKOUT_OPEN else DS_PREVIEW_BANNER
     return f'''{banner}
-<div class="page-head"><div class="wrap"><h1><span class="gold">Thank you</span></h1><p>Your Discovery Scout payment went through Square.</p></div></div>
+<div class="page-head"><div class="wrap"><h1><span class="gold">Thank you</span></h1><p>Thank you for your interest in Discovery Scout. If you completed your payment through Square, your payment receipt is your purchase confirmation. We will use your checkout contact information to request the trip details needed to prepare your plan.</p></div></div>
 <section><div class="wrap prose">
 <div class="card">
 <p>Square emails your receipt. We will email you at the address you gave at checkout to collect your trip details, then deliver your plan by email within 3 business days after we have those details.</p>
@@ -491,9 +508,9 @@ ARTICLES = [
         "desc": "What AI assistant setup means: instructions, boundaries, files, and preferences configured around your work, for Muse, Grok, ChatGPT, and Claude.",
         "caption": "AI assistant setup",
         "heading": "AI assistant setup, explained",
-        "summary": "What setup means: instructions, boundaries, files, and preferences configured around your work, so your assistant knows your business from the first day.",
+        "summary": "What setup means: configuring instructions, boundaries, available files, and preferences to help an AI assistant work with your business context.",
         "body": f'''
-<div class="page-head"><div class="wrap"><h1><span class="gold">AI assistant</span> setup, explained</h1><p>Your AI assistant should know your work before you start typing. Setup is what makes that true.</p></div></div>
+<div class="page-head"><div class="wrap"><h1><span class="gold">AI assistant</span> setup, explained</h1><p>AI assistant setup can give an assistant relevant business context, instructions, and boundaries before you begin working.</p></div></div>
 <section><div class="wrap prose">
 <p>An AI assistant out of the box knows nothing about your business. It can draft, answer, and research, but it does so generically, and you spend your time re-explaining context it should already have. Setup closes that gap. It connects the assistant to your work, your files, and your preferences, sets its instructions and boundaries, and leaves you with a working assistant tuned to you.</p>
 <h2>What setup covers</h2>
@@ -505,7 +522,7 @@ ARTICLES = [
 <li>A working session showing you how to use it well, fitted to your real work</li>
 </ul>
 <h2>What changes after setup</h2>
-<p>You stop re-explaining. The assistant drafts in your patterns, checks against your records, and asks before anything moves. The hours of trial and error go away because the tuning is done for you, fitted to your work, current on the day it is done.</p>
+<p>A configured assistant can use your provided instructions, available records, and preferences to reduce repeated explanations. Each configuration should be reviewed and tested for the intended tasks and authorization boundaries. The tuning is fitted to your work, current on the day it is done.</p>
 <h2>Setup is not a course</h2>
 <p>We do not sell recorded material. Setup is done for you, on your assistant, with your work. What you get is a configured assistant and the knowledge to use it, not a video to watch.</p>
 <div class="card"><p>If your assistant still feels generic, setup is the missing step.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
@@ -524,11 +541,11 @@ ARTICLES = [
 <section><div class="wrap prose">
 <p>Meetings end in commitments. An AI that turns meeting talk into payments must be checked against what was actually agreed, not trusted on its own reading of the conversation. If the same system drafts and approves, a misread becomes a payment.</p>
 <h2>Draft, check, approve</h2>
-<p>Second Seat works in three steps. First, AI drafts each payment from the meeting. Second, a separate checker compares the draft against the owner's own words and blocks anything that does not match, like a changed bank account or an inflated amount. Third, nothing is paid until the owner approves it with one tap. Every payment keeps the quote it came from as its receipt.</p>
+<p>In the verified PayPal sandbox demonstration, Second Seat used three steps: AI payment drafting, separate checking against the owner's words, and owner approval. The demonstration has not established production payment readiness. Every payment kept the quote it came from as its receipt.</p>
 <h2>What the demo proved</h2>
 <p>In a sandbox demonstration using PayPal's test environment, a fake bank-change request was blocked, and a clean $480 payment was approved and captured as completed. That was a demonstration, not a client payment, and it is described here as one. The point stands: the checker caught what the drafter missed, and the owner's tap was the step that released the money.</p>
 <h2>The principle travels</h2>
-<p>The same separation applies to any agent that acts on your behalf. Drafting and checking are different jobs, and approval belongs to a person. That is the standard we build to, in Second Seat and in every agent we build for clients.</p>
+<p>The same separation applies to any agent that acts on your behalf. Drafting and checking are different jobs, and approval belongs to a person. That is the design standard we intend to apply to custom agent projects, with each implementation requiring its own testing and verification.</p>
 <div class="card"><p>Watch the Second Seat demo, or start a conversation about approval gates for your own workflows.</p><p style="margin-top:14px"><a class="btn primary" href="https://youtu.be/1VJKjwJzRN0">Watch the demo</a></p><p style="margin-top:14px"><a class="more" href="mailto:{EMAIL}">Start a conversation</a></p></div>
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
@@ -546,7 +563,7 @@ ARTICLES = [
 <h2>What a general assistant does well</h2>
 <p>ChatGPT, Claude, Grok, and Muse handle varied, one-off work: drafting, questions, research, thinking through a problem. You drive, and it responds. Configured around your work, your files, and your preferences, a general assistant gets faster and more accurate, because it stops starting from zero every time.</p>
 <h2>What a custom agent does</h2>
-<p>A custom agent does defined, repeated work on your workflow, your rules, and your records: intake, drafting, research, follow-up, and checking. It runs the same job the same way every time, with approval gates before anything is sent, paid, or changed. It is built for one business, not for everyone.</p>
+<p>A custom agent does defined, repeated work on your workflow, your rules, and your records: intake, drafting, research, follow-up, and checking. It is designed to perform a defined, repeatable workflow with specified approval requirements. Its reliability and controls must be tested for that workflow. It is built for one business, not for everyone.</p>
 <h2>The deciding question</h2>
 <p>Is the work repeated, defined, and tied to your records? That points to an agent. Is it varied, one-off, and driven by judgment in the moment? A configured assistant may be all you need. The two often work together: an assistant for thinking work, and agents for repeated work, with a person approving what matters in both.</p>
 <div class="card"><p>Not sure which fits? Describe the work, and we will tell you plainly which one it is.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
@@ -568,9 +585,9 @@ ARTICLES = [
 <h2>2. Is it built around my workflow and records?</h2>
 <p>A good answer: yes, custom to your rules and your records. Be careful with one-size templates sold as custom work. If the builder cannot describe your workflow back to you, the build will not fit it.</p>
 <h2>3. What happens when the AI is wrong?</h2>
-<p>A good answer: a separate checker, evidence kept, and errors visible. The system should show its work, so a mistake is caught and corrected instead of silently becoming an action.</p>
+<p>A good answer: an independently checked workflow, retained evidence, visible errors, and documented testing of what the controls can and cannot catch.</p>
 <h2>4. Do I keep control of my files and infrastructure?</h2>
-<p>A good answer: self-hosted options exist, and your files stay on infrastructure you control. Ask what happens to your data and your system if you stop working with the builder.</p>
+<p>A good answer: ask whether self-hosted options are available, where your files will reside, who controls the infrastructure, and what happens to your data and system if the engagement ends.</p>
 <h2>5. Is training built for my team?</h2>
 <p>A good answer: sessions built around your tools, workflows, and approvals, not recorded generic material. Training should fit the team that receives it.</p>
 <h2>6. Can you show the work?</h2>
@@ -624,7 +641,7 @@ ARTICLES = [
 <li>Approval: a person approves anything sent, paid, or changed, with the evidence in front of them</li>
 </ul>
 <h2>What stays the same</h2>
-<p>Your tools stay. Your records stay. Your decisions stay yours. Automation changes how work moves between those things, not who is in charge of them. Document-heavy operations become clear processes with practical automation plans, and human review stays built into the decisions that matter.</p>
+<p>Where existing tools can support the necessary workflow and controls, automation may improve how work moves between them without requiring replacement. Your decisions stay yours. Document-heavy operations become clear processes with practical automation plans, and human review stays built into the decisions that matter.</p>
 <h2>How to start</h2>
 <p>Start with one workflow that repeats, takes too long, or breaks when one person is out. Map it as it actually runs today, then automate the movement between steps, keeping approval where it belongs. One working workflow teaches more than a plan for ten.</p>
 <div class="card"><p>Tell us about the workflow that eats your week. We will map it as it runs today and show what automation would change.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
@@ -644,7 +661,7 @@ ARTICLES = [
 <h2>1. The workflow, as it actually runs</h2>
 <p>Software built from a generic template fits generic work. A custom application starts from your workflow: the steps, the handoffs, the decisions, and the records. If the builder cannot describe your workflow back to you, the build will not fit it.</p>
 <h2>2. Approval gates</h2>
-<p>Anything the application sends, pays, or changes should pass a person first. Approval is a feature, not a policy document. In Second Seat, nothing is paid until the owner approves with one tap, and a separate checker verifies the draft first.</p>
+<p>Anything the application sends, pays, or changes should pass a person first. Approval is a feature, not a policy document. In Second Seat's PayPal sandbox demonstration, a separate checker reviewed the payment draft and the owner approved the test payment before execution.</p>
 <h2>3. Evidence kept with the work</h2>
 <p>Every action should keep what it came from. A payment keeps its quote as its receipt. A plan keeps its reasons. An inventory record keeps its condition notes. When the evidence travels with the work, disputes get shorter and audits get easier.</p>
 <h2>4. Reasons you can read</h2>
@@ -671,9 +688,9 @@ ARTICLES = [
 <h2>Keep the decision record</h2>
 <p>Decisions need a record of their own: who decided, what they decided, what evidence they saw, and when. Operating procedures, runbooks, evidence matrices, and decision records exist so that a decision made today can be understood and defended later. Automation should write these records as it goes, not leave them for someone to reconstruct.</p>
 <h2>Keep the checkpoint</h2>
-<p>Before anything documented moves money or property, a review checkpoint verifies it. That is the principle behind Sovereign Mesh, our verified-handoffs work: custody and authorization verified before the handoff, not assumed after it. Sovereign Mesh is a concept and an Encountering Innovation 2027 applicant, described here as what it is, not as a shipped product. The checkpoint principle applies to documentation automation today, with or without it.</p>
+<p>Before anything documented moves money or property, a review checkpoint verifies it. That is the principle behind Sovereign Mesh, our verified-handoffs work: custody and authorization verified before the handoff, not assumed after it. Sovereign Mesh is a concept and an Encountering Innovation 2027 applicant, described here as what it is, not as a shipped product. The checkpoint principle can be applied to documentation automation independently of Sovereign Mesh, with the controls tested for each implementation.</p>
 <p>Automate the drafting, the assembly, and the filing. Keep the source, the decision, and the checkpoint. That is documentation that holds up.</p>
-<div class="card"><p>If your documentation is growing faster than your ability to trust it, start with the trail. We build documentation systems that keep it.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
+<div class="card"><p>If your documentation is growing faster than your ability to trust it, start with the trail. We offer documentation-system design and development centered on retaining source records, decisions, and review checkpoints.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
@@ -687,7 +704,7 @@ ARTICLES = [
         "body": f'''
 <div class="page-head"><div class="wrap"><h1><span class="gold">How packout software</span> improves inventory documentation</h1><p>Contents work lives or dies on its documentation. Software earns its place when every item carries its own record from packout to packback.</p></div></div>
 <section><div class="wrap prose">
-<p>Contents inventory, packout, storage, packback, condition documentation, and claims reporting are one chain. When the chain lives in separate notes, photos, and spreadsheets, items get lost in the gaps. Packout software ties each item to one record that follows it through every stage.</p>
+<p>Contents inventory, packout, storage, packback, condition documentation, and claims reporting are one chain. When the chain lives in separate notes, photos, and spreadsheets, items get lost in the gaps. The packout software is designed to connect inventory, condition documentation, storage, packback, and claims reporting through item-level records.</p>
 <h2>What one record per item changes</h2>
 <ul>
 <li>Inventory: every item is logged once, with its identity and location, instead of being re-entered at each stage</li>
@@ -697,7 +714,7 @@ ARTICLES = [
 <li>Claims reporting: the report is assembled from the records kept along the way, not reconstructed after the fact</li>
 </ul>
 <h2>Built from claims work</h2>
-<p>Loving Grace Technologies builds and supports this software, shaped by over ten years of complex insurance claims work: multimillion-dollar property losses, estimating, coverage analysis, and negotiation. The software reflects what that work actually requires of a record: completeness at the time, condition tied to the item, and a report that holds up.</p>
+<p>Loving Grace Technologies builds this software, shaped by over ten years of complex insurance claims work: multimillion-dollar property losses, estimating, coverage analysis, and negotiation. The software reflects what that work actually requires of a record: completeness at the time, condition tied to the item, and a report that holds up.</p>
 <div class="card"><p>If your contents documentation depends on memory and retyping, one record per item is the fix. Ask us about the software.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
@@ -744,7 +761,7 @@ P["index.html"] = (
 <div class="card">{ic("flow")}<h3>Workflow and AI automation</h3><p>AI-assisted workflow design so routine work is faster and easier to audit, with people still approving what matters.</p></div>
 <div class="card">{ic("sys")}<h3>Computer systems planning</h3><p>Practical planning for the systems a team already has and the ones it needs next, including requirements, tool selection, and implementation maps.</p></div>
 <div class="card">{ic("web")}<h3>Websites and web applications</h3><p>Design and build of websites and web apps for businesses and public-facing work, including custom product software.</p></div>
-<div class="card">{ic("spark")}<h3>AI assistant setup</h3><p>We set up and configure the AI assistant you already have, including Muse, Grok, ChatGPT, and Claude, so it knows your work, your files, and your preferences. You get a working assistant, tuned to you, without the hours of trial and error.</p></div>
+<div class="card">{ic("spark")}<h3>AI assistant setup</h3><p>We set up and configure the AI assistant you already have, including Muse, Grok, ChatGPT, and Claude, tailored to your work, your files, and your preferences.</p></div>
 <div class="card">{ic("train")}<h3>AI implementation training</h3><p>We train teams to implement AI using systems we build, not off-the-shelf courses. Every engagement is custom-built for the work at hand.</p></div>
 <div class="card">{ic("docs")}<h3>Documentation, evidence, and research</h3><p>Technical documentation, evidence and governance support, and research strategy for government and commercial teams.</p></div>
 <div class="card">{ic("box")}<h3>Packout software</h3><p>Software for contents inventory, packout, storage, packback, condition documentation, and claims reporting.</p></div>
@@ -758,16 +775,28 @@ P["index.html"] = (
 <h2>What we are building</h2><div class="rule"></div>
 <p class="lead">Human-centered deep tech on one principle: our technology does real work, and people stay in charge of every decision that matters.</p>
 <div class="grid">
-<div class="card">{ic("agent")}<h3>Loving Grace Agent</h3><p>A self-hosted AI assistant with memory, skills, and computer use. It always asks before sending, paying, or deleting.</p><hr><a class="more" href="products.html#agent">Learn more about Loving Grace Agent</a></div>
-<div class="card">{ic("seat")}<h3>Second Seat</h3><p>It turns what a small-business owner agrees to in a meeting into PayPal payments. AI drafts each payment, then a separate checker compares it against the owner&rsquo;s own words and blocks anything that doesn&rsquo;t match, like a changed bank account or an inflated amount. Nothing is paid until the owner approves it with one tap, and every payment keeps the quote it came from as its receipt.</p><hr><a class="more" href="https://youtu.be/1VJKjwJzRN0">Watch the demo</a></div>
-<div class="card">{ic("music")}<h3>AI Music &amp; Studio Tools</h3><p>AI music and studio tools for blues and soul recordings, made to support the artist&rsquo;s own voice.</p><hr><a class="more" href="products.html#music">Learn more about AI Music &amp; Studio Tools</a></div>
+<div class="card">{ic("agent")}<h3>Loving Grace Agent</h3><p>An AI assistant in development, with memory, skills, and computer use, running on rented cloud infrastructure.</p><hr><a class="more" href="products.html#agent">Learn more about Loving Grace Agent</a></div>
+<div class="card">{ic("seat")}<h3>Second Seat</h3><p>Second Seat is an AI payment-approval research prototype. In a working PayPal sandbox demonstration, AI drafted each payment, a separate checker compared it against the owner&rsquo;s own words and blocked anything that didn&rsquo;t match, like a changed bank account or an inflated amount, and nothing was paid until the owner approved it with one tap. Every payment kept the quote it came from as its receipt.</p><hr><a class="more" href="https://youtu.be/1VJKjwJzRN0">Watch the demo</a></div>
+<div class="card">{ic("music")}<h3>AI Music &amp; Studio Tools</h3><p>Song remake and studio polish for blues and soul recordings: stem separation, cleanup, and mixing built around the artist&rsquo;s own voice.</p><hr><a class="more" href="products.html#music">Learn more about AI Music &amp; Studio Tools</a></div>
 <div class="card">{ic("scout")}<h3>Discovery Scout</h3><p>A planning tool for legal outdoor hunts. It uses commercially allowed open data, scores areas, and explains why. It does not guarantee a find. The public page is a waitlist, with nothing to buy.</p><hr><a class="more" href="discovery-scout.html">Learn more about Discovery Scout</a></div>
 </div>
 </div></section>
 
+<section class="approach" id="research"><div class="wrap">
+<p class="caption">Research and development</p>
+<h2>Deep tech, stated plainly</h2><div class="rule"></div>
+<p class="lead">Loving Grace Technologies is an independent deep-technology R&amp;D company. Our lead program is Sovereign Mesh, verified handoffs for custody and authorization, at Technology Readiness Level 2 with a controlled demonstration targeted for April 2027.</p>
+<div class="grid">
+<div class="card">{ic("scale")}<h3>Sovereign Mesh</h3><p>Independently verifiable authorization, custody transfers, and evidence integrity when connectivity is unreliable. Concept formulated, integrated system unproven, stated plainly.</p></div>
+<div class="card">{ic("seat")}<h3>Second Seat</h3><p>Approval research with a working PayPal sandbox demo: a separate checker blocked a simulated unauthorized bank-change request, and the owner approved a $480 test payment.</p></div>
+<div class="card">{ic("sys")}<h3>Independent AI infrastructure</h3><p>Self-hosted AI models on rented GPU infrastructure under our control. Member of NVIDIA Inception.</p></div>
+</div>
+<p style="margin-top:28px"><a class="more" href="research.html">Research and development</a></p>
+</div></section>
+
 <section class="approach" id="projects"><div class="wrap">
 <p class="caption">Selected projects</p>
-<h2>Sites and software we have built</h2><div class="rule"></div>
+<h2>Selected website and software projects</h2><div class="rule"></div>
 <p class="lead">Screenshots from recent website and software builds. These are examples of work, not live links.</p>
 {GALLERY}
 </div></section>
@@ -778,7 +807,7 @@ P["index.html"] = (
 <div class="grid">
 <div class="card">{ic("scale")}<h3>Ethical Intelligence</h3><p>Our tools draft and prepare. A person approves anything that is sent, paid, or deleted.</p></div>
 <div class="card">{ic("key")}<h3>Luminous Intelligence</h3><p>Clear, grounded AI that explains its work. Self-hosted options keep files and memory on infrastructure you control.</p></div>
-<div class="card">{ic("heart")}<h3>Human-Centered Innovation</h3><p>Refined, practical tools that small businesses, creators, government, and research teams can run and trust.</p></div>
+<div class="card">{ic("heart")}<h3>Human-Centered Innovation</h3><p>We develop human-centered technology for potential applications in small business, creative work, government, and research.</p></div>
 </div>
 </div></section>
 
@@ -808,7 +837,7 @@ P["services.html"] = (
 <div class="page-head"><div class="wrap"><h1><span class="gold">Our</span> Services</h1><p>An R&amp;D company that helps teams plan, build, document, and implement technology &mdash; with people still in charge.</p></div></div>
 <section class="approach"><div class="wrap">
 <article class="card product">{ic("agent")}<span class="caption">Custom builds</span><h2>AI agents</h2>
-<p>Custom AI agents that carry out defined work: intake, drafting, research, follow-up, and checking, with approval gates before anything is sent, paid, or changed. We design each agent around your workflow, your rules, and your records, with a control layer that keeps people in charge of the decisions that matter.</p></article>
+<p>We offer custom AI agent development for defined workflows, including intake, drafting, research, follow-up, and checking. Projects are designed with human-approval requirements and controls appropriate to the agreed scope, built around your workflow, your rules, and your records.</p></article>
 <article class="card product">{ic("flow")}<span class="caption">Automation</span><h2>Workflow and AI automation</h2>
 <p>AI-assisted workflow design, intake, prompt systems, and approval workflows for repetitive tasks. We help structure document-heavy operations into clear processes and practical automation plans, with human review built into decisions.</p></article>
 <article class="card product">{ic("sys")}<span class="caption">Planning</span><h2>Computer systems planning</h2>
@@ -816,13 +845,13 @@ P["services.html"] = (
 <article class="card product">{ic("web")}<span class="caption">Web design and development</span><h2>Websites and web applications</h2>
 <p>Design and build of websites and web apps for businesses, artists, and public-facing work, as well as custom product software. Selected examples appear on our Work page as screenshots.</p></article>
 <article class="card product">{ic("spark")}<span class="caption">Done for you</span><h2>AI assistant setup</h2>
-<p>Setup and configuration of the AI assistant you already use, including Muse, Grok, ChatGPT, and Claude. We connect it to your work, your files, and your preferences, set its instructions and boundaries, and show you how to use it well, so it behaves the way you want from the first day.</p></article>
+<p>Setup and configuration of the AI assistant you already use, including Muse, Grok, ChatGPT, and Claude. We configure the assistant around your work, available files, preferences, and defined boundaries, then provide guidance on using and evaluating the configuration.</p></article>
 <article class="card product">{ic("train")}<span class="caption">Custom training</span><h2>AI implementation training</h2>
 <p>We train teams to implement AI using systems we build, not off-the-shelf courses. Curriculum and sessions are custom-built around the tools, workflows, and approvals that team will actually use.</p></article>
 <article class="card product">{ic("docs")}<span class="caption">Writing and research</span><h2>Documentation, evidence, and research strategy</h2>
 <p>Operating procedures, runbooks, evidence matrices, decision records, review checkpoints, and source-backed research for government and commercial teams, including concept papers and proposal support.</p></article>
 <article class="card product">{ic("box")}<span class="caption">Software</span><h2>Packout software</h2>
-<p>Software for contents inventory, packout, storage, packback, condition documentation, and claims reporting. Loving Grace Technologies builds and supports the software.</p></article>
+<p>Software for contents inventory, packout, storage, packback, condition documentation, and claims reporting. Loving Grace Technologies builds the software.</p></article>
 <article class="card product">{ic("consult")}<span class="caption">Consulting</span><h2>Small Business Consulting</h2>
 <p>We help small businesses get ready for an AI-powered world. We look at how your business runs today, find where AI can save you time and money, and build a clear, practical plan to put it to work. We also help with the foundations around it: planning, registrations, and contracting readiness, so you&rsquo;re set up to grow.</p></article>
 </div></section>
@@ -830,10 +859,10 @@ P["services.html"] = (
 <p class="caption">Questions</p>
 <h2>Questions buyers ask</h2><div class="rule"></div>
 <div class="grid">
-<div class="card"><h3>Do you work remotely?</h3><p>Yes. Engagements are remote, and we serve clients across the United States from Grenada, Mississippi.</p></div>
+<div class="card"><h3>Do you work remotely?</h3><p>Yes. Engagements are remote. We are available to clients across the United States from Grenada, Mississippi.</p></div>
 <div class="card"><h3>How much does an engagement cost?</h3><p>Pricing depends on scope: the workflow, the systems involved, and what must be checked before anything moves. Email us with what you need and we will scope it with you. No prices are published because no two engagements are the same.</p></div>
 <div class="card"><h3>Do you sell courses?</h3><p>No. We do not sell recorded courses. Training is built custom for one team, around the tools, workflows, and approvals that team will actually use, and it is current on the day it is delivered.</p></div>
-<div class="card"><h3>Who approves what the AI does?</h3><p>A person does. Our tools draft and prepare, and a person approves anything that is sent, paid, or changed. Approval gates are built into the work, not added later.</p></div>
+<div class="card"><h3>Who approves what the AI does?</h3><p>A person does. Our approach prioritizes human approval for consequential actions. Each implementation defines and tests its approval controls before production use.</p></div>
 <div class="card"><h3>Will it work with the tools we already use?</h3><p>That is the starting point. Agents and assistant setups are built around your workflow, your rules, and your records, including the AI assistant you already use.</p></div>
 </div>
 </div></section>''',
@@ -846,22 +875,22 @@ P["products.html"] = (
 <div class="page-head"><div class="wrap"><h1><span class="gold">Our</span> Work</h1><p>Products we are building, and selected websites and software already in the world.</p></div></div>
 <section class="approach"><div class="wrap">
 <article class="card product" id="agent">{ic("agent")}
-<span class="caption">Self-hosted AI assistant</span>
+<span class="caption">In development</span>
 <h2>Loving Grace Agent</h2>
-<p>The Loving Grace Agent runs on your own server. It remembers context, learns new skills, and can use a computer to get tasks done.</p>
-<ul><li>Memory that carries context across conversations</li><li>Skills it can add and reuse for repeat work</li><li>Computer use for browser and desktop tasks</li><li>Always asks before sending, paying, or deleting</li></ul>
+<p>The Loving Grace Agent is an AI assistant application in development, running on rented cloud infrastructure. It is designed to remember context, learn new skills, and use a computer to get tasks done. Customer deployment has not been verified.</p>
+<ul><li>Memory that carries context across conversations</li><li>Skills it can add and reuse for repeat work</li><li>Computer use for browser and desktop tasks</li><li>Approval safeguards in design, still being tested</li></ul>
 </article>
 <article class="card product" id="second-seat">{ic("seat")}
 <span class="caption">PayPal payments</span>
 <h2>Second Seat</h2>
-<p>It turns what a small-business owner agrees to in a meeting into PayPal payments. AI drafts each payment, then a separate checker compares it against the owner&rsquo;s own words and blocks anything that doesn&rsquo;t match, like a changed bank account or an inflated amount. Nothing is paid until the owner approves it with one tap, and every payment keeps the quote it came from as its receipt.</p>
+<p>Second Seat is an AI payment-approval research prototype. In a working PayPal sandbox demonstration, AI drafted each payment, a separate checker compared it against the owner&rsquo;s own words and blocked anything that didn&rsquo;t match, like a changed bank account or an inflated amount, and nothing was paid until the owner approved it with one tap. Every payment kept the quote it came from as its receipt.</p>
 <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/1VJKjwJzRN0" title="Second Seat demo" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
 <p style="margin-top:12px"><a href="https://youtu.be/1VJKjwJzRN0">Watch the demo</a></p>
 </article>
 <article class="card product" id="music">{ic("music")}
 <span class="caption">For blues and soul recordings</span>
 <h2>AI Music &amp; Studio Tools</h2>
-<p>Tools that help artists and producers work with their recordings, including stem separation, editing, and AI-assisted music creation. Built to support the artist&rsquo;s voice, and used only with the artist&rsquo;s permission.</p>
+<p>Song remake and studio polish for blues and soul recordings. The pipeline splits a recording into stems (vocals, drums, bass, and other), cleans each stem, and mixes and masters the result, built around the artist&rsquo;s own voice. The pipeline is intended for songs the artist owns or is authorized to use. The tested workflow preserves the artist&rsquo;s recorded voice; no voice cloning or voice conversion was used. Built and tested in November 2026 on a demo recording.</p>
 </article>
 <article class="card product" id="discovery-scout">{ic("scout")}
 <span class="caption">Waitlist</span>
@@ -873,14 +902,70 @@ P["products.html"] = (
 <article class="card product" id="presence">{ic("spark")}
 <span class="caption">Research and development</span>
 <h2>Loving Grace Presence</h2>
-<p>Holographic presence research: technology that can extend how a person is represented, while the person keeps final authority. Work on this line has been invited to pitch on the NSF SBIR path, with Mississippi MS-FAST Phase 0 in progress. This is not an award.</p>
+<p>Holographic presence research: technology that can extend how a person is represented, while the person keeps final authority. Loving Grace Presence is an early-stage research concept. No NSF invitation, grant, or MS-FAST Phase 0 award is claimed.</p>
 </article>
 </div></section>
 <section class="textured-tile approach" id="projects"><div class="wrap">
 <p class="caption">Selected projects</p>
-<h2>Sites and software we have built</h2><div class="rule"></div>
-<p class="lead">Screenshots from recent website and software builds, including client sites and our packout software. These are examples of work, not live links.</p>
+<h2>Selected website and software projects</h2><div class="rule"></div>
+<p class="lead">Screenshots from recent website and software projects, including our packout software. These are examples of work, not live links.</p>
 {GALLERY}
+</div></section>''',
+)
+
+P["research.html"] = (
+    "Research and Development | Loving Grace Technologies",
+    "Loving Grace Technologies is an independent deep-technology research and development company. Lead program: Sovereign Mesh verified handoffs. Working systems: Second Seat approval research and self-hosted AI infrastructure. Grenada, Mississippi.",
+    f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Research and</span> Development</h1><p>Loving Grace Technologies is an independent deep-technology research and development company. We pursue federal research funding, competitive innovation programs, and intellectual property development, alongside selected client work.</p></div></div>
+<section class="approach"><div class="wrap">
+<article class="card product">{ic("scale")}<span class="caption">Lead research program</span>
+<h2>Sovereign Mesh: Verified Handoffs</h2>
+<p>Research objective: a system for independently verifiable authorization, custody transfers, evidence integrity, and operational continuity when connectivity is unreliable.</p>
+<p>Status, stated plainly: Technology Readiness Level 2. The concept is formulated. The integrated system is unproven. There is no validated integrated prototype today.</p>
+<p>The first workflow is contents pack-out and restoration handoffs, where property changes hands between organizations and the record of who authorized what must hold up later.</p>
+<p>The test plan is 20 controlled handoffs, including unauthorized requests, offline operation, and later reconciliation, with results recorded rather than assumed. The target is a controlled physical handoff prototype in April 2027.</p>
+<p>Second Seat, Professional Packout, and ClaimVision provide reusable components and use cases. They do not yet constitute a validated integrated prototype.</p>
+<p>Sovereign Mesh is an Encountering Innovation 2027 applicant, submitted November 2, 2026. Encountering Innovation is a route to defense technology scouts and research partners. It does not itself award funding. Sovereign Mesh has no weapons function.</p>
+<p><a class="more" href="article-documentation-evidence-automation.html">How we document evidence and custody</a></p>
+</article>
+</div></section>
+<section class="textured-tile approach"><div class="wrap">
+<p class="caption">Working systems</p>
+<h2>Research with working demonstrations</h2><div class="rule"></div>
+<div class="grid">
+<div class="card">{ic("seat")}<h3>Second Seat</h3><p>Approval research with a working demo. AI drafts each payment, then a separate checker compares it against the owner's own words and blocks anything that does not match. In a PayPal sandbox demonstration, a fake bank-change request was blocked and a clean $480 payment was approved and captured. Enforcement happens at the action gateway, not by screening agent words.</p><hr><a class="more" href="article-meeting-approval.html">What the demo proved</a></div>
+<div class="card">{ic("sys")}<h3>Independent AI infrastructure</h3><p>Loving Grace Technologies hosts its own models on rented GPU infrastructure it controls, rather than building on vendor systems. Second Seat's redaction model runs self-hosted, and its briefing model receives only owner-approved redacted text. Loving Grace Technologies is a member of NVIDIA Inception.</p></div>
+<div class="card">{ic("scout")}<h3>Discovery Scout</h3><p>Applied research in explainable scoring from open data. Discovery Scout scores areas for legal outdoor hunts and explains the reasons for each score, from geology, land status, and documented public sites.</p><hr><a class="more" href="discovery-scout.html">Learn more about Discovery Scout</a></div>
+</div>
+</div></section>
+<section class="approach"><div class="wrap">
+<p class="caption">Method</p>
+<h2>How research is done here</h2><div class="rule"></div>
+<p class="lead">Our research method is: Brief. Verify. Map. Model. Resource. Ask. Command.</p>
+<div class="grid">
+<div class="card"><h3>Claims are graded before they are used</h3><p>Verified, distorted, or unsupported. A claim that cannot be checked is labeled as unchecked, not presented as fact.</p></div>
+<div class="card"><h3>Checking is separate from drafting</h3><p>Second Seat demonstrates our research approach: separating AI drafting from independent checking and human approval. We apply this principle when designing other multi-agent systems. Tamper-evident is not the same as truthful, and we build to that distinction.</p></div>
+<div class="card"><h3>Confidentiality is a design rule</h3><p>An AI's ability to access or understand information never establishes permission to disclose it. Every disclosure needs authorization of its own.</p></div>
+</div>
+<p class="lead" style="margin-top:28px">We state the maturity of each program plainly. Research takes time. Concepts are presented as concepts, and working systems are presented as working systems.</p>
+</div></section>
+<section class="textured-tile approach"><div class="wrap">
+<p class="caption">Supporting research areas</p>
+<h2>Early exploration</h2><div class="rule"></div>
+<p class="lead">These directions are in the company portfolio. No prototypes are claimed, and no timelines are promised.</p>
+<div class="grid">
+<div class="card"><h3>Low-resource AI</h3><p>AI systems that run on modest, independent infrastructure, including operation when connectivity is unreliable.</p></div>
+<div class="card"><h3>Robotics</h3><p>Robotic facility and care concepts. Early exploration. A defined technical breakthrough is still required.</p></div>
+<div class="card"><h3>Universal translation</h3><p>Language research for translation across languages. A later research proposal, not a current program.</p></div>
+<div class="card"><h3>Presence research</h3><p>Holographic presence technology that extends how a person is represented, while the person keeps final authority.</p></div>
+<div class="card"><h3>Historical technologies</h3><p>Historical methods and prior art, a research direction held without pressure to commercialize every finding.</p></div>
+</div>
+</div></section>
+<section class="band"><div class="wrap">
+<h2>Research inquiries welcome</h2>
+<p>For research collaboration, pilots, and government and research inquiries, write to us.</p>
+<a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a>
 </div></section>''',
 )
 
@@ -906,10 +991,9 @@ P["about.html"] = (
 <dt>Legal name</dt><dd>Loving Grace Technologies, LLC</dd>
 <dt>Location</dt><dd>Grenada, Mississippi, United States</dd>
 <dt>Formed</dt><dd>June 2, 2026</dd>
-<dt>SAM.gov</dt><dd>Active registration (activated July 10, 2026; renewal June 23, 2027)</dd>
+<dt>SAM.gov</dt><dd>Registration recorded as active October 15, 2026 (activated July 10, 2026)</dd>
 <dt>UEI</dt><dd>U5D5QT7QLRQ5</dd>
 <dt>CAGE code</dt><dd>222V5</dd>
-<dt>NAICS</dt><dd>541512 Computer Systems Design Services<br>541720 Research and Development in the Social Sciences and Humanities<br>541990 All Other Professional, Scientific, and Technical Services</dd>
 </dl></div>
 </div></section>''',
 )
@@ -942,7 +1026,7 @@ P["privacy.html"] = (
 <h2>Hosting and Embedded Content</h2>
 <p>Our hosting provider may keep standard server logs, such as IP address and browser type, to deliver and secure the site. Fonts are served by Google Fonts. The Work page embeds a YouTube video in privacy-enhanced mode; YouTube&rsquo;s own privacy policy applies when you play it.</p>
 <h2>Our Products</h2>
-<p>Our products are designed to ask for a person&rsquo;s approval before sending, paying, or deleting anything. Product-specific privacy terms are provided to customers separately.</p>
+<p>Human approval for consequential actions is a core design principle. Approval mechanisms and tested capabilities vary by product and development stage.</p>
 <h2>Contact</h2>
 <p>Questions about privacy: <a href="mailto:{EMAIL}">{EMAIL}</a></p>
 </div></section>''',
@@ -1028,7 +1112,7 @@ _ds_ld = discovery_ld()
 if CHECKOUT_OPEN:
     _ds_ld = (_ds_ld.replace(" Waitlist only. Nothing to buy here.", " Plans and prices are on the plans page.")
                     .replace(" This page is a waitlist. Planned plans are not for sale here.", " Plans are sold through Square on the plans page."))
-EXTRA_LD = {"discovery-scout.html": _ds_ld}
+EXTRA_LD = {"discovery-scout.html": _ds_ld, "research.html": research_ld()}
 for _a in ARTICLES:
     EXTRA_LD[_a["fn"]] = article_ld(_a["fn"], _a["title"], _a["desc"])
 for fn, (t, d, b) in P.items():
@@ -1038,7 +1122,7 @@ for fn, (t, d, b) in P.items():
     Path(fn).write_text(page(fn, t, d, b, EXTRA_LD.get(fn, ""), head), encoding="utf-8")
 
 # Sitemap of public pages (not the 404 page)
-SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
+SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
 if CHECKOUT_OPEN:
     SITEMAP_PAGES += ["discovery-scout-plans.html", "terms.html", "refund-policy.html"]
 urls = []

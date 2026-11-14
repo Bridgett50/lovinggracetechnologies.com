@@ -1,7 +1,7 @@
-# Discovery Scout Terms of Use and Refund Policy bodies (DRAFT, not approved).
+# Discovery Scout Terms of Use and Refund Policy bodies (approved by Bridgett Nov 12, 2026).
 # Source: /workspace/discovery-scout/legal-2026-11-12/terms.html and refund-policy.html
 # (Drive: Terms Doc 1md-wYi4a1H66vGxK-1VfGwnaSzKGGeripLrHHlcxS2c, Refund Doc 1JMihfKI0jPu7EHz8Xr4XE1DfhkFAaDVLkbpYPOaaz_k).
-# Refund time windows and several refund rules are draft choices not yet confirmed by Bridgett.
+# Refund time windows and refund rules as approved Nov 12, 2026.
 TERMS_BODY = r"""<div class="page-head"><div class="wrap"><h1>Discovery Scout <span class="gold">Terms of Use</span></h1><p>Last updated November 12, 2026</p></div></div>
 <section><div class="wrap prose">
 <p>These Terms of Use ("Terms") cover Discovery Scout, including the Discovery Scout waitlist, website pages, trip plans, reports, and paid plans. Please read them before you buy. If you do not agree, please do not buy or use Discovery Scout.</p>
@@ -48,7 +48,7 @@ TERMS_BODY = r"""<div class="page-head"><div class="wrap"><h1>Discovery Scout <s
 <tr>
 <td><strong>Free</strong></td>
 <td>$0</td>
-<td>Spot reports and a basic hunt plan (itinerary outline, gear list, legal checklist, nearest keep-what-you-find sites).</td>
+<td>Planned: spot reports and a basic hunt plan (itinerary outline, gear list, legal checklist, nearest keep-what-you-find sites).</td>
 </tr>
 <tr>
 <td><strong>Done-for-you plan</strong></td>
@@ -63,12 +63,12 @@ TERMS_BODY = r"""<div class="page-head"><div class="wrap"><h1>Discovery Scout <s
 <tr>
 <td><strong>Scout</strong></td>
 <td>$9 per month or $79 per year</td>
-<td>Everything in Free, plus 3 done-for-you plans each month, saved spots, and trip history.</td>
+<td>Planned subscription. Everything in Free, plus 3 done-for-you plans each month, saved spots, and trip history.</td>
 </tr>
 <tr>
 <td><strong>Pro</strong></td>
 <td>$19 per month or $149 per year</td>
-<td>Unlimited done-for-you plans and all hunt types, including meteorite, metal-detecting, and expedition planning.</td>
+<td>Planned subscription. Unlimited done-for-you plans and all hunt types, including meteorite, metal-detecting, and expedition planning.</td>
 </tr>
 </tbody>
 </table>
@@ -85,8 +85,8 @@ TERMS_BODY = r"""<div class="page-head"><div class="wrap"><h1>Discovery Scout <s
 <h2>6. Payment, renewal, and cancellation</h2>
 <ul>
 <li><strong>One-time purchases.</strong> The Done-for-you plan ($19) and Concierge ($49) are one-time charges for one plan or one trip. They do not renew.</li>
-<li><strong>Subscriptions renew automatically.</strong> Scout and Pro renew automatically at the end of each billing period (monthly or yearly) at the price shown at checkout, using the payment method you gave, until you cancel. We will tell you before any price change takes effect, and you can cancel before it applies.</li>
-<li><strong>How to cancel.</strong> You can cancel any time by using the cancel option in your account or checkout receipt, if one is offered, or by emailing <a href="mailto:bridgettsanders50@lovinggracetechnologies.com">bridgettsanders50@lovinggracetechnologies.com</a> with the subject "Cancel Discovery Scout." Cancellation stops the next renewal. You keep access until the end of the period you already paid for.</li>
+<li><strong>Subscriptions are not currently offered.</strong> Scout and Pro subscriptions are not currently available for purchase. If they are launched with automatic renewal, the applicable price, billing period, and cancellation terms will be disclosed before purchase, and we will tell you before any price change takes effect.</li>
+<li><strong>How to cancel.</strong> You can cancel any time by emailing <a href="mailto:bridgettsanders50@lovinggracetechnologies.com">bridgettsanders50@lovinggracetechnologies.com</a> with the subject "Cancel Discovery Scout." Cancellation stops the next renewal. You keep access until the end of the period you already paid for.</li>
 <li><strong>Payments.</strong> Payments are handled by a third-party payment processor. We do not see or store your full card number.</li>
 <li><strong>Refunds</strong> are covered by the Discovery Scout Refund Policy: <a href="refund-policy.html">https://lovinggracetechnologies.com/refund-policy.html</a></li>
 </ul>
@@ -148,18 +148,18 @@ REFUND_BODY = r"""<div class="page-head"><div class="wrap"><h1>Discovery Scout <
 <ul>
 <li>Free plan and the waitlist: free. Nothing to refund.</li>
 <li>Done-for-you plan ($19) and Concierge ($49): full refund if you ask before we start your plan. After delivery, if the plan has a real error we cannot fix, you get a full refund.</li>
-<li>Scout ($9/month or $79/year) and Pro ($19/month or $149/year): cancel any time. Monthly plans: a full refund of your first monthly charge if you ask within 7 days. Yearly plans: a full refund if you ask within 14 days of the yearly charge.</li>
+<li>Scout ($9/month or $79/year) and Pro ($19/month or $149/year), when offered: cancel any time. Monthly plans: a full refund of your first monthly charge if you ask within 7 days. Yearly plans: a full refund if you ask within 14 days of the yearly charge.</li>
 <li><strong>We do not charge you for tickets, tours, digs, lodging, or travel from other businesses</strong>, including operators on Viator or GetYourGuide. Refunds for those come from the business you paid, under its own rules.</li>
 <li>Discovery Scout does not guarantee finds. Not finding anything is not, by itself, a reason for a refund.</li>
 </ul>
 <h2>1. One-time plans: Done-for-you ($19) and Concierge ($49)</h2>
 <p><strong>Before we start.</strong> If you ask for a refund before we begin preparing your plan, we refund the full amount.</p>
-<p><strong>Late delivery.</strong> If we do not deliver your plan by the time shown at checkout, you may cancel and receive a full refund, or keep the order and wait.</p>
+<p><strong>Late delivery.</strong> If we do not deliver your plan within 3 business days after we have your trip details, you may cancel and receive a full refund, or keep the order and wait.</p>
 <p><strong>Errors in the plan.</strong> Ask within 14 days of purchase. If your plan has a real error (for example, the wrong location, a site listed as open that was already closed when we prepared the plan, or a missing part of what the plan includes), tell us what is wrong. We will correct it within 3 business days. If we cannot fix it, or you would rather not wait, we refund the full amount.</p>
 <p><strong>Concierge.</strong> If you cancel a Concierge trip after we have started the planning work but before we deliver the finished plan, we refund the full amount minus $19 for the Done-for-you plan, and we still send you that plan. After the Concierge work is delivered, the error rules above apply.</p>
 <p><strong>Trip changes.</strong> If your trip is canceled or moved because of weather, a site closure, or a change in your own plans, our fee is not refunded after the plan is delivered, because the planning work is done. Email us and we will update the plan for a new date within 60 days of purchase at no charge, once.</p>
 <h2>2. Subscriptions: Scout and Pro</h2>
-<p><strong>Cancel any time.</strong> Email <a href="mailto:bridgettsanders50@lovinggracetechnologies.com">bridgettsanders50@lovinggracetechnologies.com</a> with the subject "Cancel Discovery Scout," or use the cancel option in your account or receipt if one is offered. Canceling stops the next renewal. You keep access until the end of the period you already paid for.</p>
+<p><strong>Scout and Pro subscriptions are not currently offered for purchase.</strong> The terms in this section apply only when the plans become available and the terms are confirmed at checkout. <strong>Cancel any time.</strong> Email <a href="mailto:bridgettsanders50@lovinggracetechnologies.com">bridgettsanders50@lovinggracetechnologies.com</a> with the subject "Cancel Discovery Scout." Canceling stops the next renewal. You keep access until the end of the period you already paid for.</p>
 <p><strong>Monthly plans ($9/month Scout, $19/month Pro).</strong> If you ask within 7 days of your <strong>first</strong> monthly charge, we refund that charge in full and end the subscription. After that, monthly charges are not refunded, but you can cancel at any time to stop the next one.</p>
 <p><strong>Yearly plans ($79/year Scout, $149/year Pro).</strong> If you ask within 14 days of a yearly charge (the first one or a renewal), we refund that charge in full and end the subscription. After 14 days, the yearly charge is not refunded, and your access continues until the end of that year.</p>
 <p><strong>Billing mistakes.</strong> If we charged you twice, charged the wrong amount, or charged you after you canceled, we refund the mistaken charge in full, whenever you tell us.</p>
