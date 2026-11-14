@@ -604,6 +604,104 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
+    {
+        "fn": "article-workflow-automation-existing-software.html",
+        "title": "Automate a Workflow Without Replacing Your Software | Loving Grace Technologies",
+        "desc": "Automation does not have to mean new software. How to layer intake, drafting, checking, and approval over the tools a team already uses.",
+        "caption": "Automation",
+        "heading": "Automate the workflow, keep the software",
+        "summary": "Automation does not have to mean new software. How to layer intake, drafting, checking, and approval over the tools a team already uses.",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Automate the workflow,</span> keep the software</h1><p>Automation does not have to mean replacing what works. The workflow is the thing to fix, not the toolbox.</p></div></div>
+<section><div class="wrap prose">
+<p>Most teams do not need new software. They need the work between their tools to stop depending on memory, retyping, and chasing. Automation done right layers over what a team already uses: intake comes in one way, drafting follows a set pattern, checking happens against the record, and approval sits with a person before anything moves.</p>
+<h2>What gets automated first</h2>
+<ul>
+<li>Intake: requests arrive in one shape, with the details needed to act on them</li>
+<li>Drafting: routine documents start from a pattern built on your records, not from a blank page</li>
+<li>Follow-up: the next step is tracked, so nothing waits on someone remembering to ask</li>
+<li>Checking: work is compared against the source record before it goes anywhere</li>
+<li>Approval: a person approves anything sent, paid, or changed, with the evidence in front of them</li>
+</ul>
+<h2>What stays the same</h2>
+<p>Your tools stay. Your records stay. Your decisions stay yours. Automation changes how work moves between those things, not who is in charge of them. Document-heavy operations become clear processes with practical automation plans, and human review stays built into the decisions that matter.</p>
+<h2>How to start</h2>
+<p>Start with one workflow that repeats, takes too long, or breaks when one person is out. Map it as it actually runs today, then automate the movement between steps, keeping approval where it belongs. One working workflow teaches more than a plan for ten.</p>
+<div class="card"><p>Tell us about the workflow that eats your week. We will map it as it runs today and show what automation would change.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-custom-web-application-checklist.html",
+        "title": "What Should a Custom Web Application Include? | Loving Grace Technologies",
+        "desc": "A custom web application should fit one workflow, keep evidence, and keep people in charge. A checklist drawn from software we have actually built.",
+        "caption": "Web applications",
+        "heading": "What a custom web application should include",
+        "summary": "A custom web application should fit one workflow, keep evidence, and keep people in charge. A checklist drawn from software we have actually built.",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">What a custom web application</span> should include</h1><p>Custom software earns its keep when it fits one workflow exactly. Here is what to require before it is built.</p></div></div>
+<section><div class="wrap prose">
+<h2>1. The workflow, as it actually runs</h2>
+<p>Software built from a generic template fits generic work. A custom application starts from your workflow: the steps, the handoffs, the decisions, and the records. If the builder cannot describe your workflow back to you, the build will not fit it.</p>
+<h2>2. Approval gates</h2>
+<p>Anything the application sends, pays, or changes should pass a person first. Approval is a feature, not a policy document. In Second Seat, nothing is paid until the owner approves with one tap, and a separate checker verifies the draft first.</p>
+<h2>3. Evidence kept with the work</h2>
+<p>Every action should keep what it came from. A payment keeps its quote as its receipt. A plan keeps its reasons. An inventory record keeps its condition notes. When the evidence travels with the work, disputes get shorter and audits get easier.</p>
+<h2>4. Reasons you can read</h2>
+<p>When software scores, ranks, or recommends, it should explain why in plain words. Discovery Scout scores areas and shows the reasons for each score. A result without a reason is a guess wearing software.</p>
+<h2>5. People in charge of the edges</h2>
+<p>Software handles the routine. People handle the exceptions, the judgment calls, and the final say. The application should make those moments easy to find and easy to act on, not bury them.</p>
+<p>That is the standard we build to: defined work, kept evidence, readable reasons, and a person approving what matters.</p>
+<div class="card"><p>Describe the workflow you want software for. We will tell you plainly what it should include and what it should not.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-documentation-evidence-automation.html",
+        "title": "Automate Documentation While Preserving Evidence | Loving Grace Technologies",
+        "desc": "Automation that erases its own trail is a liability. How to automate documentation and keep the source, the decision, and the checkpoint.",
+        "caption": "Documentation",
+        "heading": "Automate documentation, preserve the evidence",
+        "summary": "Automation that erases its own trail is a liability. How to automate documentation and keep the source, the decision, and the checkpoint.",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Automate documentation,</span> preserve the evidence</h1><p>Documentation automation should make the record stronger, not thinner. Three rules keep it honest.</p></div></div>
+<section><div class="wrap prose">
+<h2>Keep the source</h2>
+<p>Every automated document should trace back to the record it came from: the file, the message, the measurement, the agreement. Source-backed research means the claim and its source travel together. If the source is lost, the document is an assertion, not evidence.</p>
+<h2>Keep the decision record</h2>
+<p>Decisions need a record of their own: who decided, what they decided, what evidence they saw, and when. Operating procedures, runbooks, evidence matrices, and decision records exist so that a decision made today can be understood and defended later. Automation should write these records as it goes, not leave them for someone to reconstruct.</p>
+<h2>Keep the checkpoint</h2>
+<p>Before anything documented moves money or property, a review checkpoint verifies it. That is the principle behind Sovereign Mesh, our verified-handoffs work: custody and authorization verified before the handoff, not assumed after it. Sovereign Mesh is a concept and an Encountering Innovation 2027 applicant, described here as what it is, not as a shipped product. The checkpoint principle applies to documentation automation today, with or without it.</p>
+<p>Automate the drafting, the assembly, and the filing. Keep the source, the decision, and the checkpoint. That is documentation that holds up.</p>
+<div class="card"><p>If your documentation is growing faster than your ability to trust it, start with the trail. We build documentation systems that keep it.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-packout-software-inventory.html",
+        "title": "How Packout Software Improves Inventory Documentation | Loving Grace Technologies",
+        "desc": "Contents work lives or dies on its documentation. How packout software ties inventory, condition, storage, and packback to one record.",
+        "caption": "Packout software",
+        "heading": "How packout software improves inventory documentation",
+        "summary": "Contents work lives or dies on its documentation. How packout software ties inventory, condition, storage, and packback to one record.",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">How packout software</span> improves inventory documentation</h1><p>Contents work lives or dies on its documentation. Software earns its place when every item carries its own record from packout to packback.</p></div></div>
+<section><div class="wrap prose">
+<p>Contents inventory, packout, storage, packback, condition documentation, and claims reporting are one chain. When the chain lives in separate notes, photos, and spreadsheets, items get lost in the gaps. Packout software ties each item to one record that follows it through every stage.</p>
+<h2>What one record per item changes</h2>
+<ul>
+<li>Inventory: every item is logged once, with its identity and location, instead of being re-entered at each stage</li>
+<li>Condition: condition notes and documentation attach to the item at packout, so later questions have an answer from the time it mattered</li>
+<li>Storage: the record shows where the item is, not just that it exists somewhere</li>
+<li>Packback: return is checked against the same record, so what went out is what comes back, or the difference is visible</li>
+<li>Claims reporting: the report is assembled from the records kept along the way, not reconstructed after the fact</li>
+</ul>
+<h2>Built from claims work</h2>
+<p>Loving Grace Technologies builds and supports this software, shaped by over ten years of complex insurance claims work: multimillion-dollar property losses, estimating, coverage analysis, and negotiation. The software reflects what that work actually requires of a record: completeness at the time, condition tied to the item, and a report that holds up.</p>
+<div class="card"><p>If your contents documentation depends on memory and retyping, one record per item is the fix. Ask us about the software.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
 ]
 
 def articles_body():
@@ -940,7 +1038,7 @@ for fn, (t, d, b) in P.items():
     Path(fn).write_text(page(fn, t, d, b, EXTRA_LD.get(fn, ""), head), encoding="utf-8")
 
 # Sitemap of public pages (not the 404 page)
-SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
+SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
 if CHECKOUT_OPEN:
     SITEMAP_PAGES += ["discovery-scout-plans.html", "terms.html", "refund-policy.html"]
 urls = []
