@@ -22,7 +22,7 @@ FONTS = (
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600&family=Montserrat:wght@500&family=Quicksand:wght@600&display=swap" rel="stylesheet">'
 )
-CSS_V = "20261114a"
+CSS_V = "20261114-nav1"
 ICONS = {
     "agent": '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><path d="M12 10.6v2.8M10.6 12h2.8"/></svg>',
     "seat": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="11" rx="2"/><path d="M9 20h6M12 16v4"/><path d="M8.5 11.2l2.2 2 4.8-4.6"/></svg>',
@@ -123,12 +123,14 @@ PAGE_TMPL = """<!doctype html>
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 {fonts}
 <link rel="stylesheet" href="assets/style.css?v={css_v}">
+<script src="assets/navigation.js?v={css_v}" defer></script>
 {ld}
 </head>
 <body>
 <header class="site"><div class="wrap">
 <a class="brand" href="index.html" aria-label="Loving Grace Technologies home"><picture><source srcset="assets/logo-horizontal.webp" type="image/webp"><img src="assets/logo-horizontal.jpg" alt="Loving Grace Technologies" width="900" height="309"></picture></a>
-<nav aria-label="Main"><ul>{nav}</ul></nav>
+<button class="nav-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" hidden>Menu</button>
+<nav id="site-navigation" aria-label="Main"><ul>{nav}</ul></nav>
 </div></header>
 <main>
 {body}
