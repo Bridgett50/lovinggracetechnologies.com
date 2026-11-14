@@ -141,7 +141,6 @@ PAGE_TMPL = """<!doctype html>
 </div>
 <div>
 <nav aria-label="Footer"><a href="services.html">Services</a><a href="products.html">Work</a><a href="articles.html">Articles</a><a href="research.html">Research</a><a href="discovery-scout.html">Discovery Scout</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav>
-<p><a href="mailto:{email}">{email}</a></p>
 <p>Grenada, Mississippi</p>
 </div>
 <div class="foot-bottom">
