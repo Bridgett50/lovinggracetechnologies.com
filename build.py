@@ -22,7 +22,7 @@ FONTS = (
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600&family=Montserrat:wght@500&family=Quicksand:wght@600&display=swap" rel="stylesheet">'
 )
-CSS_V = "20261114-nav2"
+CSS_V = "20261114-nav3"
 ICONS = {
     "agent": '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><path d="M12 10.6v2.8M10.6 12h2.8"/></svg>',
     "seat": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="11" rx="2"/><path d="M9 20h6M12 16v4"/><path d="M8.5 11.2l2.2 2 4.8-4.6"/></svg>',
