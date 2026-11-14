@@ -1,11 +1,10 @@
 # Generates the static pages. Run: python3 build.py
 EMAIL = "bridgettsanders50@lovinggracetechnologies.com"
 # Contact form delivery: FormSubmit (formsubmit.co), free, no account. The
-# action URL carries the destination address until activation returns the
-# random-string alias, which replaces the address here. First submission
-# triggers a confirmation email to the company inbox; submissions are held
-# and delivered after that confirmation is clicked.
-FORMSUBMIT_ACTION = "https://formsubmit.co/" + EMAIL
+# action URL uses the random-string alias from the activation email (Nov 14,
+# 2026), so the destination address does not appear in the page source.
+# Activation was confirmed by clicking the link in the company inbox.
+FORMSUBMIT_ACTION = "https://formsubmit.co/548c5c63a32fd6b891ee9a99d20679d5"
 # Canonical site is the custom domain. Apex A records point at GitHub Pages.
 # www is a CNAME to bridgett50.github.io; GitHub Pages redirects it to the apex.
 SITE = "https://lovinggracetechnologies.com/"
