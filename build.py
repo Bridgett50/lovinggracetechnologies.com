@@ -7,6 +7,7 @@ NAV = [
     ("index.html", "Home"),
     ("services.html", "Services"),
     ("products.html", "Work"),
+    ("articles.html", "Articles"),
     ("about.html", "About"),
     ("contact.html", "Contact"),
 ]
@@ -77,6 +78,21 @@ def ldjson():
     }
     return '<script type="application/ld+json">' + json.dumps(data, separators=(",", ":")) + "</script>"
 
+def article_ld(fn, title, desc):
+    import json
+    data = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": SITE + fn + "#article",
+        "headline": title,
+        "description": desc,
+        "author": {"@id": SITE + "#business"},
+        "publisher": {"@id": SITE + "#business"},
+        "datePublished": "2026-11-14",
+        "mainEntityOfPage": SITE + fn,
+    }
+    return '<script type="application/ld+json">' + json.dumps(data, separators=(",", ":")) + "</script>"
+
 PAGE_TMPL = """<!doctype html>
 <html lang="en">
 <head>
@@ -116,7 +132,7 @@ PAGE_TMPL = """<!doctype html>
 <p class="sig" style="font-size:14px;margin-top:10px;max-width:28rem">Named for a simple idea: machines should watch over people with grace, and people should remain in charge.</p>
 </div>
 <div>
-<nav aria-label="Footer"><a href="services.html">Services</a><a href="products.html">Work</a><a href="discovery-scout.html">Discovery Scout</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav>
+<nav aria-label="Footer"><a href="services.html">Services</a><a href="products.html">Work</a><a href="articles.html">Articles</a><a href="discovery-scout.html">Discovery Scout</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav>
 <p><a href="mailto:{email}">{email}</a></p>
 <p>Grenada, Mississippi</p>
 </div>
@@ -462,6 +478,148 @@ DS_CHECKOUT_HEAD = '<link rel="stylesheet" href="assets/checkout.css?v=20261112c
 DS_NOINDEX = '<meta name="robots" content="noindex,nofollow">'
 
 
+# ---------------------------------------------------------------------------
+# Articles: practical writing about the work, in the site's own theme.
+# Every claim here comes from the company's own services, products, and
+# verified demo record. No client stories, no prices, no invented results.
+# ---------------------------------------------------------------------------
+
+ARTICLES = [
+    {
+        "fn": "article-ai-assistant-setup.html",
+        "title": "AI Assistant Setup, Explained | Loving Grace Technologies",
+        "desc": "What AI assistant setup means: instructions, boundaries, files, and preferences configured around your work, for Muse, Grok, ChatGPT, and Claude.",
+        "caption": "AI assistant setup",
+        "heading": "AI assistant setup, explained",
+        "summary": "What setup means: instructions, boundaries, files, and preferences configured around your work, so your assistant knows your business from the first day.",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">AI assistant</span> setup, explained</h1><p>Your AI assistant should know your work before you start typing. Setup is what makes that true.</p></div></div>
+<section><div class="wrap prose">
+<p>An AI assistant out of the box knows nothing about your business. It can draft, answer, and research, but it does so generically, and you spend your time re-explaining context it should already have. Setup closes that gap. It connects the assistant to your work, your files, and your preferences, sets its instructions and boundaries, and leaves you with a working assistant tuned to you.</p>
+<h2>What setup covers</h2>
+<ul>
+<li>Instructions for how the assistant should behave, in your patterns and your tone</li>
+<li>Boundaries for what it must never do alone, including anything sent, paid, or changed</li>
+<li>Your files, records, and context, so it works from your facts instead of guessing</li>
+<li>The assistant you already use, including Muse, Grok, ChatGPT, and Claude</li>
+<li>A working session showing you how to use it well, fitted to your real work</li>
+</ul>
+<h2>What changes after setup</h2>
+<p>You stop re-explaining. The assistant drafts in your patterns, checks against your records, and asks before anything moves. The hours of trial and error go away because the tuning is done for you, fitted to your work, current on the day it is done.</p>
+<h2>Setup is not a course</h2>
+<p>We do not sell recorded material. Setup is done for you, on your assistant, with your work. What you get is a configured assistant and the knowledge to use it, not a video to watch.</p>
+<div class="card"><p>If your assistant still feels generic, setup is the missing step.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-meeting-approval.html",
+        "title": "AI Meeting Assistants: Who Approves? | Loving Grace Technologies",
+        "desc": "An AI meeting assistant should draft, never pay. How Second Seat separates drafting from checking, and what a sandbox demo proved.",
+        "caption": "Approval gates",
+        "heading": "Who approves what the AI drafts?",
+        "summary": "A meeting assistant that can pay on its own is a risk, not a helper. How Second Seat separates drafting from checking, and what a sandbox demo proved.",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Who approves</span> what the AI drafts?</h1><p>A meeting assistant that can pay on its own is a risk, not a helper. The fix is a separate checker and a person's tap.</p></div></div>
+<section><div class="wrap prose">
+<p>Meetings end in commitments. An AI that turns meeting talk into payments must be checked against what was actually agreed, not trusted on its own reading of the conversation. If the same system drafts and approves, a misread becomes a payment.</p>
+<h2>Draft, check, approve</h2>
+<p>Second Seat works in three steps. First, AI drafts each payment from the meeting. Second, a separate checker compares the draft against the owner's own words and blocks anything that does not match, like a changed bank account or an inflated amount. Third, nothing is paid until the owner approves it with one tap. Every payment keeps the quote it came from as its receipt.</p>
+<h2>What the demo proved</h2>
+<p>In a sandbox demonstration using PayPal's test environment, a fake bank-change request was blocked, and a clean $480 payment was approved and captured as completed. That was a demonstration, not a client payment, and it is described here as one. The point stands: the checker caught what the drafter missed, and the owner's tap was the step that released the money.</p>
+<h2>The principle travels</h2>
+<p>The same separation applies to any agent that acts on your behalf. Drafting and checking are different jobs, and approval belongs to a person. That is the standard we build to, in Second Seat and in every agent we build for clients.</p>
+<div class="card"><p>Watch the Second Seat demo, or start a conversation about approval gates for your own workflows.</p><p style="margin-top:14px"><a class="btn primary" href="https://youtu.be/1VJKjwJzRN0">Watch the demo</a></p><p style="margin-top:14px"><a class="more" href="mailto:{EMAIL}">Start a conversation</a></p></div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-custom-agent-vs-chatgpt.html",
+        "title": "Custom AI Agent vs. ChatGPT: Which Do You Need? | Loving Grace Technologies",
+        "desc": "A general assistant and a custom agent solve different problems. How to tell which one your business actually needs.",
+        "caption": "Choosing",
+        "heading": "Custom agent or general assistant?",
+        "summary": "Both are useful. They are not interchangeable. The work decides which one your business needs.",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Custom agent</span> or general assistant?</h1><p>Both are useful. They are not interchangeable. The work decides.</p></div></div>
+<section><div class="wrap prose">
+<h2>What a general assistant does well</h2>
+<p>ChatGPT, Claude, Grok, and Muse handle varied, one-off work: drafting, questions, research, thinking through a problem. You drive, and it responds. Configured around your work, your files, and your preferences, a general assistant gets faster and more accurate, because it stops starting from zero every time.</p>
+<h2>What a custom agent does</h2>
+<p>A custom agent does defined, repeated work on your workflow, your rules, and your records: intake, drafting, research, follow-up, and checking. It runs the same job the same way every time, with approval gates before anything is sent, paid, or changed. It is built for one business, not for everyone.</p>
+<h2>The deciding question</h2>
+<p>Is the work repeated, defined, and tied to your records? That points to an agent. Is it varied, one-off, and driven by judgment in the moment? A configured assistant may be all you need. The two often work together: an assistant for thinking work, and agents for repeated work, with a person approving what matters in both.</p>
+<div class="card"><p>Not sure which fits? Describe the work, and we will tell you plainly which one it is.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-choosing-ai-company.html",
+        "title": "How to Choose an AI Implementation Company | Loving Grace Technologies",
+        "desc": "Six questions to ask any AI implementation company before you hire one, and what good answers sound like.",
+        "caption": "Buying guide",
+        "heading": "Choosing an AI implementation company",
+        "summary": "Six questions to ask any AI implementation company before you hire one. The answers tell you who keeps you in charge.",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Choosing</span> an AI implementation company</h1><p>Ask these six questions before you hire anyone to build with AI. The answers tell you who keeps you in charge.</p></div></div>
+<section><div class="wrap prose">
+<h2>1. Who approves what the AI does?</h2>
+<p>A good answer: a person does, before anything is sent, paid, or changed, with approval gates built into the work. Be careful with any answer that treats approval as optional or as something to add later.</p>
+<h2>2. Is it built around my workflow and records?</h2>
+<p>A good answer: yes, custom to your rules and your records. Be careful with one-size templates sold as custom work. If the builder cannot describe your workflow back to you, the build will not fit it.</p>
+<h2>3. What happens when the AI is wrong?</h2>
+<p>A good answer: a separate checker, evidence kept, and errors visible. The system should show its work, so a mistake is caught and corrected instead of silently becoming an action.</p>
+<h2>4. Do I keep control of my files and infrastructure?</h2>
+<p>A good answer: self-hosted options exist, and your files stay on infrastructure you control. Ask what happens to your data and your system if you stop working with the builder.</p>
+<h2>5. Is training built for my team?</h2>
+<p>A good answer: sessions built around your tools, workflows, and approvals, not recorded generic material. Training should fit the team that receives it.</p>
+<h2>6. Can you show the work?</h2>
+<p>A good answer: demos, documentation, and a clear scope before work starts. Verify, then decide. Claims without something to look at are not evidence.</p>
+<p>That order is how we work: brief, verify, map, model, resource, ask, command. We scope from your actual facts, build around your workflow, and keep approval with you.</p>
+<div class="card"><p>Ask us the six questions. We will answer them directly.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-ai-training-engagement.html",
+        "title": "What a Custom AI Training Engagement Includes | Loving Grace Technologies",
+        "desc": "AI training built for one team: their tools, their workflows, their approvals. What is included, and what it is not.",
+        "caption": "Training",
+        "heading": "Custom AI training, built for one team",
+        "summary": "Training should fit the team that receives it. What a custom engagement includes, and what it is not.",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Custom AI training,</span> built for one team</h1><p>Training should fit the team that receives it. Ours is built around the tools, workflows, and approvals that team will actually use.</p></div></div>
+<section><div class="wrap prose">
+<p>Generic AI training teaches buttons. Custom training teaches your work. Sessions are built around the systems your team uses, the approvals your team must make, and the records your team keeps, so what people learn on the day is what they do the next day.</p>
+<h2>What an engagement includes</h2>
+<ul>
+<li>Working sessions on the systems built for the team, using the team's real workflows</li>
+<li>Approval habits: what the AI drafts, what a person approves, and where the line sits</li>
+<li>Boundaries: what the AI must never do alone, stated plainly and built into the work</li>
+<li>Written procedures and runbooks the team keeps, so the knowledge stays after the sessions end</li>
+</ul>
+<h2>What it is not</h2>
+<p>It is not a recorded course. We do not sell recorded material, because recorded material goes stale while the tools keep changing. Training is fitted to the team and current on the day it is delivered, and it is built for one team, not sold to everyone.</p>
+<div class="card"><p>Tell us about your team and the tools it uses. We will build the training around that.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+]
+
+def articles_body():
+    cards = "".join(
+        f'<div class="card"><p class="caption">{a["caption"]}</p><h3>{a["heading"]}</h3><p>{a["summary"]}</p><hr><a class="more" href="{a["fn"]}">Read the article</a></div>'
+        for a in ARTICLES
+    )
+    return f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Our</span> Articles</h1><p>Practical writing about AI agents, assistant setup, approval gates, and implementation.</p></div></div>
+<section class="approach"><div class="wrap">
+<p class="lead">Written by Loving Grace Technologies, about the work we do and the standards we build to.</p>
+<div class="grid">
+{cards}
+</div>
+</div></section>'''
+
 P = {}
 
 P["index.html"] = (
@@ -526,6 +684,18 @@ P["index.html"] = (
 </div>
 </div></section>
 
+<section class="approach" id="articles"><div class="wrap">
+<p class="caption">Articles</p>
+<h2>Writing on AI agents, setup, and approval</h2><div class="rule"></div>
+<p class="lead">Practical articles about the work we do and the standards we build to.</p>
+<div class="grid">
+<div class="card"><p class="caption">AI assistant setup</p><h3>AI assistant setup, explained</h3><p>What setup means: instructions, boundaries, files, and preferences configured around your work.</p><hr><a class="more" href="article-ai-assistant-setup.html">Read the article</a></div>
+<div class="card"><p class="caption">Approval gates</p><h3>Who approves what the AI drafts?</h3><p>How Second Seat separates drafting from checking, and what a sandbox demo proved.</p><hr><a class="more" href="article-meeting-approval.html">Read the article</a></div>
+<div class="card"><p class="caption">Choosing</p><h3>Custom agent or general assistant?</h3><p>Both are useful. They are not interchangeable. The work decides which one your business needs.</p><hr><a class="more" href="article-custom-agent-vs-chatgpt.html">Read the article</a></div>
+</div>
+<p style="margin-top:28px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>
+
 <section class="band"><div class="wrap">
 <h2>Scientific Rigor. Human Wisdom. Conscious Future.</h2>
 <p>Engineering a more conscious world, together. Partnerships, pilots, research, and government collaboration are welcome.</p>
@@ -557,6 +727,17 @@ P["services.html"] = (
 <p>Software for contents inventory, packout, storage, packback, condition documentation, and claims reporting. Loving Grace Technologies builds and supports the software.</p></article>
 <article class="card product">{ic("consult")}<span class="caption">Consulting</span><h2>Small Business Consulting</h2>
 <p>We help small businesses get ready for an AI-powered world. We look at how your business runs today, find where AI can save you time and money, and build a clear, practical plan to put it to work. We also help with the foundations around it: planning, registrations, and contracting readiness, so you&rsquo;re set up to grow.</p></article>
+</div></section>
+<section class="textured-tile approach"><div class="wrap">
+<p class="caption">Questions</p>
+<h2>Questions buyers ask</h2><div class="rule"></div>
+<div class="grid">
+<div class="card"><h3>Do you work remotely?</h3><p>Yes. Engagements are remote, and we serve clients across the United States from Grenada, Mississippi.</p></div>
+<div class="card"><h3>How much does an engagement cost?</h3><p>Pricing depends on scope: the workflow, the systems involved, and what must be checked before anything moves. Email us with what you need and we will scope it with you. No prices are published because no two engagements are the same.</p></div>
+<div class="card"><h3>Do you sell courses?</h3><p>No. We do not sell recorded courses. Training is built custom for one team, around the tools, workflows, and approvals that team will actually use, and it is current on the day it is delivered.</p></div>
+<div class="card"><h3>Who approves what the AI does?</h3><p>A person does. Our tools draft and prepare, and a person approves anything that is sent, paid, or changed. Approval gates are built into the work, not added later.</p></div>
+<div class="card"><h3>Will it work with the tools we already use?</h3><p>That is the starting point. Agents and assistant setups are built around your workflow, your rules, and your records, including the AI assistant you already use.</p></div>
+</div>
 </div></section>''',
 )
 
@@ -701,6 +882,13 @@ P["discovery-scout-thanks.html"] = (
     "Thank you for your Discovery Scout order.",
     thanks_body(),
 )
+for _a in ARTICLES:
+    P[_a["fn"]] = (_a["title"], _a["desc"], _a["body"])
+P["articles.html"] = (
+    "Articles | Loving Grace Technologies",
+    "Articles from Loving Grace Technologies: AI agents, AI assistant setup, approval gates, implementation training, and choosing an AI company.",
+    articles_body(),
+)
 CHECKOUT_PAGES = ["discovery-scout-plans.html", "terms.html", "refund-policy.html", "discovery-scout-thanks.html"]
 
 if CHECKOUT_OPEN:
@@ -743,6 +931,8 @@ if CHECKOUT_OPEN:
     _ds_ld = (_ds_ld.replace(" Waitlist only. Nothing to buy here.", " Plans and prices are on the plans page.")
                     .replace(" This page is a waitlist. Planned plans are not for sale here.", " Plans are sold through Square on the plans page."))
 EXTRA_LD = {"discovery-scout.html": _ds_ld}
+for _a in ARTICLES:
+    EXTRA_LD[_a["fn"]] = article_ld(_a["fn"], _a["title"], _a["desc"])
 for fn, (t, d, b) in P.items():
     head = ""
     if fn in CHECKOUT_PAGES:
@@ -750,7 +940,7 @@ for fn, (t, d, b) in P.items():
     Path(fn).write_text(page(fn, t, d, b, EXTRA_LD.get(fn, ""), head), encoding="utf-8")
 
 # Sitemap of public pages (not the 404 page)
-SITEMAP_PAGES = ["index.html", "services.html", "products.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
+SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
 if CHECKOUT_OPEN:
     SITEMAP_PAGES += ["discovery-scout-plans.html", "terms.html", "refund-policy.html"]
 urls = []
