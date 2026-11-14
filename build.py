@@ -991,9 +991,10 @@ P["about.html"] = (
 <dt>Legal name</dt><dd>Loving Grace Technologies, LLC</dd>
 <dt>Location</dt><dd>Grenada, Mississippi, United States</dd>
 <dt>Formed</dt><dd>June 2, 2026</dd>
-<dt>SAM.gov</dt><dd>Registration recorded as active October 15, 2026 (activated July 10, 2026)</dd>
+<dt>SAM.gov</dt><dd>Active registration (activated July 10, 2026; renewal June 23, 2027)</dd>
 <dt>UEI</dt><dd>U5D5QT7QLRQ5</dd>
 <dt>CAGE code</dt><dd>222V5</dd>
+<dt>NAICS</dt><dd>541512 Computer Systems Design Services<br>541720 Research and Development in the Social Sciences and Humanities<br>541990 All Other Professional, Scientific, and Technical Services</dd>
 </dl></div>
 </div></section>''',
 )
