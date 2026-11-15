@@ -101,6 +101,18 @@ def article_ld(fn, title, desc):
     }
     return '<script type="application/ld+json">' + json.dumps(data, separators=(",", ":")) + "</script>"
 
+# Google Analytics 4, installed Nov 15, 2026, at Bridgett's order.
+# Property: Loving Grace Technologies website. Account: Loving Grace Technologies.
+# Google Signals OFF, Google Ads linking OFF. Privacy page discloses this tag.
+GA_ID = "G-05WWQY8PGW"
+GA_SNIPPET = """<script async src="https://www.googletagmanager.com/gtag/js?id=G-05WWQY8PGW"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-05WWQY8PGW');
+</script>"""
+
 PAGE_TMPL = """<!doctype html>
 <html lang="en">
 <head>
@@ -125,6 +137,7 @@ PAGE_TMPL = """<!doctype html>
 <link rel="stylesheet" href="assets/style.css?v={css_v}">
 <script src="assets/navigation.js?v={css_v}" defer></script>
 {ld}
+{ga}
 </head>
 <body>
 <header class="site"><div class="wrap">
@@ -162,7 +175,7 @@ def page(fn, title, desc, body, extra_ld="", extra_head=""):
     path = "" if fn == "index.html" else fn
     return PAGE_TMPL.format(
         title=title, desc=desc, url=SITE + path, site=SITE,
-        fonts=FONTS, css_v=CSS_V, ld=ldjson() + extra_ld + extra_head, nav=nav, body=body, email=EMAIL,
+        fonts=FONTS, css_v=CSS_V, ld=ldjson() + extra_ld + extra_head, nav=nav, body=body, email=EMAIL, ga=GA_SNIPPET,
     )
 
 def shot(stem, title, cap):
@@ -1159,11 +1172,12 @@ P["privacy.html"] = (
     "Privacy | Loving Grace Technologies",
     "Privacy policy for the Loving Grace Technologies website.",
     f'''
-<div class="page-head"><div class="wrap"><h1><span class="gold">Privacy</span> Policy</h1><p>Last updated November 14, 2026</p></div></div>
+<div class="page-head"><div class="wrap"><h1><span class="gold">Privacy</span> Policy</h1><p>Last updated November 15, 2026</p></div></div>
 <section><div class="wrap prose">
 <p>This policy covers the public Loving Grace Technologies website, run by Loving Grace Technologies, LLC and hosted on GitHub Pages.</p>
 <h2>What We Collect</h2>
-<p>This website has no advertising and no analytics or tracking cookies. We do not sell personal information.</p>
+<p>This website has no advertising. We do not sell personal information.</p>
+<p>We use Google Analytics to count visits and see which pages are read. Google Analytics uses cookies and collects standard visit information, such as the pages viewed, approximate location, device, and browser. It does not collect your name, email address, or payment information through this site.</p>
 <p>The Discovery Scout page has an email-only waitlist. Joining opens an email to us, or you can email us directly. If you send that message, we receive the address you include and use it only to tell you about Discovery Scout. We do not ask for a password, payment card, government identification, or home address. This site does not run a separate signup database.</p>
 <p>The Contact page has a form. If you use it, the name, email address, topic, and message you enter are delivered to us by email through FormSubmit, the form service that carries the message. We use what you send only to reply to you. We do not ask for a password, payment card, government identification, or home address on the form.</p>
 <p>If you email us, we receive your email address and whatever you choose to include, and we use it only to reply to you and, if you asked to join the waitlist, to keep that request.</p>
