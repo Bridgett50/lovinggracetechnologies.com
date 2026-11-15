@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Self-Hosted Moved Inside the Firewall. The Model Did Not Move With It. | Loving Grace Technologies</title>
+<meta name="description" content="Anthropic put self-hosted Claude Managed Agents into private beta on Nov 12, 2026. The service, the database, and the sandboxes move inside. The model calls still go out. A second story from the same month shows the other meaning of self-hosted.">
+<meta name="theme-color" content="#CDCED6">
+<meta property="og:title" content="Self-Hosted Moved Inside the Firewall. The Model Did Not Move With It. | Loving Grace Technologies">
+<meta property="og:description" content="Anthropic put self-hosted Claude Managed Agents into private beta on Nov 12, 2026. The service, the database, and the sandboxes move inside. The model calls still go out. A second story from the same month shows the other meaning of self-hosted.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lovinggracetechnologies.com/article-self-hosted-model-did-not-move.html">
+<meta property="og:image" content="https://lovinggracetechnologies.com/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Self-Hosted Moved Inside the Firewall. The Model Did Not Move With It. | Loving Grace Technologies">
+<meta name="twitter:description" content="Anthropic put self-hosted Claude Managed Agents into private beta on Nov 12, 2026. The service, the database, and the sandboxes move inside. The model calls still go out. A second story from the same month shows the other meaning of self-hosted.">
+<link rel="canonical" href="https://lovinggracetechnologies.com/article-self-hosted-model-did-not-move.html">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600&family=Montserrat:wght@500&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=20261114-nav3">
+<script src="assets/navigation.js?v=20261114-nav3" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://lovinggracetechnologies.com/#business","name":"Loving Grace Technologies, LLC","legalName":"Loving Grace Technologies, LLC","url":"https://lovinggracetechnologies.com/","logo":"https://lovinggracetechnologies.com/assets/emblem-512.png","image":"https://lovinggracetechnologies.com/assets/og-image.jpg","email":"bridgettsanders50@lovinggracetechnologies.com","description":"Human-centered technology for government and commercial teams: AI agents, AI assistant setup, workflow and AI automation, systems planning, websites, training, research, and small business consulting.","address":{"@type":"PostalAddress","addressLocality":"Grenada","addressRegion":"MS","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Grenada","containedInPlace":{"@type":"State","name":"Mississippi"}},{"@type":"Country","name":"United States"}],"knowsAbout":["AI agent development","Workflow and AI automation","Systems planning","Website development","AI assistant setup and configuration","AI implementation training","Technical documentation","Deep technology research and development","Verified authorization and custody systems","Packout and contents inventory software","Small business consulting"],"slogan":"Where Consciousness Meets Technology"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://lovinggracetechnologies.com/article-self-hosted-model-did-not-move.html#article","headline":"Self-Hosted Moved Inside the Firewall. The Model Did Not Move With It. | Loving Grace Technologies","description":"Anthropic put self-hosted Claude Managed Agents into private beta on Nov 12, 2026. The service, the database, and the sandboxes move inside. The model calls still go out. A second story from the same month shows the other meaning of self-hosted.","author":{"@id":"https://lovinggracetechnologies.com/#business"},"publisher":{"@id":"https://lovinggracetechnologies.com/#business"},"datePublished":"2026-11-14","mainEntityOfPage":"https://lovinggracetechnologies.com/article-self-hosted-model-did-not-move.html"}</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html" aria-label="Loving Grace Technologies home"><picture><source srcset="assets/logo-horizontal.webp" type="image/webp"><img src="assets/logo-horizontal.jpg" alt="Loving Grace Technologies" width="900" height="309"></picture></a>
+<button class="nav-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" hidden>Menu</button>
+<nav id="site-navigation" aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="products.html">Work</a></li><li><a href="articles.html">Articles</a></li><li><a href="research.html">Research</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+</div></header>
+<main>
+
+<div class="page-head"><div class="wrap"><h1><span class="gold">Self-hosted moved inside the firewall.</span> The model did not move with it.</h1><p>What moves inside is the service that runs the agents. The model stays where it was.</p></div></div>
+<section><div class="wrap prose">
+<p>On Nov 12, 2026, Anthropic put self-hosted Claude Managed Agents into private beta. The headline is easy to misread. It sounds like Claude itself now runs inside a company's own systems. It does not. What moves inside is the service that runs the agents. The model stays where it was, and every model call still travels out to a provider the customer picks. The distinction matters, because self-hosted now means at least two different things, and the same month produced a clear example of each.</p>
+<h2>What Anthropic actually shipped</h2>
+<p>Managed Agents is Anthropic's service for long-running AI agents, the kind that fix broken builds, test releases, triage alerts, and work through backlogs. It launched as a hosted service in April 2026. In May 2026, Anthropic added self-hosted sandboxes, so an agent's tool execution could run on customer systems while Anthropic still ran the agent itself. The Nov 12 step moves the rest of the service inside as well. The customer runs three pieces: the cma-server, which serves the Managed Agents API, runs the agent loop, and stores agents, sessions, and history; a PostgreSQL database, version 16 or later, which holds that history; and workers that run the agents' shell and file tools inside sandboxes the customer controls. Anthropic's docs state that it has no remote access to a customer's self-hosted server or its logs.</p>
+<p>What does not move is the model. Each time an agent asks Claude something, the request goes to an inference provider. Anthropic's Claude API is the default. The alternatives named in the docs are Amazon Bedrock, Claude models on Google Cloud, Microsoft Foundry, or the customer's own model gateway. Anthropic's data and access docs add a sentence that should not be skipped: each model call carries the conversation so far, including prompts, tool inputs, and tool results. Session history can now live in the customer's own database, and credentials can stay in-house, but the content of each call still leaves the network unless the customer routes it to a gateway it controls.</p>
+<p>The self-hosted edition is also not a feature-for-feature copy of the hosted service. Anthropic's docs list hosted features that are not available on the self-hosted server, including cloud environments, the Files API, webhooks, scheduled deployments, dreams, prebuilt document skills, and vault credentials for MCP OAuth, plus full multiagent orchestration, which is limited to coordinator-type setups. Web search and web fetch stay off until explicitly enabled. Nothing migrates from the hosted service. One tenant runs per deployment. The customer operates and secures the server, the database, and the sandboxes, and installs each release itself. Access runs only through an Anthropic account team, for eligible organizations. Anthropic has published no price and no general availability date. A private beta open only to eligible organizations, with no price and no date, is a controlled test, not a product launch.</p>
+<h2>The other meaning of self-hosted</h2>
+<p>The same month produced the other meaning of self-hosted. At the AI Engineer NYC conference on Oct 13, 2026, David Abitbol, who leads AI operations at Revolut, described how the fintech made self-hosted open-weight GLM models the default coding stack for roughly 2,000 engineers, running on about 56 NVIDIA B200 GPUs. Coverage of the talk in early November reported a blended inference cost near $0.30 per million tokens and inference costs roughly 90 percent below the prior commercial mix, plus reported productivity gains of about 60 percent less coding time and 70 percent shorter task-to-merge lead time. Those figures are company-reported, not independently audited, and the coverage does not isolate the model change from other causes. The model version is also inconsistent across secondary coverage, with GLM-5.3 and GLM-4.5 both named, while the primary post names only GLM. Frontier tools, including Claude Code and Codex, remain available for exceptions. The point that holds across the coverage is the architecture: Revolut downloads open model weights and runs inference on infrastructure under its control. The model itself moved inside. That is different from Anthropic's beta, where the service moved inside and the model did not.</p>
+<p>Both stories are real, and they answer different questions. Anthropic's beta answers: can the agent service, its history, and its credentials live inside our perimeter, under our operation? Revolut's setup answers: can the model itself run on hardware we control, with our code staying on our systems? A buyer who hears self-hosted and assumes both answers are yes will be wrong about at least one of them.</p>
+<h2>Five questions to ask before calling any setup self-hosted</h2>
+<ol>
+<li>Where do model calls go? Name the provider for every call, including the default. If the answer is a vendor API, the model is hosted, whatever else is self-hosted.</li>
+<li>What leaves the network on each call? Prompts, tool inputs, tool results, and conversation history all travel with the call unless the routing says otherwise. Get that in writing.</li>
+<li>Who holds the history and the credentials? In Anthropic's beta, the customer holds both, in its own database and its own systems. In a hosted service, the vendor holds them. The difference decides who can audit, retain, and delete the record.</li>
+<li>What is missing compared with the hosted version? Feature gaps, disabled tools, and migration limits change what a team can actually run. Read the differences page before planning a move.</li>
+<li>Who operates and patches it? Self-hosting moves the work, not just the data. The server, the database, the sandboxes, and each release are the customer's job now, including security updates on the vendor's timetable.</li>
+</ol>
+<h2>What to watch</h2>
+<p>Whether Anthropic's beta opens wider, publishes pricing, and closes the feature gaps, and whether more large engineering teams follow Revolut's path of running open-weight models as the default with frontier tools kept for exceptions. Self-hosted is no longer one claim. It is a split, and the useful question is always the same: which part moved, and which part did not?</p>
+<h2>Sources</h2>
+<ul>
+<li>Anthropic, Claude Platform release notes and self-hosted Claude Managed Agents docs, Nov 12, 2026, as cited in <a href="https://aiagentupdate.com/post/anthropic-claude-managed-agents-self-hosted-2026-11-13">AI Agent Update, Nov 13, 2026</a> and <a href="https://cellcog.ai/blog/claude-managed-agents-self-hosted/">CellCog, Nov 12, 2026</a>.</li>
+<li>AI Engineer NYC talk by David Abitbol, Oct 13, 2026, as covered Nov 2 to 5, 2026: <a href="http://i10x.ai/news/revolut-glm-self-hosted-2000-engineers">i10x analysis</a> and <a href="https://ainews.leverageai.com.au/case/revolut-self-hosted-glm-coding-adoption-claim">AI News Radar case file</a>. Figures are company-reported.</li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+<div>
+<div class="wordmark" aria-label="Loving Grace Technologies"><span class="loving">Loving</span> <span class="grace">Grace</span><small>TECHNOLOGIES</small></div>
+<p class="sig">Sacred by design. Powered by innovation. Guided by grace.</p>
+<p class="sig" style="font-size:14px;margin-top:10px;max-width:28rem">Named for a simple idea: machines should watch over people with grace, and people should remain in charge.</p>
+</div>
+<div>
+<nav aria-label="Footer"><a href="services.html">Services</a><a href="products.html">Work</a><a href="articles.html">Articles</a><a href="research.html">Research</a><a href="discovery-scout.html">Discovery Scout</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refund-policy.html">Refunds</a></nav>
+<p>Grenada, Mississippi</p>
+</div>
+<div class="foot-bottom">
+<p class="motto">Technology with purpose<span>&bull;</span>Intelligence with compassion<span>&bull;</span>Innovation with integrity</p>
+<p>&copy; 2026 Loving Grace Technologies, LLC</p>
+</div>
+</div></footer>
+</body>
+</html>

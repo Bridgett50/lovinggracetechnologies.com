@@ -503,8 +503,10 @@ DS_NOINDEX = '<meta name="robots" content="noindex,nofollow">'
 
 # ---------------------------------------------------------------------------
 # Articles: practical writing about the work, in the site's own theme.
-# Every claim here comes from the company's own services, products, and
-# verified demo record. No client stories, no prices, no invented results.
+# Service articles draw on the company's own services, products, and
+# verified demo record. News articles report dated news in related
+# fields, verified on the primary source named in the article, and
+# carry no company pitch. No client stories, no prices, no invented results.
 # ---------------------------------------------------------------------------
 
 ARTICLES = [
@@ -722,6 +724,81 @@ ARTICLES = [
 <h2>Built from claims work</h2>
 <p>Loving Grace Technologies builds this software, shaped by over ten years of complex insurance claims work: multimillion-dollar property losses, estimating, coverage analysis, and negotiation. The software reflects what that work actually requires of a record: completeness at the time, condition tied to the item, and a report that holds up.</p>
 <div class="card"><p>If your contents documentation depends on memory and retyping, one record per item is the fix. Ask us about the software.</p><p style="margin-top:14px"><a class="btn primary" href="mailto:{EMAIL}">Start a conversation</a></p><p style="margin-top:14px"><a class="more" href="services.html">See our services</a></p></div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-agents-that-pay-approval-is-the-job.html",
+        "title": "Agents Can Pay Now. The Approval Screen Is the Whole Job. | Loving Grace Technologies",
+        "desc": "Visa tested AI shopping agents, prosecutors unsealed a $129 million impersonation case, and OpenAI shipped a wallet that lets agents pay. All three landed within eight days, and all three point at the same control: approval.",
+        "caption": "Agents that pay",
+        "heading": "Agents can pay now. The approval screen is the whole job.",
+        "summary": "Visa tested AI shopping agents, prosecutors unsealed a $129 million impersonation case, and OpenAI shipped a wallet that lets agents pay. All three point at the same control: approval.",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Agents can pay now.</span> The approval screen is the whole job.</h1><p>Buying got easier. Deciding correctly did not.</p></div></div>
+<section><div class="wrap prose">
+<p>Three news items landed within eight days, and they belong together. On Nov 5, 2026, Visa published a benchmark that put AI shopping agents through realistic buying tasks. On the same day, federal prosecutors in New York unsealed an indictment alleging that AI impersonation was used to trick employees into sending about $129 million. On Nov 13, 2026, OpenAI shipped ChatGPT Wallet, which lets an AI agent complete a purchase on a user's behalf. Buying got easier. Deciding correctly did not.</p>
+<h2>What Visa found</h2>
+<p>Visa's test is the clearest measure of the gap. The Visa Agentic Commerce Benchmark put 22 AI models from 12 labs through 15 shopping challenges, such as buying a TV, a laptop, or a personal care appliance. To pass, a model had to uncover the customer's requirements in conversation and then make the right choice, which sometimes meant not buying at all. The models passed 57.2 percent of runs and failed 42.8 percent. The best models passed 82.2 percent of attempts. The worst passed 28.9 percent. Consistency was weaker still. Each model got three attempts at each scenario, and all three attempts passed only 34.2 percent of the time.</p>
+<p>The finding that matters most for anyone who lets an agent near money is this one. In 54 percent of the runs that failed, the AI still ended in a purchase. It bought something that did not meet the customer's stated requirements, or it bought before it had uncovered all the requirements. Failing did not mean stopping. Visa's own September 2026 Trust Index found that 72 percent of U.S. consumers had used an AI assistant, but only 23 percent trusted AI to handle payment transactions on their behalf. The benchmark explains why that trust is low, and what has to change to earn it.</p>
+<h2>What OpenAI shipped</h2>
+<p>OpenAI's Wallet, shipped Nov 13, 2026, is built around one answer to that problem: a human approval step, with the card itself kept out of the agent's reach. In OpenAI's release notes, the Wallet helps a user's dot go from finding what is needed to making a purchase on the user's behalf. The user saves an eligible card once, then reviews the merchant, the items, the total, and the selected card before authorizing with biometrics such as Face ID or Touch ID. The Wallet supplies a substitute payment credential at checkout, so the actual card details stay hidden from the agent and the business. The user keeps the card's rewards and its protections for qualifying disputes. The rollout is gradual, in dots, for ChatGPT Pro subscribers age 18 or older in the United States, with an eligible US-issued card and a US billing address. OpenAI adds a limit worth reading twice: approval alone does not confirm an order, and the merchant's confirmation still has to be checked after checkout.</p>
+<h2>What prosecutors allege</h2>
+<p>The indictment unsealed Nov 5, 2026, shows the other side of the same week. The Justice Department charged Jacob Soall, Sharon Hazan, and Guy Sheetrit with using what the release calls super intelligence to impersonate the voices and images of corporate executives and attorneys, in order to trick employees into sending large payments to accounts controlled by the alleged conspiracy. Prosecutors allege the scheme ran between 2024 and 2026 and took more than $129 million from companies in the United States and around the world, including six itemized losses ranging from about $2.7 million to about $11.6 million. The charges are allegations. The defendants are presumed innocent unless and until proven guilty, and extradition requests were pending at the time of the announcement. The practical lesson does not depend on the outcome of the case. A voice or a face on a call is no longer proof of identity. A payment request that arrives with urgency and secrecy still needs a check that runs outside the channel it arrived through, and a named person who signs off on it.</p>
+<h2>One job</h2>
+<p>Read together, the three items describe one job. The agent can find, compare, draft, and queue. The human must still decide, on a screen that shows exactly what will move, to whom, for how much, and under what terms, with a real option to say no. A tap that only confirms that something happened is not approval. Approval is a check that can stop the move.</p>
+<h2>Five checks worth keeping before any agent is allowed to pay</h2>
+<ol>
+<li>The approval screen shows the merchant, the items, the quantity, the total including known taxes, fees, and shipping, the card being charged, and whether the purchase creates a recurring charge, a deposit, or an authorization hold. If any of that is missing, the screen is not ready.</li>
+<li>No purchase is allowed when the requirements are incomplete. The Visa result to remember is the 54 percent: a failed run that buys anyway is worse than a failed run that stops.</li>
+<li>A payment change, a new payee, or an urgent wire request is verified through a channel the request did not use. A callback to a known number, a separate message thread, or an in-person confirmation counts. A reply in the same thread does not.</li>
+<li>The agent never sees raw card details. A substitute credential, a token, or a wallet layer sits between the agent and the account, and the limits on that credential are set in advance.</li>
+<li>Every attempt is logged, including the ones that were stopped. When something goes wrong, the record should show what the agent proposed, what the approver saw, and what was decided.</li>
+</ol>
+<h2>What to watch</h2>
+<p>Whether later Visa benchmark rounds, which Visa says will extend to checkout, payment, and order placement, show the failure rate falling, and whether wallet-style approval screens become the default wherever agents can spend. The news this week says the tools to buy are here. The controls that make buying safe are still being built, one approval screen at a time.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.22936.html">Visa, Visa Releases First-of-Its-Kind Industry Benchmark for AI Shopping, Nov 5, 2026</a></li>
+<li><a href="https://openai.com/products/release-notes/?category=chatgpt">OpenAI, Release Notes, Introducing ChatGPT Wallet, Nov 13, 2026</a></li>
+<li><a href="https://www.justice.gov/usao-sdny/pr/three-foreign-nationals-arrested-and-charged-scheme-use-super-intelligence-defraud">U.S. Department of Justice, Three Foreign Nationals Arrested And Charged With Scheme To Use Super Intelligence To Defraud Companies Of $129 Million, Nov 5, 2026</a></li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-self-hosted-model-did-not-move.html",
+        "title": "Self-Hosted Moved Inside the Firewall. The Model Did Not Move With It. | Loving Grace Technologies",
+        "desc": "Anthropic put self-hosted Claude Managed Agents into private beta on Nov 12, 2026. The service, the database, and the sandboxes move inside. The model calls still go out. A second story from the same month shows the other meaning of self-hosted.",
+        "caption": "What self-hosted means now",
+        "heading": "Self-hosted moved inside the firewall. The model did not move with it.",
+        "summary": "Anthropic put self-hosted Claude Managed Agents into private beta on Nov 12, 2026. The service, the database, and the sandboxes move inside. The model calls still go out.",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Self-hosted moved inside the firewall.</span> The model did not move with it.</h1><p>What moves inside is the service that runs the agents. The model stays where it was.</p></div></div>
+<section><div class="wrap prose">
+<p>On Nov 12, 2026, Anthropic put self-hosted Claude Managed Agents into private beta. The headline is easy to misread. It sounds like Claude itself now runs inside a company's own systems. It does not. What moves inside is the service that runs the agents. The model stays where it was, and every model call still travels out to a provider the customer picks. The distinction matters, because self-hosted now means at least two different things, and the same month produced a clear example of each.</p>
+<h2>What Anthropic actually shipped</h2>
+<p>Managed Agents is Anthropic's service for long-running AI agents, the kind that fix broken builds, test releases, triage alerts, and work through backlogs. It launched as a hosted service in April 2026. In May 2026, Anthropic added self-hosted sandboxes, so an agent's tool execution could run on customer systems while Anthropic still ran the agent itself. The Nov 12 step moves the rest of the service inside as well. The customer runs three pieces: the cma-server, which serves the Managed Agents API, runs the agent loop, and stores agents, sessions, and history; a PostgreSQL database, version 16 or later, which holds that history; and workers that run the agents' shell and file tools inside sandboxes the customer controls. Anthropic's docs state that it has no remote access to a customer's self-hosted server or its logs.</p>
+<p>What does not move is the model. Each time an agent asks Claude something, the request goes to an inference provider. Anthropic's Claude API is the default. The alternatives named in the docs are Amazon Bedrock, Claude models on Google Cloud, Microsoft Foundry, or the customer's own model gateway. Anthropic's data and access docs add a sentence that should not be skipped: each model call carries the conversation so far, including prompts, tool inputs, and tool results. Session history can now live in the customer's own database, and credentials can stay in-house, but the content of each call still leaves the network unless the customer routes it to a gateway it controls.</p>
+<p>The self-hosted edition is also not a feature-for-feature copy of the hosted service. Anthropic's docs list hosted features that are not available on the self-hosted server, including cloud environments, the Files API, webhooks, scheduled deployments, dreams, prebuilt document skills, and vault credentials for MCP OAuth, plus full multiagent orchestration, which is limited to coordinator-type setups. Web search and web fetch stay off until explicitly enabled. Nothing migrates from the hosted service. One tenant runs per deployment. The customer operates and secures the server, the database, and the sandboxes, and installs each release itself. Access runs only through an Anthropic account team, for eligible organizations. Anthropic has published no price and no general availability date. A private beta open only to eligible organizations, with no price and no date, is a controlled test, not a product launch.</p>
+<h2>The other meaning of self-hosted</h2>
+<p>The same month produced the other meaning of self-hosted. At the AI Engineer NYC conference on Oct 13, 2026, David Abitbol, who leads AI operations at Revolut, described how the fintech made self-hosted open-weight GLM models the default coding stack for roughly 2,000 engineers, running on about 56 NVIDIA B200 GPUs. Coverage of the talk in early November reported a blended inference cost near $0.30 per million tokens and inference costs roughly 90 percent below the prior commercial mix, plus reported productivity gains of about 60 percent less coding time and 70 percent shorter task-to-merge lead time. Those figures are company-reported, not independently audited, and the coverage does not isolate the model change from other causes. The model version is also inconsistent across secondary coverage, with GLM-5.3 and GLM-4.5 both named, while the primary post names only GLM. Frontier tools, including Claude Code and Codex, remain available for exceptions. The point that holds across the coverage is the architecture: Revolut downloads open model weights and runs inference on infrastructure under its control. The model itself moved inside. That is different from Anthropic's beta, where the service moved inside and the model did not.</p>
+<p>Both stories are real, and they answer different questions. Anthropic's beta answers: can the agent service, its history, and its credentials live inside our perimeter, under our operation? Revolut's setup answers: can the model itself run on hardware we control, with our code staying on our systems? A buyer who hears self-hosted and assumes both answers are yes will be wrong about at least one of them.</p>
+<h2>Five questions to ask before calling any setup self-hosted</h2>
+<ol>
+<li>Where do model calls go? Name the provider for every call, including the default. If the answer is a vendor API, the model is hosted, whatever else is self-hosted.</li>
+<li>What leaves the network on each call? Prompts, tool inputs, tool results, and conversation history all travel with the call unless the routing says otherwise. Get that in writing.</li>
+<li>Who holds the history and the credentials? In Anthropic's beta, the customer holds both, in its own database and its own systems. In a hosted service, the vendor holds them. The difference decides who can audit, retain, and delete the record.</li>
+<li>What is missing compared with the hosted version? Feature gaps, disabled tools, and migration limits change what a team can actually run. Read the differences page before planning a move.</li>
+<li>Who operates and patches it? Self-hosting moves the work, not just the data. The server, the database, the sandboxes, and each release are the customer's job now, including security updates on the vendor's timetable.</li>
+</ol>
+<h2>What to watch</h2>
+<p>Whether Anthropic's beta opens wider, publishes pricing, and closes the feature gaps, and whether more large engineering teams follow Revolut's path of running open-weight models as the default with frontier tools kept for exceptions. Self-hosted is no longer one claim. It is a split, and the useful question is always the same: which part moved, and which part did not?</p>
+<h2>Sources</h2>
+<ul>
+<li>Anthropic, Claude Platform release notes and self-hosted Claude Managed Agents docs, Nov 12, 2026, as cited in <a href="https://aiagentupdate.com/post/anthropic-claude-managed-agents-self-hosted-2026-11-13">AI Agent Update, Nov 13, 2026</a> and <a href="https://cellcog.ai/blog/claude-managed-agents-self-hosted/">CellCog, Nov 12, 2026</a>.</li>
+<li>AI Engineer NYC talk by David Abitbol, Oct 13, 2026, as covered Nov 2 to 5, 2026: <a href="http://i10x.ai/news/revolut-glm-self-hosted-2000-engineers">i10x analysis</a> and <a href="https://ainews.leverageai.com.au/case/revolut-self-hosted-glm-coding-adoption-claim">AI News Radar case file</a>. Figures are company-reported.</li>
+</ul>
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
@@ -1189,7 +1266,7 @@ for fn, (t, d, b) in P.items():
     Path(fn).write_text(page(fn, t, d, b, EXTRA_LD.get(fn, ""), head), encoding="utf-8")
 
 # Sitemap of public pages (not the 404 page)
-SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
+SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "article-agents-that-pay-approval-is-the-job.html", "article-self-hosted-model-did-not-move.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
 if CHECKOUT_OPEN:
     SITEMAP_PAGES += ["discovery-scout-plans.html", "terms.html", "refund-policy.html"]
 urls = []
