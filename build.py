@@ -86,7 +86,7 @@ def ldjson():
     }
     return '<script type="application/ld+json">' + json.dumps(data, separators=(",", ":")) + "</script>"
 
-def article_ld(fn, title, desc):
+def article_ld(fn, title, desc, date="2026-11-14"):
     import json
     data = {
         "@context": "https://schema.org",
@@ -96,7 +96,7 @@ def article_ld(fn, title, desc):
         "description": desc,
         "author": {"@id": SITE + "#business"},
         "publisher": {"@id": SITE + "#business"},
-        "datePublished": "2026-11-14",
+        "datePublished": date,
         "mainEntityOfPage": SITE + fn,
     }
     return '<script type="application/ld+json">' + json.dumps(data, separators=(",", ":")) + "</script>"
@@ -815,6 +815,60 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
+    {
+        "fn": "article-defense-logistics-commercial-ai.html",
+        "title": "Defense Logistics Turned to Commercial AI. The Plan Is Due This Month. | Loving Grace Technologies",
+        "desc": "Leidos won a $95 million contract to bring AI automation to the Pentagon's asset system, and the Army's FedEx Dataworks logistics modernization plan is expected in November 2026. Both put commercial AI inside defense logistics.",
+        "caption": "Defense logistics",
+        "heading": "Defense logistics turned to commercial AI. The plan is due this month.",
+        "summary": "Leidos won a $95 million contract to bring AI automation to the Pentagon's asset system, and the Army's FedEx Dataworks logistics modernization plan is expected in November 2026.",
+        "date": "2026-11-15",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Defense logistics turned to commercial AI.</span> The plan is due this month.</h1><p>Both put commercial AI inside defense logistics.</p></div></div>
+<section><div class="wrap prose">
+<p>Two defense logistics stories landed in the same fortnight, and they point the same way. The Pentagon's asset system is getting commercial AI automation under a $95 million contract, and the Army's plan to rebuild its domestic logistics network with FedEx Dataworks is due this month. In both cases the government is buying commercial logistics skill instead of building a bespoke system from scratch.</p>
+<p>The contract first. On Oct 22, 2026, Leidos announced a new $95 million, five-year contract from the Defense Logistics Agency to apply AI-driven automation, cloud, and modern software development practices to the Enterprise Logistics Management System, known as ELMS. The system is used by more than 50 agencies to manage over 80 million items of government property valued at more than $140 billion. The contract runs a base year plus four option years, through August 2031. Leidos has supported ELMS and its predecessor, the Defense Property Accountability System, for more than 21 years. The work is to accelerate software delivery, streamline processes, and support secure, reliable operations. Leidos senior vice president Jason McCarthy put the stakes plainly in the announcement: accurate, reliable asset visibility is a cornerstone of military readiness.</p>
+<p>The second story is bigger in scope and different in shape. In August 2026, the Army announced a project under its Strategic Capital Initiative with a FedEx Dataworks-led team to modernize its domestic non-tactical logistics networks, supply chain procedures, and organic industrial base sites. That means 23 government-owned and operated industrial facilities that make, repair, overhaul, and store military equipment and munitions. The aim, in the Army's own words, is a predictive, intelligent logistics network that optimizes materiel management and improves transportation routing, so soldiers receive parts, munitions, and equipment ahead of operational demand. The data environment will sit inside Google's Department of Defense Impact Level 5 authorized commercial cloud. The Army and the FedEx-led team formed working groups to analyze existing networks, processes, and technologies, and a finalized implementation plan for U.S. based sites is expected by November 2026.</p>
+<p>A Nov 5, 2026 FreightWaves report adds the commercial context. FedEx Dataworks uses analytics, artificial intelligence, and digital technology to turn supply chain visibility into actionable intelligence, built on the operational signals from millions of parcel and freight shipments. FedEx chief executive Raj Subramaniam discussed the Army contract on the company's Oct 28 earnings call, calling logistics orchestration a new market opportunity. Last month FedEx Dataworks hired retired Vice Admiral Dion English as vice president and global lead for defense and government logistics solutions. During his Navy career he led a multibillion-dollar global logistics enterprise spanning all combatant commands and more than 150 countries.</p>
+<p>The Strategic Capital Initiative itself is the frame that holds the FedEx project. It launched at the end of February 2026 to match the Army's most acute needs with investable private sector commercial models, so infrastructure upgrades can scale without waiting years for traditional appropriations and procurement cycles. It runs on six strategic pillars, including strengthening logistics and supply chains, energy resilience, and advanced manufacturing. The shift is from a traditional contracting relationship toward a public-private partnership in which the Army's demand makes a commercial venture viable and self-sustaining.</p>
+<p>Read together, the two stories describe one change in how defense logistics gets built. The Leidos contract is the familiar shape: a prime contractor, a defined system, a five-year term, AI automation applied to software delivery and operations. The FedEx project is the newer shape: a commercial logistics company leading a team, predictive analytics and time-definite delivery imported from its own network, a secure cloud environment, and a funding model designed to move faster than the appropriations cycle. Both depend on the same thing: data that is accurate enough to trust, and a record of custody that survives audit.</p>
+<h2>What to watch</h2>
+<p>Whether the Army's implementation plan lands in November as expected and what it commits to first, whether the ELMS automation shows measurable delivery speed gains before the first option year, and whether other commercial logistics firms follow FedEx into defense work under the Strategic Capital Initiative model. The contracts are signed. The question now is whether the commercial methods work inside the system they are meant to modernize.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.leidos.com/insights/leidos-bringing-ai-advances-pentagon-logistics-system">Leidos, Leidos Bringing AI Advances to Pentagon Logistics System, Oct 22, 2026</a></li>
+<li><a href="https://www.intelligentgov.tech/2026/11/02/leidos-wins-us95-million-pentagon-contract-to-modernise-military-logistics-with-ai/">Intelligent Gov, Leidos Wins US$95 Million Pentagon Contract to Modernise Military Logistics With AI, Nov 2, 2026</a></li>
+<li><a href="https://www.freightwaves.com/news/us-army-enlists-fedex-to-modernize-logistics-at-depots">FreightWaves, US Army Enlists FedEx to Modernize Logistics at Depots, Nov 5, 2026</a></li>
+<li><a href="https://www.army.mil/article/294805/army_launches_flagship_strategic_capital_initiative_with_fedex_dataworks_to_modernize_logistics_infrastructure">U.S. Army, Army Launches Flagship Strategic Capital Initiative With FedEx Dataworks to Modernize Logistics Infrastructure, Aug 21, 2026</a></li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-korea-ramc-ai-agent-military-logistics.html",
+        "title": "Korea Is Building an AI Agent for Military Logistics. It Starts With the Cost of Keeping a Tank Running. | Loving Grace Technologies",
+        "desc": "South Korea's defense and industry ministries kicked off a 48-month, KRW 30 billion RAM-C AI Agent project on Nov 4, 2026, to analyze reliability, availability, maintainability, and cost across weapon system life cycles, with field testing on the K2 tank, Maritime Surveillance Radar-II, and FA-50.",
+        "caption": "Military logistics AI",
+        "heading": "Korea is building an AI agent for military logistics. It starts with the cost of keeping a tank running.",
+        "summary": "South Korea's defense and industry ministries kicked off a 48-month, KRW 30 billion RAM-C AI Agent project on Nov 4, 2026, to analyze reliability, availability, maintainability, and cost across weapon system life cycles.",
+        "date": "2026-11-15",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Korea is building an AI agent for military logistics.</span> It starts with the cost of keeping a tank running.</h1><p>RAM-C stands for reliability, availability, maintainability, and cost.</p></div></div>
+<section><div class="wrap prose">
+<p>On Nov 4, 2026, South Korea's Ministry of National Defense and Ministry of Trade, Industry and Resources held a kickoff meeting at the Daejeon Convention Center for a project with a plain name and a large ambition: the RAM-C AI Agent research and development project. Around 100 people attended, including representatives from the lead organization, Korea Aerospace Industries, as well as the Army, Navy, Air Force, the Korea Institute for Defense Analyses, and the Defense Agency for Technology and Quality. The project runs 48 months on a total budget of KRW 30 billion. Its job is to bring artificial intelligence into military logistics, starting with the question every operator asks and few can answer precisely: what does it cost, over its whole life, to keep a weapon system available?</p>
+<p>RAM-C stands for reliability, availability, maintainability, and cost. The project is designed to collect, manage, and analyze the data generated throughout a weapon system's life cycle, combining three pieces: infrastructure that integrates military logistics data, intelligent models that analyze reliability, availability, maintainability, and cost, and intelligent decision support tools that draw on the combined analysis. Once deployed, a system powered by the RAM-C AI agent will let military users analyze life-cycle costs and efficiency by mission type and determine the best operating and maintenance policies in a timely manner.</p>
+<p>The test plan is what makes the project concrete. The ministries plan to assess the technology's suitability for operational use by testing it on representative weapon systems currently in service across the land, maritime, and air domains: the K2 main battle tank, the Maritime Surveillance Radar-II, and the FA-50 fighter aircraft. Field testing is meant to correct errors and resolve discrepancies between the technology under development and actual field operations, making operational data more reliable and helping set realistic RAM targets and estimate appropriate sustainment costs when developing future weapon systems.</p>
+<p>The project also covers the supply chain behind the systems. It will run an integrated analysis of demand forecasts for spare parts, parts inventory management, and cost estimates across the weapon system life cycle. The results are expected to lay the groundwork for working with Korean materials, parts, and equipment companies to proactively manage parts obsolescence and plan the development of domestic alternatives. The ministries say the work will also strengthen Korea's position in export negotiations for domestically produced weapon systems and bolster confidence in follow-on maintenance, repair, and overhaul services, because buyers will see sustainment costs backed by reliable data instead of estimates.</p>
+<p>The ministries will continue to work closely with Korea Aerospace Industries and with partners across industry, academia, research institutes, and the military. The project is a research program, not a deployed system, and its value will be proven or not in the field tests on the K2, the radar, and the FA-50. What it signals now is that military logistics is becoming an AI agent problem in more than one country at once: the United States is putting commercial AI into its Pentagon asset system and its Army depots, and South Korea is building an agent to answer the life-cycle cost question for its own fleet.</p>
+<h2>What to watch</h2>
+<p>Whether the field tests on the three weapon systems produce usable reliability and cost models, whether the spare parts demand forecasts change how Korea manages obsolescence, and whether other countries announce comparable life-cycle AI agent programs. The kickoff is done. The evidence comes from the field.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://english.motir.go.kr/eng/article/EATCLdfa319ada/2782/view">Ministry of Trade, Industry and Resources (Korea), Korea Launches AI Agent Project to Modernize Military Logistics, registered Nov 5, 2026</a></li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
 ]
 
 def articles_body():
@@ -1272,7 +1326,7 @@ if CHECKOUT_OPEN:
                     .replace(" This page is a waitlist. Planned plans are not for sale here.", " Plans are sold through Square on the plans page."))
 EXTRA_LD = {"discovery-scout.html": _ds_ld, "research.html": research_ld()}
 for _a in ARTICLES:
-    EXTRA_LD[_a["fn"]] = article_ld(_a["fn"], _a["title"], _a["desc"])
+    EXTRA_LD[_a["fn"]] = article_ld(_a["fn"], _a["title"], _a["desc"], _a.get("date", "2026-11-14"))
 for fn, (t, d, b) in P.items():
     head = ""
     if fn in CHECKOUT_PAGES:
@@ -1280,7 +1334,7 @@ for fn, (t, d, b) in P.items():
     Path(fn).write_text(page(fn, t, d, b, EXTRA_LD.get(fn, ""), head), encoding="utf-8")
 
 # Sitemap of public pages (not the 404 page)
-SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "article-agents-that-pay-approval-is-the-job.html", "article-self-hosted-model-did-not-move.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
+SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "article-agents-that-pay-approval-is-the-job.html", "article-self-hosted-model-did-not-move.html", "article-defense-logistics-commercial-ai.html", "article-korea-ramc-ai-agent-military-logistics.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
 if CHECKOUT_OPEN:
     SITEMAP_PAGES += ["discovery-scout-plans.html", "terms.html", "refund-policy.html"]
 urls = []
