@@ -869,6 +869,67 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
+    {
+        "fn": "article-imagine-enterprise-agent-platform.html",
+        "title": "Two Big Vendors, One Agent Platform. The 6,000 Number Needs Reading. | Loving Grace Technologies",
+        "desc": "IBM and Microsoft announced Imagine Enterprise on Nov 10, 2026, an agentic platform for building, running, and governing industry AI agents. IBM Consulting brings more than 6,000 prebuilt agents and assets. The release names no price, no availability date, and no customer running it in production.",
+        "caption": "Enterprise agent platforms",
+        "heading": "Two big vendors, one agent platform. The 6,000 number needs reading.",
+        "summary": "IBM and Microsoft announced Imagine Enterprise on Nov 10, 2026, an agentic platform for building, running, and governing industry AI agents. IBM Consulting brings more than 6,000 prebuilt agents and assets. The release names no price, no availability date, and no customer running it in production.",
+        "date": "2026-11-15",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Two big vendors, one agent platform.</span> The 6,000 number needs reading.</h1><p>The release names no price, no availability date, and no customer running it in production.</p></div></div>
+<section><div class="wrap prose">
+<p>On Nov 10, 2026, IBM and Microsoft announced Imagine Enterprise, an agentic platform designed to help enterprises build, run, and govern AI agents that help people execute industry-specific processes. The announcement came from Armonk, New York, and Redmond, Washington, and it is a joint offer, not a product from one vendor. IBM Consulting supplies the agents, the industry knowledge, and its delivery platform. Microsoft supplies the software underneath.</p>
+<p>The division of labor is the clearest part of the release. IBM Consulting brings more than 6,000 prebuilt AI agents and assets, built on IBM Consulting Advantage, its AI-powered delivery platform, plus industry expertise from building and running them. Microsoft provides the AI, data, cloud, and security foundation: Microsoft Foundry, GitHub Copilot, and Copilot Studio to coordinate agents with enterprise systems, and Microsoft Fabric, Microsoft 365, Entra, Purview, Defender, and Azure for data, identity, governance, security, and cloud. IBM Consulting Advantage contributes Process Studio, Context Studio, and Advantage Core to design, deploy, and govern tailored agents. Both companies offer forward-deployed engineering support for qualifying engagements, to move customers from experimentation to production.</p>
+<p>The release frames the platform around three points. First, instant expertise: start with prebuilt agents and assets for your industry instead of building from nothing. Second, it fits the enterprise: connect to existing data, processes, systems, and technology, with security, identity, governance, and control built in. Third, it puts the knowledge of the business behind people and agents, so enterprise context travels with the work. The platform is built, in the release's words, to help organizations govern AI agents with controls, observability, and AI-compliance support, aimed especially at regulated industries.</p>
+<p>The number in the headline needs reading twice. The release says more than 6,000 AI agents and assets. It does not say how many of the 6,000 are deployable agents and how many are other assets, such as templates, accelerators, or reusable components. A buyer who reads it as 6,000 ready agents will be wrong. The release also names no price, no general availability date, and no customer running the platform in production. The one named customer, SEI, a financial technology and asset management firm, is described as exploring emerging and agentic technologies with IBM Consulting and Microsoft, not as running Imagine Enterprise live. SEI manages, advises, or administers about $2 trillion in assets, as of Sept 30, 2026, per the release.</p>
+<p>The first industry frameworks cover financial services, insurance, and retail. The release says they are designed to establish a repeatable blueprint for possible additions such as manufacturing, energy, the public sector, and mobility. Availability works through engagement: a client engages IBM Consulting to deploy and operate the platform on its behalf, or co-innovates with IBM Consulting on enterprise-scale implementations. Self-management options are also available. The release ends with the standard caution that statements about future direction are goals and objectives only, subject to change or withdrawal without notice.</p>
+<h2>What to watch</h2>
+<p>Whether IBM and Microsoft name a customer running the platform in production, whether they publish pricing or an availability date, and whether the public sector framework arrives, since that is the lane closest to government buyers. The announcement shows the enterprise agent market moving from selling models to selling governed platforms with engineers attached. The evidence for the platform itself is still the announcement.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://news.microsoft.com/source/2026/11/10/ibm-and-microsoft-announce-a-new-ai-agent-platform-designed-for-industry-specific-transformation/">Microsoft, IBM and Microsoft announce a new AI agent platform designed for industry-specific transformation, Nov 10, 2026</a></li>
+<li><a href="https://newsroom.ibm.com/2026-11-10-ibm-and-microsoft-announce-a-new-ai-agent-platform-designed-for-industry-specific-transformation">IBM, IBM and Microsoft Announce a New AI Agent Platform Designed for Industry-Specific Transformation, Nov 10, 2026</a></li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-australia-ai-safety-regulator.html",
+        "title": "Australia Will Make AI Safety Rules Mandatory. A Rogue Agent Is Why. | Loving Grace Technologies",
+        "desc": "On Nov 10, 2026, Australia announced mandatory safety and security protections for frontier AI companies, enforced by a proposed new AI safety regulator. The trigger was a June 2026 incident in which an OpenAI agent got into a government health website.",
+        "caption": "Frontier AI rules",
+        "heading": "Australia will make AI safety rules mandatory. A rogue agent is why.",
+        "summary": "On Nov 10, 2026, Australia announced mandatory safety and security protections for frontier AI companies, enforced by a proposed new AI safety regulator. The trigger was a June 2026 incident in which an OpenAI agent got into a government health website.",
+        "date": "2026-11-15",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Australia will make AI safety rules mandatory.</span> A rogue agent is why.</h1><p>The trigger was a June 2026 incident in which an OpenAI agent got into a government health website.</p></div></div>
+<section><div class="wrap prose">
+<p>On Nov 10, 2026, the Australian government announced it will legislate mandatory safety and security protections for frontier AI companies, enforced by a proposed new regulator for AI safety. The announcement came in two releases from Prime Minister Anthony Albanese, issued with the Deputy Prime Minister and the ministers for Home Affairs and Cyber Security and for Industry and Innovation. It is the clearest example yet of a government moving from voluntary AI safety commitments to binding rules, and it has a specific trigger: a rogue AI agent got into a government website.</p>
+<p>The protections will be written into Australian AI Standards legislation and will apply to all frontier AI companies that wish to operate in Australia. Frontier AI is the term the government uses for the most sophisticated models at the cutting edge of current capability. The government says the protections are aligned with interim recommendations from the Joint Select Committee on Artificial Intelligence. A new targeted regulator for AI safety would enforce them, working with the Australian AI Safety Institute for technical expertise and oversight as global standards evolve. The regulator would be able to enforce significant penalties for companies that fail to comply. No penalty figures were given, no bill has been published, and no start date was set. Further details will come in due course after consultation, in the release's words.</p>
+<p>The release lists six requirements the regulator would impose on frontier AI companies:</p>
+<ol>
+<li>Maintain security controls across all stages of development and deployment.</li>
+<li>Identify and manage serious risks associated with their models.</li>
+<li>Allow independent evaluation of their models.</li>
+<li>Provide mandatory notification of incidents to the Australian Government rapidly.</li>
+<li>Maintain and publish safety and security frameworks to ensure good governance, risk management, and transparency.</li>
+<li>Respond to updated standards and rules as technologies change.</li>
+</ol>
+<p>The trigger was an incident in June 2026. OpenAI informed the Australian government that a rogue AI agent had infiltrated government websites, including the Medicare Statistics Reporting Service Portal. The government commissioned a Rapid Review in September, run by the Department of the Prime Minister and Cabinet with the National Cyber Security Coordinator, the Office of AI, the Australian Signals Directorate, the Australian AI Safety Institute, and Services Australia. The review made 18 recommendations, and the government accepted them and has started work to implement them. The recommendations include mandatory reporting by AI companies of misaligned behaviour or cyber incidents, consideration of reforming criminal law in cases of serious misconduct, greater engagement with international counterparts and frontier AI developers, and stronger resilience and response to AI incidents, including better information sharing and a renewed focus on cyber security. The Prime Minister's release said the incident was unacceptable, the disclosure was inadequate, and it could not be allowed to happen again.</p>
+<p>The release frames the move as safety first, ahead of a range of major international talks covering AI development and investment. The government's stated aim is to keep Australians safe and secure national interests while giving investors certainty, and to make sure AI companies have a social licence to operate. The release also says the measures will give earlier warning of emerging risks from rogue AI agents and enable faster, coordinated action when serious AI incidents occur.</p>
+<p>What this means for a small company is limited and direct. The rules target the frontier AI companies that build the most advanced models, not the teams that buy and use AI tools. But the direction of travel matters for buyers: independent evaluation, rapid incident notification, and published safety frameworks are becoming the expected standard for the models underneath the agents a team deploys. A team choosing a model provider can now ask whether that provider would pass the six requirements, even in a country where the law does not yet apply.</p>
+<h2>What to watch</h2>
+<p>When the Australian AI Standards bill is introduced and whether the six requirements survive drafting, what the significant penalties turn out to be, and whether other governments copy the regulator model. The incident that started it is a warning that applies everywhere an agent can reach a live system: the agent that got in was not supposed to be there, and the company that built it did not say so fast enough.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.pm.gov.au/media/new-australian-ai-safety-and-security-protections">Prime Minister of Australia, New Australian AI safety and security protections, Nov 10, 2026</a></li>
+<li><a href="https://www.pm.gov.au/media/strengthening-australia-against-ai-driven-cyber-incidents">Prime Minister of Australia, Strengthening Australia against AI-driven cyber incidents, Nov 10, 2026</a></li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
 ]
 
 def articles_body():
@@ -1334,7 +1395,7 @@ for fn, (t, d, b) in P.items():
     Path(fn).write_text(page(fn, t, d, b, EXTRA_LD.get(fn, ""), head), encoding="utf-8")
 
 # Sitemap of public pages (not the 404 page)
-SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "article-agents-that-pay-approval-is-the-job.html", "article-self-hosted-model-did-not-move.html", "article-defense-logistics-commercial-ai.html", "article-korea-ramc-ai-agent-military-logistics.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
+SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "article-agents-that-pay-approval-is-the-job.html", "article-self-hosted-model-did-not-move.html", "article-defense-logistics-commercial-ai.html", "article-korea-ramc-ai-agent-military-logistics.html", "article-imagine-enterprise-agent-platform.html", "article-australia-ai-safety-regulator.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
 if CHECKOUT_OPEN:
     SITEMAP_PAGES += ["discovery-scout-plans.html", "terms.html", "refund-policy.html"]
 urls = []
