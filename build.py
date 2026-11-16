@@ -930,6 +930,74 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
+    {
+        "fn": "article-nvidia-ceo-transition.html",
+        "title": "The AI Hardware Company Changed Leaders. The Roadmap Did Not Move. | Loving Grace Technologies",
+        "desc": "On Nov 12, 2026, NVIDIA announced that Jensen Huang had resigned as president, CEO, and director, effective immediately. Colette Kress, the chief financial officer since 2013, is interim CEO. The release gives no reason, and the earnings date did not move.",
+        "caption": "AI hardware leadership",
+        "heading": "The AI hardware company changed leaders. The roadmap did not move.",
+        "summary": "On Nov 12, 2026, NVIDIA announced that Jensen Huang had resigned as president, CEO, and director, effective immediately. Colette Kress, the chief financial officer since 2013, is interim CEO. The release gives no reason, and the earnings date did not move.",
+        "date": "2026-11-16",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">The AI hardware company changed leaders.</span> The roadmap did not move.</h1><p>The release gives no reason, and the earnings date did not move.</p></div></div>
+<section><div class="wrap prose">
+<p>On Nov 12, 2026, NVIDIA announced that Jensen Huang had resigned as President, Chief Executive Officer, and a member of the Board, effective immediately. The announcement came from the company's Board of Directors, published as a press release through its investor site. It is short, and it is worth reading exactly as written, because what it does not say matters as much as what it does.</p>
+<p>Colette Kress, the company's Executive Vice President and Chief Financial Officer, agreed to serve as Interim Chief Executive Officer. She keeps the chief financial officer role while she holds the interim job, until a permanent successor is named. Kress has been NVIDIA's chief financial officer since joining the company in September 2013. Before that, she spent nearly 25 years in finance roles at technology companies, including Cisco and Microsoft. The Board said it is initiating a search for a permanent chief executive and will consider internal and external candidates. No timetable for the search was given.</p>
+<p>The Board also appointed Harvey C. Jones as its first-ever Chair of the Board. Jones has been an entrepreneur, technology executive, and active venture investor for over 30 years, including serving as Chief Executive Officer and Executive Chairman of Synopsys.</p>
+<p>The release gives no reason for the resignation. It thanks Huang for his contributions over 33 years and calls NVIDIA one of the most consequential technology companies in the world. It does not connect the departure to any investigation, dispute, or business result. Any account that supplies a reason is going beyond the company's own statement, and this article does not repeat one.</p>
+<p>What the release does say, twice, is that the work continues. Jones, speaking as Chair, said the Board has full confidence in Kress and the leadership team, and that the company expects its operations, customer commitments, and product roadmap to continue without interruption. Kress said the focus remains on serving customers, partners, developers, and shareholders, and on advancing the work that has made NVIDIA a leader in accelerated computing and AI.</p>
+<p>The calendar did not move either. NVIDIA will report its third-quarter fiscal 2027 financial results on Tuesday, November 17, at approximately 1:20 p.m. PT, as previously scheduled, followed by its earnings call at 2 p.m. PT. That puts Kress in front of investors five days after taking the interim role, with the company's numbers, not its leadership story, as the subject.</p>
+<p>For teams that build on NVIDIA hardware, the practical read is narrow. The chips, the software stack, and the supply commitments are run by the same leadership team the release names, and the release says the roadmap continues without interruption. The open questions are the ones the release leaves open: who the permanent chief executive will be, whether the search looks inside or outside, and what the Nov 17 results say about demand for the hardware the whole AI field runs on. A founder-CEO who led a company for 33 years leaving with immediate effect and no stated reason is a real event. It is also, on the company's own statement, an event with no announced change to what the company ships or when.</p>
+<h2>What to watch</h2>
+<p>The Nov 17 earnings release and call, the first public forum for the interim chief executive, and any word on the permanent search, including whether the Board names a candidate from inside the company or outside it.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/default.aspx">NVIDIA, NVIDIA Announces CEO Transition, Nov 12, 2026</a></li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-elevenlabs-agents-memory-routines.html",
+        "title": "Voice Agents That Remember You. Half of It Is a Promise. | Loving Grace Technologies",
+        "desc": "At its New York Summit on Nov 11, 2026, ElevenLabs announced 13 new products and upgrades, including agent memory, multi-step routines, a model-routing engine, and a meeting app with free early access. About half the package is preview or roadmap, not something you can use today.",
+        "caption": "Voice agents grow up",
+        "heading": "Voice agents that remember you. Half of it is a promise.",
+        "summary": "At its New York Summit on Nov 11, 2026, ElevenLabs announced 13 new products and upgrades, including agent memory, multi-step routines, a model-routing engine, and a meeting app with free early access. About half the package is preview or roadmap, not something you can use today.",
+        "date": "2026-11-16",
+        "body": f'''
+<div class="page-head"><div class="wrap"><h1><span class="gold">Voice agents that remember you.</span> Half of it is a promise.</h1><p>About half the package is preview or roadmap, not something you can use today.</p></div></div>
+<section><div class="wrap prose">
+<p>ElevenLabs spent four years becoming the default name in AI voice. On Nov 11, 2026, at its first New York Summit, the company announced 13 new products and upgrades that turn it from a voice toolmaker into an enterprise agent platform. The package falls into four parts: custom models tuned on a customer's own data, voice agents that remember returning customers and automate follow-up work, a new workplace app for meetings, and a partner channel backed by NVIDIA infrastructure. The honest split, which the keynote does not draw for you, is that about half of it is something you can use now and about half is a preview with no date.</p>
+<p>What is live now starts with ElevenAI, a new app that acts as an AI teammate. It listens to spoken conversations, including in-person meetings, and turns them into notes, summaries, and action items for each attendee. It also does dictation into any app and gives live assistance during a call. Free early access opened with the announcement on Nov 11. ElevenLabs built notice and consent mechanisms into the app rather than adding them later, which matters because an app that listens to in-person meetings carries a legal profile that varies by place, and the compliance obligation stays with the user.</p>
+<p>Two models shipped the day before the Summit, on Nov 10. Scribe v3 is a speech-to-text transcription model covering 102 languages, which ElevenLabs says produces 27 percent fewer word errors than Scribe v2 on its own evaluation. Scribe v3 Live is the real-time version. It supports diarization for the first time, telling speakers apart in a live conversation, and ElevenLabs says it makes 43 percent fewer errors than its predecessor, with turn detection that reads the whole conversation rather than the last moment of audio. Both models are in the ElevenLabs API, Scribe v3 Live is in ElevenAgents, and Scribe v3 is now the default in the ElevenLabs app. A healthcare-tuned variant, Scribe v3 Medical, recognizes clinical terms. A third model family also arrived around the Summit: Eleven v4 for expressive text-to-speech, and Eleven Realtime, a speech-to-speech model built for fast voice agents.</p>
+<p>Campaign Manager shipped Nov 9, two days before the Summit, and it is quietly the most commercially interesting launch of the three days. You give it contacts and a goal, a qualified lead or a confirmed appointment, and it works the follow-up over time. After each step it decides what happens next. No answer means try again later. A caller saying "call me back Thursday at 4pm" means it calls back then. You set the days and hours it may contact people and cap the attempts per person, and if someone asks not to be contacted it stops and logs it. Every campaign shows the full funnel from enrollment to outcome. It runs on phone calls and WhatsApp today, with email and SMS channels to come.</p>
+<p>What is still a promise starts with the Interaction Engine, the centerpiece of the Summit. It is a system that manages a whole voice conversation, deciding when to speak and when to listen, and which AI model should handle each moment. A cheaper model handles simple requests, a frontier model steps in for complex ones like refunds. If it works, it is a direct cost lever on every agent deployment. It was previewed, not released, and no date was given.</p>
+<p>ElevenAgents, the company's platform for deploying voice and chat agents across sales, support, recruitment, and operations, will add Memory and Routines, plus Architect, a tool for creating and modifying agents through natural-language instructions. Memory will let an agent build a record of a returning authenticated customer over time, capturing the things that never had a CRM field: preferences, constraints, the fact that someone mentioned moving in March. ElevenLabs frames it so the CRM stays the system of record and Memory holds the conversational residue. Routines add multi-step automation for the work around a conversation rather than the conversation itself: pre-screening a mortgage applicant and calling back within minutes, reminding patients before a visit, offering a cancelled slot to a waitlist, writing to a CRM afterwards. Neither has a ship date.</p>
+<p>The fourth part is model customization. In the coming months, selected enterprises will work with ElevenLabs researchers to fine-tune open-source language models and ElevenLabs voice models on data from their own live deployments, picking their own target metrics. The company's chief executive, Mati Staniszewski, compared it to each company having its own reinforcement-learning stack, and said conversational agents will become critical infrastructure for every enterprise, as essential as cloud or payments, within a few years. Pricing is undisclosed, and the work starts with selected enterprises first, so whether mid-sized companies can afford it is an open question.</p>
+<p>The NVIDIA deal ties the package to the hardware story. NVIDIA's Nemotron 3.5 Super VL, an open vision-language model built for reasoning in agentic workloads, is now available inside ElevenAgents, and ElevenLabs plans to add 15 megawatts of NVIDIA Vera Rubin compute capacity on top of its existing Blackwell Ultra systems. ElevenLabs says Nemotron completed customer-support benchmark tasks at 70 percent lower cost than other leading open models. That is the company's own benchmark, not independently verified, so treat the number as a claim rather than a result.</p>
+<p>A Partner Program and Marketplace round out the announcement, covering more than 550 partners in 44 countries.</p>
+<p>Five questions worth keeping before buying into any of it:</p>
+<ol>
+<li>Which parts are live today, and which are previews? ElevenAI, Scribe v3, Scribe v3 Live, and Campaign Manager are usable now. Interaction Engine, Memory, Routines, and fine-tuning are not, and none has a date.</li>
+<li>What does free early access convert into? ElevenAI is free right now, and ElevenLabs has not published pricing for what comes afterwards, or what happens to your notes if you later stop paying.</li>
+<li>Where does the memory live, and who controls it? An agent that remembers a customer is holding personal history. The CRM stays the system of record in ElevenLabs' framing, but the consent, retention, and deletion terms for Memory have not been published with the preview.</li>
+<li>Whose benchmark is the savings number? The 70 percent cost figure for Nemotron and the 43 percent error reduction for Scribe v3 Live are ElevenLabs' own measurements. No independent comparison was published with either.</li>
+<li>Who can actually buy the custom-model work? Selected enterprises first, starting in the coming months, with no price. A small team should not plan around it until it opens wider.</li>
+</ol>
+<h2>What to watch</h2>
+<p>Whether Interaction Engine, Memory, and Routines get dates and reach general availability, whether the fine-tuning program opens beyond selected enterprises, and what ElevenAI costs once early access closes.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.unite.ai/elevenlabs-unveils-model-customization-elevenai-and-partner-program/">Unite.AI, ElevenLabs Unveils Model Customization, ElevenAI and Partner Program, Nov 12, 2026</a></li>
+<li><a href="https://www.ciol.com/news/elevenlabs-expands-its-ai-agents-with-memory-and-automation-12802824">CIOL, ElevenLabs Expands Its AI Agents With Memory and Automation</a></li>
+<li><a href="https://dailyaipedia.com/elevenlabs-whats-next-2026/">DailyAIPedia, ElevenAI Free Access, and What Is Next From ElevenLabs</a></li>
+<li><a href="https://aiagentupdate.com/post/elevenlabs-agent-platform-2026-11-12">AI Agent Update, ElevenLabs goes from voice tool to enterprise agent platform with 13 new products, Nov 12, 2026</a></li>
+<li><a href="https://freshsynapse.com/articles/elevenlabs-interaction-engine-new-voice-models-2026-11-12/">FreshSynapse, ElevenLabs Unveils Its Interaction Engine and 13 Upgrades, Nov 12, 2026</a></li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
 ]
 
 def articles_body():
@@ -1395,7 +1463,7 @@ for fn, (t, d, b) in P.items():
     Path(fn).write_text(page(fn, t, d, b, EXTRA_LD.get(fn, ""), head), encoding="utf-8")
 
 # Sitemap of public pages (not the 404 page)
-SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "article-agents-that-pay-approval-is-the-job.html", "article-self-hosted-model-did-not-move.html", "article-defense-logistics-commercial-ai.html", "article-korea-ramc-ai-agent-military-logistics.html", "article-imagine-enterprise-agent-platform.html", "article-australia-ai-safety-regulator.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
+SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "article-agents-that-pay-approval-is-the-job.html", "article-self-hosted-model-did-not-move.html", "article-defense-logistics-commercial-ai.html", "article-korea-ramc-ai-agent-military-logistics.html", "article-imagine-enterprise-agent-platform.html", "article-australia-ai-safety-regulator.html", "article-nvidia-ceo-transition.html", "article-elevenlabs-agents-memory-routines.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
 if CHECKOUT_OPEN:
     SITEMAP_PAGES += ["discovery-scout-plans.html", "terms.html", "refund-policy.html"]
 urls = []
