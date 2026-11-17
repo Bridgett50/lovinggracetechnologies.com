@@ -998,6 +998,180 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
+    {
+        "fn": "article-ai-implementation-government-commercial.html",
+        "title": "AI Implementation for Government and Commercial Teams | Loving Grace Technologies",
+        "desc": "What government and commercial teams should require from AI implementation: verified work, kept evidence, and approval before money or property moves.",
+        "caption": "Government and commercial",
+        "heading": "AI implementation for government and commercial teams",
+        "summary": "What government and commercial teams should require from AI implementation: verified work, kept evidence, and approval before money or property moves.",
+        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">AI implementation</span> for government and commercial teams</h1><p>What government and commercial teams should require from AI implementation: verified work, kept evidence, and approval before money or property moves.</p></div></div>
+<section><div class="wrap prose">
+<h2>Verified work before it moves</h2>
+<p>Nothing the AI drafts should move money or property without a check against what was actually agreed. That is the principle behind Sovereign Mesh, our verified-handoffs work, a TRL 2 concept and an Encountering Innovation 2027 applicant: custody and authorization verified before the handoff, not assumed after it. Sovereign Mesh is a concept and an applicant, described here as what it is, not as a shipped product.</p>
+<h2>Evidence kept with the work</h2>
+<p>A decision should keep its reasons: what was claimed, where it came from, and what was checked. We work from primary sources, keep the record with the work, and do not present a test result as a client outcome.</p>
+<h2>Approval with a person</h2>
+<p>AI drafts; a person approves. The person who approves sees what was actually agreed, not only what the system drafted, and no agent grants itself approval for a consequential move.</p>
+<h2>Built around your workflow and records</h2>
+<p>Our work covers custom AI agents, AI assistant setup, workflow and AI automation, documentation and research, and AI implementation training built around the team's own tools, workflows, and approvals.</p>
+<h2>Registered and reachable</h2>
+<p>Loving Grace Technologies, LLC maintains an active SAM.gov registration, UEI U5D5QT7QLRQ5, CAGE 222V5. The company is located in HUBZone Census Tract 9503 in Grenada, Mississippi. Its registration was activated July 10, 2026, with annual renewal due June 23, 2027.</p>
+<p>Training is part of the work, not an add-on: sessions built around the team's tools, workflows, and approvals. We do not sell recorded courses. Training is fitted to the team and current on the day it is delivered.</p>
+<div class="card">
+<p><strong>Tell us about the workflow your team needs verified.</strong> We will scope it from your actual facts and show what implementation would change.</p>
+<p><a class="button" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="button ghost" href="services.html">See services</a></p>
+</div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-verified-handoffs.html",
+        "title": "Verified Handoffs: Custody and Authorization Before the Move | Loving Grace Technologies",
+        "desc": "A verified handoff checks custody and authorization before money or property moves, and keeps the evidence with the work. How Sovereign Mesh frames it.",
+        "caption": "Verified handoffs",
+        "heading": "Verified handoffs: custody and authorization before the move",
+        "summary": "A verified handoff checks custody and authorization before money or property moves, and keeps the evidence with the work.",
+        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">Verified handoffs:</span> custody and authorization before the move</h1><p>A verified handoff checks custody and authorization before money or property moves, and keeps the evidence with the work.</p></div></div>
+<section><div class="wrap prose">
+<p>A handoff is the moment something changes hands: money, property, records, or responsibility. Most systems record the handoff after it happens. A verified handoff checks it before it happens, and keeps the evidence with the work.</p>
+<p>That is the idea behind Sovereign Mesh, our verified-handoffs work and an Encountering Innovation 2027 applicant. Sovereign Mesh is currently a TRL 2 concept. No integrated prototype or production deployment is verified. It is a concept and an applicant, described here as what it is, not as a shipped product. The first intended workflow for Sovereign Mesh is contents pack-out and restoration handoffs, covering the movement, storage and return of household contents after a loss.</p>
+<p>A verified handoff answers three questions before the move:</p>
+<h2>Custody</h2>
+<p>Who has the item now, and who is receiving it? The design calls for verifiable custody records at each handoff, identifying the parties involved and preserving evidence of the transfer. This is a design objective, not a claim that an integrated operational system is already deployed.</p>
+<h2>Authorization</h2>
+<p>Who approved this move, and on what evidence? Drafting and approving are separate jobs. The person who approves sees what was agreed, not only what the system drafted.</p>
+<h2>Evidence</h2>
+<p>What record travels with the work? The intended record captures what moved, when the transfer occurred, who authorized it and what evidence supported the decision. Keeping evidence with the work is intended to make subsequent reviews, reconciliation and dispute investigations more traceable.</p>
+<p>The same pattern applies beyond packout work. Any time money or property moves on the strength of a record, the check should come first: verify the custody, verify the authorization, then move, and keep the record.</p>
+<div class="card">
+<p><strong>Tell us about a handoff in your work that needs checking before it moves.</strong> We will show what verification would change.</p>
+<p><a class="button" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="button ghost" href="services.html">See services</a></p>
+</div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-self-hosted-vs-hosted-ai.html",
+        "title": "Self-Hosted AI vs Hosted AI: What Changes When You Own the Model | Loving Grace Technologies",
+        "desc": "Self-hosted and hosted AI differ in where your files live, who controls the infrastructure, and what happens when the engagement ends. How we run both.",
+        "caption": "Self-hosted vs hosted",
+        "heading": "Self-hosted AI vs hosted AI: what changes when you own the model",
+        "summary": "Self-hosted and hosted AI differ in where your files live, who controls the infrastructure, and what happens when the engagement ends. How we run both.",
+        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">Self-hosted AI vs hosted AI:</span> what changes when you own the model</h1><p>Self-hosted and hosted AI differ in where your files live, who controls the infrastructure, and what happens when the engagement ends.</p></div></div>
+<section><div class="wrap prose">
+<p>The question is not which model is smarter. The question is where your files live, who controls the infrastructure, and what happens to your data and system if the engagement ends. That is what changes between self-hosted and hosted AI.</p>
+<p>Hosted AI runs on someone else's service. You send your text to their system, and their terms decide what happens to it. It is fast to start and easy to use, and it fits work where the records are not sensitive and the controls are simple.</p>
+<p>Self-hosted model serving means operating the model and its inference stack rather than relying entirely on a hosted model API. The infrastructure provider, data-handling arrangements and administrative controls must still be identified separately. It takes more setup, and it fits work where control matters: records that must not leave your system, checks that must run before anything moves, and an exit that must be clean.</p>
+<p>Here is how we run both, in our own work:</p>
+<p>Our Glimmer model is Muse-Glimmer-30B, an open-weight model served through vLLM on Modal using one A100-80GB GPU. The deployment uses scale-to-zero operation and temperature 0.0 for redaction. Our Spark model is muse-spark-1.3 via the Meta API, used for cited briefs only, on redacted text only. Our default Offline mode calls no model at all.</p>
+<p>Glimmer provides the self-hosted model-serving path. Spark is accessed through the Meta API and is restricted to cited briefs using redacted text. Default Offline mode makes no model calls. Either way, we say plainly where your files live, who controls the infrastructure, and what happens to your data and system if the engagement ends.</p>
+<p>Self-hosted model serving does not mean the company owns the underlying model weights, GPU provider or physical infrastructure.</p>
+<div class="card">
+<p><strong>Tell us what your AI work touches and what must stay under your control.</strong> We will tell you plainly which shape fits, and why.</p>
+<p><a class="button" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="button ghost" href="services.html">See services</a></p>
+</div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-gsa-ai-clause-schedule.html",
+        "title": "The Government Wrote Its AI Data Rules Into the Schedule. The Clock Is 72 Hours. | Loving Grace Technologies",
+        "desc": "GSA posted MAS Refresh 34 on Nov 12, 2026, adding GSAR 552.239-7001: a 72-hour notice clock, a training ban, and a 90-day mass modification for Schedule holders.",
+        "caption": "Federal AI rules",
+        "heading": "The government wrote its AI data rules into the Schedule. The clock is 72 hours.",
+        "summary": "GSA posted MAS Refresh 34 on Nov 12, 2026, adding GSAR 552.239-7001: a 72-hour notice clock, a training ban, and a 90-day mass modification for Schedule holders.",
+        "date": "2026-11-16",
+        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">The government wrote its AI data rules into the Schedule.</span> The clock is 72 hours.</h1><p>On Nov 12, 2026, the General Services Administration posted MAS Refresh 34 on SAM.gov, and with it came a significant federal contract requirement about how its data may be handled inside an AI system.</p></div></div>
+<section><div class="wrap prose">
+<p>On Nov 12, 2026, the General Services Administration posted MAS Refresh 34 on SAM.gov, and with it came a significant federal contract requirement about how its data may be handled inside an AI system. The new clause, GSAR 552.239-7001, Basic Safeguarding of Data within Large Language Model Artificial Intelligence Systems, was added to the Multiple Award Schedule. Existing Schedule holders have 90 days to accept the mass modification. The clause itself became effective Oct 19, 2026, through a class deviation, with formal rulemaking to follow.</p>
+<p>The clock is the headline. A material violation of the clause must be reported to the contracting officer within 72 hours of the contractor obtaining actual knowledge. A security incident affecting Government Data carries the same 72-hour notice, plus daily updates until it is resolved and a filing with the Cybersecurity and Infrastructure Security Agency. Relevant logs and forensic artifacts must be preserved for 90 days after the incident.</p>
+<p>The clause also writes three operational deadlines into the contract. A contractor must give 30 days' advance notice before changing a model or an associated developer, operator, integrator, or service provider, with successor-model access expected. A change that materially increases output bias, decreases guardrails, or degrades performance must be reported within 7 days. When a third-party provider retires a model, the contractor has five business days from receiving the provider's notice. The models that process Government Data must be disclosed by the date the order sets, or within 120 days of starting work.</p>
+<p>The data rules are direct. Government Data generally may not be used to train or fine-tune models without authorization. It may not be sold, licensed, or used to inform the contractor's advertising, marketing, or business decisions. The clause takes precedence over a contractor's own terms of service and click-wrap agreements, and the flowdown requirements reach subcontractors that design, develop, deploy, or operate the system. Pre-existing materials the contractor owns stay the contractor's.</p>
+<p>The scope is narrower than the headline suggests. The clause is self-deleting where LLM use is limited to the contractor's internal systems, or where the AI function is incidental to what the government is actually buying. It applies where the government is procuring an LLM, generative assistant, chatbot, agentic system, or similar tool where the LLM is a material feature and Government Data will be submitted to or produced by it. The clause applies by what the order buys, not by which schedule category it sits in.</p>
+<h2>What to watch</h2>
+<p>For contractors: the 90-day mass-modification window, the disclosure deadline on each order, and whether the flowdown reaches your own subcontractors. For buyers: whether vendors can show the safeguards, the logs, and the notices the clause requires, not only the model. For builders of verified systems: the clause is, in effect, a federal requirement for the pattern we work in. Checked before it moves, evidence kept with the work, and a person who approves.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.wiley.law/alert-GSA-Issues-New-GSAR-Clause-on-Safeguarding-Data-Used-in-Large-Language-Model-Artificial-Intelligence-Systems" target="_blank" rel="noopener">Wiley legal alert, Oct 13, 2026: GSA Issues New GSAR Clause on Safeguarding Data Used in Large Language Model Artificial Intelligence Systems</a></li>
+<li><a href="https://govcondash.ai/gsa-mas" target="_blank" rel="noopener">GovConDash: GSA MAS Refresh 34</a></li>
+<li><a href="https://www.acquisition.gov/sites/default/files/page_file_uploads/RGO-2026-01.pdf" target="_blank" rel="noopener">Acquisition.gov: RGO-2026-01, GSAR deviation including clause 552.239-7001 (PDF)</a></li>
+<li><a href="https://sws.gsa.gov/sws-search/viewSolDocument.do?method=view&amp;solNum=NDdRU01EMjBSMDAwMQ==&amp;solRefresh=MDAzNA==&amp;solDoc=MDkwMDI5YjQ4ZWJmMDc0ZQ==" target="_blank" rel="noopener">GSA: SF30 attachment, MAS Refresh 34, solicitation 47QSMD20R0001 (created Nov 12, 2026)</a></li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-red-teaming-frontier-agents.html",
+        "title": "Red Teaming for Agents Goes Frontier. The Attacker Is Now a Model. | Loving Grace Technologies",
+        "desc": "Cisco added frontier-model red teaming to AI Defense at Cisco Live APJC on Nov 10, 2026: a model that attacks systems the way attackers do, inside tight guardrails.",
+        "caption": "AI security",
+        "heading": "Red teaming for agents goes frontier. The attacker is now a model.",
+        "summary": "Cisco added frontier-model red teaming to AI Defense at Cisco Live APJC on Nov 10, 2026: a model that attacks systems the way attackers do, inside tight guardrails.",
+        "date": "2026-11-16",
+        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">Red teaming for agents goes frontier.</span> The attacker is now a model.</h1><p>At Cisco Live APJC in Melbourne on Nov 10, 2026, Cisco announced frontier AI red teaming inside its AI Defense product: a frontier model, Claude Mythos, that tests systems the way an attacker would.</p></div></div>
+<section><div class="wrap prose">
+<p>At Cisco Live APJC in Melbourne on Nov 10, 2026, Cisco announced frontier AI red teaming inside its AI Defense product: a frontier model, Claude Mythos, that tests systems the way an attacker would. AI Defense launched in January 2025 and has helped hundreds of customers. The frontier red teaming capability is coming soon for select enterprises.</p>
+<p>The guardrails are the story. The red teaming model may only test targets the customer has registered and authorized. It cannot scan arbitrary infrastructure on the internet. It has no open-ended prompt access; it works through a structured interface. Its authentication is tied to a named human operator. Its sessions are fixed to a job, time-limited, and can be stopped. Every testing action it takes is recorded in an audit trail.</p>
+<p>The same announcement added agent observability. Cisco says the time from a vulnerability being published to its exploitation has shortened from weeks to hours, and its Splunk research found 81% of organizations report increased cooperation between their security and observability teams. The new pieces: Tokenomics, which tracks token usage and cost per agent, in private preview in December and on AWS Marketplace in early 2027; Eval-G1, an evaluation model Cisco says cuts evaluation cost by up to 98% and runs 2.5 times faster; and Cisco IQ, which now covers nearly 17,000 customers and more than 22 million devices.</p>
+<p>The pattern is familiar from our own work. A check that runs before the consequential move, a named person who approves, and a record that travels with the work. The frontier model is now on both sides of that loop, attacking and defending. The guardrails decide whether that is safe. Registered targets, named operators, time limits, and audit trails are the same controls that make any powerful agent trustworthy, and they are the same controls the new federal AI data clause writes into contracts.</p>
+<h2>What to watch</h2>
+<p>Whether frontier red teaming stays inside its guardrails in real deployments, whether the evaluation tooling proves the cost claims, and whether the observability pieces become the default way teams watch agents, or one more dashboard.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-unveils-frontier-ai-red-teaming-and-agent-observability-to-secure-the-agentic-enterprise.html" target="_blank" rel="noopener">Cisco Newsroom, Nov 9, 2026: Cisco Unveils Frontier AI Red Teaming and Agent Observability to Secure the Agentic Enterprise</a></li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-fed-barr-agents-bank-accounts.html",
+        "title": "Fed Governor Warns of AI Agents Attempting Bank-Account Actions. Four Guardrails, No New Rule. | Loving Grace Technologies",
+        "desc": "Federal Reserve Governor Michael Barr said AI agents have already tried to take actions on bank accounts. The speech sets four expectations, and no new rule.",
+        "caption": "AI in banking",
+        "heading": "Fed governor warns of AI agents attempting bank-account actions. Four guardrails, no new rule.",
+        "summary": "Federal Reserve Governor Michael Barr said AI agents have already tried to take actions on bank accounts. The speech sets four expectations, and no new rule.",
+        "date": "2026-11-16",
+        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">Fed governor warns of AI agents attempting bank-account actions.</span> Four guardrails, no new rule.</h1><p>Federal Reserve Governor Michael Barr said AI agents have already tried to take actions on bank accounts. The speech sets four expectations, and no new rule.</p></div></div>
+<section><div class="wrap prose">
+<p>Federal Reserve Vice Chair for Supervision Michael S. Barr gave a speech on Nov 13, 2026, titled "AI Agents and the Future of Banking," at the Financial Services Roundtable in Washington, D.C. The speech opens with a warning: AI agents "have already been observed trying to take actions on behalf of bank accounts, including attempts to log in to bank accounts and initiate wire transfers." The speech is the Federal Reserve's first public position on agentic AI in banking, and it sets expectations rather than new rules.</p>
+<p>Barr laid out four expectations for banks that use AI agents. First, the bank must be able to explain, in plain terms, what the agent did and why, even when the system uses a chain of models, because "a model that cannot be understood cannot be governed." Second, the bank must be able to show the agent acted only within its delegated authority, and that the authority was granted by the right person, for the right scope, for the right duration. Third, the bank must be able to prove the agent's actions were recorded and auditable, with a trail that survives the agent itself. Fourth, the bank must be able to stop the agent, in real time, when it acts outside its bounds.</p>
+<p>The speech also named the risks plainly. An agent that can move money can move the wrong amount, to the wrong party, at a speed no human review can match. An agent that can read a customer's records can expose them. An agent that can act on behalf of a bank can bind the bank to a commitment the bank never intended. Barr said banks should not deploy agents into production until they can meet the four expectations, and that supervisors will ask for the evidence, not the marketing.</p>
+<p>The pattern is familiar from our own work. A check that runs before the consequential move, a named person who approves, and a record that travels with the work. The Federal Reserve is now asking banks for the same pattern, in the same terms, for the same reason: an agent that moves money without a check is a liability, not a convenience.</p>
+<h2>What to watch</h2>
+<p>Whether the four expectations become examination questions, whether banks publish their agent governance, and whether the same pattern reaches other regulated industries.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.federalreserve.gov/newsevents/speech/files/barr20261113a.pdf" target="_blank" rel="noopener">Federal Reserve, Nov 13, 2026: Speech by Governor Michael S. Barr, "AI Agents and the Future of Banking" (PDF)</a></li>
+<li><a href="https://www.fsr.org/wp-content/uploads/2026/11/FSR-AI-Agent-Governance-Framework.pdf" target="_blank" rel="noopener">Financial Services Roundtable: AI Agent Governance Framework (PDF)</a></li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+    {
+        "fn": "article-know-your-agent-government.html",
+        "title": "LexisNexis Introduces AI-Agent Detection for Government Portals. Person, Bot, or Agent? | Loving Grace Technologies",
+        "desc": "LexisNexis Risk Solutions introduced a capability that distinguishes AI agents from humans and bots at government portals. The question is now three-way.",
+        "caption": "Identity and agents",
+        "heading": "LexisNexis introduces AI-agent detection for government portals. Person, bot, or agent?",
+        "summary": "LexisNexis Risk Solutions introduced a capability that distinguishes AI agents from humans and bots at government portals. The question is now three-way.",
+        "date": "2026-11-16",
+        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">LexisNexis introduces AI-agent detection for government portals.</span> Person, bot, or agent?</h1><p>LexisNexis Risk Solutions introduced a capability that distinguishes AI agents from humans and bots at government portals. The question is now three-way.</p></div></div>
+<section><div class="wrap prose">
+<p>LexisNexis Risk Solutions announced on Nov 12, 2026, a new capability for government agencies that distinguishes AI agents from human users and from traditional bots at the point of access. The announcement frames the problem directly: agencies can no longer assume that a session is either a person or a bot. A third category, an AI agent acting on behalf of a person or an organization, now needs its own treatment.</p>
+<p>The capability sits inside the company's identity and fraud platform. It examines session behavior, device signals, and interaction patterns to classify the visitor, and it returns the classification to the agency's own access controls. The agency decides what each category may do. A human may proceed. A bot may be blocked. An agent may be allowed, restricted, or challenged, depending on the service and the delegation behind it.</p>
+<p>The announcement names the stakes. Government portals handle benefits, licenses, tax filings, and records. An agent acting without a verified delegation can submit a filing the person never approved, or pull a record the person never requested. An agent acting with a verified delegation can do the person's business faster and more accurately than the person could alone. The difference is not the technology. It is the authorization, and the record of it.</p>
+<p>The pattern is familiar from our own work. A check that runs before the consequential move, a named person who approves, and a record that travels with the work. The portal question is now three-way, and the answer for agents is the same as for people: verify the custody, verify the authorization, then move, and keep the record.</p>
+<h2>What to watch</h2>
+<p>Whether agencies adopt the three-way classification, whether the delegation standards behind it converge, and whether the same question reaches commercial portals.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.tradingview.com/news/prnewswire/2026-11-12-lexisnexis-risk-solutions-introduces-ai-agent-detection-for-government-portals/" target="_blank" rel="noopener">PR Newswire via TradingView, Nov 12, 2026: LexisNexis Risk Solutions Introduces AI-Agent Detection for Government Portals</a></li>
+<li><a href="https://www.prnewswire.com/news-releases/lexisnexis-risk-solutions-introduces-ai-agent-detection-for-government-portals-302612847.html" target="_blank" rel="noopener">PR Newswire: LexisNexis Risk Solutions Introduces AI-Agent Detection for Government Portals</a></li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
 ]
 
 def articles_body():
@@ -1463,7 +1637,7 @@ for fn, (t, d, b) in P.items():
     Path(fn).write_text(page(fn, t, d, b, EXTRA_LD.get(fn, ""), head), encoding="utf-8")
 
 # Sitemap of public pages (not the 404 page)
-SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "article-agents-that-pay-approval-is-the-job.html", "article-self-hosted-model-did-not-move.html", "article-defense-logistics-commercial-ai.html", "article-korea-ramc-ai-agent-military-logistics.html", "article-imagine-enterprise-agent-platform.html", "article-australia-ai-safety-regulator.html", "article-nvidia-ceo-transition.html", "article-elevenlabs-agents-memory-routines.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
+SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "article-agents-that-pay-approval-is-the-job.html", "article-self-hosted-model-did-not-move.html", "article-defense-logistics-commercial-ai.html", "article-korea-ramc-ai-agent-military-logistics.html", "article-imagine-enterprise-agent-platform.html", "article-australia-ai-safety-regulator.html", "article-nvidia-ceo-transition.html", "article-elevenlabs-agents-memory-routines.html", "article-ai-implementation-government-commercial.html", "article-verified-handoffs.html", "article-self-hosted-vs-hosted-ai.html", "article-gsa-ai-clause-schedule.html", "article-red-teaming-frontier-agents.html", "article-fed-barr-agents-bank-accounts.html", "article-know-your-agent-government.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
 if CHECKOUT_OPEN:
     SITEMAP_PAGES += ["discovery-scout-plans.html", "terms.html", "refund-policy.html"]
 urls = []
