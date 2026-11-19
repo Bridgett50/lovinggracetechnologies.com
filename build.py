@@ -1238,6 +1238,63 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
+    {
+        "fn": "article-replit-missions-budget-and-approval.html",
+        "title": "A Swarm of Agents, a Fixed Budget, and a Human Who Still Approves | Loving Grace Technologies",
+        "desc": "Replit launched Missions on Nov 17, 2026. You define the outcome and the spending limit. A swarm of agents plans, builds, and tests toward it, and the approval gates you set stay in place as the work evolves.",
+        "caption": "Agent swarms with a budget",
+        "heading": "A swarm of agents, a fixed budget, and a human who still approves",
+        "summary": "Replit launched Missions on Nov 17, 2026: a swarm of agents that plans, builds, and tests toward a goal you define, inside a spending limit you set, with approval gates that stay in place as the work evolves.",
+        "date": "2026-11-19",
+        "body": '''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">A swarm of agents,</span> a fixed budget, and a human who still approves</h1><p>Replit launched Missions on Nov 17, 2026. You define the outcome and the spending limit. A swarm of agents plans, builds, and tests toward it, and the approval gates you set stay in place as the work evolves.</p></div></div>
+<section><div class="wrap prose">
+<p>On Nov 17, 2026, Replit launched Missions, a way to hand a swarm of AI agents a goal and a budget instead of a single prompt. You define the outcome, and Replit coordinates agents to plan, build, test, and iterate toward it within the budget and boundaries you set. The examples in the announcement are the kind of work teams keep postponing: winning more enterprise customers, improving product performance, or replacing legacy software.</p>
+<h2>The agreement comes before the work</h2>
+<p>Before any agent starts, the mission agreement sets two things: the spending limit, and which actions require your permission. You also agree on acceptable tradeoffs, such as offering paid pilots or discounts on annual contracts. Replit gives an example: cap the mission's spending at $1,000 and require approval before the agent contacts prospects, shares a proposal, changes customer-facing sales materials, or makes product commitments. The announcement states that these limits and approval requirements remain in place as the approach evolves. The agents do not get to renegotiate the boundaries because they found a different tactic.</p>
+<h2>An independent judge, and a hard stop</h2>
+<p>During setup, Missions asks questions to define success. For a goal like winning the first 10 paying enterprise customers, it asks what counts as an enterprise customer, and whether paid pilots count or success means signed annual contracts above a minimum value. An independent AI judge checks results against those agreed criteria, and the agents use its feedback to refine their work. A mission is marked complete when the criteria are met. If the budget runs out first, work stops with the outcome still unresolved. That stop is the control that matters most. A swarm that can keep spending until it succeeds is a runaway cost. A swarm that stops when the money runs out is a bounded experiment.</p>
+<h2>The self-test: DataCat in two days</h2>
+<p>Replit used itself as the first example. The team wanted application monitoring in-house, so it gave Missions the goal of building DataCat, a platform it could customize and run on its own infrastructure. In two days, within a $3,000 budget, a swarm of agents built a working platform with dashboards, alerts, and application tracing, then tested it against measurable performance and reliability goals. To test whether DataCat could help diagnose a failure, the team deliberately introduced a database bug. DataCat raised an alert in 38 seconds, against a 60-second target, and traced the failure to the exact database query and its logs. In a three-hour load test, DataCat stored 26 million records of application activity and 4.4 million log entries with no data lost, while searches and alerts kept running. All 36 data-correctness checks and 15 alert-reliability checks passed. Replit is open-sourcing a self-hostable version of DataCat.</p>
+<h2>The swarm numbers, and their limits</h2>
+<p>Replit also ran a benchmark across 13 representative tasks using NumPy. With Auto (Max), a single agent achieved speedups of up to 4 times. A 16-agent swarm reached 17 times, and a 32-agent swarm reached 19 times. Auto (Power) showed the same pattern at 2, 7, and 9 times. On E-Commerce Bench, where an agent starts with 100,000 yen and runs online stores for a simulated year, Missions grew that to 4.82 million yen in a single run, roughly 48 times the starting money, which Replit calls a state-of-the-art result more than three times the best on the public leaderboard.</p>
+<p>Read the caveats Replit wrote into the announcement itself. The controlled tests do not establish performance against the original platform's hosted service or on Replit's production systems. The build comparison used one run per setup on identical cloud machines, scored only shared product areas, and used the original platform's agent version 7.56.2 to send data. API compatibility was a separate test suite from data correctness and alert reliability. These are company-reported figures from company-run tests, not independent benchmarks.</p>
+<h2>What to watch</h2>
+<p>Whether the budget stop holds in customer use, and whether the independent judge's checks match what a human would accept. Whether parallel agents duplicate work or make inconsistent decisions on the same goal. And whether the fixed budget makes teams willing to try work they kept postponing. No price is published in the announcement. Replit directs inquiries to its sales team.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://ld.replit.com/blog/introducing-replit-missions" target="_blank" rel="noopener">Replit, Introducing Replit Missions, Nov 17, 2026</a></li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+
+    {
+        "fn": "article-chargebee-arc-finance-agents.html",
+        "title": "Finance Agents That Show Their Work Before Anything Is Committed | Loving Grace Technologies",
+        "desc": "Chargebee launched Arc on Nov 18, 2026. Three finance agents handle contract ingestion, receivables, and revenue recognition, and every action is shown, cited, and held for review before anything is committed.",
+        "caption": "Finance agents with citations",
+        "heading": "Finance agents that show their work before anything is committed",
+        "summary": "Chargebee launched Arc on Nov 18, 2026: three finance agents for contract ingestion, receivables, and revenue recognition, running on a governance layer where every action is shown, cited, and held for review before anything is committed.",
+        "date": "2026-11-19",
+        "body": '''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">Finance agents</span> that show their work before anything is committed</h1><p>Chargebee launched Arc on Nov 18, 2026. Three finance agents handle contract ingestion, receivables, and revenue recognition, and every action is shown, cited, and held for review before anything is committed.</p></div></div>
+<section><div class="wrap prose">
+<p>On Nov 18, 2026, Chargebee announced Arc, a new agentic platform that runs complete finance workflows as one connected, traceable thread, from contract to invoice to revenue. At launch, Arc's pre-built agents solve three finance jobs: contract ingestion, receivables, and revenue recognition. A workspace called Agent Studio lets teams build custom agents on the same foundations. Arc is open for early access now.</p>
+<h2>Three agents, one thread</h2>
+<p>The contract ingestion agent reads a signed contract and brings a proposed billing setup and open questions to the finance team, with every extracted field linked back to its source, including the customer, items, prices, entitlements, price ramps, billing dates, and payment terms. The receivables agent builds a context graph of each customer's contracts, usage, and payment history, then prepares collections work, such as drafting the reply to a promise to pay or a question about a usage charge. Human teams approve, edit, or reject each proposal, and the agent works within each company's own rules and escalation thresholds. The revenue recognition agent breaks each contract into performance obligations, applies company policy, including prepaid credits, overages, and rollovers, and reallocates price when a contract changes, so teams can trace how each amendment changed revenue.</p>
+<h2>The governance layer is the product</h2>
+<p>Arc runs on four building blocks: tasks, drafts, comments, and citations. Tasks break complex work into steps, coordinate it across tools, teams, and time, and keep a clear record of each step and who took it. Drafts give teams a safe place to check proposed work, so nothing irreversible happens until someone signs off. Comments let agents flag ambiguity and collaborate with users in context. Citations show where each value came from, so review and verification go faster. Every action is shown, cited, and held for review before anything is committed.</p>
+<p>Arc carries each piece of finance work from start to finish as a single thread, logging every step with its author and its rationale, so the audit trail is complete whether a human or an agent did the work. When a human corrects an agent's treatment, a built-in learning loop remembers that correction the next time. Arc also works beyond Chargebee, pulling context from and acting across systems such as contract management, CRM, and email.</p>
+<h2>Why finance first</h2>
+<p>Finance teams rely on different systems of record for auditable, defensible numbers, but those systems do not capture the day-to-day operational context scattered across Slack threads, customer contracts, collections emails, and employees' heads. Chargebee says hundreds of its customers have already built agents, dashboards, and automations with its MCP release, and Arc grew from what those teams built. The quote from co-founder and CEO Krish Subramanian in the release puts it plainly: finance teams need systems that provide a shared foundation for humans and agents, and a standard of consistency and accuracy for every unit of work.</p>
+<h2>What to watch</h2>
+<p>Whether early-access customers report that the citation trail holds up under real audit, and whether the learning loop's memory of corrections stays visible to the team that made them. The release states no price and no general availability date. Early access is open now, and Chargebee points inquiries to witharc.ai.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://rss.globenewswire.com/news-release/2026/11/18/3405953/0/en/chargebee-launches-arc-a-new-agentic-finance-platform.html" target="_blank" rel="noopener">Chargebee, Chargebee Launches Arc, A New Agentic Finance Platform, Nov 18, 2026</a></li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
 ]
 
 def articles_body():
@@ -1703,7 +1760,7 @@ for fn, (t, d, b) in P.items():
     Path(fn).write_text(page(fn, t, d, b, EXTRA_LD.get(fn, ""), head), encoding="utf-8")
 
 # Sitemap of public pages (not the 404 page)
-SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "article-agents-that-pay-approval-is-the-job.html", "article-self-hosted-model-did-not-move.html", "article-defense-logistics-commercial-ai.html", "article-korea-ramc-ai-agent-military-logistics.html", "article-imagine-enterprise-agent-platform.html", "article-australia-ai-safety-regulator.html", "article-nvidia-ceo-transition.html", "article-elevenlabs-agents-memory-routines.html", "article-ai-implementation-government-commercial.html", "article-verified-handoffs.html", "article-self-hosted-vs-hosted-ai.html", "article-gsa-ai-clause-schedule.html", "article-red-teaming-frontier-agents.html", "article-fed-barr-agents-bank-accounts.html", "article-know-your-agent-government.html", "article-businesses-in-chatgpt-agent.html", "article-grok-bot-1-0-shared-teammates.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
+SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "article-agents-that-pay-approval-is-the-job.html", "article-self-hosted-model-did-not-move.html", "article-defense-logistics-commercial-ai.html", "article-korea-ramc-ai-agent-military-logistics.html", "article-imagine-enterprise-agent-platform.html", "article-australia-ai-safety-regulator.html", "article-nvidia-ceo-transition.html", "article-elevenlabs-agents-memory-routines.html", "article-ai-implementation-government-commercial.html", "article-verified-handoffs.html", "article-self-hosted-vs-hosted-ai.html", "article-gsa-ai-clause-schedule.html", "article-red-teaming-frontier-agents.html", "article-fed-barr-agents-bank-accounts.html", "article-know-your-agent-government.html", "article-businesses-in-chatgpt-agent.html", "article-grok-bot-1-0-shared-teammates.html", "article-replit-missions-budget-and-approval.html", "article-chargebee-arc-finance-agents.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
 if CHECKOUT_OPEN:
     SITEMAP_PAGES += ["discovery-scout-plans.html", "terms.html", "refund-policy.html"]
 urls = []
