@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /lateral
+Disallow: /serve.py
+Disallow: /test_lateral.py
 
 Sitemap: https://lovinggracetechnologies.com/sitemap.xml
