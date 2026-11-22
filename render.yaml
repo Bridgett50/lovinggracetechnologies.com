@@ -1,0 +1,18 @@
+# LATERAL web service. The public website stays on GitHub Pages.
+# Apply this blueprint only after the LATERAL commit is on main.
+# Set LATERAL_PASSWORD in the Render dashboard. Do not put a password here.
+services:
+  - type: web
+    name: loving-grace-lateral
+    runtime: python
+    plan: free
+    region: oregon
+    branch: main
+    buildCommand: python3 -m pip install -r requirements.txt
+    startCommand: python3 serve.py
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.3"
+      - key: LATERAL_PASSWORD
+        sync: false

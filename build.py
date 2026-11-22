@@ -2290,8 +2290,11 @@ Path("sitemap.xml").write_text(
     + "\n</urlset>\n",
     encoding="utf-8",
 )
+# /lateral is not a static page. serve.py gates it. These Disallow lines keep
+# crawlers off that address and off the server file if a host publishes the
+# repository as files. The page also sends noindex. The page is not in the sitemap.
 Path("robots.txt").write_text(
-    "User-agent: *\nAllow: /\n\nSitemap: " + SITE + "sitemap.xml\n",
+    "User-agent: *\nAllow: /\nDisallow: /lateral\nDisallow: /serve.py\nDisallow: /test_lateral.py\n\nSitemap: " + SITE + "sitemap.xml\n",
     encoding="utf-8",
 )
 print("wrote", ", ".join(P), "sitemap.xml, robots.txt")
