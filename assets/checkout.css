@@ -14,7 +14,7 @@
 .ds-buy[aria-disabled="true"]{opacity:.55;cursor:not-allowed}
 .ds-agree{margin-bottom:8px}
 .ds-agree label{display:flex;gap:12px;align-items:flex-start;font-size:16px}
-.ds-agree input{width:22px;height:22px;margin-top:2px;flex:none}
+.ds-agree input{width:24px;height:24px;margin-top:2px;flex:none}
 .ds-notes{margin-top:24px}
 .ds-off .ds-soon{display:block;font-size:11px;letter-spacing:.12em;margin-top:2px}
 .ds-btns .btn{text-align:center}
