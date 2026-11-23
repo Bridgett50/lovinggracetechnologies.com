@@ -161,7 +161,7 @@ PAGE_TMPL = """<!doctype html>
 <p class="sig" style="font-size:14px;margin-top:10px;max-width:28rem">Named for a simple idea: machines should watch over people with grace, and people should remain in charge.</p>
 </div>
 <div>
-<nav aria-label="Footer"><a href="services.html">Services</a><a href="products.html">Work</a><a href="articles.html">Articles</a><a href="research.html">Research</a><a href="discovery-scout.html">Discovery Scout</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav>
+<nav aria-label="Footer"><a href="services.html">Services</a><a href="products.html">Work</a><a href="articles.html">Articles</a><a href="research.html">Research</a><a href="discovery-scout.html">Discovery Scout</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="assets/Loving-Grace-Technologies-Capability-Statement.pdf" download="Loving-Grace-Technologies-Capability-Statement.pdf">Download Capability Statement (PDF)</a><a href="privacy.html">Privacy</a></nav>
 <nav aria-label="Follow"><a href="https://www.facebook.com/profile.php?id=61596476147014" rel="noopener noreferrer">Facebook</a><a href="https://www.linkedin.com/company/lovinggracetech/" rel="noopener noreferrer">LinkedIn</a><a href="https://www.youtube.com/channel/UCUEiHKR74F2YdL1z71B6aQQ" rel="noopener noreferrer">YouTube</a></nav>
 <p>Grenada, Mississippi</p>
 </div>
@@ -2038,6 +2038,9 @@ P["services.html"] = (
 <p>Software for contents inventory, packout, storage, packback, condition documentation, and claims reporting. Loving Grace Technologies builds the software.</p></article>
 <article class="card product">{ic("consult")}<span class="caption">Consulting</span><h2>Small business consulting</h2>
 <p>We help small businesses get ready for an AI-powered world. We look at how your business runs today, find where AI can save you time and money, and build a clear, practical plan to put it to work. We also help with the foundations around it: planning, registrations, and contracting readiness, so you&rsquo;re set up to grow.</p></article>
+</div></section>
+<section class="approach"><div class="wrap">
+<p class="btns"><a class="btn primary" href="assets/Loving-Grace-Technologies-Capability-Statement.pdf" download="Loving-Grace-Technologies-Capability-Statement.pdf">Download Capability Statement (PDF)</a></p>
 </div></section>
 <section class="textured-tile approach"><div class="wrap">
 <p class="caption">Questions</p>
