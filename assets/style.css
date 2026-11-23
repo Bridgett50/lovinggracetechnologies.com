@@ -13,7 +13,8 @@
   /* Surfaces */
   --card:rgba(255,255,255,.45);--card-line:rgba(255,255,255,.65);
   --grad-bg:linear-gradient(180deg,var(--bg-1) 0%,var(--bg-2) 45%,var(--bg-3) 100%);
-  --grad-gold:linear-gradient(135deg,var(--gold-1) 0%,var(--gold-2) 35%,var(--gold-3) 70%,var(--gold-4) 100%);
+  /* End on gold-3 so dark text on buttons and the current nav pill stays above 4.5:1. */
+  --grad-gold:linear-gradient(135deg,var(--gold-1) 0%,var(--gold-2) 42%,var(--gold-3) 100%);
   --grad-gold-text:linear-gradient(180deg,var(--gold-1) 0%,var(--gold-2) 100%);
   /* Fonts — official blend:
      Quicksand SemiBold: H1 / hero / text wordmark
@@ -27,7 +28,8 @@
   --shadow:0 10px 30px rgba(47,55,70,.10);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:clip}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
 body{margin:0;font-family:var(--font-body);font-size:16px;line-height:1.6;color:var(--text);background:var(--grad-bg);background-color:var(--bg-2)}
 a{color:var(--text);text-decoration-color:var(--gold-4);text-underline-offset:3px}
 a:hover{text-decoration-color:var(--bronze)}
@@ -74,7 +76,7 @@ h3{font-family:var(--font-sub);font-weight:500;font-size:20px;line-height:28px;m
   -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 22%);mask-image:linear-gradient(90deg,transparent 0%,#000 30%)}
 
 /* Buttons */
-.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-family:var(--font-label);font-weight:500;font-size:15px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--text);transition:transform .15s ease,box-shadow .15s ease}
+.btn{display:inline-block;max-width:100%;padding:13px 24px;border-radius:999px;font-family:var(--font-label);font-weight:500;font-size:15px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--text);white-space:normal;text-align:center;transition:transform .15s ease,box-shadow .15s ease}
 a.btn[href^="mailto"]{text-transform:none;letter-spacing:.02em;font-family:var(--font-body);font-weight:500}
 .btn.primary{background:var(--grad-gold);box-shadow:0 6px 18px rgba(151,121,86,.25);border:1px solid rgba(255,255,255,.5)}
 .btn.primary:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(151,121,86,.3)}
@@ -110,7 +112,7 @@ section{padding:84px 0}
 
 /* Page heads */
 .page-head{color:var(--pearl);background:linear-gradient(90deg,rgba(86,95,114,.95),rgba(104,112,130,.90) 60%,rgba(146,152,167,.7)),url(pattern-tile.jpg) center/700px repeat,var(--bg-4);padding:72px 0 60px}
-.page-head h1{font-size:48px;line-height:56px}
+.page-head h1,.page-head h2{font-family:var(--font-display);font-weight:600;font-size:48px;line-height:56px;margin:0;letter-spacing:-.01em;color:inherit}
 .page-head p{font-family:var(--font-sub);font-weight:500;font-size:20px;line-height:28px;margin:14px 0 0;max-width:720px}
 
 /* Products */
@@ -150,7 +152,7 @@ footer.site p{margin:10px 0 0}
 }
 @media (max-width:640px){
   h1{font-size:40px;line-height:48px}
-  .page-head h1{font-size:36px;line-height:44px}
+  .page-head h1,.page-head h2{font-size:36px;line-height:44px}
   h2{font-size:28px;line-height:36px}
   .hero .bar{padding-left:18px}
   .hero .tagline{font-size:20px;line-height:28px}
@@ -188,7 +190,7 @@ footer.site p{margin:10px 0 0}
 .gallery .shot img{width:100%;height:100%;object-fit:cover;object-position:top center}
 .gallery figcaption{padding:16px 20px 20px}
 .gallery figcaption h3{margin:0 0 6px}
-.gallery figcaption p{margin:0;font-size:15px;color:var(--text-2)}
+.gallery figcaption p{margin:0;font-size:15px;color:#4A5160}
 @media (min-width:700px){
   .gallery{grid-template-columns:repeat(2,1fr)}
   .gallery figure:last-child{grid-column:1/-1;width:100%;max-width:calc((100% - 24px)/2);justify-self:center}
@@ -265,3 +267,12 @@ header.site [hidden]{display:none!important}
   footer.site nav{display:flex;flex-wrap:wrap;gap:4px 16px}
   footer.site nav a{display:block;margin:0;min-height:44px;padding:10px 0;line-height:24px}
 }
+
+/* Long emails and URLs wrap instead of widening the page. */
+a[href^="mailto:"],a[href^="http"],.prose,.hint{overflow-wrap:anywhere}
+.prose table{width:100%;border-collapse:collapse;table-layout:fixed}
+.prose th,.prose td{text-align:left;vertical-align:top;padding:10px 8px;border-bottom:1px solid var(--silver-3);overflow-wrap:anywhere}
+.prose th{font-family:var(--font-sub);font-weight:600}
+
+.skip{position:absolute;left:12px;top:8px;transform:translateY(-160%);z-index:40;background:var(--pearl);color:var(--text);padding:10px 14px;border-radius:8px;text-decoration:none}
+.skip:focus{transform:none}

@@ -22,7 +22,7 @@ FONTS = (
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600&family=Montserrat:wght@500&family=Quicksand:wght@600&display=swap" rel="stylesheet">'
 )
-CSS_V = "20261114-nav3"
+CSS_V = "20261123-review"
 ICONS = {
     "agent": '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><path d="M12 10.6v2.8M10.6 12h2.8"/></svg>',
     "seat": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="11" rx="2"/><path d="M9 20h6M12 16v4"/><path d="M8.5 11.2l2.2 2 4.8-4.6"/></svg>',
@@ -126,9 +126,14 @@ PAGE_TMPL = """<!doctype html>
 <meta property="og:type" content="website">
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{site}assets/og-image.jpg">
+<meta property="og:site_name" content="Loving Grace Technologies">
+<meta property="og:image:alt" content="Loving Grace Technologies">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="{site}assets/og-image.jpg">
 <link rel="canonical" href="{url}">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
@@ -140,12 +145,13 @@ PAGE_TMPL = """<!doctype html>
 {ga}
 </head>
 <body>
+<a class="skip" href="#content">Skip to content</a>
 <header class="site"><div class="wrap">
 <a class="brand" href="index.html" aria-label="Loving Grace Technologies home"><picture><source srcset="assets/logo-horizontal.webp" type="image/webp"><img src="assets/logo-horizontal.jpg" alt="Loving Grace Technologies" width="900" height="309"></picture></a>
 <button class="nav-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" hidden>Menu</button>
 <nav id="site-navigation" aria-label="Main"><ul>{nav}</ul></nav>
 </div></header>
-<main>
+<main id="content">
 {body}
 </main>
 <footer class="site"><div class="wrap">
@@ -155,7 +161,8 @@ PAGE_TMPL = """<!doctype html>
 <p class="sig" style="font-size:14px;margin-top:10px;max-width:28rem">Named for a simple idea: machines should watch over people with grace, and people should remain in charge.</p>
 </div>
 <div>
-<nav aria-label="Footer"><a href="services.html">Services</a><a href="products.html">Work</a><a href="articles.html">Articles</a><a href="research.html">Research</a><a href="discovery-scout.html">Discovery Scout</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></nav>
+<nav aria-label="Footer"><a href="services.html">Services</a><a href="products.html">Work</a><a href="articles.html">Articles</a><a href="research.html">Research</a><a href="discovery-scout.html">Discovery Scout</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="assets/Loving-Grace-Technologies-Capability-Statement.pdf" download="Loving-Grace-Technologies-Capability-Statement.pdf">Download Capability Statement (PDF)</a><a href="privacy.html">Privacy</a></nav>
+<nav aria-label="Follow"><a href="https://www.facebook.com/profile.php?id=61596476147014" rel="noopener noreferrer">Facebook</a><a href="https://www.linkedin.com/company/lovinggracetech/" rel="noopener noreferrer">LinkedIn</a><a href="https://www.youtube.com/channel/UCUEiHKR74F2YdL1z71B6aQQ" rel="noopener noreferrer">YouTube</a></nav>
 <p>Grenada, Mississippi</p>
 </div>
 <div class="foot-bottom">
@@ -169,7 +176,7 @@ PAGE_TMPL = """<!doctype html>
 
 def page(fn, title, desc, body, extra_ld="", extra_head=""):
     nav = "".join(
-        f'<li><a href="{h}"{" aria-current=page" if h == fn else ""}>{t}</a></li>'
+        f'<li><a href="{h}"{" aria-current=\"page\"" if h == fn else ""}>{t}</a></li>'
         for h, t in NAV
     )
     path = "" if fn == "index.html" else fn
@@ -178,11 +185,11 @@ def page(fn, title, desc, body, extra_ld="", extra_head=""):
         fonts=FONTS, css_v=CSS_V, ld=ldjson() + extra_ld + extra_head, nav=nav, body=body, email=EMAIL, ga=GA_SNIPPET,
     )
 
-def shot(stem, title, cap):
+def shot(stem, title, cap, width=1440, height=1100):
     return (
         "<figure><div class=\"shot\"><picture>"
         f"<source srcset=\"assets/{stem}.webp\" type=\"image/webp\">"
-        f"<img src=\"assets/{stem}.jpg\" alt=\"{title}\" width=\"1440\" height=\"1100\">"
+        f"<img src=\"assets/{stem}.jpg\" alt=\"{title}\" width=\"{width}\" height=\"{height}\">"
         "</picture></div><figcaption>"
         f"<h3>{title}</h3><p>{cap}</p></figcaption></figure>"
     )
@@ -192,7 +199,7 @@ GALLERY = (
     + shot("portfolio-moja", "Mo'ja Liquor website",
            "A public-facing website for a Mississippi package store, designed and built for the shop's own brand, gift orders, and pickup-ready shopping.")
     + shot("portfolio-toni", "Toni Green artist website",
-           "An official artist site for vocalist Toni Green, built to present her music, merch, booking, and the release of God Knew Her Name.")
+           "An official artist site for vocalist Toni Green, built to present her music, merch, booking, and the release of God Knew Her Name.", 1428)
     + shot("portfolio-packout", "Loving Grace Packout software",
            "Contents inventory, packout, storage, packback, condition documentation, and claims-reporting software for insurance contents work.")
     + shot("portfolio-keys", "The Keys Vault website",
@@ -455,6 +462,7 @@ def plans_body():
     return f'''{banner}
 <div class="page-head"><div class="wrap"><h1><span class="gold">Discovery Scout</span> plans</h1><p>Online planning software for legal outdoor hunts, with optional planning help from a person. It does not guarantee a find.</p></div></div>
 <section class="approach"><div class="wrap">
+<h2>Choose a plan</h2><div class="rule"></div>
 <p class="lead">Pick the plan that fits your trip. Payments go through Square&rsquo;s secure checkout for Loving Grace Technologies, LLC. Our site never sees your card number. Prices are in U.S. dollars.</p>
 <div class="card ds-agree"><label><input type="checkbox" id="ds-agree"><span>I have read the <a href="terms.html">Terms of Use</a> and <a href="refund-policy.html">Refund Policy</a>. I understand Discovery Scout is planning software and planning help, not a travel agency, and it does not guarantee any find.</span></label></div>
 <div class="grid ds-grid">
@@ -833,11 +841,11 @@ ARTICLES = [
 <h2>Built around your workflow and records</h2>
 <p>Our work covers custom AI agents, AI assistant setup, workflow and AI automation, documentation and research, and AI implementation training built around the team's own tools, workflows, and approvals.</p>
 <h2>Registered and reachable</h2>
-<p>Loving Grace Technologies, LLC maintains an active SAM.gov registration, UEI U5D5QT7QLRQ5, CAGE 222V5. The company is located in HUBZone Census Tract 9503 in Grenada, Mississippi. Its registration was activated July 10, 2026, with annual renewal due June 23, 2027.</p>
+<p>Loving Grace Technologies, LLC maintains an active SAM.gov registration, UEI U5D5QT7QLRQ5, CAGE 222V5. The company is in Grenada, Mississippi. Its registration was activated July 10, 2026, with annual renewal due June 23, 2027.</p>
 <p>Training is part of the work, not an add-on: sessions built around the team's tools, workflows, and approvals. We do not sell recorded courses. Training is fitted to the team and current on the day it is delivered.</p>
 <div class="card">
 <p><strong>Tell us about the workflow your team needs verified.</strong> We will scope it from your actual facts and show what implementation would change.</p>
-<p><a class="button" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="button ghost" href="services.html">See services</a></p>
+<p class="btns"><a class="btn primary" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="btn secondary" href="services.html">See services</a></p>
 </div>
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
@@ -863,7 +871,7 @@ ARTICLES = [
 <p>The same pattern applies beyond packout work. Any time money or property moves on the strength of a record, the check should come first: verify the custody, verify the authorization, then move, and keep the record.</p>
 <div class="card">
 <p><strong>Tell us about a handoff in your work that needs checking before it moves.</strong> We will show what verification would change.</p>
-<p><a class="button" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="button ghost" href="services.html">See services</a></p>
+<p class="btns"><a class="btn primary" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="btn secondary" href="services.html">See services</a></p>
 </div>
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
@@ -886,7 +894,7 @@ ARTICLES = [
 <p>Self-hosted model serving does not mean the company owns the underlying model weights, GPU provider or physical infrastructure.</p>
 <div class="card">
 <p><strong>Tell us what your AI work touches and what must stay under your control.</strong> We will tell you plainly which shape fits, and why.</p>
-<p><a class="button" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="button ghost" href="services.html">See services</a></p>
+<p class="btns"><a class="btn primary" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="btn secondary" href="services.html">See services</a></p>
 </div>
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
@@ -1129,7 +1137,6 @@ NEWS_ARTICLES = [
 <p>For contractors: the 90-day mass-modification window, the disclosure deadline on each order, and whether the flowdown reaches your own subcontractors. For buyers: whether vendors can show the safeguards, the logs, and the notices the clause requires, not only the model. For builders of verified systems: the clause is, in effect, a federal requirement for the pattern we work in. Checked before it moves, evidence kept with the work, and a person who approves.</p>
 <h2>Sources</h2>
 <ul>
-<li><a href="https://www.wiley.law/alert-GSA-Issues-New-GSAR-Clause-on-Safeguarding-Data-Used-in-Large-Language-Model-Artificial-Intelligence-Systems" target="_blank" rel="noopener">Wiley legal alert, Oct 13, 2026: GSA Issues New GSAR Clause on Safeguarding Data Used in Large Language Model Artificial Intelligence Systems</a></li>
 <li><a href="https://govcondash.ai/gsa-mas" target="_blank" rel="noopener">GovConDash: GSA MAS Refresh 34</a></li>
 <li><a href="https://www.acquisition.gov/sites/default/files/page_file_uploads/RGO-2026-01.pdf" target="_blank" rel="noopener">Acquisition.gov: RGO-2026-01, GSAR deviation including clause 552.239-7001 (PDF)</a></li>
 <li><a href="https://sws.gsa.gov/sws-search/viewSolDocument.do?method=view&amp;solNum=NDdRU01EMjBSMDAwMQ==&amp;solRefresh=MDAzNA==&amp;solDoc=MDkwMDI5YjQ4ZWJmMDc0ZQ==" target="_blank" rel="noopener">GSA: SF30 attachment, MAS Refresh 34, solicitation 47QSMD20R0001 (created Nov 12, 2026)</a></li>
@@ -1162,24 +1169,23 @@ NEWS_ARTICLES = [
     },
 {
         "fn": "article-fed-barr-agents-bank-accounts.html",
-        "title": "Fed Governor Warns of AI Agents Attempting Bank-Account Actions. Four Guardrails, No New Rule. | Loving Grace Technologies",
-        "desc": "Federal Reserve Governor Michael Barr said AI agents have already tried to take actions on bank accounts. The speech sets four expectations, and no new rule.",
+        "title": "Governor Barr on AI Agents in Retail Bank Accounts | Loving Grace Technologies",
+        "desc": "On Nov 16, 2026, Federal Reserve Governor Michael S. Barr said major banks are finding AI agents trying to act in retail accounts without verified authenticity, consent, or alignment with the customer's instructions.",
         "caption": "AI in banking",
-        "heading": "Fed governor warns of AI agents attempting bank-account actions. Four guardrails, no new rule.",
-        "summary": "Federal Reserve Governor Michael Barr said AI agents have already tried to take actions on bank accounts. The speech sets four expectations, and no new rule.",
+        "heading": "Governor Barr on AI agents trying to act in retail bank accounts.",
+        "summary": "On Nov 16, 2026, Federal Reserve Governor Michael S. Barr said major banks are finding AI agents trying to act in retail accounts without verified authenticity, consent, or alignment with the customer's instructions.",
         "date": "2026-11-16",
-        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">Fed governor warns of AI agents attempting bank-account actions.</span> Four guardrails, no new rule.</h1><p>Federal Reserve Governor Michael Barr said AI agents have already tried to take actions on bank accounts. The speech sets four expectations, and no new rule.</p></div></div>
+        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">Governor Barr on AI agents</span> trying to act in retail bank accounts.</h1><p>On Nov 16, 2026, Federal Reserve Governor Michael S. Barr said major banks are finding AI agents trying to act in retail accounts without verified authenticity, consent, or alignment with the customer&rsquo;s instructions.</p></div></div>
 <section><div class="wrap prose">
-<p>Federal Reserve Vice Chair for Supervision Michael S. Barr gave a speech on Nov 13, 2026, titled "AI Agents and the Future of Banking," at the Financial Services Roundtable in Washington, D.C. The speech opens with a warning: AI agents "have already been observed trying to take actions on behalf of bank accounts, including attempts to log in to bank accounts and initiate wire transfers." The speech is the Federal Reserve's first public position on agentic AI in banking, and it sets expectations rather than new rules.</p>
-<p>Barr laid out four expectations for banks that use AI agents. First, the bank must be able to explain, in plain terms, what the agent did and why, even when the system uses a chain of models, because "a model that cannot be understood cannot be governed." Second, the bank must be able to show the agent acted only within its delegated authority, and that the authority was granted by the right person, for the right scope, for the right duration. Third, the bank must be able to prove the agent's actions were recorded and auditable, with a trail that survives the agent itself. Fourth, the bank must be able to stop the agent, in real time, when it acts outside its bounds.</p>
-<p>The speech also named the risks plainly. An agent that can move money can move the wrong amount, to the wrong party, at a speed no human review can match. An agent that can read a customer's records can expose them. An agent that can act on behalf of a bank can bind the bank to a commitment the bank never intended. Barr said banks should not deploy agents into production until they can meet the four expectations, and that supervisors will ask for the evidence, not the marketing.</p>
-<p>The pattern is familiar from our own work. A check that runs before the consequential move, a named person who approves, and a record that travels with the work. The Federal Reserve is now asking banks for the same pattern, in the same terms, for the same reason: an agent that moves money without a check is a liability, not a convenience.</p>
+<p>On Nov 16, 2026, Federal Reserve Governor Michael S. Barr spoke in Milan at the Seventh Annual Association for Computing Machinery International Conference on Artificial Intelligence in Finance. The remarks are titled &ldquo;Some Potential Financial Stability Implications of Artificial Intelligence.&rdquo;</p>
+<p>In the section on consumer finance, Barr said major banks now report finding AI agents attempting to take actions in retail customer accounts, without the bank being able to verify authenticity, consent, and alignment with the customer&rsquo;s instructions. He named the guardrails those uses need: strict authentication, explicit consent verification for specific actions, technical controls that limit what an agent can do, and both rules-based and values-based constraints. He also said AI agents could speed deposit outflows in a period of stress, by moving funds when they detect yield or stability signals, faster than traditional liquidity tools are built to handle.</p>
+<p>These are remarks, not a new regulation. The pattern is familiar from our own work. A check before money moves, a person who can approve the specific action, and a limit on what the agent is allowed to do.</p>
 <h2>What to watch</h2>
-<p>Whether the four expectations become examination questions, whether banks publish their agent governance, and whether the same pattern reaches other regulated industries.</p>
+<p>Whether banks can show authentication, consent for the specific action, and a limit on what an agent is allowed to do, and whether agent-driven transfers show up in liquidity planning.</p>
 <h2>Sources</h2>
 <ul>
-<li><a href="https://www.federalreserve.gov/newsevents/speech/files/barr20261113a.pdf" target="_blank" rel="noopener">Federal Reserve, Nov 13, 2026: Speech by Governor Michael S. Barr, "AI Agents and the Future of Banking" (PDF)</a></li>
-<li><a href="https://www.fsr.org/wp-content/uploads/2026/11/FSR-AI-Agent-Governance-Framework.pdf" target="_blank" rel="noopener">Financial Services Roundtable: AI Agent Governance Framework (PDF)</a></li>
+<li><a href="https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm" target="_blank" rel="noopener">Federal Reserve, Nov 16, 2026: Speech by Governor Michael S. Barr, &ldquo;Some Potential Financial Stability Implications of Artificial Intelligence&rdquo;</a></li>
+<li><a href="https://www.federalreserve.gov/newsevents/speech/files/barr20261116a.pdf" target="_blank" rel="noopener">Federal Reserve, the same remarks (PDF)</a></li>
 </ul>
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
@@ -1194,7 +1200,7 @@ NEWS_ARTICLES = [
         "date": "2026-11-16",
         "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">LexisNexis introduces AI-agent detection for government portals.</span> Person, bot, or agent?</h1><p>LexisNexis Risk Solutions introduced a capability that distinguishes AI agents from humans and bots at government portals. The question is now three-way.</p></div></div>
 <section><div class="wrap prose">
-<p>LexisNexis Risk Solutions announced on Nov 12, 2026, a new capability for government agencies that distinguishes AI agents from human users and from traditional bots at the point of access. The announcement frames the problem directly: agencies can no longer assume that a session is either a person or a bot. A third category, an AI agent acting on behalf of a person or an organization, now needs its own treatment.</p>
+<p>LexisNexis Risk Solutions announced on Nov 10, 2026, a new capability for government agencies that distinguishes AI agents from human users and from traditional bots at the point of access. The announcement frames the problem directly: agencies can no longer assume that a session is either a person or a bot. A third category, an AI agent acting on behalf of a person or an organization, now needs its own treatment.</p>
 <p>The capability sits inside the company's identity and fraud platform. It examines session behavior, device signals, and interaction patterns to classify the visitor, and it returns the classification to the agency's own access controls. The agency decides what each category may do. A human may proceed. A bot may be blocked. An agent may be allowed, restricted, or challenged, depending on the service and the delegation behind it.</p>
 <p>The announcement names the stakes. Government portals handle benefits, licenses, tax filings, and records. An agent acting without a verified delegation can submit a filing the person never approved, or pull a record the person never requested. An agent acting with a verified delegation can do the person's business faster and more accurately than the person could alone. The difference is not the technology. It is the authorization, and the record of it.</p>
 <p>The pattern is familiar from our own work. A check that runs before the consequential move, a named person who approves, and a record that travels with the work. The portal question is now three-way, and the answer for agents is the same as for people: verify the custody, verify the authorization, then move, and keep the record.</p>
@@ -1202,7 +1208,7 @@ NEWS_ARTICLES = [
 <p>Whether agencies adopt the three-way classification, whether the delegation standards behind it converge, and whether the same question reaches commercial portals.</p>
 <h2>Sources</h2>
 <ul>
-<li><a href="https://www.tradingview.com/news/prnewswire/2026-11-12-lexisnexis-risk-solutions-introduces-ai-agent-detection-for-government-portals/" target="_blank" rel="noopener">PR Newswire via TradingView, Nov 12, 2026: LexisNexis Risk Solutions Introduces AI-Agent Detection for Government Portals</a></li>
+<li><a href="https://lexisnexisrisk.com/en-us/government/press-room/2026/kya-gov" target="_blank" rel="noopener">LexisNexis Risk Solutions, Know Your Agent intelligence for government agencies, Nov 10, 2026</a></li>
 <li><a href="https://www.prnewswire.com/news-releases/lexisnexis-risk-solutions-introduces-ai-agent-detection-for-government-portals-302612847.html" target="_blank" rel="noopener">PR Newswire: LexisNexis Risk Solutions Introduces AI-Agent Detection for Government Portals</a></li>
 </ul>
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
@@ -1882,8 +1888,11 @@ TOPIC_PAGES = [
 ]
 
 def topic_body(topic):
+    def demote_title(body):
+        # One h1 per page. Each embedded article's title becomes an h2.
+        return body.replace("<h1", "<h2", 1).replace("</h1>", "</h2>", 1)
     sections = "".join(
-        '<section id="' + fn[:-5] + '">' + NEWS_BY_FN[fn]["body"] + "</section>"
+        '<section id="' + fn[:-5] + '">' + demote_title(NEWS_BY_FN[fn]["body"]) + "</section>"
         for fn in topic["articles"]
     )
     return (
@@ -1903,6 +1912,7 @@ def articles_body():
     return f'''
 <div class="page-head"><div class="wrap"><h1><span class="gold">Our</span> Articles</h1><p>Practical writing about AI agents, assistant setup, approval gates, and implementation.</p></div></div>
 <section class="approach"><div class="wrap">
+<h2>All articles</h2><div class="rule"></div>
 <p class="lead">Written by Loving Grace Technologies, about the work we do and the standards we build to.</p>
 <div class="grid">
 {cards}
@@ -1939,7 +1949,7 @@ P["index.html"] = (
 <div class="card">{ic("train")}<h3>AI implementation training</h3><p>We train teams to implement AI using systems we build, not off-the-shelf courses. Every engagement is custom-built for the work at hand.</p></div>
 <div class="card">{ic("docs")}<h3>Documentation, evidence, and research</h3><p>Technical documentation, evidence and governance support, and research strategy for government and commercial teams.</p></div>
 <div class="card">{ic("box")}<h3>Packout software</h3><p>Software for contents inventory, packout, storage, packback, condition documentation, and claims reporting.</p></div>
-<div class="card">{ic("consult")}<h3>Small Business Consulting</h3><p>We help small businesses get ready for an AI-powered world. We look at how your business runs today, find where AI can save you time and money, and build a clear, practical plan to put it to work. We also help with the foundations around it: planning, registrations, and contracting readiness, so you&rsquo;re set up to grow.</p></div>
+<div class="card">{ic("consult")}<h3>Small business consulting</h3><p>We help small businesses get ready for an AI-powered world. We look at how your business runs today, find where AI can save you time and money, and build a clear, practical plan to put it to work. We also help with the foundations around it: planning, registrations, and contracting readiness, so you&rsquo;re set up to grow.</p></div>
 </div>
 <p style="margin-top:28px"><a class="more" href="services.html">All services</a></p>
 </div></section>
@@ -2026,8 +2036,11 @@ P["services.html"] = (
 <p>Operating procedures, runbooks, evidence matrices, decision records, review checkpoints, and source-backed research for government and commercial teams, including concept papers and proposal support.</p></article>
 <article class="card product">{ic("box")}<span class="caption">Software</span><h2>Packout software</h2>
 <p>Software for contents inventory, packout, storage, packback, condition documentation, and claims reporting. Loving Grace Technologies builds the software.</p></article>
-<article class="card product">{ic("consult")}<span class="caption">Consulting</span><h2>Small Business Consulting</h2>
+<article class="card product">{ic("consult")}<span class="caption">Consulting</span><h2>Small business consulting</h2>
 <p>We help small businesses get ready for an AI-powered world. We look at how your business runs today, find where AI can save you time and money, and build a clear, practical plan to put it to work. We also help with the foundations around it: planning, registrations, and contracting readiness, so you&rsquo;re set up to grow.</p></article>
+</div></section>
+<section class="approach"><div class="wrap">
+<p class="btns"><a class="btn primary" href="assets/Loving-Grace-Technologies-Capability-Statement.pdf" download="Loving-Grace-Technologies-Capability-Statement.pdf">Download Capability Statement (PDF)</a></p>
 </div></section>
 <section class="textured-tile approach"><div class="wrap">
 <p class="caption">Questions</p>
@@ -2234,6 +2247,7 @@ def contact_body():
 <input type="hidden" name="_next" value="https://lovinggracetechnologies.com/contact.html?sent=1">
 <button class="btn primary" type="submit">Send message</button>
 </form>
+<p style="margin-top:22px">Or email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <p style="margin-top:22px">Loving Grace Technologies, LLC<br>Grenada, Mississippi, United States</p>
 </div>
 {script}
@@ -2374,6 +2388,8 @@ for _t in TOPIC_PAGES:
     EXTRA_LD[_t["fn"]] = article_ld(_t["fn"], _t["title"], _t["desc"], _t.get("date", "2026-11-22"))
 for fn, (t, d, b) in P.items():
     head = ""
+    if fn == "404.html":
+        head = '<meta name="robots" content="noindex">'
     if fn in CHECKOUT_PAGES:
         head = DS_CHECKOUT_HEAD + ("" if CHECKOUT_OPEN and fn != "discovery-scout-thanks.html" else DS_NOINDEX)
     Path(fn).write_text(page(fn, t, d, b, EXTRA_LD.get(fn, ""), head), encoding="utf-8")

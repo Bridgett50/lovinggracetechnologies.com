@@ -37,7 +37,7 @@ mimetypes.add_type("text/plain", ".txt")
 
 ALLOWED_SUFFIXES = {
     ".html", ".css", ".js", ".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg",
-    ".ico", ".xml", ".txt", ".webmanifest", ".json", ".woff", ".woff2",
+    ".ico", ".xml", ".txt", ".webmanifest", ".json", ".pdf", ".woff", ".woff2",
 }
 
 
@@ -142,7 +142,7 @@ def layout(title: str, description: str, body: str) -> str:
 <link rel="preconnect" href="https://fonts.googleapis.com" referrerpolicy="no-referrer">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin referrerpolicy="no-referrer">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600&family=Montserrat:wght@500&family=Quicksand:wght@600&display=swap" rel="stylesheet" referrerpolicy="no-referrer">
-<link rel="stylesheet" href="assets/style.css?v=20261122-lateral">
+<link rel="stylesheet" href="assets/style.css?v=20261123-review">
 <style>
 .sr{{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}}
 .gate{{max-width:32rem}}
@@ -150,12 +150,13 @@ def layout(title: str, description: str, body: str) -> str:
 <script src="assets/navigation.js?v=20261122-lateral" defer></script>
 </head>
 <body>
+<a class="skip" href="#content">Skip to content</a>
 <header class="site"><div class="wrap">
 <a class="brand" href="index.html" aria-label="Loving Grace Technologies home"><picture><source srcset="assets/logo-horizontal.webp" type="image/webp"><img src="assets/logo-horizontal.jpg" alt="Loving Grace Technologies" width="900" height="309"></picture></a>
 <button class="nav-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" hidden>Menu</button>
 <nav id="site-navigation" aria-label="Main"><ul>{nav}</ul></nav>
 </div></header>
-<main>
+<main id="content">
 {body}
 </main>
 <footer class="site"><div class="wrap">
@@ -165,7 +166,8 @@ def layout(title: str, description: str, body: str) -> str:
 <p class="sig" style="font-size:14px;margin-top:10px;max-width:28rem">Named for a simple idea: machines should watch over people with grace, and people should remain in charge.</p>
 </div>
 <div>
-<nav aria-label="Footer"><a href="services.html">Services</a><a href="products.html">Work</a><a href="articles.html">Articles</a><a href="research.html">Research</a><a href="discovery-scout.html">Discovery Scout</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refund-policy.html">Refunds</a></nav>
+<nav aria-label="Footer"><a href="services.html">Services</a><a href="products.html">Work</a><a href="articles.html">Articles</a><a href="research.html">Research</a><a href="discovery-scout.html">Discovery Scout</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="assets/Loving-Grace-Technologies-Capability-Statement.pdf" download="Loving-Grace-Technologies-Capability-Statement.pdf">Download Capability Statement (PDF)</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refund-policy.html">Refunds</a></nav>
+<nav aria-label="Follow"><a href="https://www.facebook.com/profile.php?id=61596476147014" rel="noopener noreferrer">Facebook</a><a href="https://www.linkedin.com/company/lovinggracetech/" rel="noopener noreferrer">LinkedIn</a><a href="https://www.youtube.com/channel/UCUEiHKR74F2YdL1z71B6aQQ" rel="noopener noreferrer">YouTube</a></nav>
 <p>Grenada, Mississippi</p>
 </div>
 <div class="foot-bottom">
