@@ -523,7 +523,7 @@ DS_NOINDEX = '<meta name="robots" content="noindex,nofollow">'
 # ---------------------------------------------------------------------------
 
 ARTICLES = [
-    {
+{
         "fn": "article-ai-assistant-setup.html",
         "title": "AI Assistant Setup, Explained | Loving Grace Technologies",
         "desc": "What AI assistant setup means: instructions, boundaries, files, and preferences configured around your work, for Muse, Grok, ChatGPT, and Claude.",
@@ -550,7 +550,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-meeting-approval.html",
         "title": "AI Meeting Assistants: Who Approves? | Loving Grace Technologies",
         "desc": "An AI meeting assistant should draft, never pay. How Second Seat separates drafting from checking, and what a sandbox demo proved.",
@@ -571,7 +571,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-custom-agent-vs-chatgpt.html",
         "title": "Custom AI Agent vs. ChatGPT: Which Do You Need? | Loving Grace Technologies",
         "desc": "A general assistant and a custom agent solve different problems. How to tell which one your business actually needs.",
@@ -591,7 +591,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-choosing-ai-company.html",
         "title": "How to Choose an AI Implementation Company | Loving Grace Technologies",
         "desc": "Six questions to ask any AI implementation company before you hire one, and what good answers sound like.",
@@ -618,7 +618,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-ai-training-engagement.html",
         "title": "What a Custom AI Training Engagement Includes | Loving Grace Technologies",
         "desc": "AI training built for one team: their tools, their workflows, their approvals. What is included, and what it is not.",
@@ -642,7 +642,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-workflow-automation-existing-software.html",
         "title": "Automate a Workflow Without Replacing Your Software | Loving Grace Technologies",
         "desc": "Automation does not have to mean new software. How to layer intake, drafting, checking, and approval over the tools a team already uses.",
@@ -669,7 +669,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-custom-web-application-checklist.html",
         "title": "What Should a Custom Web Application Include? | Loving Grace Technologies",
         "desc": "A custom web application should fit one workflow, keep evidence, and keep people in charge. A checklist drawn from software we have actually built.",
@@ -694,7 +694,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-documentation-evidence-automation.html",
         "title": "Automate Documentation While Preserving Evidence | Loving Grace Technologies",
         "desc": "Automation that erases its own trail is a liability. How to automate documentation and keep the source, the decision, and the checkpoint.",
@@ -715,7 +715,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-packout-software-inventory.html",
         "title": "How Packout Software Improves Inventory Documentation | Loving Grace Technologies",
         "desc": "Contents work lives or dies on its documentation. How packout software ties inventory, condition, storage, and packback to one record.",
@@ -740,7 +740,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-agents-that-pay-approval-is-the-job.html",
         "title": "Agents Can Pay Now. The Approval Screen Is the Whole Job. | Loving Grace Technologies",
         "desc": "Visa tested AI shopping agents, prosecutors unsealed a $129 million impersonation case, and OpenAI shipped a wallet that lets agents pay. All three landed within eight days, and all three point at the same control: approval.",
@@ -779,7 +779,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-self-hosted-model-did-not-move.html",
         "title": "Self-Hosted Moved Inside the Firewall. The Model Did Not Move With It. | Loving Grace Technologies",
         "desc": "Anthropic put self-hosted Claude Managed Agents into private beta on Nov 12, 2026. The service, the database, and the sandboxes move inside. The model calls still go out. A second story from the same month shows the other meaning of self-hosted.",
@@ -815,7 +815,119 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
+        "fn": "article-ai-implementation-government-commercial.html",
+        "title": "AI Implementation for Government and Commercial Teams | Loving Grace Technologies",
+        "desc": "What government and commercial teams should require from AI implementation: verified work, kept evidence, and approval before money or property moves.",
+        "caption": "Government and commercial",
+        "heading": "AI implementation for government and commercial teams",
+        "summary": "What government and commercial teams should require from AI implementation: verified work, kept evidence, and approval before money or property moves.",
+        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">AI implementation</span> for government and commercial teams</h1><p>What government and commercial teams should require from AI implementation: verified work, kept evidence, and approval before money or property moves.</p></div></div>
+<section><div class="wrap prose">
+<h2>Verified work before it moves</h2>
+<p>Nothing the AI drafts should move money or property without a check against what was actually agreed. That is the principle behind Sovereign Mesh, our verified-handoffs work, a TRL 2 concept and an Encountering Innovation 2027 applicant: custody and authorization verified before the handoff, not assumed after it. Sovereign Mesh is a concept and an applicant, described here as what it is, not as a shipped product.</p>
+<h2>Evidence kept with the work</h2>
+<p>A decision should keep its reasons: what was claimed, where it came from, and what was checked. We work from primary sources, keep the record with the work, and do not present a test result as a client outcome.</p>
+<h2>Approval with a person</h2>
+<p>AI drafts; a person approves. The person who approves sees what was actually agreed, not only what the system drafted, and no agent grants itself approval for a consequential move.</p>
+<h2>Built around your workflow and records</h2>
+<p>Our work covers custom AI agents, AI assistant setup, workflow and AI automation, documentation and research, and AI implementation training built around the team's own tools, workflows, and approvals.</p>
+<h2>Registered and reachable</h2>
+<p>Loving Grace Technologies, LLC maintains an active SAM.gov registration, UEI U5D5QT7QLRQ5, CAGE 222V5. The company is located in HUBZone Census Tract 9503 in Grenada, Mississippi. Its registration was activated July 10, 2026, with annual renewal due June 23, 2027.</p>
+<p>Training is part of the work, not an add-on: sessions built around the team's tools, workflows, and approvals. We do not sell recorded courses. Training is fitted to the team and current on the day it is delivered.</p>
+<div class="card">
+<p><strong>Tell us about the workflow your team needs verified.</strong> We will scope it from your actual facts and show what implementation would change.</p>
+<p><a class="button" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="button ghost" href="services.html">See services</a></p>
+</div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+{
+        "fn": "article-verified-handoffs.html",
+        "title": "Verified Handoffs: Custody and Authorization Before the Move | Loving Grace Technologies",
+        "desc": "A verified handoff checks custody and authorization before money or property moves, and keeps the evidence with the work. How Sovereign Mesh frames it.",
+        "caption": "Verified handoffs",
+        "heading": "Verified handoffs: custody and authorization before the move",
+        "summary": "A verified handoff checks custody and authorization before money or property moves, and keeps the evidence with the work.",
+        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">Verified handoffs:</span> custody and authorization before the move</h1><p>A verified handoff checks custody and authorization before money or property moves, and keeps the evidence with the work.</p></div></div>
+<section><div class="wrap prose">
+<p>A handoff is the moment something changes hands: money, property, records, or responsibility. Most systems record the handoff after it happens. A verified handoff checks it before it happens, and keeps the evidence with the work.</p>
+<p>That is the idea behind Sovereign Mesh, our verified-handoffs work and an Encountering Innovation 2027 applicant. Sovereign Mesh is currently a TRL 2 concept. No integrated prototype or production deployment is verified. It is a concept and an applicant, described here as what it is, not as a shipped product. The first intended workflow for Sovereign Mesh is contents pack-out and restoration handoffs, covering the movement, storage and return of household contents after a loss.</p>
+<p>A verified handoff answers three questions before the move:</p>
+<h2>Custody</h2>
+<p>Who has the item now, and who is receiving it? The design calls for verifiable custody records at each handoff, identifying the parties involved and preserving evidence of the transfer. This is a design objective, not a claim that an integrated operational system is already deployed.</p>
+<h2>Authorization</h2>
+<p>Who approved this move, and on what evidence? Drafting and approving are separate jobs. The person who approves sees what was agreed, not only what the system drafted.</p>
+<h2>Evidence</h2>
+<p>What record travels with the work? The intended record captures what moved, when the transfer occurred, who authorized it and what evidence supported the decision. Keeping evidence with the work is intended to make subsequent reviews, reconciliation and dispute investigations more traceable.</p>
+<p>The same pattern applies beyond packout work. Any time money or property moves on the strength of a record, the check should come first: verify the custody, verify the authorization, then move, and keep the record.</p>
+<div class="card">
+<p><strong>Tell us about a handoff in your work that needs checking before it moves.</strong> We will show what verification would change.</p>
+<p><a class="button" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="button ghost" href="services.html">See services</a></p>
+</div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+{
+        "fn": "article-self-hosted-vs-hosted-ai.html",
+        "title": "Self-Hosted AI vs Hosted AI: What Changes When You Own the Model | Loving Grace Technologies",
+        "desc": "Self-hosted and hosted AI differ in where your files live, who controls the infrastructure, and what happens when the engagement ends. How we run both.",
+        "caption": "Self-hosted vs hosted",
+        "heading": "Self-hosted AI vs hosted AI: what changes when you own the model",
+        "summary": "Self-hosted and hosted AI differ in where your files live, who controls the infrastructure, and what happens when the engagement ends. How we run both.",
+        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">Self-hosted AI vs hosted AI:</span> what changes when you own the model</h1><p>Self-hosted and hosted AI differ in where your files live, who controls the infrastructure, and what happens when the engagement ends.</p></div></div>
+<section><div class="wrap prose">
+<p>The question is not which model is smarter. The question is where your files live, who controls the infrastructure, and what happens to your data and system if the engagement ends. That is what changes between self-hosted and hosted AI.</p>
+<p>Hosted AI runs on someone else's service. You send your text to their system, and their terms decide what happens to it. It is fast to start and easy to use, and it fits work where the records are not sensitive and the controls are simple.</p>
+<p>Self-hosted model serving means operating the model and its inference stack rather than relying entirely on a hosted model API. The infrastructure provider, data-handling arrangements and administrative controls must still be identified separately. It takes more setup, and it fits work where control matters: records that must not leave your system, checks that must run before anything moves, and an exit that must be clean.</p>
+<p>Here is how we run both, in our own work:</p>
+<p>Our Glimmer model is Muse-Glimmer-30B, an open-weight model served through vLLM on Modal using one A100-80GB GPU. The deployment uses scale-to-zero operation and temperature 0.0 for redaction. Our Spark model is muse-spark-1.3 via the Meta API, used for cited briefs only, on redacted text only. Our default Offline mode calls no model at all.</p>
+<p>Glimmer provides the self-hosted model-serving path. Spark is accessed through the Meta API and is restricted to cited briefs using redacted text. Default Offline mode makes no model calls. Either way, we say plainly where your files live, who controls the infrastructure, and what happens to your data and system if the engagement ends.</p>
+<p>Self-hosted model serving does not mean the company owns the underlying model weights, GPU provider or physical infrastructure.</p>
+<div class="card">
+<p><strong>Tell us what your AI work touches and what must stay under your control.</strong> We will tell you plainly which shape fits, and why.</p>
+<p><a class="button" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="button ghost" href="services.html">See services</a></p>
+</div>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+{
+        "fn": "article-custom-ai-agent-build.html",
+        "title": "What a Custom AI Agent Build Includes | Loving Grace Technologies",
+        "desc": "A custom AI agent is built around one workflow, your records, and approval gates. What the build includes, start to finish.",
+        "caption": "Agent builds",
+        "heading": "What a custom AI agent build includes",
+        "summary": "A custom agent is built around one workflow, your records, and approval gates. What the build includes, start to finish.",
+        "date": "2026-11-17",
+        "body": '''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">What a custom AI agent build includes</span></h1><p>A custom agent is built around one workflow, your records, and approval gates. What the build includes, start to finish.</p></div></div>
+<section><div class="wrap prose">
+<p>A custom AI agent is not a chatbot with your logo on it. It is a defined piece of work, built around one workflow, your records, and the approval gates that keep you in charge. Here is what a build includes, in the order the work runs. The steps below state the build standard. The completed run that shows the standard working is the Second Seat demonstration, named as a demonstration wherever it appears.</p>
+<ol>
+<li>Brief. The build starts with the work itself: what repeats, what it costs today, and what a good result looks like. The build is scoped from actual facts, not from a template.</li>
+<li>Verify. The build standard requires checking the records the agent will rely on and testing the controls for what they can and cannot catch. A claim the agent makes should trace back to a source. If the source is missing, the build says so before anything is automated.</li>
+<li>Map. The workflow is mapped as it actually runs today: the steps, the handoffs, the decisions, and the records. If the workflow cannot be described back accurately, the build will not fit it.</li>
+<li>Model. The agent is designed as an orchestration: intake takes the request in one shape, triage sorts it, specialist reasoning does the work, and one command center holds the whole picture. Drafting and checking are separate jobs, and approval belongs to a person.</li>
+<li>Resource. The build standard calls for selecting tools and models that fit the work, including evaluating self-hosted options where control matters. The build states plainly where files live, who controls the infrastructure, and what happens to data and systems if the engagement ends.</li>
+<li>Ask. Before anything the agent drafts is sent, paid, or changed, a person approves it with the evidence in front of them. The Second Seat demonstration ran this step end to end: a separate checker reviewed the payment draft and the owner approved the test payment before execution. In the PayPal sandbox demonstration, a fake bank-change request was blocked, and a clean $480 payment was approved and captured as completed. That was a demonstration, not a client payment, and it is described here as one.</li>
+<li>Command. The owner keeps the final say. The agent handles the routine. People handle the exceptions, the judgment calls, and the final approval. The build should make those moments easy to find and easy to act on.</li>
+</ol>
+<p>That is the build standard: defined work, kept evidence, readable reasons, and a person approving what matters. The Second Seat demonstration illustrates the intended approval gate in one sandbox workflow. A build applies the same standard to yours, scoped from your facts.</p>
+<p>Call to action: Describe the work that repeats in your business. We will tell you plainly whether an agent fits it, and what the build would include.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://youtu.be/1VJKjwJzRN0" target="_blank" rel="noopener">Second Seat: Approval-Gated Payments (PayPal sandbox demo), YouTube</a></li>
+</ul>
+<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
+</div></section>''',
+    },
+]
+
+# Fresh-news articles removed from their own pages Nov 22, 2026 (article
+# consolidation, Bridgett's Go). They live on as sections of the four topic
+# pages below. Their dicts are unchanged: title, description, caption,
+# heading, summary, body, and date are exactly as published.
+NEWS_ARTICLES = [
+{
         "fn": "article-defense-logistics-commercial-ai.html",
         "title": "Defense Logistics Turned to Commercial AI. The Plan Is Due This Month. | Loving Grace Technologies",
         "desc": "Leidos won a $95 million contract to bring AI automation to the Pentagon's asset system, and the Army's FedEx Dataworks logistics modernization plan is expected in November 2026. Both put commercial AI inside defense logistics.",
@@ -844,7 +956,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-korea-ramc-ai-agent-military-logistics.html",
         "title": "Korea Is Building an AI Agent for Military Logistics. It Starts With the Cost of Keeping a Tank Running. | Loving Grace Technologies",
         "desc": "South Korea's defense and industry ministries kicked off a 48-month, KRW 30 billion RAM-C AI Agent project on Nov 4, 2026, to analyze reliability, availability, maintainability, and cost across weapon system life cycles, with field testing on the K2 tank, Maritime Surveillance Radar-II, and FA-50.",
@@ -869,7 +981,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-imagine-enterprise-agent-platform.html",
         "title": "Two Big Vendors, One Agent Platform. The 6,000 Number Needs Reading. | Loving Grace Technologies",
         "desc": "IBM and Microsoft announced Imagine Enterprise on Nov 10, 2026, an agentic platform for building, running, and governing industry AI agents. IBM Consulting brings more than 6,000 prebuilt agents and assets. The release names no price, no availability date, and no customer running it in production.",
@@ -895,7 +1007,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-australia-ai-safety-regulator.html",
         "title": "Australia Will Make AI Safety Rules Mandatory. A Rogue Agent Is Why. | Loving Grace Technologies",
         "desc": "On Nov 10, 2026, Australia announced mandatory safety and security protections for frontier AI companies, enforced by a proposed new AI safety regulator. The trigger was a June 2026 incident in which an OpenAI agent got into a government health website.",
@@ -930,7 +1042,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-nvidia-ceo-transition.html",
         "title": "The AI Hardware Company Changed Leaders. The Roadmap Did Not Move. | Loving Grace Technologies",
         "desc": "On Nov 12, 2026, NVIDIA announced that Jensen Huang had resigned as president, CEO, and director, effective immediately. Colette Kress, the chief financial officer since 2013, is interim CEO. The release gives no reason, and the earnings date did not move.",
@@ -957,7 +1069,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-elevenlabs-agents-memory-routines.html",
         "title": "Voice Agents That Remember You. Half of It Is a Promise. | Loving Grace Technologies",
         "desc": "At its New York Summit on Nov 11, 2026, ElevenLabs announced 13 new products and upgrades, including agent memory, multi-step routines, a model-routing engine, and a meeting app with free early access. About half the package is preview or roadmap, not something you can use today.",
@@ -998,83 +1110,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
-        "fn": "article-ai-implementation-government-commercial.html",
-        "title": "AI Implementation for Government and Commercial Teams | Loving Grace Technologies",
-        "desc": "What government and commercial teams should require from AI implementation: verified work, kept evidence, and approval before money or property moves.",
-        "caption": "Government and commercial",
-        "heading": "AI implementation for government and commercial teams",
-        "summary": "What government and commercial teams should require from AI implementation: verified work, kept evidence, and approval before money or property moves.",
-        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">AI implementation</span> for government and commercial teams</h1><p>What government and commercial teams should require from AI implementation: verified work, kept evidence, and approval before money or property moves.</p></div></div>
-<section><div class="wrap prose">
-<h2>Verified work before it moves</h2>
-<p>Nothing the AI drafts should move money or property without a check against what was actually agreed. That is the principle behind Sovereign Mesh, our verified-handoffs work, a TRL 2 concept and an Encountering Innovation 2027 applicant: custody and authorization verified before the handoff, not assumed after it. Sovereign Mesh is a concept and an applicant, described here as what it is, not as a shipped product.</p>
-<h2>Evidence kept with the work</h2>
-<p>A decision should keep its reasons: what was claimed, where it came from, and what was checked. We work from primary sources, keep the record with the work, and do not present a test result as a client outcome.</p>
-<h2>Approval with a person</h2>
-<p>AI drafts; a person approves. The person who approves sees what was actually agreed, not only what the system drafted, and no agent grants itself approval for a consequential move.</p>
-<h2>Built around your workflow and records</h2>
-<p>Our work covers custom AI agents, AI assistant setup, workflow and AI automation, documentation and research, and AI implementation training built around the team's own tools, workflows, and approvals.</p>
-<h2>Registered and reachable</h2>
-<p>Loving Grace Technologies, LLC maintains an active SAM.gov registration, UEI U5D5QT7QLRQ5, CAGE 222V5. The company is located in HUBZone Census Tract 9503 in Grenada, Mississippi. Its registration was activated July 10, 2026, with annual renewal due June 23, 2027.</p>
-<p>Training is part of the work, not an add-on: sessions built around the team's tools, workflows, and approvals. We do not sell recorded courses. Training is fitted to the team and current on the day it is delivered.</p>
-<div class="card">
-<p><strong>Tell us about the workflow your team needs verified.</strong> We will scope it from your actual facts and show what implementation would change.</p>
-<p><a class="button" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="button ghost" href="services.html">See services</a></p>
-</div>
-<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
-</div></section>''',
-    },
-    {
-        "fn": "article-verified-handoffs.html",
-        "title": "Verified Handoffs: Custody and Authorization Before the Move | Loving Grace Technologies",
-        "desc": "A verified handoff checks custody and authorization before money or property moves, and keeps the evidence with the work. How Sovereign Mesh frames it.",
-        "caption": "Verified handoffs",
-        "heading": "Verified handoffs: custody and authorization before the move",
-        "summary": "A verified handoff checks custody and authorization before money or property moves, and keeps the evidence with the work.",
-        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">Verified handoffs:</span> custody and authorization before the move</h1><p>A verified handoff checks custody and authorization before money or property moves, and keeps the evidence with the work.</p></div></div>
-<section><div class="wrap prose">
-<p>A handoff is the moment something changes hands: money, property, records, or responsibility. Most systems record the handoff after it happens. A verified handoff checks it before it happens, and keeps the evidence with the work.</p>
-<p>That is the idea behind Sovereign Mesh, our verified-handoffs work and an Encountering Innovation 2027 applicant. Sovereign Mesh is currently a TRL 2 concept. No integrated prototype or production deployment is verified. It is a concept and an applicant, described here as what it is, not as a shipped product. The first intended workflow for Sovereign Mesh is contents pack-out and restoration handoffs, covering the movement, storage and return of household contents after a loss.</p>
-<p>A verified handoff answers three questions before the move:</p>
-<h2>Custody</h2>
-<p>Who has the item now, and who is receiving it? The design calls for verifiable custody records at each handoff, identifying the parties involved and preserving evidence of the transfer. This is a design objective, not a claim that an integrated operational system is already deployed.</p>
-<h2>Authorization</h2>
-<p>Who approved this move, and on what evidence? Drafting and approving are separate jobs. The person who approves sees what was agreed, not only what the system drafted.</p>
-<h2>Evidence</h2>
-<p>What record travels with the work? The intended record captures what moved, when the transfer occurred, who authorized it and what evidence supported the decision. Keeping evidence with the work is intended to make subsequent reviews, reconciliation and dispute investigations more traceable.</p>
-<p>The same pattern applies beyond packout work. Any time money or property moves on the strength of a record, the check should come first: verify the custody, verify the authorization, then move, and keep the record.</p>
-<div class="card">
-<p><strong>Tell us about a handoff in your work that needs checking before it moves.</strong> We will show what verification would change.</p>
-<p><a class="button" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="button ghost" href="services.html">See services</a></p>
-</div>
-<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
-</div></section>''',
-    },
-    {
-        "fn": "article-self-hosted-vs-hosted-ai.html",
-        "title": "Self-Hosted AI vs Hosted AI: What Changes When You Own the Model | Loving Grace Technologies",
-        "desc": "Self-hosted and hosted AI differ in where your files live, who controls the infrastructure, and what happens when the engagement ends. How we run both.",
-        "caption": "Self-hosted vs hosted",
-        "heading": "Self-hosted AI vs hosted AI: what changes when you own the model",
-        "summary": "Self-hosted and hosted AI differ in where your files live, who controls the infrastructure, and what happens when the engagement ends. How we run both.",
-        "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">Self-hosted AI vs hosted AI:</span> what changes when you own the model</h1><p>Self-hosted and hosted AI differ in where your files live, who controls the infrastructure, and what happens when the engagement ends.</p></div></div>
-<section><div class="wrap prose">
-<p>The question is not which model is smarter. The question is where your files live, who controls the infrastructure, and what happens to your data and system if the engagement ends. That is what changes between self-hosted and hosted AI.</p>
-<p>Hosted AI runs on someone else's service. You send your text to their system, and their terms decide what happens to it. It is fast to start and easy to use, and it fits work where the records are not sensitive and the controls are simple.</p>
-<p>Self-hosted model serving means operating the model and its inference stack rather than relying entirely on a hosted model API. The infrastructure provider, data-handling arrangements and administrative controls must still be identified separately. It takes more setup, and it fits work where control matters: records that must not leave your system, checks that must run before anything moves, and an exit that must be clean.</p>
-<p>Here is how we run both, in our own work:</p>
-<p>Our Glimmer model is Muse-Glimmer-30B, an open-weight model served through vLLM on Modal using one A100-80GB GPU. The deployment uses scale-to-zero operation and temperature 0.0 for redaction. Our Spark model is muse-spark-1.3 via the Meta API, used for cited briefs only, on redacted text only. Our default Offline mode calls no model at all.</p>
-<p>Glimmer provides the self-hosted model-serving path. Spark is accessed through the Meta API and is restricted to cited briefs using redacted text. Default Offline mode makes no model calls. Either way, we say plainly where your files live, who controls the infrastructure, and what happens to your data and system if the engagement ends.</p>
-<p>Self-hosted model serving does not mean the company owns the underlying model weights, GPU provider or physical infrastructure.</p>
-<div class="card">
-<p><strong>Tell us what your AI work touches and what must stay under your control.</strong> We will tell you plainly which shape fits, and why.</p>
-<p><a class="button" href="mailto:{EMAIL}">Contact Loving Grace Technologies</a> <a class="button ghost" href="services.html">See services</a></p>
-</div>
-<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
-</div></section>''',
-    },
-    {
+{
         "fn": "article-gsa-ai-clause-schedule.html",
         "title": "The Government Wrote Its AI Data Rules Into the Schedule. The Clock Is 72 Hours. | Loving Grace Technologies",
         "desc": "GSA posted MAS Refresh 34 on Nov 12, 2026, adding GSAR 552.239-7001: a 72-hour notice clock, a training ban, and a 90-day mass modification for Schedule holders.",
@@ -1101,7 +1137,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-red-teaming-frontier-agents.html",
         "title": "Red Teaming for Agents Goes Frontier. The Attacker Is Now a Model. | Loving Grace Technologies",
         "desc": "Cisco added frontier-model red teaming to AI Defense at Cisco Live APJC on Nov 10, 2026: a model that attacks systems the way attackers do, inside tight guardrails.",
@@ -1124,7 +1160,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-fed-barr-agents-bank-accounts.html",
         "title": "Fed Governor Warns of AI Agents Attempting Bank-Account Actions. Four Guardrails, No New Rule. | Loving Grace Technologies",
         "desc": "Federal Reserve Governor Michael Barr said AI agents have already tried to take actions on bank accounts. The speech sets four expectations, and no new rule.",
@@ -1148,7 +1184,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-know-your-agent-government.html",
         "title": "LexisNexis Introduces AI-Agent Detection for Government Portals. Person, Bot, or Agent? | Loving Grace Technologies",
         "desc": "LexisNexis Risk Solutions introduced a capability that distinguishes AI agents from humans and bots at government portals. The question is now three-way.",
@@ -1172,7 +1208,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-businesses-in-chatgpt-agent.html",
         "title": "Your Business Can Answer Inside ChatGPT Now. The Agent Is Yours to Check. | Loving Grace Technologies",
         "desc": "OpenAI launched Businesses in ChatGPT in beta on Nov 10, 2026. Any eligible business can claim its profile in Business Hub, and eligible US ecommerce and service businesses can publish a Business Agent that answers customers inside ChatGPT. The agent is labeled, separate, and reviewed before it goes live.",
@@ -1206,7 +1242,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-grok-bot-1-0-shared-teammates.html",
         "title": "The AI Teammate Joined the Meeting. Who Approves What It Learns? | Loving Grace Technologies",
         "desc": "xAI launched Grok Bot 1.0 on Nov 2, 2026, with shared Team Bots in Slack, Microsoft Teams, and video calls, and a bot that offers to take on work before anyone asks. The announcement does not say who approves what a shared Bot learns, or whose accounts it acts through. Those are the questions to ask before sharing one.",
@@ -1238,7 +1274,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-replit-missions-budget-and-approval.html",
         "title": "A Swarm of Agents, a Fixed Budget, and a Human Who Still Approves | Loving Grace Technologies",
         "desc": "Replit launched Missions on Nov 17, 2026. You define the outcome and the spending limit. A swarm of agents plans, builds, and tests toward it, and the approval gates you set stay in place as the work evolves.",
@@ -1267,8 +1303,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-
-    {
+{
         "fn": "article-chargebee-arc-finance-agents.html",
         "title": "Finance Agents That Show Their Work Before Anything Is Committed | Loving Grace Technologies",
         "desc": "Chargebee launched Arc on Nov 18, 2026. Three finance agents handle contract ingestion, receivables, and revenue recognition, and every action is shown, cited, and held for review before anything is committed.",
@@ -1295,37 +1330,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
-        "fn": "article-custom-ai-agent-build.html",
-        "title": "What a Custom AI Agent Build Includes | Loving Grace Technologies",
-        "desc": "A custom AI agent is built around one workflow, your records, and approval gates. What the build includes, start to finish.",
-        "caption": "Agent builds",
-        "heading": "What a custom AI agent build includes",
-        "summary": "A custom agent is built around one workflow, your records, and approval gates. What the build includes, start to finish.",
-        "date": "2026-11-17",
-        "body": '''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">What a custom AI agent build includes</span></h1><p>A custom agent is built around one workflow, your records, and approval gates. What the build includes, start to finish.</p></div></div>
-<section><div class="wrap prose">
-<p>A custom AI agent is not a chatbot with your logo on it. It is a defined piece of work, built around one workflow, your records, and the approval gates that keep you in charge. Here is what a build includes, in the order the work runs. The steps below state the build standard. The completed run that shows the standard working is the Second Seat demonstration, named as a demonstration wherever it appears.</p>
-<ol>
-<li>Brief. The build starts with the work itself: what repeats, what it costs today, and what a good result looks like. The build is scoped from actual facts, not from a template.</li>
-<li>Verify. The build standard requires checking the records the agent will rely on and testing the controls for what they can and cannot catch. A claim the agent makes should trace back to a source. If the source is missing, the build says so before anything is automated.</li>
-<li>Map. The workflow is mapped as it actually runs today: the steps, the handoffs, the decisions, and the records. If the workflow cannot be described back accurately, the build will not fit it.</li>
-<li>Model. The agent is designed as an orchestration: intake takes the request in one shape, triage sorts it, specialist reasoning does the work, and one command center holds the whole picture. Drafting and checking are separate jobs, and approval belongs to a person.</li>
-<li>Resource. The build standard calls for selecting tools and models that fit the work, including evaluating self-hosted options where control matters. The build states plainly where files live, who controls the infrastructure, and what happens to data and systems if the engagement ends.</li>
-<li>Ask. Before anything the agent drafts is sent, paid, or changed, a person approves it with the evidence in front of them. The Second Seat demonstration ran this step end to end: a separate checker reviewed the payment draft and the owner approved the test payment before execution. In the PayPal sandbox demonstration, a fake bank-change request was blocked, and a clean $480 payment was approved and captured as completed. That was a demonstration, not a client payment, and it is described here as one.</li>
-<li>Command. The owner keeps the final say. The agent handles the routine. People handle the exceptions, the judgment calls, and the final approval. The build should make those moments easy to find and easy to act on.</li>
-</ol>
-<p>That is the build standard: defined work, kept evidence, readable reasons, and a person approving what matters. The Second Seat demonstration illustrates the intended approval gate in one sandbox workflow. A build applies the same standard to yours, scoped from your facts.</p>
-<p>Call to action: Describe the work that repeats in your business. We will tell you plainly whether an agent fits it, and what the build would include.</p>
-<h2>Sources</h2>
-<ul>
-<li><a href="https://youtu.be/1VJKjwJzRN0" target="_blank" rel="noopener">Second Seat: Approval-Gated Payments (PayPal sandbox demo), YouTube</a></li>
-</ul>
-<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
-</div></section>''',
-    },
-
-    {
+{
         "fn": "article-genpact-onyx-earned-autonomy.html",
         "title": "Earned Autonomy: The Agent Proposes, the Expert Approves, and the Leash Gets Longer | Loving Grace Technologies",
         "desc": "Genpact announced Genpact Onyx on Nov 16, 2026, an Agentic Operations platform that grounds agents in process knowledge and lets autonomy be earned one approved decision at a time. The first product built on it handles accounts payable.",
@@ -1358,8 +1363,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-
-    {
+{
         "fn": "article-appian-agent-control-plane.html",
         "title": "The Agent Control Plane Grew Up: From Permission to Proof of Value | Loving Grace Technologies",
         "desc": "Appian shared new agent control plane capabilities at Appian Europe on Nov 17, 2026: register and bound agents, run them inside deterministic processes, and measure them on business KPIs. A 2026 study by Appian and Harvard Business Review Analytic Services found just 16 percent of respondents report a high degree of measurable value from AI.",
@@ -1392,8 +1396,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-
-    {
+{
         "fn": "article-nvidia-q3-fy2027-results.html",
         "title": "NVIDIA's $115.8 Billion Quarter: AI Infrastructure Revenue More Than Doubles Year Over Year | Loving Grace Technologies",
         "desc": "NVIDIA reported $115.8 billion in revenue for its third fiscal quarter, up 103 percent from a year earlier, with data center revenue of $107.6 billion. Vera Rubin shipped, the fourth-quarter outlook is $130 billion, and the release launched an agent safety platform.",
@@ -1430,8 +1433,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-
-    {
+{
         "fn": "article-twilio-agent-supervision.html",
         "title": "Twilio Grades Your AI Agent After the Call Ends | Loving Grace Technologies",
         "desc": "Twilio added two supervision operators to its Conversations layer on Nov 17, 2026: Task Completion and Hallucination Detection. They review the conversation record after it ends and flag what went wrong, judged by a model separate from the agent. Task Completion evaluates only the first task in a conversation.",
@@ -1467,8 +1469,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-
-    {
+{
         "fn": "article-customer-sent-an-agent-service-platforms.html",
         "title": "The Customer Sent an Agent. Service Platforms Answered in the Same Week. | Loving Grace Technologies",
         "desc": "Between Nov 10 and Nov 13, 2026, Zendesk, NiCE, and Intercom each shipped something for conversations where the customer is software. The question is no longer whether agents will call. It is whether service can tell an agent from a person, and govern it.",
@@ -1508,8 +1509,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-
-    {
+{
         "fn": "article-claude-meetings-works-during-call.html",
         "title": "Claude Joined the Meeting. It Started Working Before Anyone Hung Up. | Loving Grace Technologies",
         "desc": "Anthropic published Claude Meetings on Nov 12, 2026. Claude joins a Google Meet call as a visible participant, answers questions, and builds docs and whiteboards while people are still talking. The limits matter as much as the feature: Meet only, Team and Enterprise only, and no outside guests by default.",
@@ -1545,8 +1545,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-
-    {
+{
         "fn": "article-gemini-tasks-free-calls-shopping.html",
         "title": "Gemini Can Make the Call and Handle Checkout. The Approval Is Still Yours to Give. | Loving Grace Technologies",
         "desc": "On Nov 17, 2026, Google made Tasks in Gemini free in six countries. Gemini can now call businesses, sign into portals, compare prices, and check out with Google Pay, running on the new Gemini 4 Hydrogen model. It is built to pause and ask before it clicks Buy, and users can set a hard spending cap. The approval gate is the product.",
@@ -1581,8 +1580,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-
-    {
+{
         "fn": "article-microsoft-ignite-agent-365-autopilot.html",
         "title": "Microsoft's Ignite Answer: Govern the Agent, Measure It, and Give It an Identity. | Loving Grace Technologies",
         "desc": "At Microsoft Ignite 2026 on Nov 17, Microsoft made Copilot the work operating system, put Autopilot in Frontier rollout as a long-running agent with its own identity and memory, and added Agent 365 cost management and business analytics so leaders can see what agents cost and what they deliver. Most of the new pieces are still in preview or the Frontier program, not generally available.",
@@ -1617,8 +1615,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-
-    {
+{
         "fn": "article-claude-linked-billing-no-shared-key.html",
         "title": "Claude Linked Billing: The Key Never Changes Hands | Loving Grace Technologies",
         "desc": "Anthropic put linked billing into beta on Nov 17, 2026. A customer links their Claude organization to an app once, sets a spend limit, and pays without sharing an API key. The requests still run in the platform's organization, and the customer's own data terms do not travel with them.",
@@ -1652,8 +1649,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-
-    {
+{
         "fn": "article-house-ai-agent-bills-november-2026.html",
         "title": "Congress Wrote Rules for Federal AI Agents | Loving Grace Technologies",
         "desc": "On Nov 18, 2026, House Homeland Security Republicans introduced four bills for AI agents on federal networks: an investigations board, an agent framework, an AI hiring pilot, and a codified IT-sector role. They are bills, not law, and they arrive before a change of control in January.",
@@ -1688,8 +1684,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-
-    {
+{
         "fn": "article-bny-microsoft-agent-negotiated-treasury-trade.html",
         "title": "Two Agents Negotiated a Treasury Trade. Humans Still Approved It. | Loving Grace Technologies",
         "desc": "On Nov 17, 2026, BNY announced that it and Microsoft had completed a pilot in which AI agents from the two firms negotiated a US Treasury bill trade under defined controls, while human traders reviewed and approved the proposed terms before execution.",
@@ -1719,8 +1714,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-
-    {
+{
         "fn": "article-devin-bots-manager-agents.html",
         "title": "Devin Bots Turn Coding Agents Into Teams Managed Around Outcomes | Loving Grace Technologies",
         "desc": "Cognition launched Devin Bots on Nov 17, 2026. A Bot takes a goal, leads a team of Devin coding agents, keeps the memory, and brings only the decisions that need a human back to the engineer.",
@@ -1750,8 +1744,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-
-    {
+{
         "fn": "article-dubai-city-ai-agent-government.html",
         "title": "Dubai Approved a City AI Agent. The Government Comes First. | Loving Grace Technologies",
         "desc": "On Nov 18, 2026, Dubai approved a City AI Agent initiative that would let AI agents understand what residents need, carry out tasks, and coordinate procedures across government entities through one experience. The City AI Agent is an approved initiative, not a launch. The working agents launched the same day handle internal government work.",
@@ -1779,8 +1772,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-
-    {
+{
         "fn": "article-copilot-studio-agent-accounts.html",
         "title": "Microsoft Gave Its Agents Their Own Accounts. The Memory Is Shared. | Loving Grace Technologies",
         "desc": "On Nov 18, 2026, Microsoft said dedicated agent accounts for Copilot Studio agents will enter public preview in December 2026. An agent gets its own credentials, its own mailbox, and a place in the directory. The memory it builds is shared across everyone who works with it, with no opt-out in the preview.",
@@ -1811,7 +1803,7 @@ ARTICLES = [
 <p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>
 </div></section>''',
     },
-    {
+{
         "fn": "article-dell-agentic-data-gateway.html",
         "title": "One Governed Door for Every Agent | Loving Grace Technologies",
         "desc": "At SC26, Dell put a customer-controlled gateway between production AI agents and enterprise data. One front door, one identity per call, credentials held centrally, and the gateway is designed to operate inside the customer's environment without retaining prompts or persistent secrets, though some integrated services may still transmit selected context to external models under applicable customer agreements.",
@@ -1821,7 +1813,7 @@ ARTICLES = [
         "date": "2026-11-22",
         "body": f'''<div class="page-head"><div class="wrap"><p class="eyebrow">Research and Analysis</p><h1><span class="gold">One governed door</span> for every agent.</h1><p>At SC26, Dell put a customer-controlled gateway between production AI agents and enterprise data. One front door, one identity per call, credentials held centrally, and the gateway is designed to operate inside the customer's environment without retaining prompts or persistent secrets, though some integrated services may still transmit selected context to external models under applicable customer agreements.</p></div></div><section><div class="wrap prose"><p>Dell is addressing a growing infrastructure challenge: giving independently developed AI agents consistent access to enterprise information without creating separate credentials, data connections, and oversight systems for each one. Its November 16 announcement introduces a centralized gateway designed to bring those functions together. When each agent builds its own connection to search, databases, and pipelines, and holds its own API keys, teams end up with scattered credentials, repeated retrieval work, and no single record of what any agent saw or did. Dell's answer is a single governed front door: the Agentic Data Gateway, part of the Dell AI Data Platform.</p><p>The gateway is a customer-controlled Model Context Protocol server and AI agent gateway. It gives every agent one front door to the platform's models, tools, knowledge, and data engines. Applications can communicate with the gateway through MCP or OpenAI-compatible interfaces. The system maintains a directory of available enterprise services and can direct requests to supported models, databases, search tools, and outside MCP integrations. Outside services can be registered too, so agents can reach record systems, alerting tools, and web search through the same door.</p><p>Three controls in the design are the ones that matter for anyone running agents against real data. First, each call runs with the caller's identity, data scope, and budget, and is traced end to end. Second, credentials are managed centrally, so agents no longer need to carry their own API keys. Retrieval, authorization, quotas, token accounting, and observability are handled in one place, giving teams an auditable path to thousands of concurrent agents. Dell says the gateway is designed to operate inside the customer's environment without retaining prompts or persistent secrets. Some integrated services may still transmit selected context to external models under applicable customer agreements, so local gateway operation does not mean every associated AI workload remains entirely on-premises. Dell's framing is that context is built once from governed data and then reused, so agents stop rebuilding the same understanding on every request.</p><p>Dell reports that context reuse reduced token consumption by as much as 76% and improved answer accuracy from 60% to 94% in its September 2026 internal benchmark. The test used a synthetic toll-plaza dataset, 20 questions, six workload types, and an NVIDIA Nemotron model. Dell cautions that results depend on the workload, data, model, and configuration; the figures are not evidence of equivalent performance across enterprise deployments. As an example of its broader AI Data Platform, Dell cites CTBC Bank, reporting fraud-detection times reduced from weeks to 0.03 seconds and more than $60 million in prevented fraud losses during 2025. Dell does not establish in this announcement that the newly introduced Agentic Data Gateway independently caused those outcomes.</p><p>The gateway sits inside a wider set of Data Orchestration additions. Hybrid orchestration lets pipelines run where the data and compute already live, on Kubernetes clusters, Dell AI Factory infrastructure, non-Dell infrastructure, and public cloud endpoints, with Dell deploying, scaling, observing, and tearing down the containers. Storage Intelligence scans storage arrays to build a metadata repository of the files they hold, so teams can see what they have and curate the relevant files into datasets. Dell's proposed Data Intelligence tools would help operators investigate AI outputs by connecting the underlying datasets with information about their origin, processing history, and quality. The announcement does not establish how completely these tools reconstruct every action across an agent workflow. A new structured-data browser brings tables into the same pipelines as unstructured content such as images, video, PDFs, and document chunks.</p><p>Dell announced integrations involving LangChain, OpenAI Codex, and Unstructured.io. The planned LangSmith integration will provide tracing and evaluation through Dell's platform marketplace. Codex development environments are designed to keep code execution and enterprise data processing on customer-controlled infrastructure, while sending necessary inference context to OpenAI-hosted models subject to customer agreements. Unstructured.io supplies document parsing, chunking, and embedding, with ready-to-use templates that turn raw documents into searchable knowledge and a chat tool that answers with sources cited.</p><p>Dell expects availability of its AI Data Platform improvements to begin in December 2026, without specifying a separate launch date for each announced gateway component or integration. The new Exascale storage platforms are scheduled for the first half of 2027.</p><h2>What to watch</h2><p>the release schedule for individual gateway capabilities, independently reported production performance, the security implications of combining internal and external AI services, and whether customers achieve measurable reductions in duplicated integrations and token usage.</p><h2>Sources</h2><ul><li><a href="https://www.dell.com/en-us/blog/dell-ai-data-platform-makes-data-agent-ready-at-sc26" target="_blank" rel="noopener">Dell, Dell AI Data Platform Makes Data Agent-Ready at SC26, Nov 16, 2026</a></li><li><a href="https://www.dell.com/en-us/newsroom/announcements/dell-technologies-delivers-the-trusted-data-and-ai-infrastructure-foundation-needed-to-scale-enterprise-ai" target="_blank" rel="noopener">Dell Technologies, Dell Technologies Delivers the Trusted Data and AI Infrastructure Foundation Needed to Scale Enterprise AI, Nov 16, 2026</a></li></ul><p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p></div></section>''',
     },
-    {
+{
         "fn": "article-signal-blocks-os-ai-agents.html",
         "title": "Signal Locks the Screen Against the Operating System's Own Agents | Loving Grace Technologies",
         "desc": "On Nov 20, 2026, Signal said the AI agents built into iOS and Android are an existential threat to its privacy promise, and it is preventing screenshots on iOS 27 and activating screen protection on Android where it can detect an AI assistant attempting to read the screen. The encryption still holds. The screen was the gap.",
@@ -1833,10 +1825,80 @@ ARTICLES = [
     },
 ]
 
+NEWS_BY_FN = {a["fn"]: a for a in NEWS_ARTICLES}
+
+# The four topic pages (30 news articles). Each topic page holds the
+# full text of its articles as sections, word for word, each with its
+# own anchor link (the article filename without .html).
+TOPIC_PAGES = [
+    {
+        "fn": 'topic-approval-gates.html',
+        "title": 'Approval gates and agent control | Loving Grace Technologies',
+        "desc": 'Who approves, who controls, and who is accountable when AI agents act: Appian, Genpact, Microsoft Ignite, Twilio, Dell, Copilot agent accounts, Replit Missions, Claude linked billing, a negotiated Treasury trade, a bank-account warning, and Chargebee finance agents.',
+        "caption": 'Topic page',
+        "heading": 'Approval gates and agent control',
+        "summary": 'Eleven articles on who approves, who controls, and who is accountable when AI agents act.',
+        "date": '2026-11-22',
+        "h1": '<span class="gold">Approval gates</span> and agent control',
+        "intro": 'The Loving Grace core theme: who approves, who controls, who is accountable. Eleven articles, each with its own anchor link.',
+        "articles": ['article-appian-agent-control-plane.html', 'article-genpact-onyx-earned-autonomy.html', 'article-microsoft-ignite-agent-365-autopilot.html', 'article-twilio-agent-supervision.html', 'article-dell-agentic-data-gateway.html', 'article-copilot-studio-agent-accounts.html', 'article-replit-missions-budget-and-approval.html', 'article-claude-linked-billing-no-shared-key.html', 'article-bny-microsoft-agent-negotiated-treasury-trade.html', 'article-fed-barr-agents-bank-accounts.html', 'article-chargebee-arc-finance-agents.html'],
+    },
+    {
+        "fn": 'topic-government-regulation.html',
+        "title": 'Government, defense, and regulation | Loving Grace Technologies',
+        "desc": "AI agents in government, defense, and regulation: defense logistics, Korea's military logistics agent, the GSA AI clause, Congress's federal AI agent bills, Dubai's City AI Agent, agent detection for government portals, and Australia's mandatory AI safety rules.",
+        "caption": 'Topic page',
+        "heading": 'Government, defense, and regulation',
+        "summary": 'Seven articles on AI agents in government, defense, and regulation.',
+        "date": '2026-11-22',
+        "h1": '<span class="gold">Government, defense,</span> and regulation',
+        "intro": 'AI agents in government, defense, and regulation. Seven articles, each with its own anchor link.',
+        "articles": ['article-defense-logistics-commercial-ai.html', 'article-korea-ramc-ai-agent-military-logistics.html', 'article-gsa-ai-clause-schedule.html', 'article-house-ai-agent-bills-november-2026.html', 'article-dubai-city-ai-agent-government.html', 'article-know-your-agent-government.html', 'article-australia-ai-safety-regulator.html'],
+    },
+    {
+        "fn": 'topic-agents-at-work.html',
+        "title": 'Agents at work | Loving Grace Technologies',
+        "desc": 'AI agents at work: Grok Bot in the meeting, Claude working during the call, customers sending agents to service platforms, businesses answering inside ChatGPT, Gemini making calls and handling checkout, and ElevenLabs voice agents that remember you.',
+        "caption": 'Topic page',
+        "heading": 'Agents at work',
+        "summary": 'Six articles on AI agents doing real work: meetings, service, chat, calls, and voice.',
+        "date": '2026-11-22',
+        "h1": '<span class="gold">Agents</span> at work',
+        "intro": 'AI agents doing real work: meetings, service, chat, calls, and voice. Six articles, each with its own anchor link.',
+        "articles": ['article-grok-bot-1-0-shared-teammates.html', 'article-claude-meetings-works-during-call.html', 'article-customer-sent-an-agent-service-platforms.html', 'article-businesses-in-chatgpt-agent.html', 'article-gemini-tasks-free-calls-shopping.html', 'article-elevenlabs-agents-memory-routines.html'],
+    },
+    {
+        "fn": 'topic-industry-safety-platforms.html',
+        "title": 'Industry, safety, and platforms | Loving Grace Technologies',
+        "desc": "Industry, safety, and platforms: NVIDIA's leadership change and $115.8 billion quarter, the Imagine enterprise agent platform, Devin Bots managing coding agents around outcomes, red teaming for frontier agents, and Signal locking the screen against the operating system's own agents.",
+        "caption": 'Topic page',
+        "heading": 'Industry, safety, and platforms',
+        "summary": 'Six articles on industry moves, platform shifts, and agent safety.',
+        "date": '2026-11-22',
+        "h1": '<span class="gold">Industry, safety,</span> and platforms',
+        "intro": 'Industry moves, platform shifts, and agent safety. Six articles, each with its own anchor link.',
+        "articles": ['article-nvidia-ceo-transition.html', 'article-nvidia-q3-fy2027-results.html', 'article-imagine-enterprise-agent-platform.html', 'article-devin-bots-manager-agents.html', 'article-red-teaming-frontier-agents.html', 'article-signal-blocks-os-ai-agents.html'],
+    },
+]
+
+def topic_body(topic):
+    sections = "".join(
+        '<section id="' + fn[:-5] + '">' + NEWS_BY_FN[fn]["body"] + "</section>"
+        for fn in topic["articles"]
+    )
+    return (
+        '<div class="page-head"><div class="wrap"><h1>' + topic["h1"] + "</h1><p>"
+        + topic["intro"]
+        + "</p></div></div>\n"
+        + sections
+        + '\n<p style="margin-top:24px"><a class="more" href="articles.html">All articles</a></p>'
+    )
+
+
 def articles_body():
     cards = "".join(
         f'<div class="card"><p class="caption">{a["caption"]}</p><h3>{a["heading"]}</h3><p>{a["summary"]}</p><hr><a class="more" href="{a["fn"]}">Read the article</a></div>'
-        for a in ARTICLES
+        for a in ARTICLES + TOPIC_PAGES
     )
     return f'''
 <div class="page-head"><div class="wrap"><h1><span class="gold">Our</span> Articles</h1><p>Practical writing about AI agents, assistant setup, approval gates, and implementation.</p></div></div>
@@ -2212,10 +2274,27 @@ P["discovery-scout.html"] = (
     scout_body(),
 )
 
+# Redirects for the 30 news-article URLs removed Nov 22, 2026 (article
+# consolidation). GitHub Pages has no server configuration, so a true
+# server-side 301 is not available. This client-side map in the existing
+# 404 page sends an old article link to the matching topic page and
+# article anchor. No new pages: the map lives in the 404 page.
+REDIRECTS = {}
+for _t in TOPIC_PAGES:
+    for _fn in _t["articles"]:
+        REDIRECTS[_fn] = _t["fn"] + "#" + _fn[:-5]
+_REDIRECT_PAIRS = ",".join(f'"{k}":"{v}"' for k, v in REDIRECTS.items())
+REDIRECT_SCRIPT = (
+    "<script>(function(){var m={"
+    + _REDIRECT_PAIRS
+    + "};var p=window.location.pathname.split('/').pop();"
+    + "if(m[p]){window.location.replace(m[p]);}})();</script>"
+)
+
 P["404.html"] = (
     "Page not found | Loving Grace Technologies",
     "Page not found.",
-    '<div class="page-head"><div class="wrap"><h1>Page not found</h1><p>That page doesn&rsquo;t exist. <a style="color:var(--pearl)" href="index.html">Go to the home page</a>.</p></div></div>',
+    '<div class="page-head"><div class="wrap"><h1>Page not found</h1><p>That page doesn&rsquo;t exist. <a style="color:var(--pearl)" href="index.html">Go to the home page</a>.</p></div></div>' + REDIRECT_SCRIPT,
 )
 
 P["discovery-scout-plans.html"] = (
@@ -2240,6 +2319,8 @@ P["discovery-scout-thanks.html"] = (
 )
 for _a in ARTICLES:
     P[_a["fn"]] = (_a["title"], _a["desc"], _a["body"])
+for _t in TOPIC_PAGES:
+    P[_t["fn"]] = (_t["title"], _t["desc"], topic_body(_t))
 P["articles.html"] = (
     "Articles | Loving Grace Technologies",
     "Articles from Loving Grace Technologies: AI agents, AI assistant setup, approval gates, implementation training, and choosing an AI company.",
@@ -2289,6 +2370,8 @@ if CHECKOUT_OPEN:
 EXTRA_LD = {"discovery-scout.html": _ds_ld, "research.html": research_ld()}
 for _a in ARTICLES:
     EXTRA_LD[_a["fn"]] = article_ld(_a["fn"], _a["title"], _a["desc"], _a.get("date", "2026-11-14"))
+for _t in TOPIC_PAGES:
+    EXTRA_LD[_t["fn"]] = article_ld(_t["fn"], _t["title"], _t["desc"], _t.get("date", "2026-11-22"))
 for fn, (t, d, b) in P.items():
     head = ""
     if fn in CHECKOUT_PAGES:
@@ -2296,7 +2379,7 @@ for fn, (t, d, b) in P.items():
     Path(fn).write_text(page(fn, t, d, b, EXTRA_LD.get(fn, ""), head), encoding="utf-8")
 
 # Sitemap of public pages (not the 404 page)
-SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "article-agents-that-pay-approval-is-the-job.html", "article-self-hosted-model-did-not-move.html", "article-defense-logistics-commercial-ai.html", "article-korea-ramc-ai-agent-military-logistics.html", "article-imagine-enterprise-agent-platform.html", "article-australia-ai-safety-regulator.html", "article-nvidia-ceo-transition.html", "article-elevenlabs-agents-memory-routines.html", "article-ai-implementation-government-commercial.html", "article-verified-handoffs.html", "article-self-hosted-vs-hosted-ai.html", "article-gsa-ai-clause-schedule.html", "article-red-teaming-frontier-agents.html", "article-fed-barr-agents-bank-accounts.html", "article-know-your-agent-government.html", "article-businesses-in-chatgpt-agent.html", "article-grok-bot-1-0-shared-teammates.html", "article-replit-missions-budget-and-approval.html", "article-chargebee-arc-finance-agents.html", "article-custom-ai-agent-build.html", "article-genpact-onyx-earned-autonomy.html", "article-appian-agent-control-plane.html", "article-nvidia-q3-fy2027-results.html", "article-twilio-agent-supervision.html", "article-customer-sent-an-agent-service-platforms.html", "article-claude-meetings-works-during-call.html", "article-gemini-tasks-free-calls-shopping.html", "article-microsoft-ignite-agent-365-autopilot.html", "article-claude-linked-billing-no-shared-key.html", "article-house-ai-agent-bills-november-2026.html", "article-bny-microsoft-agent-negotiated-treasury-trade.html", "article-devin-bots-manager-agents.html", "article-dubai-city-ai-agent-government.html", "article-copilot-studio-agent-accounts.html", "article-dell-agentic-data-gateway.html", "article-signal-blocks-os-ai-agents.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
+SITEMAP_PAGES = ["index.html", "services.html", "products.html", "articles.html", "research.html", "article-ai-assistant-setup.html", "article-meeting-approval.html", "article-custom-agent-vs-chatgpt.html", "article-choosing-ai-company.html", "article-ai-training-engagement.html", "article-workflow-automation-existing-software.html", "article-custom-web-application-checklist.html", "article-documentation-evidence-automation.html", "article-packout-software-inventory.html", "article-agents-that-pay-approval-is-the-job.html", "article-self-hosted-model-did-not-move.html", "article-ai-implementation-government-commercial.html", "article-verified-handoffs.html", "article-self-hosted-vs-hosted-ai.html", "article-custom-ai-agent-build.html", "topic-approval-gates.html", "topic-government-regulation.html", "topic-agents-at-work.html", "topic-industry-safety-platforms.html", "discovery-scout.html", "about.html", "contact.html", "privacy.html"]
 if CHECKOUT_OPEN:
     SITEMAP_PAGES += ["discovery-scout-plans.html", "terms.html", "refund-policy.html"]
 urls = []
