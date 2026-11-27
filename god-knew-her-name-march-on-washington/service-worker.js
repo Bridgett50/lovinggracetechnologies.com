@@ -1,8 +1,12 @@
 /* God Knew Her Name March on Washington — service worker.
    Registered from march pages; its scope is this directory only.
    Caches public march pages and assets for offline reading.
-   Form submissions (POST) and private data are never cached. */
-var CACHE = "gkn-march-v1";
+   Form submissions (POST) and private data are never cached.
+   v2 (Nov 27, 2026): new cache name so browsers install this worker and
+   drop the v1 cache; documents are network-first (fresh copy wins,
+   cache is the offline fallback); static assets stay cache-first
+   under the current cache name. */
+var CACHE = "gkn-march-v2";
 var CORE = [
   "./",
   "./index.html",
@@ -43,7 +47,7 @@ self.addEventListener("activate", function (event) {
   event.waitUntil(
     caches.keys().then(function (keys) {
       return Promise.all(keys.map(function (key) {
-        if (key.indexOf("gkn-march-") === 0 && key !== CACHE) {
+        if (key !== CACHE) {
           return caches.delete(key);
         }
         return null;
@@ -56,7 +60,7 @@ self.addEventListener("fetch", function (event) {
   var request = event.request;
   if (request.method !== "GET") { return; }
   var sameOrigin = new URL(request.url).origin === self.location.origin;
-  if (request.mode === "navigate") {
+  if (request.mode === "navigate" || request.destination === "document") {
     event.respondWith(
       fetch(request).then(function (response) {
         var copy = response.clone();
