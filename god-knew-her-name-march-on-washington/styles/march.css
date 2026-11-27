@@ -1,5 +1,9 @@
 /* God Knew Her Name March on Washington — march stylesheet.
-   Scoped to the march directory; uses only the kit design tokens. */
+   Scoped to the march directory; uses the kit design tokens plus the
+   Phoenix Tree cinematic palette (visual elevation, Nov 27, 2026).
+   Grounds: Deep Bronze Black / Phoenix Bronze with radial amber light;
+   porcelain reading surfaces; golds in their spec-assigned roles;
+   mulberry demoted to form submit buttons and light-section accents. */
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
@@ -8,28 +12,36 @@ body {
   color: var(--gkn-ink);
   font-family: var(--gkn-body);
   font-size: 17px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 .wrap { max-width: var(--gkn-content-width); margin: 0 auto; padding: 0 var(--gkn-space-lg); }
 .reading { max-width: var(--gkn-reading-width); }
 .skip {
   position: absolute; left: -9999px; top: 0;
-  background: var(--gkn-primary); color: var(--gkn-background);
+  background: var(--gkn-cinematic-black); color: var(--gkn-foliage-light);
   padding: var(--gkn-space-sm) var(--gkn-space-md); z-index: 10;
 }
 .skip:focus { left: 0; }
 a { color: var(--gkn-primary); }
 a:focus-visible, button:focus-visible, input:focus-visible,
 select:focus-visible, textarea:focus-visible {
-  outline: 2px solid var(--gkn-gold-dark); outline-offset: 2px;
+  outline: 2px solid var(--gkn-primary); outline-offset: 2px;
+}
+.site-header :focus-visible, .site-footer :focus-visible,
+.hero :focus-visible, .page-head :focus-visible,
+.band-bronze :focus-visible, .band-black :focus-visible {
+  outline-color: var(--gkn-foliage-light);
 }
 
-/* Header */
-.site-header { background: var(--gkn-primary); color: var(--gkn-background); }
-.header-in { padding-top: var(--gkn-space-lg); padding-bottom: var(--gkn-space-md); }
+/* Header — Band 1: Deep Bronze Black, thin gold divider */
+.site-header {
+  background: var(--gkn-cinematic-black); color: var(--gkn-background);
+  border-bottom: 1px solid var(--gkn-branch-gold);
+}
+.header-in { padding-top: var(--gkn-space-md); padding-bottom: var(--gkn-space-md); }
 .brand {
   display: inline-flex; align-items: center; gap: var(--gkn-space-md);
-  color: var(--gkn-background); text-decoration: none;
+  color: var(--gkn-foliage-light); text-decoration: none;
 }
 .brand .namefold { width: 44px; height: 48px; color: var(--gkn-gold); flex: none; }
 .wordmark { display: inline-flex; flex-direction: column; line-height: 1.15; }
@@ -37,40 +49,54 @@ select:focus-visible, textarea:focus-visible {
 .wm-em { font-size: 1.18em; }
 .wm-2 {
   font-family: var(--gkn-label); font-weight: 500; font-size: 13px;
-  letter-spacing: .32em; text-transform: uppercase; color: var(--gkn-gold-light);
+  letter-spacing: .32em; text-transform: uppercase; color: var(--gkn-illuminated-gold);
 }
-.site-nav { border-top: 1px solid var(--gkn-secondary); }
+.site-nav { border-top: 1px solid var(--gkn-wing-bronze); }
 .site-nav ul {
   list-style: none; margin: 0; padding: var(--gkn-space-sm) 0;
   display: flex; flex-wrap: wrap; gap: 2px var(--gkn-space-md);
 }
 .site-nav a {
   color: var(--gkn-background); text-decoration: none;
-  font-family: var(--gkn-label); font-weight: 600; font-size: 14px;
+  font-family: var(--gkn-label); font-weight: 600; font-size: 15px;
   padding: 4px 2px; display: inline-block;
 }
-.site-nav a:hover { color: var(--gkn-gold-light); }
-.site-nav a[aria-current="page"] { color: var(--gkn-gold-light); text-decoration: underline; }
-
-/* Hero */
-.hero {
-  background: var(--gkn-primary); color: var(--gkn-background);
-  text-align: center; padding: var(--gkn-space-xl) 0 64px;
+.site-nav a:hover { color: var(--gkn-illuminated-gold); }
+.site-nav a[aria-current="page"] {
+  color: var(--gkn-background);
+  text-decoration: underline;
+  text-decoration-color: var(--gkn-cornerstone-gold);
+  text-decoration-thickness: 2px; text-underline-offset: 4px;
 }
-.hero .namefold { width: 72px; height: 78px; color: var(--gkn-gold); }
+
+/* Hero — Band 2: radial amber light on the container, artwork untouched */
+.hero {
+  background: var(--gkn-hero-ground);
+  color: var(--gkn-background);
+  text-align: center; padding: 64px 0 72px;
+}
+.phoenix-artwork {
+  display: block;
+  width: min(100%, 680px);
+  height: auto;
+  margin-inline: auto;
+  object-fit: contain;
+  filter: none; opacity: 1; transform: none; mix-blend-mode: normal; clip-path: none;
+}
 .hero h1 {
   font-family: var(--gkn-display); font-weight: 500;
-  font-size: 44px; line-height: 1.12; margin: var(--gkn-space-md) 0 var(--gkn-space-xs);
+  line-height: 1.08; margin: var(--gkn-space-xl) 0 var(--gkn-space-xs);
+  color: var(--gkn-foliage-light);
 }
-.hero h1 .hero-name { display: block; font-size: 80px; }
+.hero h1 .hero-name { display: block; font-size: clamp(44px, 9vw, 96px); }
 .hero h1 .hero-sub {
-  display: block; font-family: var(--gkn-label); font-weight: 500;
-  font-size: 20px; letter-spacing: .34em; text-transform: uppercase;
-  color: var(--gkn-gold-light); margin-top: var(--gkn-space-md);
+  display: block; font-family: var(--gkn-display); font-weight: 500;
+  font-size: clamp(25px, 4.2vw, 46px); letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gkn-illuminated-gold); margin-top: var(--gkn-space-md);
 }
 .hero .dates { font-family: var(--gkn-heading); font-weight: 600; font-size: 20px; margin: var(--gkn-space-lg) 0 0; }
-.hero .place { margin: var(--gkn-space-xs) 0 0; color: var(--gkn-gold-light); }
-.gold-rule { border: 0; border-top: 1px solid var(--gkn-gold); width: 120px; margin: var(--gkn-space-lg) auto; }
+.hero .place { margin: var(--gkn-space-xs) 0 0; }
+.gold-rule { border: 0; border-top: 1px solid var(--gkn-cornerstone-gold); width: 120px; margin: var(--gkn-space-lg) auto; }
 
 /* Buttons */
 .btn {
@@ -80,26 +106,56 @@ select:focus-visible, textarea:focus-visible {
 }
 .btn.primary { background: var(--gkn-primary); color: var(--gkn-background); }
 .btn.primary:hover { background: var(--gkn-secondary); }
-.btn.light { background: var(--gkn-background); color: var(--gkn-primary); border-color: var(--gkn-background); }
-.btn.light:hover { background: var(--gkn-gold-light); }
-.btn.gold-outline { background: transparent; color: var(--gkn-gold-light); border-color: var(--gkn-gold); }
-.btn.gold-outline:hover { color: var(--gkn-white); border-color: var(--gkn-gold-light); }
+.btn.gold { background: var(--gkn-illuminated-gold); color: var(--gkn-cinematic-black); border-color: var(--gkn-illuminated-gold); }
+.btn.gold:hover { background: var(--gkn-foliage-light); border-color: var(--gkn-foliage-light); }
+.btn.gold-outline { background: transparent; color: var(--gkn-illuminated-gold); border-color: var(--gkn-cornerstone-gold); }
+.btn.gold-outline:hover { color: var(--gkn-foliage-light); border-color: var(--gkn-foliage-light); }
 .btn-row { display: flex; flex-wrap: wrap; gap: var(--gkn-space-md); margin-top: var(--gkn-space-lg); }
 .hero .btn-row { justify-content: center; }
 
-/* Sections */
+/* Sections and homepage bands */
 section.page { padding: 56px 0 72px; }
-section.block { padding: 48px 0; }
-section.block.alt { background: var(--gkn-white); border-top: 1px solid var(--gkn-border); border-bottom: 1px solid var(--gkn-border); }
+section.block { padding: var(--gkn-section-space) 0; }
+.band-porcelain { background: var(--gkn-background); color: var(--gkn-ink); }
+.band-bronze {
+  background: var(--gkn-cinematic-bronze); color: var(--gkn-background);
+  border-top: 1px solid var(--gkn-branch-gold);
+}
+.band-black {
+  background: var(--gkn-cinematic-black); color: var(--gkn-background);
+  border-top: 1px solid var(--gkn-branch-gold);
+}
+.band-bronze h2, .band-black h2 { color: var(--gkn-foliage-light); }
+.band-bronze h3, .band-black h3 { color: var(--gkn-illuminated-gold); }
+.band-bronze a, .band-black a { color: var(--gkn-illuminated-gold); }
+.band-bronze a:hover, .band-black a:hover { color: var(--gkn-foliage-light); }
+.band-bronze .source-note, .band-black .source-note { color: var(--gkn-gold-light); }
+.band-bronze dl.facts dt, .band-black dl.facts dt { color: var(--gkn-illuminated-gold); }
+
+/* Band 5: two-column editorial grid on desktop, stacked on mobile */
+.grid-band { padding: var(--gkn-section-space) 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gkn-space-xl) 48px; }
+.panel { border-top: 1px solid var(--gkn-branch-gold); padding-top: var(--gkn-space-lg); }
+.panel h2 { margin-top: 0; }
+@media (max-width: 800px) { .grid-2 { grid-template-columns: 1fr; } }
+
+/* Page-title band (inner pages): bronze with subtle radial light */
+.page-head {
+  background: radial-gradient(ellipse at 50% 18%, var(--gkn-ground-amber) 0%, var(--gkn-cinematic-bronze) 52%, var(--gkn-cinematic-black) 100%);
+  padding: clamp(36px, 7vw, 80px) 0;
+  border-bottom: 1px solid var(--gkn-branch-gold);
+}
+.page-head h1 { color: var(--gkn-foliage-light); margin: 0; }
+
 h1 {
-  font-family: var(--gkn-display); font-weight: 500; font-size: 36px;
-  line-height: 1.2; color: var(--gkn-primary); margin: 0 0 var(--gkn-space-lg);
+  font-family: var(--gkn-display); font-weight: 500; font-size: clamp(34px, 5.5vw, 64px);
+  line-height: 1.15; color: var(--gkn-primary); margin: 0 0 var(--gkn-space-lg);
 }
 h2 {
-  font-family: var(--gkn-display); font-weight: 500; font-size: 30px;
-  line-height: 1.25; color: var(--gkn-primary); margin: 0 0 var(--gkn-space-md);
+  font-family: var(--gkn-display); font-weight: 500; font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.2; color: var(--gkn-primary); margin: 0 0 var(--gkn-space-md);
 }
-h3 { font-family: var(--gkn-heading); font-weight: 600; font-size: 20px; margin: var(--gkn-space-lg) 0 var(--gkn-space-sm); }
+h3 { font-family: var(--gkn-heading); font-weight: 600; font-size: 22px; margin: var(--gkn-space-lg) 0 var(--gkn-space-sm); }
 p { margin: 0 0 var(--gkn-space-md); }
 .source-note { color: var(--gkn-muted); font-size: 14px; }
 .schedule-block {
@@ -111,12 +167,17 @@ p { margin: 0 0 var(--gkn-space-md); }
 .schedule-block .what { font-family: var(--gkn-display); font-size: 24px; margin-bottom: var(--gkn-space-xs); }
 .schedule-block .when { margin-bottom: var(--gkn-space-lg); }
 .schedule-block .when:last-child { margin-bottom: 0; }
+.band-bronze .schedule-block, .band-black .schedule-block {
+  background: rgba(26, 14, 2, .45); border: 1px solid var(--gkn-branch-gold);
+}
+.band-bronze .schedule-block .day, .band-black .schedule-block .day { color: var(--gkn-illuminated-gold); }
+.band-bronze .schedule-block .what, .band-black .schedule-block .what { color: var(--gkn-foliage-light); }
 .card {
-  background: var(--gkn-white); border: 1px solid var(--gkn-border);
+  background: var(--gkn-white); border: 1px solid var(--gkn-branch-gold);
   border-radius: var(--gkn-radius-card); padding: var(--gkn-space-lg);
   margin: 0 0 var(--gkn-space-lg);
 }
-.update-entry { border-left: 3px solid var(--gkn-gold); padding-left: var(--gkn-space-lg); margin-bottom: var(--gkn-space-xl); }
+.update-entry { border-left: 3px solid var(--gkn-cornerstone-gold); padding-left: var(--gkn-space-lg); margin-bottom: var(--gkn-space-xl); }
 .update-entry .date { font-family: var(--gkn-label); font-weight: 600; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--gkn-muted); }
 dl.facts { margin: 0 0 var(--gkn-space-lg); }
 dl.facts dt { font-family: var(--gkn-label); font-weight: 600; font-size: 14px; color: var(--gkn-primary); margin-top: var(--gkn-space-md); }
@@ -124,7 +185,7 @@ dl.facts dd { margin: 2px 0 0; }
 .faq-item { margin-bottom: var(--gkn-space-lg); }
 .faq-item h3 { margin-top: 0; }
 
-/* Forms */
+/* Forms: porcelain page, clearly defined white form, mulberry submit */
 .privacy-note {
   background: var(--gkn-white); border: 1px solid var(--gkn-border);
   border-radius: var(--gkn-radius-card); padding: var(--gkn-space-lg);
@@ -137,10 +198,14 @@ dl.facts dd { margin: 2px 0 0; }
   border-radius: var(--gkn-radius-card); padding: var(--gkn-space-md) var(--gkn-space-lg);
   font-weight: 500;
 }
+.march-form {
+  background: var(--gkn-white); border: 1px solid var(--gkn-border);
+  border-radius: var(--gkn-radius-card); padding: var(--gkn-space-lg);
+}
 .march-form .field { margin-bottom: var(--gkn-space-md); }
 .march-form label, .march-form legend {
-  display: block; font-family: var(--gkn-label); font-weight: 500;
-  font-size: 14px; margin-bottom: 6px; color: var(--gkn-ink);
+  display: block; font-family: var(--gkn-label); font-weight: 600;
+  font-size: 15px; margin-bottom: 6px; color: var(--gkn-ink);
 }
 .march-form fieldset { border: 1px solid var(--gkn-border); border-radius: var(--gkn-radius-card); padding: var(--gkn-space-md) var(--gkn-space-lg); margin: 0 0 var(--gkn-space-md); background: var(--gkn-white); }
 .march-form fieldset label { display: flex; gap: var(--gkn-space-sm); align-items: baseline; font-family: var(--gkn-body); font-size: 16px; font-weight: 400; }
@@ -154,21 +219,21 @@ dl.facts dd { margin: 2px 0 0; }
 .march-form textarea { min-height: 110px; }
 .march-form .optional { color: var(--gkn-muted); font-weight: 400; }
 
-/* Footer */
+/* Footer — Band 11: Deep Bronze Black, thin gold upper boundary */
 .site-footer {
-  background: var(--gkn-primary); color: var(--gkn-background);
-  padding: 48px 0; margin-top: 0; text-align: center;
+  background: var(--gkn-cinematic-black); color: var(--gkn-background);
+  padding: 64px 0; margin-top: 0; text-align: center;
+  border-top: 1px solid var(--gkn-branch-gold);
 }
-.site-footer a { color: var(--gkn-gold-light); }
-.site-footer .footer-name { font-family: var(--gkn-display); font-size: 24px; }
+.site-footer a { color: var(--gkn-illuminated-gold); }
+.site-footer .footer-name { font-family: var(--gkn-display); font-size: 26px; color: var(--gkn-foliage-light); }
+.site-footer .footer-name a { color: var(--gkn-foliage-light); }
 .site-footer p { margin-bottom: var(--gkn-space-sm); }
 
 @media (max-width: 640px) {
-  .hero h1 { font-size: 30px; }
-  .hero h1 .hero-name { font-size: 44px; }
-  .hero h1 .hero-sub { font-size: 15px; }
-  h1 { font-size: 30px; }
-  h2 { font-size: 25px; }
+  .hero { padding: 40px 0 48px; }
   .wm-1 { font-size: 22px; }
-  section.block { padding: 36px 0; }
+  section.block { padding: 40px 0; }
+  .grid-band { padding: 40px 0; }
+  .march-form { padding: var(--gkn-space-md); }
 }

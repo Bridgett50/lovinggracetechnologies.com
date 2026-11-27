@@ -48,4 +48,18 @@
     #E9D9B9 75%,
     #C5A572 100%
   );
+
+  /* Phoenix Tree cinematic palette (visual elevation, Nov 27, 2026;
+     roles per the ChatGPT design specification, section 2 and 9) */
+  --gkn-cinematic-black: #1A0E02;
+  --gkn-cinematic-bronze: #311802;
+  --gkn-ground-amber: #552B03;
+  --gkn-foliage-light: #FDE29B;
+  --gkn-illuminated-gold: #F0C479;
+  --gkn-cornerstone-gold: #E19F33;
+  --gkn-branch-gold: #C58334;
+  --gkn-ember-gold: #AB651C;
+  --gkn-wing-bronze: #9E540E;
+  --gkn-section-space: clamp(56px, 8vw, 112px);
+  --gkn-hero-ground: radial-gradient(ellipse at 50% 35%, #552B03 0%, #311802 38%, #1A0E02 75%);
 }
