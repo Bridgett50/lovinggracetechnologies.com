@@ -1,0 +1,174 @@
+/* God Knew Her Name March on Washington — march stylesheet.
+   Scoped to the march directory; uses only the kit design tokens. */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--gkn-background);
+  color: var(--gkn-ink);
+  font-family: var(--gkn-body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+.wrap { max-width: var(--gkn-content-width); margin: 0 auto; padding: 0 var(--gkn-space-lg); }
+.reading { max-width: var(--gkn-reading-width); }
+.skip {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--gkn-primary); color: var(--gkn-background);
+  padding: var(--gkn-space-sm) var(--gkn-space-md); z-index: 10;
+}
+.skip:focus { left: 0; }
+a { color: var(--gkn-primary); }
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--gkn-gold-dark); outline-offset: 2px;
+}
+
+/* Header */
+.site-header { background: var(--gkn-primary); color: var(--gkn-background); }
+.header-in { padding-top: var(--gkn-space-lg); padding-bottom: var(--gkn-space-md); }
+.brand {
+  display: inline-flex; align-items: center; gap: var(--gkn-space-md);
+  color: var(--gkn-background); text-decoration: none;
+}
+.brand .namefold { width: 44px; height: 48px; color: var(--gkn-gold); flex: none; }
+.wordmark { display: inline-flex; flex-direction: column; line-height: 1.15; }
+.wm-1 { font-family: var(--gkn-display); font-weight: 500; font-size: 28px; letter-spacing: .01em; }
+.wm-em { font-size: 1.18em; }
+.wm-2 {
+  font-family: var(--gkn-label); font-weight: 500; font-size: 13px;
+  letter-spacing: .32em; text-transform: uppercase; color: var(--gkn-gold-light);
+}
+.site-nav { border-top: 1px solid var(--gkn-secondary); }
+.site-nav ul {
+  list-style: none; margin: 0; padding: var(--gkn-space-sm) 0;
+  display: flex; flex-wrap: wrap; gap: 2px var(--gkn-space-md);
+}
+.site-nav a {
+  color: var(--gkn-background); text-decoration: none;
+  font-family: var(--gkn-label); font-weight: 600; font-size: 14px;
+  padding: 4px 2px; display: inline-block;
+}
+.site-nav a:hover { color: var(--gkn-gold-light); }
+.site-nav a[aria-current="page"] { color: var(--gkn-gold-light); text-decoration: underline; }
+
+/* Hero */
+.hero {
+  background: var(--gkn-primary); color: var(--gkn-background);
+  text-align: center; padding: var(--gkn-space-xl) 0 64px;
+}
+.hero .namefold { width: 72px; height: 78px; color: var(--gkn-gold); }
+.hero h1 {
+  font-family: var(--gkn-display); font-weight: 500;
+  font-size: 44px; line-height: 1.12; margin: var(--gkn-space-md) 0 var(--gkn-space-xs);
+}
+.hero h1 .hero-name { display: block; font-size: 80px; }
+.hero h1 .hero-sub {
+  display: block; font-family: var(--gkn-label); font-weight: 500;
+  font-size: 20px; letter-spacing: .34em; text-transform: uppercase;
+  color: var(--gkn-gold-light); margin-top: var(--gkn-space-md);
+}
+.hero .dates { font-family: var(--gkn-heading); font-weight: 600; font-size: 20px; margin: var(--gkn-space-lg) 0 0; }
+.hero .place { margin: var(--gkn-space-xs) 0 0; color: var(--gkn-gold-light); }
+.gold-rule { border: 0; border-top: 1px solid var(--gkn-gold); width: 120px; margin: var(--gkn-space-lg) auto; }
+
+/* Buttons */
+.btn {
+  display: inline-block; font-family: var(--gkn-label); font-weight: 600; font-size: 15px;
+  padding: 12px 22px; border-radius: var(--gkn-radius-button);
+  text-decoration: none; border: 1px solid var(--gkn-primary); cursor: pointer;
+}
+.btn.primary { background: var(--gkn-primary); color: var(--gkn-background); }
+.btn.primary:hover { background: var(--gkn-secondary); }
+.btn.light { background: var(--gkn-background); color: var(--gkn-primary); border-color: var(--gkn-background); }
+.btn.light:hover { background: var(--gkn-gold-light); }
+.btn.gold-outline { background: transparent; color: var(--gkn-gold-light); border-color: var(--gkn-gold); }
+.btn.gold-outline:hover { color: var(--gkn-white); border-color: var(--gkn-gold-light); }
+.btn-row { display: flex; flex-wrap: wrap; gap: var(--gkn-space-md); margin-top: var(--gkn-space-lg); }
+.hero .btn-row { justify-content: center; }
+
+/* Sections */
+section.page { padding: 56px 0 72px; }
+section.block { padding: 48px 0; }
+section.block.alt { background: var(--gkn-white); border-top: 1px solid var(--gkn-border); border-bottom: 1px solid var(--gkn-border); }
+h1 {
+  font-family: var(--gkn-display); font-weight: 500; font-size: 36px;
+  line-height: 1.2; color: var(--gkn-primary); margin: 0 0 var(--gkn-space-lg);
+}
+h2 {
+  font-family: var(--gkn-display); font-weight: 500; font-size: 30px;
+  line-height: 1.25; color: var(--gkn-primary); margin: 0 0 var(--gkn-space-md);
+}
+h3 { font-family: var(--gkn-heading); font-weight: 600; font-size: 20px; margin: var(--gkn-space-lg) 0 var(--gkn-space-sm); }
+p { margin: 0 0 var(--gkn-space-md); }
+.source-note { color: var(--gkn-muted); font-size: 14px; }
+.schedule-block {
+  background: var(--gkn-white); border: 1px solid var(--gkn-border);
+  border-radius: var(--gkn-radius-card); padding: var(--gkn-space-lg);
+  margin: var(--gkn-space-md) 0 var(--gkn-space-lg);
+}
+.schedule-block .day { font-family: var(--gkn-heading); font-weight: 600; font-size: 18px; color: var(--gkn-primary); margin-bottom: var(--gkn-space-xs); }
+.schedule-block .what { font-family: var(--gkn-display); font-size: 24px; margin-bottom: var(--gkn-space-xs); }
+.schedule-block .when { margin-bottom: var(--gkn-space-lg); }
+.schedule-block .when:last-child { margin-bottom: 0; }
+.card {
+  background: var(--gkn-white); border: 1px solid var(--gkn-border);
+  border-radius: var(--gkn-radius-card); padding: var(--gkn-space-lg);
+  margin: 0 0 var(--gkn-space-lg);
+}
+.update-entry { border-left: 3px solid var(--gkn-gold); padding-left: var(--gkn-space-lg); margin-bottom: var(--gkn-space-xl); }
+.update-entry .date { font-family: var(--gkn-label); font-weight: 600; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--gkn-muted); }
+dl.facts { margin: 0 0 var(--gkn-space-lg); }
+dl.facts dt { font-family: var(--gkn-label); font-weight: 600; font-size: 14px; color: var(--gkn-primary); margin-top: var(--gkn-space-md); }
+dl.facts dd { margin: 2px 0 0; }
+.faq-item { margin-bottom: var(--gkn-space-lg); }
+.faq-item h3 { margin-top: 0; }
+
+/* Forms */
+.privacy-note {
+  background: var(--gkn-white); border: 1px solid var(--gkn-border);
+  border-radius: var(--gkn-radius-card); padding: var(--gkn-space-lg);
+  margin: 0 0 var(--gkn-space-lg);
+}
+.privacy-note h2 { font-size: 22px; }
+.privacy-note p { margin-bottom: 0; }
+.sent-note {
+  background: var(--gkn-petal-veil); border: 1px solid var(--gkn-gold);
+  border-radius: var(--gkn-radius-card); padding: var(--gkn-space-md) var(--gkn-space-lg);
+  font-weight: 500;
+}
+.march-form .field { margin-bottom: var(--gkn-space-md); }
+.march-form label, .march-form legend {
+  display: block; font-family: var(--gkn-label); font-weight: 500;
+  font-size: 14px; margin-bottom: 6px; color: var(--gkn-ink);
+}
+.march-form fieldset { border: 1px solid var(--gkn-border); border-radius: var(--gkn-radius-card); padding: var(--gkn-space-md) var(--gkn-space-lg); margin: 0 0 var(--gkn-space-md); background: var(--gkn-white); }
+.march-form fieldset label { display: flex; gap: var(--gkn-space-sm); align-items: baseline; font-family: var(--gkn-body); font-size: 16px; font-weight: 400; }
+.march-form input[type="text"], .march-form input[type="email"],
+.march-form input[type="tel"], .march-form input[type="number"],
+.march-form select, .march-form textarea {
+  width: 100%; font-family: var(--gkn-body); font-size: 16px; color: var(--gkn-ink);
+  background: var(--gkn-white); border: 1px solid var(--gkn-muted);
+  border-radius: var(--gkn-radius-button); padding: 10px 12px;
+}
+.march-form textarea { min-height: 110px; }
+.march-form .optional { color: var(--gkn-muted); font-weight: 400; }
+
+/* Footer */
+.site-footer {
+  background: var(--gkn-primary); color: var(--gkn-background);
+  padding: 48px 0; margin-top: 0; text-align: center;
+}
+.site-footer a { color: var(--gkn-gold-light); }
+.site-footer .footer-name { font-family: var(--gkn-display); font-size: 24px; }
+.site-footer p { margin-bottom: var(--gkn-space-sm); }
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 30px; }
+  .hero h1 .hero-name { font-size: 44px; }
+  .hero h1 .hero-sub { font-size: 15px; }
+  h1 { font-size: 30px; }
+  h2 { font-size: 25px; }
+  .wm-1 { font-size: 22px; }
+  section.block { padding: 36px 0; }
+}

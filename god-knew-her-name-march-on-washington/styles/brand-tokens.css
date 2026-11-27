@@ -1,0 +1,51 @@
+:root {
+  /* Primary */
+  --gkn-primary: #402438;
+  --gkn-background: #FAF7F2;
+
+  /* Secondary */
+  --gkn-secondary: #674456;
+  --gkn-petal-veil: #DCCAD1;
+  --gkn-quiet-sable: #B8A7A0;
+
+  /* Metallic accents */
+  --gkn-gold: #C5A572;
+  --gkn-gold-light: #E9D9B9;
+  --gkn-gold-dark: #806238;
+
+  /* Neutrals */
+  --gkn-white: #FFFFFF;
+  --gkn-border: #DED7D0;
+  --gkn-muted: #70656B;
+  --gkn-ink: #30292E;
+
+  /* Typography */
+  --gkn-display: "Bodoni Moda", Georgia, serif;
+  --gkn-heading: "DM Sans", Arial, sans-serif;
+  --gkn-body: "Inter", Arial, sans-serif;
+  --gkn-label: "DM Sans", Arial, sans-serif;
+
+  /* Spacing */
+  --gkn-space-xs: 4px;
+  --gkn-space-sm: 8px;
+  --gkn-space-md: 16px;
+  --gkn-space-lg: 24px;
+  --gkn-space-xl: 32px;
+  --gkn-space-section: 96px;
+
+  /* Layout */
+  --gkn-content-width: 1280px;
+  --gkn-reading-width: 720px;
+  --gkn-radius-button: 4px;
+  --gkn-radius-card: 8px;
+
+  /* Decorative finish */
+  --gkn-metal-gradient: linear-gradient(
+    135deg,
+    #806238 0%,
+    #E9D9B9 30%,
+    #C5A572 55%,
+    #E9D9B9 75%,
+    #C5A572 100%
+  );
+}
