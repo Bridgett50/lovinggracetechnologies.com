@@ -11,8 +11,10 @@
    rule that every design publish bumps the cache version.
    v4 (Nov 27, 2026): cache bumped in the same commit as the About page
    band reorder (The Song opens the page; the 30th Anniversary moves to
-   its background position before Event Status). */
-var CACHE = "gkn-march-v4";
+   its background position before Event Status).
+   v5 (Nov 27, 2026): cache bumped in the same commit as the Event
+   Leadership listing update. */
+var CACHE = "gkn-march-v5";
 var CORE = [
   "./",
   "./index.html",
