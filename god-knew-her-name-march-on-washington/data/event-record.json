@@ -4,7 +4,7 @@
   "official_url": "https://lovinggracetechnologies.com/god-knew-her-name-march-on-washington/",
   "timezone": "America/New_York",
   "organizing_entity": "Loving Grace Technologies, LLC",
-  "organizer": "Bridget Sander",
+  "organizer": "Loving Grace Technologies, LLC",
   "event_coordinator": "Toni Green",
   "permit_status": "under_review",
   "location_status": "proposed",
@@ -14,25 +14,70 @@
     "region": "DC",
     "country": "US"
   },
+  "gathering_start": "2027-10-21",
+  "gathering_end": "2027-10-24",
   "activities": [
+    {
+      "id": "arrival-and-credentials",
+      "name": "Arrival and Credentials",
+      "date": "2027-10-21",
+      "start": null,
+      "end": null,
+      "venue": null,
+      "status": "details_to_be_announced",
+      "source": "organizer_directed"
+    },
+    {
+      "id": "fireside-chat",
+      "name": "Fireside Chat",
+      "date": "2027-10-21",
+      "start": null,
+      "end": null,
+      "venue": null,
+      "status": "details_to_be_announced",
+      "source": "organizer_directed"
+    },
     {
       "id": "prayer-vigil",
       "name": "Prayer Vigil",
       "start": "2027-10-22T17:00:00-04:00",
       "end": "2027-10-22T21:00:00-04:00",
-      "status": "proposed"
+      "status": "proposed",
+      "source": "permit_application"
     },
     {
       "id": "march-and-rally",
       "name": "March and Rally",
       "start": "2027-10-23T10:00:00-04:00",
       "end": "2027-10-23T15:00:00-04:00",
-      "status": "proposed"
+      "status": "proposed",
+      "source": "permit_application"
+    },
+    {
+      "id": "the-ball",
+      "name": "The Ball",
+      "date": "2027-10-23",
+      "start": null,
+      "end": null,
+      "venue": null,
+      "note": "Evening",
+      "status": "details_to_be_announced",
+      "source": "organizer_directed"
+    },
+    {
+      "id": "prayer-brunch",
+      "name": "Prayer Brunch",
+      "date": "2027-10-24",
+      "start": null,
+      "end": null,
+      "venue": null,
+      "status": "details_to_be_announced",
+      "source": "organizer_directed"
     }
   ],
   "donations": {
     "provider": "Square",
-    "payment_url": null
+    "payment_url": "https://square.link/u/TxBquuwm"
   },
   "confirmed_sponsors": [],
   "approved_site_plan_url": null,

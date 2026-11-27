@@ -3,7 +3,7 @@
    Phoenix Tree cinematic palette (visual elevation, Nov 27, 2026).
    Grounds: Deep Bronze Black / Phoenix Bronze with radial amber light;
    porcelain reading surfaces; golds in their spec-assigned roles.
-   Purple removed entirely Nov 27, 2026 (Bridgett): the former mulberry
+   Purple removed entirely Nov 27, 2026 (organizer's direction): the former mulberry
    roles now use Deep Bronze Black; primary and submit buttons are
    black with Illuminated Gold text. */
 * { box-sizing: border-box; }
@@ -233,7 +233,7 @@ dl.facts dd { margin: 2px 0 0; }
 .site-footer .footer-name a { color: var(--gkn-foliage-light); }
 .site-footer p { margin-bottom: var(--gkn-space-sm); }
 
-/* Phone view (rebuilt Nov 27, 2026 per Bridgett): compact header,
+/* Phone view (rebuilt Nov 27, 2026 per the organizer): compact header,
    single scrollable nav strip, smaller type, 48px tap targets. */
 @media (max-width: 640px) {
   body { font-size: 16px; }

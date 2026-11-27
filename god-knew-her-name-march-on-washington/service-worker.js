@@ -5,8 +5,11 @@
    v2 (Nov 27, 2026): new cache name so browsers install this worker and
    drop the v1 cache; documents are network-first (fresh copy wins,
    cache is the offline fallback); static assets stay cache-first
-   under the current cache name. */
-var CACHE = "gkn-march-v2";
+   under the current cache name.
+   v3 (Nov 27, 2026): cache bumped in the same commit as the Toni Green
+   page, the four-day schedule and the donation wiring, per the standing
+   rule that every design publish bumps the cache version. */
+var CACHE = "gkn-march-v3";
 var CORE = [
   "./",
   "./index.html",
@@ -17,6 +20,7 @@ var CORE = [
   "./assets/namefold.svg",
   "./assets/icons/icon-192.png",
   "./about/",
+  "./toni-green/",
   "./schedule/",
   "./attend/",
   "./churches/",
