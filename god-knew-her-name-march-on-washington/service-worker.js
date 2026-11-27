@@ -8,8 +8,11 @@
    under the current cache name.
    v3 (Nov 27, 2026): cache bumped in the same commit as the Toni Green
    page, the four-day schedule and the donation wiring, per the standing
-   rule that every design publish bumps the cache version. */
-var CACHE = "gkn-march-v3";
+   rule that every design publish bumps the cache version.
+   v4 (Nov 27, 2026): cache bumped in the same commit as the About page
+   band reorder (The Song opens the page; the 30th Anniversary moves to
+   its background position before Event Status). */
+var CACHE = "gkn-march-v4";
 var CORE = [
   "./",
   "./index.html",
