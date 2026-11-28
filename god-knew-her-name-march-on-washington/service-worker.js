@@ -21,8 +21,12 @@
    lead-magnet subscribe block and the new guide page (the guide page
    itself stays out of the CORE precache list below).
    v10 (Nov 28, 2026): cache bumped after restoring the site to its
-   state from this morning, so browsers drop later caches. */
-var CACHE = "gkn-march-v11";
+   state from this morning, so browsers drop later caches.
+   v12 (Nov 28, 2026): cache bumped in the same commit as the banner
+   and navigation rebuild — the Phoenix Tree replaces the Namefold mark
+   in the banner, the favicon and the app icons, and the flat nav list
+   becomes dropdown groups (all 20 pages kept, tucked away). */
+var CACHE = "gkn-march-v12";
 var CORE = [
   "./",
   "./index.html",
@@ -30,8 +34,7 @@ var CORE = [
   "./manifest.webmanifest",
   "./styles/brand-tokens.css",
   "./styles/march.css",
-  "./assets/namefold.svg",
-  "./assets/icons/icon-192.png",
+  "./assets/phoenix-tree.png",
   "./about/",
   "./toni-green/",
   "./for-artists/",

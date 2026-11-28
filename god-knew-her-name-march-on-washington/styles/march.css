@@ -43,33 +43,78 @@ select:focus-visible, textarea:focus-visible {
 .header-in { padding-top: var(--gkn-space-md); padding-bottom: var(--gkn-space-md); }
 .brand {
   display: inline-flex; align-items: center; gap: var(--gkn-space-md);
-  color: var(--gkn-foliage-light); text-decoration: none;
+  color: var(--gkn-foliage-light); text-decoration: none; max-width: 100%;
 }
-.brand .namefold { width: 44px; height: 48px; color: var(--gkn-gold); flex: none; }
-.wordmark { display: inline-flex; flex-direction: column; line-height: 1.15; }
-.wm-1 { font-family: var(--gkn-display); font-weight: 500; font-size: 28px; letter-spacing: .01em; }
+/* Banner (Nov 28, 2026): the Phoenix Tree, the owner's approved artwork
+   byte-identical and never altered, CSS-sized small at the left of the
+   banner; the title stays on one line with fluid sizing and the tree
+   shrinks first as the viewport narrows. */
+.brand .brand-tree { width: clamp(44px, 9vw, 64px); height: auto; flex: none; }
+.wordmark { display: inline-flex; flex-direction: column; line-height: 1.15; min-width: 0; }
+.wm-1 {
+  font-family: var(--gkn-display); font-weight: 500; letter-spacing: .01em;
+  font-size: clamp(19px, 6.2vw, 30px); white-space: nowrap;
+}
 .wm-em { font-size: 1.18em; }
 .wm-2 {
-  font-family: var(--gkn-label); font-weight: 500; font-size: 13px;
-  letter-spacing: .32em; text-transform: uppercase; color: var(--gkn-illuminated-gold);
+  font-family: var(--gkn-label); font-weight: 500;
+  font-size: clamp(10px, 3.3vw, 13px);
+  letter-spacing: .3em; text-transform: uppercase; color: var(--gkn-illuminated-gold);
+  white-space: nowrap;
+}
+.wm-3 {
+  font-family: var(--gkn-label); font-weight: 500;
+  font-size: clamp(10px, 3.2vw, 13px); letter-spacing: .06em;
+  color: var(--gkn-gold-light); white-space: nowrap; margin-top: 2px;
 }
 .site-nav { border-top: 1px solid var(--gkn-wing-bronze); }
-.site-nav ul {
+.site-nav ul.nav-list {
   list-style: none; margin: 0; padding: var(--gkn-space-sm) 0;
-  display: flex; flex-wrap: wrap; gap: 2px var(--gkn-space-md);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 2px var(--gkn-space-md);
 }
-.site-nav a {
+.site-nav .nav-item { position: relative; }
+.site-nav a, .site-nav .nav-trigger {
   color: var(--gkn-background); text-decoration: none;
   font-family: var(--gkn-label); font-weight: 600; font-size: 15px;
-  padding: 4px 2px; display: inline-block;
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 28px; padding: 6px 4px;
 }
-.site-nav a:hover { color: var(--gkn-illuminated-gold); }
+.site-nav .nav-trigger {
+  background: none; border: 0; cursor: pointer; text-align: left;
+}
+.nav-caret {
+  width: 0; height: 0; flex: none;
+  border-left: 5px solid transparent; border-right: 5px solid transparent;
+  border-top: 6px solid var(--gkn-illuminated-gold);
+}
+.nav-trigger[aria-expanded="true"] .nav-caret { transform: rotate(180deg); }
+.site-nav a:hover, .site-nav .nav-trigger:hover { color: var(--gkn-illuminated-gold); }
 .site-nav a[aria-current="page"] {
   color: var(--gkn-background);
   text-decoration: underline;
   text-decoration-color: var(--gkn-cornerstone-gold);
   text-decoration-thickness: 2px; text-underline-offset: 4px;
 }
+/* Dropdown menus. Without JavaScript they render open in flow (every
+   link reachable); with JavaScript they start closed and open as
+   overlays on wide screens. */
+.site-nav .nav-menu {
+  list-style: none; margin: 0; padding: var(--gkn-space-sm) 0;
+}
+.site-nav.js .nav-menu {
+  position: absolute; top: 100%; left: 0; z-index: 30; min-width: 230px;
+  background: var(--gkn-cinematic-bronze);
+  border: 1px solid var(--gkn-branch-gold); border-radius: var(--gkn-radius-card);
+  padding: var(--gkn-space-sm);
+  box-shadow: 0 12px 28px rgba(26, 14, 2, .45);
+}
+.site-nav.js .nav-menu[hidden] { display: none; }
+.site-nav .nav-menu li { display: block; }
+.site-nav .nav-menu a {
+  display: flex; width: 100%; box-sizing: border-box;
+  min-height: 32px; padding: 8px 10px; border-radius: var(--gkn-radius-button);
+}
+.site-nav .nav-menu a:hover { background: rgba(240, 196, 121, .12); }
 
 /* Hero — Band 2: radial amber light on the container, artwork untouched */
 .hero {
@@ -241,23 +286,31 @@ dl.facts dd { margin: 2px 0 0; }
 .site-footer .footer-name a { color: var(--gkn-foliage-light); }
 .site-footer p { margin-bottom: var(--gkn-space-sm); }
 
-/* Phone view (rebuilt Nov 27, 2026 per the organizer): compact header,
-   single scrollable nav strip, smaller type, 48px tap targets. */
+/* Phone view (rebuilt Nov 27, 2026 per the organizer; navigation rebuilt
+   Nov 28, 2026): compact banner, dropdown groups instead of any long
+   list, 48px tap targets. On the phone the group triggers are the menu;
+   an open group lists its links in flow under its trigger. */
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .header-in { padding-top: var(--gkn-space-sm); padding-bottom: var(--gkn-space-sm); }
   .brand { gap: var(--gkn-space-sm); }
-  .brand .namefold { width: 34px; height: 38px; }
-  .wm-1 { font-size: 21px; }
-  .wm-2 { font-size: 11px; }
-  .site-nav ul {
-    flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch;
-    white-space: nowrap; gap: 2px var(--gkn-space-sm); padding: 6px 0;
-    scrollbar-width: none;
+  .brand .brand-tree { width: clamp(38px, 11vw, 48px); }
+  .site-nav ul.nav-list {
+    flex-direction: column; flex-wrap: nowrap; align-items: stretch;
+    gap: 0; padding: 4px 0;
   }
-  .site-nav ul::-webkit-scrollbar { display: none; }
-  .site-nav li { flex: none; }
-  .site-nav a { font-size: 14px; padding: 6px 4px; }
+  .site-nav .nav-item { position: static; }
+  .site-nav a, .site-nav .nav-trigger {
+    display: flex; width: 100%; box-sizing: border-box;
+    min-height: 44px; padding: 10px 4px; font-size: 15px;
+  }
+  .site-nav .nav-trigger { justify-content: space-between; }
+  .site-nav.js .nav-menu {
+    position: static; min-width: 0; background: transparent;
+    border: 0; border-top: 1px solid var(--gkn-wing-bronze);
+    border-radius: 0; box-shadow: none; padding: 0 0 4px 12px;
+  }
+  .site-nav .nav-menu a { min-height: 40px; padding: 8px 6px; }
   .hero { padding: 40px 0 48px; }
   .hero h1 .hero-name { font-size: 38px; }
   .hero h1 .hero-sub { font-size: 20px; }
