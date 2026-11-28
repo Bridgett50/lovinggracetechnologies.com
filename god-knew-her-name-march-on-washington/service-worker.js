@@ -13,8 +13,11 @@
    band reorder (The Song opens the page; the 30th Anniversary moves to
    its background position before Event Status).
    v5 (Nov 27, 2026): cache bumped in the same commit as the Event
-   Leadership listing update. */
-var CACHE = "gkn-march-v5";
+   Leadership listing update.
+   v6 (Nov 27, 2026): cache bumped in the same build as the Attend page
+   ticket rebuild, the new For Artists page, the homepage master-message
+   block and the Transportation form's two new fields. */
+var CACHE = "gkn-march-v6";
 var CORE = [
   "./",
   "./index.html",
@@ -26,6 +29,7 @@ var CORE = [
   "./assets/icons/icon-192.png",
   "./about/",
   "./toni-green/",
+  "./for-artists/",
   "./schedule/",
   "./attend/",
   "./churches/",
