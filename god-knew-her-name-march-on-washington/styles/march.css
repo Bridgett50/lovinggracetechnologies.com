@@ -45,7 +45,6 @@ select:focus-visible, textarea:focus-visible {
   display: inline-flex; align-items: center; gap: var(--gkn-space-md);
   color: var(--gkn-foliage-light); text-decoration: none;
 }
-.brand .namefold { width: 44px; height: 48px; color: var(--gkn-gold); flex: none; }
 .wordmark { display: inline-flex; flex-direction: column; line-height: 1.15; }
 .wm-1 { font-family: var(--gkn-display); font-weight: 500; font-size: 28px; letter-spacing: .01em; }
 .wm-em { font-size: 1.18em; }
@@ -247,7 +246,6 @@ dl.facts dd { margin: 2px 0 0; }
   body { font-size: 16px; }
   .header-in { padding-top: var(--gkn-space-sm); padding-bottom: var(--gkn-space-sm); }
   .brand { gap: var(--gkn-space-sm); }
-  .brand .namefold { width: 34px; height: 38px; }
   .wm-1 { font-size: 21px; }
   .wm-2 { font-size: 11px; }
   .site-nav ul {
@@ -273,4 +271,168 @@ dl.facts dd { margin: 2px 0 0; }
     align-items: center; justify-content: center;
   }
   .march-form { padding: var(--gkn-space-md); }
+}
+
+
+/* Flow restructure — Nov 28, 2026.
+   Six-item primary nav, mobile-first menu, Phoenix Tree as the only logo.
+   Unapproved header mark and icons removed. */
+.brand-logo {
+  width: 56px; height: 56px; flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--gkn-cinematic-black);
+}
+.wm-1 { font-size: 24px; }
+@media (min-width: 641px) {
+  .wm-1 { font-size: 28px; }
+}
+
+.site-nav { border-top: 1px solid var(--gkn-wing-bronze); }
+.nav-menu { margin: 0; }
+.nav-menu summary {
+  list-style: none; cursor: pointer;
+  font-family: var(--gkn-label); font-weight: 600; font-size: 16px;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--gkn-illuminated-gold);
+  min-height: 48px; display: flex; align-items: center;
+  padding: 4px 0;
+}
+.nav-menu summary::-webkit-details-marker { display: none; }
+.nav-menu summary::after { content: " \25BE"; }
+.nav-menu[open] summary::after { content: " \25B4"; }
+.site-nav ul {
+  display: flex; flex-direction: column;
+  list-style: none; margin: 0; padding: 0 0 12px;
+  gap: 0;
+}
+.site-nav a {
+  display: flex; align-items: center;
+  min-height: 48px; padding: 8px 0;
+  color: var(--gkn-gold-light); text-decoration: none;
+  font-family: var(--gkn-label); font-weight: 600; font-size: 16px;
+  letter-spacing: .04em;
+}
+.site-nav a:hover { color: var(--gkn-illuminated-gold); }
+.site-nav a[aria-current="page"] {
+  color: var(--gkn-foliage-light);
+  box-shadow: inset 0 -2px 0 var(--gkn-illuminated-gold);
+}
+
+@media (min-width: 800px) {
+  .nav-menu summary { display: none; }
+  .nav-menu { display: block; }
+  .nav-menu ul, .nav-menu[open] ul {
+    display: flex; flex-direction: row; flex-wrap: wrap;
+    gap: 0 8px; padding: 0;
+  }
+  .site-nav a { padding: 12px 10px; font-size: 15px; }
+}
+
+.hero-short {
+  background: var(--gkn-hero-ground);
+  color: var(--gkn-background);
+  text-align: center;
+  padding: 48px 0 56px;
+}
+.hero-short .brand-hero {
+  width: 128px; height: 128px; border-radius: 50%;
+  object-fit: cover; margin: 0 auto 24px; display: block;
+  box-shadow: 0 0 0 1px var(--gkn-branch-gold);
+}
+.hero-short h1 {
+  font-family: var(--gkn-display); font-weight: 500;
+  font-size: clamp(32px, 8vw, 64px);
+  line-height: 1.1; color: var(--gkn-foliage-light);
+  margin: 0 0 16px;
+}
+.hero-purpose {
+  font-family: var(--gkn-display); font-weight: 400;
+  font-size: clamp(18px, 4vw, 26px); line-height: 1.45;
+  color: var(--gkn-gold-light);
+  max-width: 36rem; margin: 0 auto;
+}
+.hero-short .dates {
+  font-family: var(--gkn-heading); font-weight: 600;
+  font-size: 18px; margin: 24px 0 0; color: var(--gkn-foliage-light);
+}
+.hero-short .place { margin: 4px 0 0; color: var(--gkn-gold-light); }
+.hero-short .btn-row { justify-content: center; }
+.btn {
+  min-height: 48px; display: inline-flex;
+  align-items: center; justify-content: center;
+  padding: 12px 22px;
+}
+
+.aims { list-style: none; padding: 0; margin: 0 0 8px; }
+.aims li {
+  padding: 12px 0;
+  border-top: 1px solid var(--gkn-border);
+}
+.aims li:first-child { border-top: 0; }
+.aims strong { font-family: var(--gkn-heading); font-weight: 600; display: block; margin-bottom: 4px; }
+
+.video-wrap {
+  position: relative; width: 100%; max-width: 720px;
+  aspect-ratio: 16 / 9; margin: 16px 0;
+  background: var(--gkn-cinematic-black);
+}
+.video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+.hub-choices {
+  display: grid; grid-template-columns: 1fr; gap: 12px;
+  margin: 24px 0 32px;
+}
+.hub-choices a {
+  display: flex; align-items: center; justify-content: flex-start;
+  min-height: 52px; padding: 14px 16px;
+  background: var(--gkn-white); border: 1px solid var(--gkn-border);
+  border-radius: var(--gkn-radius-card);
+  text-decoration: none; color: var(--gkn-ink);
+  font-family: var(--gkn-heading); font-weight: 600; font-size: 17px;
+}
+.hub-choices a:hover { border-color: var(--gkn-branch-gold); }
+@media (min-width: 640px) {
+  .hub-choices { grid-template-columns: 1fr 1fr; }
+}
+
+.next-step {
+  background: var(--gkn-cinematic-black); color: var(--gkn-gold-light);
+  padding: 40px 0; text-align: center;
+  border-top: 1px solid var(--gkn-branch-gold);
+}
+.next-label {
+  font-family: var(--gkn-label); font-weight: 600; font-size: 13px;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--gkn-illuminated-gold); margin-bottom: 8px;
+}
+.next-step p { color: var(--gkn-gold-light); }
+.next-step .btn.primary { margin-top: 8px; }
+
+.footer-nav {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 8px 20px; margin-top: 24px;
+}
+.footer-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+
+.special-note {
+  background: var(--gkn-white); border-left: 3px solid var(--gkn-cornerstone-gold);
+  padding: 16px 20px; margin: 16px 0 24px;
+}
+
+body { font-size: 17px; line-height: 1.7; }
+.reading { max-width: 40rem; }
+h1, h2, h3 { line-height: 1.25; }
+.source-note { color: #534C50; }
+
+@media (max-width: 640px) {
+  .site-nav ul {
+    flex-wrap: nowrap; overflow: visible; white-space: normal;
+    flex-direction: column; gap: 0; padding-bottom: 12px;
+    scrollbar-width: auto;
+  }
+  .site-nav a { font-size: 16px; padding: 8px 0; }
+  .brand-logo { width: 48px; height: 48px; }
+  .hero-short { padding: 36px 0 44px; }
+  .hero-short .brand-hero { width: 96px; height: 96px; }
 }
