@@ -19,8 +19,10 @@
    block and the Transportation form's two new fields.
    v7 (Nov 27, 2026): cache bumped in the same commit as the homepage
    lead-magnet subscribe block and the new guide page (the guide page
-   itself stays out of the CORE precache list below). */
-var CACHE = "gkn-march-v7";
+   itself stays out of the CORE precache list below).
+   v10 (Nov 28, 2026): cache bumped after restoring the site to its
+   state from this morning, so browsers drop later caches. */
+var CACHE = "gkn-march-v10";
 var CORE = [
   "./",
   "./index.html",
