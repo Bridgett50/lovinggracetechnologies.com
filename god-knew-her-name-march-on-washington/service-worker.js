@@ -22,7 +22,7 @@
    itself stays out of the CORE precache list below).
    v10 (Nov 28, 2026): cache bumped after restoring the site to its
    state from this morning, so browsers drop later caches. */
-var CACHE = "gkn-march-v10";
+var CACHE = "gkn-march-v11";
 var CORE = [
   "./",
   "./index.html",
