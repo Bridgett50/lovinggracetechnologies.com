@@ -16,8 +16,11 @@
    Leadership listing update.
    v6 (Nov 27, 2026): cache bumped in the same build as the Attend page
    ticket rebuild, the new For Artists page, the homepage master-message
-   block and the Transportation form's two new fields. */
-var CACHE = "gkn-march-v6";
+   block and the Transportation form's two new fields.
+   v7 (Nov 27, 2026): cache bumped in the same commit as the homepage
+   lead-magnet subscribe block and the new guide page (the guide page
+   itself stays out of the CORE precache list below). */
+var CACHE = "gkn-march-v7";
 var CORE = [
   "./",
   "./index.html",
