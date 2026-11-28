@@ -28,8 +28,12 @@
    becomes dropdown groups (all 20 pages kept, tucked away).
    v13 (Nov 28, 2026): cache bumped in the same commit as the mobile
    navigation correction — on phones the whole nav list tucks behind
-   one Menu button in the header instead of showing seven group rows. */
-var CACHE = "gkn-march-v13";
+   one Menu button in the header instead of showing seven group rows.
+   v14 (Nov 28, 2026): cache bumped in the same commit as the free /
+   paid page separation — the paid special events move to their own
+   Special Events page (nav: Plan Your Visit), Attend becomes
+   free-only, and Schedule, FAQ and the guide keep pointer lines. */
+var CACHE = "gkn-march-v14";
 var CORE = [
   "./",
   "./index.html",
@@ -42,6 +46,7 @@ var CORE = [
   "./toni-green/",
   "./for-artists/",
   "./schedule/",
+  "./special-events/",
   "./attend/",
   "./churches/",
   "./organizations/",
