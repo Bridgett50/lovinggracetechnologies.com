@@ -25,8 +25,11 @@
    v12 (Nov 28, 2026): cache bumped in the same commit as the banner
    and navigation rebuild — the Phoenix Tree replaces the Namefold mark
    in the banner, the favicon and the app icons, and the flat nav list
-   becomes dropdown groups (all 20 pages kept, tucked away). */
-var CACHE = "gkn-march-v12";
+   becomes dropdown groups (all 20 pages kept, tucked away).
+   v13 (Nov 28, 2026): cache bumped in the same commit as the mobile
+   navigation correction — on phones the whole nav list tucks behind
+   one Menu button in the header instead of showing seven group rows. */
+var CACHE = "gkn-march-v13";
 var CORE = [
   "./",
   "./index.html",

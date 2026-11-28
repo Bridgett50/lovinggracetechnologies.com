@@ -82,6 +82,18 @@ select:focus-visible, textarea:focus-visible {
 .site-nav .nav-trigger {
   background: none; border: 0; cursor: pointer; text-align: left;
 }
+/* Mobile Menu button (Nov 28, 2026): hidden unless JavaScript runs on a
+   phone viewport (the .js gate below keeps the no-JS fallback clean);
+   the phone media query gives it its visible form. */
+.site-nav .nav-menu-button {
+  display: none; background: none; border: 0; cursor: pointer;
+  color: var(--gkn-background); font-family: var(--gkn-label);
+  font-weight: 600; font-size: 15px;
+  align-items: center; gap: 6px;
+  min-height: 28px; padding: 6px 4px; text-align: left;
+}
+.site-nav .nav-menu-button:hover { color: var(--gkn-illuminated-gold); }
+.nav-menu-button[aria-expanded="true"] .nav-caret { transform: rotate(180deg); }
 .nav-caret {
   width: 0; height: 0; flex: none;
   border-left: 5px solid transparent; border-right: 5px solid transparent;
@@ -288,13 +300,19 @@ dl.facts dd { margin: 2px 0 0; }
 
 /* Phone view (rebuilt Nov 27, 2026 per the organizer; navigation rebuilt
    Nov 28, 2026): compact banner, dropdown groups instead of any long
-   list, 48px tap targets. On the phone the group triggers are the menu;
-   an open group lists its links in flow under its trigger. */
+   list, 48px tap targets. On the phone the whole list tucks behind one
+   Menu button in the header; an open group lists its links in flow
+   under its trigger. */
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .header-in { padding-top: var(--gkn-space-sm); padding-bottom: var(--gkn-space-sm); }
   .brand { gap: var(--gkn-space-sm); }
   .brand .brand-tree { width: clamp(38px, 11vw, 48px); }
+  .site-nav.js .nav-menu-button {
+    display: flex; width: 100%; box-sizing: border-box;
+    min-height: 44px; padding: 10px 4px; justify-content: space-between;
+  }
+  .site-nav.js ul.nav-list[hidden] { display: none; }
   .site-nav ul.nav-list {
     flex-direction: column; flex-wrap: nowrap; align-items: stretch;
     gap: 0; padding: 4px 0;
