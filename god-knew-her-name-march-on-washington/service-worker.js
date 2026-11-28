@@ -19,8 +19,10 @@
    block and the Transportation form's two new fields.
    v7 (Nov 27, 2026): cache bumped in the same commit as the homepage
    lead-magnet subscribe block and the new guide page (the guide page
-   itself stays out of the CORE precache list below). */
-var CACHE = "gkn-march-v7";
+   itself stays out of the CORE precache list below).
+   v9 (Nov 28, 2026): cache bumped after restoring the pre-restructure
+   site so browsers drop the v8 cache. */
+var CACHE = "gkn-march-v9";
 var CORE = [
   "./",
   "./index.html",
@@ -28,7 +30,7 @@ var CORE = [
   "./manifest.webmanifest",
   "./styles/brand-tokens.css",
   "./styles/march.css",
-  "./assets/namefold.svg",
+  "./assets/phoenix-tree.png",
   "./assets/icons/icon-192.png",
   "./about/",
   "./toni-green/",
