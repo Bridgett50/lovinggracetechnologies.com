@@ -32,8 +32,12 @@
    v14 (Nov 28, 2026): cache bumped in the same commit as the free /
    paid page separation — the paid special events move to their own
    Special Events page (nav: Plan Your Visit), Attend becomes
-   free-only, and Schedule, FAQ and the guide keep pointer lines. */
-var CACHE = "gkn-march-v14";
+   free-only, and Schedule, FAQ and the guide keep pointer lines.
+   v15 (Nov 28, 2026): cache bumped in the same commit as the phone
+   Menu button correction — the standard three-line hamburger icon
+   replaces the word "Menu" (the owner's correction); the button's
+   aria-label, behavior and desktop presentation are unchanged. */
+var CACHE = "gkn-march-v15";
 var CORE = [
   "./",
   "./index.html",
